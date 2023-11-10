@@ -1,4 +1,3 @@
 [submodule "IPFUnpacker"]
 	path = IPFUnpacker
-	url = git@github.com:rjgtav/IPFUnpacker.git
-	ignore = dirty
+	url = https://github.com/Temperantia8/IPFUnpacker.git
