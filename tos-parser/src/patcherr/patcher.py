@@ -101,7 +101,7 @@ def revision_decrypt(revision):
 
     revision = [ord(c) for c in revision]               # Convert to binary
     blowfish.Decipher(revision, 8, size_encrypted)      # Decrypt with blowfish
-    revision = [unichr(c) for c in revision]            # Convert back to unicode characters
+    revision = [chr(c) for c in revision]            # Convert back to unicode characters
 
     # Clean and split into a list
     revision = ''\
