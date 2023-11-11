@@ -328,6 +328,22 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 47266,treasure_box3_2,,,보물상자3,2
 47267,Event_treasure_box3_2,,minimap_event_1,크리스마스 로열 상자,2
 47268,Event_treasure_box4,,minimap_event_1,신비한 크리스마스 상자,2
+47269,pradziatemple_warp_npc,,minimap_portal,프래지아 신전,2
+47270,kruvina_wall,,minimap_portal,크루비나 장벽,2
+47271,fire_tree_wall,,minimap_portal,불타는 나무,2
+47272,black_crack,,minimap_portal,검은 균열,2
+47273,npc_paulius,,,파울루스,2
+47274,ep13_2_d_prison_1_EyeEffect_hiddennpc,,,UnvisibleName,2
+47275,surgery_switch,,,아샤크 지하 감옥 레버,2
+47276,ep13_2_d_prison_experiment_by-product_apparatus,,,아샤크 지하 감옥 프랍1,2
+47277,ep13_2_d_prison_ExperimentTable,,,아샤크 지하 감옥 프랍2,2
+47278,ep13_2_d_prison_prop_plus_01,,,아샤크 지하 감옥 프랍3,2
+47279,ep13_2_d_prison_prop_plus_02,,,아샤크 지하 감옥 프랍4,2
+47280,ep13_2_d_prison_shifter,,,아샤크 지하 감옥 프랍5,2
+47281,ep13_2_d_prison_WasteProduct,,,아샤크 지하 감옥 프랍6,2
+47282,surgery_prop,,,아샤크 지하 감옥 실험대,2
+47283,ep13_2_d_prison_WasteProduct_OBB,,,아샤크 지하 감옥 프랍6_OBB,2
+47284,npc_paulius_2,,,쓰러진 파울루스,2
 47413,npc_lecifer,몬스터,icon_item_nothing,렉시퍼 인간형,2
 48002,f_katyn_owl02,,,부엉이 조각상,2
 48003,f_katyn_owl03,,,부엉이 조각상,2
@@ -365,6 +381,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 58602,pet_fruits_plate,몬스터,icon_item_nothing,투칸 먹이,2
 58738,npc_raid_gimmick,몬스터,icon_item_nothing,보호의 단,2
 59066,farmer_plant_step_01,몬스터,icon_item_nothing,,2
+59785,mon_kupole_Lutha,몬스터,icon_item_nothing,큐폴 루타,2
 101001,mon_paladin_follower1_2_hp,몬스터,icon_item_nothing,팔라딘 추종자A2,2
 101002,mon_paladin_follower1_3_hp,몬스터,icon_item_nothing,팔라딘 추종자A3,2
 103015,mon_paladin_follower1_3_Q,몬스터,icon_item_nothing,루클리스 부대원,2
@@ -569,7 +586,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 147517,npc_fishing_manager,,,낚시터 관리인,2
 147518,npc_diana,,,디아나,2
 148001,blank_npc_moon,,,빈 NPC,2
-150000,npc_junk_shop,,,유랑 상인 게랄다스,2
+150000,npc_junk_shop,,minimap_kedora,유랑 상인 게랄다스,2
 150001,npc_skill_misc_shop_2,,,스킬 재료 상인,2
 150002,npc_skill_misc_shop_3,,,스킬 재료 상인,2
 150003,npc_equip_shop_270_315,,,장비 보급병,2
@@ -655,6 +672,78 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150225,npc_kingdom_paladin_follower2,,,팔라딘 추종자2,2
 150226,npc_kingdom_owl_statue,,,부엉이 조각상,2
 150227,npc_goddess_Laima_ep12,,,갇힌 라이마,2
+150228,npc_glacier_tuto_rp_mon,,,UnvisibleName,2
+150229,npc_glacier_tuto_rp_NPC_01,,,한기가 응축된 장치,2
+150230,npc_rangdagirl_01,,,랑다 소녀,2
+150231,npc_memorialstone_remains,,,비석의 잔해,2
+150232,npc_ancientmonument,,,고대 비석,2
+150233,npc_f_castle_101_alter_01,,,제단,2
+150234,npc_f_castle_101_altar_02,,,중앙 제단,2
+150235,npc_bower_stone,,,바우어 마석,2
+150236,npc_bower_branch_01,,,바우어 나뭇가지,2
+150237,npc_goddess_Ausirine,,,여신 아우슈리네,2
+150238,npc_rangdagirl_02,,,하얀 랑다 소녀,2
+150239,npc_MasterRangda_Barong2,,,미엘라스,2
+150240,npc_rangdagirl_03,,,검은 랑다 소녀,2
+150241,npc_giltine_01,,,길티네,2
+150242,npc_rada_goddess_ep13_1,,,여신 라다,2
+150243,black_crack_Q1,,,검은 균열,2
+150244,ep13_mine_cart_Q1,,,균열 채굴용 수레,2
+150245,blackman_crystal_Q1,,,주시자의 검은 수정,2
+150246,blackman_crystal_find,,,UnvisibleName,2
+150247,blackman_crystal_center,,,UnvisibleName,2
+150248,TOSHero_Grid_Object_1,,,배제의 빛,2
+150250,TOSHero_Grid_Object_3,,,잊혀진 이야기,2
+150251,TOSHero_HiddenTrigger_360,,,UnvisibleName,2
+150252,TOSHero_Buff_Avatar_Summon_1,,,결속된 영혼,2
+150253,TOSHero_Buff_Avatar_Summon_2,,,결속된 영혼,2
+150254,TOSHero_Buff_Avatar_Summon_3,,,결속된 영혼,2
+150255,TOSHero_Buff_Avatar_Summon_4,,,계약자,2
+150256,TOSHero_TUTO_NPC_1,,,의문의 이야기꾼,2
+150257,npc_MasterLuchador,,minimap_man_master,루차도르 마스터,2
+150258,ep14_1_orsha_flag1,,,오르샤 깃발1,2
+150259,ep14_1_orsha_flag2,,,오르샤 깃발2,2
+150260,ep14_1_royal_flag1_1,,,왕국군 깃발1,2
+150261,ep14_1_royal_flag1_2,,,왕국군 깃발2,2
+150262,ep14_1_royal_flag2,,,왕국군 깃발3,2
+150263,ep14_1_arrow,,,바닥에 꽂힌 화살,2
+150264,ep14_1_ballista,,,발리스타,2
+150265,ep14_1_barricade1_1,,,전쟁 바리케이드1,2
+150266,ep14_1_barricade1_2,,,전쟁 바리케이드2,2
+150267,ep14_1_barricade2_1,,,전쟁 바리케이드3,2
+150268,ep14_1_barricade2_2,,,전쟁 바리케이드4,2
+150269,ep14_1_large_barricade_1,,,전쟁 바리케이드5,2
+150270,ep14_1_large_barricade_2,,,전쟁 바리케이드6,2
+150271,ep14_1_large_barricade_orsha,,,전쟁 바리케이드7,2
+150272,ep14_1_large_barricade_royal,,,전쟁 바리케이드8,2
+150273,ep14_1_sand_barricade_1,,,전쟁 바리케이드9,2
+150274,ep14_1_sand_barricade_2,,,전쟁 바리케이드10,2
+150275,ep14_1_scarecrow_barricade_1,,,전쟁 바리케이드11,2
+150276,ep14_1_scarecrow_barricade_2,,,전쟁 바리케이드12,2
+150277,ep14_1_broken_orsha_flag1,,,부러진 오르샤 깃발1,2
+150278,ep14_1_broken_orsha_flag2,,,부러진 오르샤 깃발2,2
+150279,ep14_1_broken_royal_flag1_1,,,부러진 왕국군 깃발1,2
+150280,ep14_1_broken_royal_flag1_2,,,부러진 왕국군 깃발2,2
+150281,ep14_1_broken_royal_flag2,,,부러진 왕국군 깃발3,2
+150282,ep14_1_ballista2,,,발리스타2,2
+150283,ep14_1_f_castle_3_mq_3_Object_1,,,흐트러진 흔적,2
+150284,ep14_1_f_castle_3_mq_4_Object_1,,,블릭페릿의 텐트,2
+150285,npc_Kaoneela,,,섭정 카오닐라 헨류시,2
+150286,npc_Heoshaa,,,호위대장 헤오샤,2
+150287,npc_Ramin,,,대장군 라민,2
+150288,npc_Veliuona,,,마신 벨리우오나,2
+150289,npc_RoyalGuard,,,왕실 근위대,2
+150290,ep14_1_kingdomsodier,,,왕국군,2
+150291,npc_MasterHwarang,,minimap_man_archer,화랑 마스터,2
+150292,ep14_1_blackman_crystal,,,주시자의 검은 수정,2
+150293,ep14_1_Raid_Track_prop,,,레이드 연출용 프랍,2
+150294,ep14_1_kingdomsodier_hide,,,숨어 있는 병사,2
+150295,ep14_1_kingdomsodier_rescue,,,낙오된 정찰병,2
+150296,ep14_1_f_castle_3_mq_4_Object_2,,,블릭페릿의 텐트,2
+150297,ep14_1_f_castle_5_mq_1_Object_1,,,보급품 수레,2
+150298,EP14_1_FCASTLE2_MQ_4_FIELDSOLDIER,,,왕국군,2
+150299,EP14_1_FCASTLE2_MQ_5_FIELDSOLDIER,,,왕국군,2
+150300,EP14_1_FCASTLE2_MQ_6_FIELDSOLDIER,,,왕국군,2
 151000,closing_device,,,폐쇄장치,2
 151001,spell_crystal_red,,,마력이 맺힌 결정,2
 151002,spell_crystal_gem_red,,,홍염의 보석,2
@@ -798,13 +887,13 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151151,klaipeda_balloons,,,축제용 풍선 가판대,2
 151152,klaipeda_christmas_tree_npc,,,2주년 기념수,2
 151153,NPC_Golddog,,,황금개,2
-151154,treeday_1,,,묘목,2
-151155,treeday_2,,,묘목,2
-151156,treeday_3,,,성목,2
-151157,treeday_4,,,성목,2
-151158,treeday_5,,,풍성한 성목,2
-151159,treeday_6,,,풍성한 성목,2
-151160,treeday_7,,,풍성한 성목,2
+151154,treeday_1,,,[Lv.1] 식목일 기념 나무,2
+151155,treeday_2,,,[Lv.2] 식목일 기념 나무,2
+151156,treeday_3,,,[Lv.3] 식목일 기념 나무,2
+151157,treeday_4,,,[Lv.4] 식목일 기념 나무,2
+151158,treeday_5,,,[Lv.5] 식목일 기념 나무,2
+151159,treeday_6,,,[Lv.6] 식목일 기념 나무,2
+151160,treeday_7,,,[Lv.7] 식목일 기념 나무,2
 151161,treeday_square,,,화단,2
 151162,npc_2017wedding_1_f,,,2017 메이 웨딩 여자 NPC,2
 151163,npc_artefact_bouquet01,,,신부 부케,2
@@ -812,7 +901,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151165,playground_goalpost,,,축구 골대,2
 151166,strongbox_1_event,,minimap_event_3,금고상자,2
 151167,treasure_box5_event,,minimap_event_2,보물상자5,2
-151168,npc_moon,,,보름달,2
+151168,npc_moon,,minimap_event_1,보름달,2
 151169,stone_hill_show_name,,,돌 더미,2
 151170,dirt_heal_2_show_name,,,모래 더미,2
 151171,npc_kupole_1_event,,minimap_event_1,이벤트 큐폴1,2
@@ -823,6 +912,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151176,npc_kupole_6_event,,minimap_event_1,이벤트 큐폴6,2
 151177,npc_giltine_weapon_event,,minimap_event_1,이벤트 무기든 길티네,2
 151178,npc_goldpig,,minimap_event_1,황금돼지,2
+151180,gacha_cube1_event,,minimap_event_1,레티샤 시크릿 큐브,2
 152000,npc_husband_1,,,평범한 남편,2
 152001,npc_wife_1,,,평범한 아내,2
 152002,npc_oldman_1,,,평범한 노인,2
@@ -1111,6 +1201,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 153236,npc_Lapezard_statue,,,라페자드 조각상,2
 153237,npc_Lapemiter_statue,,,라페마이터 조각상,2
 153238,npc_Lapeman_statue,,,라페먼 조각상,2
+153240,npc_nicopolis_obj3,,,니코폴리스 조형물3,2
+153241,npc_nicopolis_obj4,,,이상한 조형물,2
 154000,velniasprison_warp,,minimap_portal,공간이동 마법진,2
 154001,velniasp_block,,,,2
 154002,npc_velniasp_mage,,,포탈마법사,2
@@ -1230,7 +1322,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154116,HiddenWall_60_60_500,,,,2
 154117,HiddenWall_40_40_500,,,,2
 154118,HiddenWall_25_25_500,,,,2
-154119,Event_FishingBox,,minimap_event_1,요하의 미꾸라지통,2
+154119,Event_FishingBox,,,요하의 미꾸라지통,2
 154120,npc_pajauta_1,,,파야우타,2
 154121,npc_MasterSheriff,,minimap_man_scout,셰리프 마스터,2
 154122,npc_MasterMatross,,minimap_man_archer,매트로스 마스터,2
@@ -1238,6 +1330,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154124,npc_MasterTigerHunter,,minimap_man_archer,산포 마스터,2
 154125,npc_kupole_7,,minimap_personal_house,큐폴7,2
 154129,npc_washstand_1,,minimap_event_1,분수대,2
+154130,npc_Ragana_shop,,minimap_event_1,마신 라가나의 환영,2
 155000,npc_crystal_machine,,,수정가공기계,2
 155001,farm49_sapling,,,신비한 묘목,2
 155002,dirt_ground,,,토양표본,2
@@ -1403,6 +1496,9 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 155169,d_startower_velnias_stone,,,마족의 장치,2
 155170,star_stone_01_small_startower,,,마력 잔류물,2
 155171,npc_crystal_machine_event,,minimap_event_1,이벤트 수정가공기계,2
+155172,kruvina_center_Q,,,크루비나 중앙장치,2
+155173,kruvina_center2_Q,,,거대 크루비나 중앙장치,2
+155174,dungeon_tower_1,,minimap_erosion,미지의 성역,2
 156000,npc_gintas,,,신도 긴타스,2
 156001,npc_margiris,,,마르기리스,2
 156002,npc_bocor_juta,,,보코르 유타,2
@@ -1561,9 +1657,24 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 157053,d_fantasylibrary_48_4_elt,,,환상도서관이동장치,2
 157054,halloween_scarecrow,,,할로윈 허수아비,2
 157055,magictrap_core_gimmick2,,,마력 핵,2
-157056,npc_junk_shop_2,,,[케도라 상단원]{nl}게랄다시아,2
-157057,npc_junk_shop_3,,,[케도라 상단원]{nl}게랄다손,2
+157056,npc_junk_shop_2,,minimap_kedora,[케도라 상단원]{nl}게랄다시아,2
+157057,npc_junk_shop_3,,minimap_kedora,[케도라 상단원]{nl}게랄다손,2
 157100,npc_sage_female_2,,,세이지 여2,2
+157101,blackman_crystal,,,주시자의 검은 수정,2
+157102,glacier_crystal_unique,,,유니크 글레이시어의 수정,2
+157103,glacier_crystal_legend,,,레전드 글레이시어의 수정,2
+157104,crusader_quest_npc_01,,,해진 주머니,2
+157105,npc_fedimian_merchant_5,,minimap_man_smith,대장장이 견습생,2
+157110,TOSHERO_WHEEL_MAPPATTERN_OBJECT,,,UnvisibleName,2
+157111,EP13_2_DPRISON2_MQ_5_LOSTARTICLE,,,떨어진 귀족의 분실물,2
+157112,EP13_2_DPRISON2_MQ_6_STORAGEBOX,,,고장 난 보관함,2
+157113,EP13_2_DPRISON2_MQ_7_SOULFRAGMENT,,,조각난 파울루스의 영혼,2
+157114,EP13_2_DPRISON3_TRAPSPOT,,,폭탄 설치 지점,2
+157115,ep14_1_npc_pajauta,,,파야우타,2
+157116,ep14_1_blackball,,,UnvisibleName,2
+157117,DelmoreCastleGate_SKL3_SKLOBJ,,,UnvisibleName,2
+157118,DelmoreCastleGate_SKL5_SKLOBJ,,,UnvisibleName,2
+157119,DelmoreCastleGate_KruvinaBullet,,,크루비나 탄환,2
 158000,npc_paladin_follower1_3_copy,,minimap_team,팀 배틀리그,2
 158001,npc_friar_02_blacksmith,,minimap_man_smith,수도사2 대장장이,2
 160000,h_GuildHousing_farmer_girl,,,농장 관리인,2
@@ -1584,11 +1695,157 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160015,npc_Xmas_Evt_NPC2,,minimap_event_1,크리스마스 NPC2,2
 160016,rokas_pot3_small_E1,,,새해 복항아리,2
 160018,Hiddennpc_RiftMode_Start,,,차원 붕괴 지점 입장,2
-160019,event_2001_cat,,,낚시터 고양이,2
+160019,event_2001_cat,,minimap_event_1,낚시터 고양이,2
 160020,HiddenWall_moring,,,,2
 160021,MORINGPONIA_HARD_PURIFYING_STONE,,,정화석,2
 160022,WEEKLY_PURIFYING_STONE,,,정화석,2
 160023,npc_kupole_3_event_2004,,minimap_event_1,식목일 이벤트 도우미,2
+160024,NPC_goddess_Roulette,,minimap_event_1,[이벤트] 여신의 룰렛,2
+160025,ANCIENT_QUEST_OBJECT,,minimap_portal,정화의 제단,2
+160026,ANCIENT_QUEST_OBJECT2,,minimap_portal,정화의 제단,2
+160027,Glacier_magictrap_core,,,마력 보주,2
+160028,Glacier_Spear,,,,2
+160029,Glacier_HiddenTrigger,,,,2
+160030,npc_Irredians_TelHarsha,,,텔하르샤,2
+160031,PillarOfIce,,,얼음 기둥,2
+160032,Hiddennpc_Challenge_HardMode_Reward_Multiple,,,배수권,2
+160033,Hiddennpc_Challenge_HardMode_Reward_Exit,,,모드 종료,2
+160034,npc_elevator,,minimap_elevator,맵 이동 장치,2
+160035,Glacier_ColdBlast_Obj,,,한기 폭파 활성화 장치,2
+160036,Hiddennpc_ExpertChallenge_Start,,,챌린지 모드 : 분열 특이점 입장,2
+160037,MORINGPONIA_HARD_SOLO_PURIFYING_STONE,,,정화석,2
+160038,HiddenWall_moring2,,,,2
+160039,FIELD_PURIFYING_STONE,,,정화석,2
+160040,Giltine_Raid_Cristalobj,,,봉옥,2
+160044,npc_huevill_female_1_Ev,,minimap_event_1,[5주년] 특별한 케도라 상인,2
+160046,npc_baubas,,,마신 바우바스,2
+160047,npc_Ragana_EP13,,,마신 라가나,2
+160048,weekly_flower_yellow,,,,2
+160049,weekly_flower_red,,,,2
+160050,weekly_flower_white,,,,2
+160051,Ev_Npc_barrack_snowman,,minimap_event_1,[겨울축제] 야크맘보 눈사람,2
+160052,Ev_Npc_baby_marnoks,,minimap_event_1,[1주년] 말순이,2
+160053,npc_ARQ_master,,minimap_man_archer,아퀴버지어 마스터,2
+160054,npc_CLO_master,,minimap_man_scout,클로운 마스터,2
+160055,Hiddennpc_Challenge_Auto_HardMode_Reward_Multiple,,,추가 보상권,2
+160056,Event_supply_NPC_1,,minimap_event_1,[이벤트]왕국 재건단 보급관,2
+160057,Event_supply_NPC_2,,minimap_event_1,[이벤트]왕국 재건단 수습 보급병,2
+160058,Event_supply_NPC_3,,minimap_event_1,[이벤트]왕국 재건단 보급병,2
+160059,Event_supply_NPC_4,,,보급관의 배낭,2
+160060,Event_supply_NPC_5,,,보급관의 낡은 상자,2
+160061,Event_supply_NPC_6,,minimap_event_1,왕국 재건단 보급품 수레,2
+160062,Event_supply_NPC_7,,minimap_event_1,[이벤트] 오르샤 피난민,2
+160063,Hiddennpc_Challenge_Auto_End,,,모드 종료,2
+160064,Hiddennpc_Mythic_Auto_Reward_Multiple,,,성물 레이드 배수권,2
+160065,Hiddennpc_MGame_EndPortal,,,종료,2
+160066,EVENT_dievdirbys_m,,minimap_event_1,[이벤트] 딥디르비 파견원,2
+160067,EVENT_goddess_statue,,minimap_event_1,[이벤트] 오래된 여신상,2
+160070,npc_huevill_female_1_Ev_2,,minimap_event_1,[화이트데이 이벤트]{nl}큐비트,2
+160071,npc_RUN_masterEv,,minimap_event_1,[이벤트]{nl}룬캐스터 마스터,2
+160072,npc_MIKO_masterEv,,minimap_event_1,[이벤트]{nl}무녀 마스터,2
+160073,npc_SHM_masterEv,,minimap_event_1,[이벤트]{nl}섀도우맨서 마스터,2
+160074,EV_SCS_M1,,minimap_event_1,[이벤트] 마을 자경단,2
+160075,Giltine_Raid_Cristalobj2,,,봉옥,2
+160078,leather_bag_event,,,[이벤트]{nl}여행자의 짐꾸러미,2
+160079,Hiddennpc_SoloDungeon_Mini_End,,,모드 종료,2
+160080,Event_Camping_npc,,minimap_event_1,[이벤트] 봄 캠핑{nl} 여행자,2
+160081,Event_Camping_Ax_Man_npc,,minimap_event_1,[이벤트] 게으른 나무꾼,2
+160082,Event_2105_bonfir,,minimap_event_1,[이벤트] 캠프파이어,2
+160085,Hiddennpc_Mythic_Auto_Hard_Reward_Multiple,,,추가 보상권,2
+160086,boss_Vasilissa_Center_Hidden_Mon,,,,2
+160088,npc_kupole_Bernice,,,[에테르 젬 강화]{nl} 큐폴,2
+160089,Event_2106_Summer_npc,,minimap_event_1,[21Summer] 이벤트 안내인,2
+160090,npc_hawk_vibora,,,,2
+160091,boss_Vasilissa_Hidden_Mon_PoisonSmog,,,,2
+160092,Test_Server_Shop1,,minimap_event_1,[큐폴]{nl}테스트 서버 아이템 상점 1,2
+160093,Test_Server_Shop2,,minimap_event_1,[큐폴]{nl}테스트 서버 아이템 상점 2,2
+160094,Test_Server_Shop3,,minimap_event_1,[큐폴]{nl}테스트 서버 아이템 상점 3,2
+160096,Event_2108_Npc,,minimap_event_1,[이벤트]{nl}신출내기 고고학자,2
+160097,npc_toucan_vibora,,,,2
+160098,BattleField_HiddenMonster,,,,2
+160101,weekly_Asiomage_ArmorBrake,,,,2
+160103,Event_2110_Npc,,minimap_event_1,[이벤트]{nl}유령 소녀,2
+160104,Event_2110_npc_cauldron_stew,,minimap_event_1,[이벤트]{nl}호박 스튜 솥,2
+160105,Event_2110_Npc2,,minimap_event_1,[이벤트] 폐도 피난민,2
+160106,Event_2111_npc,,minimap_event_1,[이벤트]{nl}마을 청년,2
+160107,npc_Move_to_Floor_2,,,,2
+160108,npc_Move_to_Floor_1,,,,2
+160109,boss_RevivalPaulius_Center_Hidden_Mon,,,,2
+160110,boss_RevivalPaulius_Eyes_Hidden_Mon,,,UnvisibleName,2
+160111,event_2112_npc_kupole,,minimap_event_1,[이벤트] 큐폴 루타,2
+160112,EarringRaidGabiaPadHiddenMon,,,,2
+160113,boss_RevivalPaulius_ballista_Arrow_Box,,,발리스타 화살 더미,2
+160114,boss_RevivalPaulius_ballista_Arrow_Pos,,,UnvisibleName,2
+160115,boss_RevivalPaulius_Kruvina_Pillar,,,UnvisibleName,2
+160116,boss_RevivalPaulius_incomplete_kruvina,,,UnvisibleName,2
+160117,boss_RevivalPaulius_RockFall_CamHidden_Mon,,,,2
+160118,earring_raid_npc_gabia_goddess,,,불꽃의 기억,2
+160119,Event_2201_Npc,,minimap_event_1,[이벤트]{nl}신년맞이 리틀벅,2
+160120,archeology_compass_arrow,,minimap_portal,,2
+160121,gacha_machine,,minimap_man_tpshop,여신의 큐브,2
+160122,master_Lama_npc,,minimap_man_cleric,[라마 마스터] {nl} 아스티유스,2
+160123,Event_bonfire_npc,,minimap_event_1,모닥불,2
+160124,boss_Jellyzele_find_pattern_Mon,,,,2
+160125,Event_2204_hidden_npc,,,,2
+160126,ep14_2_red_crystal,,,크루비나가 깃든 붉은 수정,2
+160127,raid_jellyzele_npc_frair_f_03,,,전승자 니욜레,2
+160128,ep14_2_Object_root_crystal_broken,,,부서진 신수의 뿌리 수정,2
+160129,ep14_2_Object_UnknownTriplehelix,,,머티니스,2
+160130,toy_ep14zemina_cloud,,, ,2
+160135,raid_castle_ep14_2_soldier6_knockdown,,,쓰러진 병사,2
+160136,boss_Spreader_Kruvina_Pillar,,,UnvisibleName,2
+160137,event_2207_npc_kupole,,minimap_event_1,[이벤트]{nl}화합의 도우미,2
+160138,Spreader_hidden_NPC,,minimap_portal,,2
+160139,toy_laima_flag,,icon_item_divine_flag,라이마 깃발,2
+160140,toy_ep14rider,,, ,2
+160141,Falouros_Sphere_Driving_HiddenMonster,,,,2
+160142,Falouros_Sphere_Driving_HiddenMonster_Electric,,,,2
+160143,Falouros_TransmutationPeople_StartNPC,,,,2
+160144,ep15_edmonda,,,에드문다스,2
+160145,ep15_1_DevilgloveCapsule,,,데블글로브가 들어있는 캡슐,2
+160146,master_JAG_npc,,minimap_man_scout,[재규어 마스터]{nl}엘 이트샤,2
+160147,guild_baubas_raid_start_npc,,,여신 라다,2
+160148,boss_roze_kupole_light_mon,,,,2
+160149,roze_kruvina_canine,,,UnvisibleName,2
+160150,ep15_1_bracken,,,붉은 고사리,2
+160151,ep15_1_bottle,,,아우슈리네의 호리병,2
+160152,roze_raid_strat_npc,,minimap_event_1,,2
+160153,roze_multi_kruvina_canine,,,UnvisibleName,2
+160154,ep15_1_sealstone,,,봉인석,2
+160155,raid_auto_sweep_npc,,minimap_event_1,자동 소탕,2
+160156,master_SpearMaster_npc,,minimap_man_scout,[신극 마스터]{nl}단아,2
+160157,Tos_Event_Coin_NPC,,minimap_event_1,TOS 주화 안내원,2
+160158,tb_jellyzele_rising_reefpiles,,,UnvisibleName,2
+160159,Event_2304_ARBOR_DAY_NPC,,minimap_event_1,[이벤트]새싹 교환원{nl},2
+160160,bridge_wailing_section1_npc,,,1구역,2
+160161,bridge_wailing_section2_npc,,,2구역,2
+160162,bridge_wailing_section3_npc,,,3구역,2
+160163,tree_1,,,묘목,2
+160164,tree_2,,,성목,2
+160165,bridge_wailing_hidden_npc,,,UnvisibleName,2
+160166,Hiddennpc_BridgeWailing_Reward_Multiple,,,배수권,2
+160167,tosw_colony_flag_klapeda,,icon_item_divine_flag,클라페다의 깃발,2
+160168,tosw_colony_flag_orsha,,icon_item_divine_flag,오르샤의 깃발,2
+160169,tosw_colony_flag_fedimian,,icon_item_divine_flag,페디미안의 깃발,2
+160170,master_Engineer_npc,,minimap_man_archer,[엔지니어 마스터]{nl}마가렛 이네자,2
+160171,upinis_illusion_wedge,,,,2
+160172,upinis_white_black_gate,,,,2
+160173,upinis_sap,,,수액,2
+160174,upinis_sleep_powder,,,수면 가루,2
+160175,guild_agit_extension_trans_dummy_npc_agit_in,,,아지트 내부,2
+160176,guild_agit_extension_trans_dummy_npc_agit_out,,,아지트 외부,2
+160177,guild_agit_extension_trans_dummy_npc_board,,,공헌도 알림판,2
+160178,Tos_Coin_Shop_NPC,,minimap_event_1,오래된 여신의 증표 상점,2
+160179,upinis_raid_strat_npc,,minimap_event_1,,2
+160180,slogutis_raid_strat_npc,,minimap_event_1,,2
+160181,guild_fallendragoon_raid_start_npc,,,비석,2
+160182,hiddennpc_solo_reward_multiple,,,배수권,2
+160183,slogutis_projectile,,,,2
+160184,papaya_colony_flag_klapeda,,icon_item_divine_flag,클라페다의 깃발,2
+160185,papaya_colony_flag_orsha,,icon_item_divine_flag,오르샤의 깃발,2
+160186,papaya_colony_flag_pedimian,,icon_item_divine_flag,페디미안의 깃발,2
+160187,event_2023_moon_rabit_start_npc,"라핀디온은 이전에도 환상도서관의 책장 사이에서 살았습니다. 바이보라 여신과 큐폴들은 굳이 잡으려 들지 않았는데, 책장속 2차원에 거주하는 마법생물이기에 위험하다 싶으면 그리로 숨는 것이 가장 큰 이유였고, 큰 피해를 주는 일도 없기 때문이었습니다. 그 중 일부는 바이보라 여신에게 봉사하는 개체도 존재했고 말입니다. 그러나 신수의 날과 그에 이어진 일련의 사태는 이 모든 일의 양상을 완전히 바꾸었습니다.",mon_lapindion,달토끼,2
+160188,event_2023_moon_rabit_whorfzone,,minimap_portal,워프 마법진,2
 161000,E_statue_zemina,,minimap_goddess,여신 제미나의 상,2
 161001,npc_kupole_Velcoffer,,,큐폴 시모나,2
 161002,npc_Teliavelis,,minimap_man_smith,대장장이 테리아베리스,2
@@ -1613,6 +1870,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 161022,uniq_id_nicopolis_mana_effect_mon,,,,2
 161023,uniq_id_nicopolis_mana_effect_onwer,,,,2
 161024,uniq_id_nicopolis_boss_room_potal,,,,2
+300023,pcskill_tutu,몬스터,icon_item_nothing,금색 투투,2
+300033,pcskill_DesperateDefense, ,icon_item_nothing,데스퍼레이트 디펜스 깃발,2
 2000127,gimmick_fireball_E1,몬스터,,화끈한 사탕,2
 2000128,farm47_circle_01_E1,몬스터,,마법진,2
 2000129,halloween_scarecrow_E1,몬스터,,할로윈 허수아비,2

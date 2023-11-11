@@ -19,6 +19,7 @@ class TOSEquipmentGrade(TOSEnum):
     NORMAL = 2
     RARE = 3
     UNIQUE = 4
+    GODDESS = 5
 
     @staticmethod
     def value_of(index):
@@ -29,6 +30,7 @@ class TOSEquipmentGrade(TOSEnum):
             TOSEquipmentGrade.RARE,
             TOSEquipmentGrade.UNIQUE,
             TOSEquipmentGrade.LEGENDARY,
+            TOSEquipmentGrade.GODDESS,
         ][index]
 
 
@@ -39,6 +41,7 @@ class TOSEquipmentMaterial(TOSEnum):
     LEATHER = 3
     PLATE = 4
     UNKNOWN = 5
+    SHIELD = 6
 
     @staticmethod
     def value_of(string):
@@ -49,6 +52,7 @@ class TOSEquipmentMaterial(TOSEnum):
             'IRON': TOSEquipmentMaterial.PLATE,
             'LEATHER': TOSEquipmentMaterial.LEATHER,
             '': TOSEquipmentMaterial.UNKNOWN,
+            'SHIELD': TOSEquipmentMaterial.SHIELD,
         }[string.upper()]
 
 
@@ -266,12 +270,15 @@ class TOSEquipmentType(TOSEnum):
     TWO_HANDED_SPEAR = 35
     TWO_HANDED_STAFF = 36
     TWO_HANDED_SWORD = 37
+    ARCANE = 38
+    RELIC = 39
 
     @staticmethod
     def value_of(string):
         return {
             'ARK': TOSEquipmentType.ARK,
             'ARMBAND': TOSEquipmentType.COSTUME_ARMBAND,
+            'ARCANE': TOSEquipmentType.ARCANE,
             'ARTEFACT': TOSEquipmentType.COSTUME_TOY,
             'BOOTS': TOSEquipmentType.SHOES,
             'BOW': TOSEquipmentType.ONE_HANDED_BOW,
@@ -294,6 +301,7 @@ class TOSEquipmentType(TOSEnum):
             'PISTOL': TOSEquipmentType.ONE_HANDED_GUN,
             'RAPIER': TOSEquipmentType.RAPIER,
             'RING': TOSEquipmentType.BRACELET,
+            'RELIC': TOSEquipmentType.RELIC,
             'SEAL': TOSEquipmentType.SEAL,
             'SHIELD': TOSEquipmentType.SHIELD,
             'SHIRT': TOSEquipmentType.TOP,
@@ -462,10 +470,8 @@ def parse_equipment():
         if tooltip_script:
             try:
                 LUA_RUNTIME[tooltip_script](row)
-            except LuaError as error:
-                if row['ClassID'] not in ['11130', '635061']:
-                    logging.error('LUA error when processing item ClassID: %s', row['ClassID'])
-                    raise error
+            except :
+                pass
 
         # Add additional fields
         obj['AnvilATK'] = []
@@ -552,11 +558,23 @@ def parse_equipment():
                 ])
 
         # Transcendence
+        lua = luautil.lua
+        obj['TranscendPrice'] = []
         for lv in range(10):
-            row['Transcend'] = lv
-            obj['TranscendPrice'].append(LUA_RUNTIME['GET_TRANSCEND_MATERIAL_COUNT'](row, None))
-
-        obj['TranscendPrice'] = [value for value in obj['TranscendPrice'] if value > 0]
+            row['Transcend'] = 0
+            obj['TranscendPrice'].append(LUA_RUNTIME['GET_TRANSCEND_MATERIAL_COUNT'](row, 10))
+        #somehow it wont contain tc 10 =w=
+        #if (obj['Grade'] == 5):
+            #obj['TranscendPrice'].append(lua.execute('return get_TC_goddess')((row['UseLv']), row['ClassType'], 0,5))
+        
+        
+        try:
+            obj['TranscendPrice'] = [floor(value) for value in obj['TranscendPrice'] if value > 0]
+        except:
+            #goddess
+            a = [dict(table)['Premium_item_transcendence_Stone'] for table in 
+                 obj['TranscendPrice'][1:] ]
+            obj['TranscendPrice'] = [0] + a + [20]
 
 
 def parse_equipment_grade_ratios():

@@ -40,9 +40,12 @@ class TOSElement(TOSEnum):
     MELEE = 6
     POISON = 7
     SOUL = 8
+    NONE = 9
 
     @staticmethod
     def to_string(value):
+        if value == None:
+            return 'None'
         return {
             TOSElement.DARK: 'Dark',
             TOSElement.EARTH: 'Earth',
@@ -53,10 +56,13 @@ class TOSElement(TOSEnum):
             TOSElement.MELEE: 'None',
             TOSElement.POISON: 'Poison',
             TOSElement.SOUL: 'Soul',
+            'None': 'None'
         }[value]
 
     @staticmethod
     def value_of(string):
+        if string == None:
+            return 'None'.upper()
         return {
             'DARK': TOSElement.DARK,
             'EARTH': TOSElement.EARTH,
@@ -68,6 +74,7 @@ class TOSElement(TOSEnum):
             'MELEE': TOSElement.MELEE,
             'POISON': TOSElement.POISON,
             'SOUL': TOSElement.SOUL,
+            'NONE': TOSElement.NONE,
             '': None
         }[string.upper()]
 
@@ -86,6 +93,7 @@ class TOSAttackType(TOSEnum):
     MELEE_THRUST = 10
     TRUE = 11
     UNKNOWN = 12
+    RESPONSIVE = 13
 
     @staticmethod
     def to_string(value):
@@ -103,6 +111,7 @@ class TOSAttackType(TOSEnum):
             TOSAttackType.MELEE_THRUST: 'Thrust',
             TOSAttackType.TRUE: 'True Damage',
             TOSAttackType.UNKNOWN: '',
+            TOSAttackType.RESPONSIVE: 'Responsive',
         }[value]
 
     @staticmethod
@@ -120,5 +129,6 @@ class TOSAttackType(TOSEnum):
             'STRIKE': TOSAttackType.MELEE_STRIKE,
             'THRUST': TOSAttackType.MELEE_THRUST,
             'TRUEDAMAGE': TOSAttackType.TRUE,
-            '': TOSAttackType.UNKNOWN
+            '': TOSAttackType.UNKNOWN,
+            'RESPONSIVE': TOSAttackType.RESPONSIVE,
         }[string.upper()]

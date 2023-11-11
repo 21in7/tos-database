@@ -22,7 +22,6 @@ URL_PATCH = None
 URL_PATCH_iTOS = 'http://drygkhncipyq8.cloudfront.net/toslive/patch/'
 URL_PATCH_jTOS = 'http://d3bbj7hlpo9jjy.cloudfront.net/live/patch/'
 URL_PATCH_kTOS = 'http://d31k064uwo645x.cloudfront.net/patchkor/'
-URL_PATCH_kTEST = 'http://d23z5ksk9uuuh6.cloudfront.net/tostest/patchkor/'
 URL_PATCH_twTOS = 'http://tospatch.x2game.com.tw/live/patch/'
 
 PATH_INPUT = None
@@ -75,7 +74,6 @@ def region(region):
     URL_PATCH = URL_PATCH_iTOS if region == TOSRegion.iTOS else URL_PATCH
     URL_PATCH = URL_PATCH_jTOS if region == TOSRegion.jTOS else URL_PATCH
     URL_PATCH = URL_PATCH_kTOS if region == TOSRegion.kTOS else URL_PATCH
-    URL_PATCH = URL_PATCH_kTEST if region == TOSRegion.kTEST else URL_PATCH
     URL_PATCH = URL_PATCH_twTOS if region == TOSRegion.twTOS else URL_PATCH
 
     PATH_INPUT = os.path.join(PATH_PARSER, 'input', region_str)

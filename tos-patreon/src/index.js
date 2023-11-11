@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
-const sharedVariables = require("../../variables");
+//const sharedVariables = require("../../variables");
 const url = require('url');
 
 // Add timestamp to logs

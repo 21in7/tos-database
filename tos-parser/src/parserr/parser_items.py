@@ -44,6 +44,8 @@ class TOSItemGroup(TOSEnum):
     SUBWEAPON = 29
     UNUSED = 30
     WEAPON = 31
+    ARCANE = 32
+    RELIC = 33
 
     @staticmethod
     def value_of(string):
@@ -51,6 +53,7 @@ class TOSItemGroup(TOSEnum):
             'ARMBAND': TOSItemGroup.ARMBAND,
             'ARMOR': TOSItemGroup.ARMOR,
             'ARK': TOSItemGroup.ARK,
+            'ARCANE': TOSItemGroup.ARCANE,
             'BOOK': TOSItemGroup.BOOK,
             'CARD': TOSItemGroup.CARD,
             'COLLECTION': TOSItemGroup.COLLECTION,
@@ -74,6 +77,7 @@ class TOSItemGroup(TOSEnum):
             'PREMIUM': TOSItemGroup.PREMIUM,
             'QUEST': TOSItemGroup.QUEST,
             'RECIPE': TOSItemGroup.RECIPE,
+            'RELIC': TOSItemGroup.RELIC,
             'SEAL': TOSItemGroup.SEAL,
             'SPECIALMATERIAL': TOSItemGroup.SPECIALMATERIAL,
             'SUBEXPORB': TOSItemGroup.SUBEXPORB,

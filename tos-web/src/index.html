@@ -27,7 +27,7 @@
 
   <!-- Trigger browser 'Translate' button -->
   <script type="application/javascript">
-    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
         lang = Object
           .keys(lang)
           .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
@@ -50,7 +50,6 @@
     {
       "iTOS": {"rebuild": true, "version": "patch_XXXXXX_release_YYYYYY"},
       "jTOS": {"rebuild": true, "version": "patch_XXXXXX_release_YYYYYY"},
-      "kTEST": {"rebuild": true, "version": "patch_XXXXXX_release_YYYYYY"},
       "kTOS": {"rebuild": true, "version": "patch_XXXXXX_release_YYYYYY"},
       "twTOS": {"rebuild": false, "version": "patch_XXXXXX_release_YYYYYY"}
     }
@@ -133,7 +132,6 @@
               <a class="dropdown-item" href="/itos/#{url}#" title="iTOS">iTOS</a>
               <a class="dropdown-item" href="/jtos/#{url}#" title="jTOS">jTOS</a>
               <a class="dropdown-item" href="/ktos/#{url}#" title="kTOS">kTOS</a>
-              <a class="dropdown-item" href="/ktest/#{url}#" title="kTEST">kTEST</a>
             </div>
           </li>
         </ul>

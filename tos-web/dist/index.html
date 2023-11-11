@@ -5,7 +5,8 @@
   <meta name="description" content="#{seo-description}#">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <base href="https://21in7.github.io/tos-database/">  <link rel="manifest" href="/manifest.json">
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
   <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
   <title>#{seo-title}#</title>
 
@@ -26,7 +27,7 @@
 
   <!-- Trigger browser 'Translate' button -->
   <script type="application/javascript">
-    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
         lang = Object
           .keys(lang)
           .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
@@ -49,7 +50,6 @@
     {
       "iTOS": {"rebuild": true, "version": "patch_XXXXXX_release_YYYYYY"},
       "jTOS": {"rebuild": true, "version": "patch_XXXXXX_release_YYYYYY"},
-      "kTEST": {"rebuild": true, "version": "patch_XXXXXX_release_YYYYYY"},
       "kTOS": {"rebuild": true, "version": "patch_XXXXXX_release_YYYYYY"},
       "twTOS": {"rebuild": false, "version": "patch_XXXXXX_release_YYYYYY"}
     }
@@ -62,7 +62,7 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
 
-<link rel="stylesheet" href="styles.d29184dc70512069ca7f.css"></head>
+</head>
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
@@ -132,7 +132,6 @@
               <a class="dropdown-item" href="/itos/#{url}#" title="iTOS">iTOS</a>
               <a class="dropdown-item" href="/jtos/#{url}#" title="jTOS">jTOS</a>
               <a class="dropdown-item" href="/ktos/#{url}#" title="kTOS">kTOS</a>
-              <a class="dropdown-item" href="/ktest/#{url}#" title="kTEST">kTEST</a>
             </div>
           </li>
         </ul>
@@ -150,5 +149,5 @@
     document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
   </script>
 
-<script type="text/javascript" src="runtime.ec2944dd8b20ec099bf3.js"></script><script type="text/javascript" src="polyfills.9b69086c4e7a04ee5afb.js"></script><script type="text/javascript" src="main.5e4f2c21382ccf9202f0.js"></script></body>
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
 </html>

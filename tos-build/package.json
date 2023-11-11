@@ -1,5 +1,6 @@
 {
   "name": "tos-deploy",
+  "homepage": "https://21in7.github.io/tos-database/",
   "version": "1.0.0",
   "description": "",
   "main": "src/deploy.js",
@@ -15,6 +16,7 @@
     "cloudflare": "^2.4.1",
     "console-stamp": "^0.2.7",
     "fs-extra": "^7.0.1",
+    "nodejieba": "^2.3.0",
     "sync-request": "^6.0.0",
     "uglify-es": "^3.3.9",
     "xml2json": "^0.11.2"

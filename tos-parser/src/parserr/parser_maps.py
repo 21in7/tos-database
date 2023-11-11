@@ -174,8 +174,8 @@ def parse_links_items():
                         drops.append({
                             'ItemClassName': zone_drop['ItemClassName'],
                             'DropRatio': int(zone_drop['DropRatio']) / 100.0,
-                            'Money_Max': int(zone_drop['Money_Max']),
-                            'Money_Min': int(zone_drop['Money_Min']),
+                            #'Money_Max': int(zone_drop['Money_Max']),
+                            #'Money_Min': int(zone_drop['Money_Min']),
                         })
 
                     # Note: drop groups work like a loot table
@@ -203,24 +203,27 @@ def parse_links_items():
                             drops.append(group_drop)
 
                 for drop in drops:
-                    item_link = {
-                        'Chance': drop['DropRatio'],
-                        'Item': globals.get_item_link(drop['ItemClassName']),
-                        'Quantity_MAX': drop['Money_Max'],
-                        'Quantity_MIN': drop['Money_Min'],
-                    }
+                    try:
+                        item_link = {
+                            'Chance': drop['DropRatio'],
+                            'Item': globals.get_item_link(drop['ItemClassName']),
+                            'Quantity_MAX': drop['Money_Max'],
+                            'Quantity_MIN': drop['Money_Min'],
+                        }
 
-                    map_link = {
-                        'Chance': drop['DropRatio'],
-                        'Map': globals.get_map_link(map['$ID_NAME']),
-                        'Quantity_MAX': drop['Money_Max'],
-                        'Quantity_MIN': drop['Money_Min'],
-                    }
+                        map_link = {
+                            'Chance': drop['DropRatio'],
+                            'Map': globals.get_map_link(map['$ID_NAME']),
+                            'Quantity_MAX': drop['Money_Max'],
+                            'Quantity_MIN': drop['Money_Min'],
+                        }
 
-                    globals.link(
-                        map_link['Map'].entity, 'Link_Items', map_link,
-                        item_link['Item'].entity, 'Link_Maps', item_link
-                    )
+                        globals.link(
+                            map_link['Map'].entity, 'Link_Items', map_link,
+                            item_link['Item'].entity, 'Link_Maps', item_link
+                        )
+                    except:
+                        logging.debug('Map {} or item {} not found'.format(map['$ID_NAME'], drop['ItemClassName']))
 
         except IOError:
             continue
@@ -266,19 +269,22 @@ def parse_links_maps():
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'map.ies')
 
     with open(ies_path, 'rb') as ies_file:
-        for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
-            if len(row['PhysicalLinkZone']) == 0:
-                continue
+        try:
+            for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+                if len(row['PhysicalLinkZone']) == 0:
+                    continue
 
-            map = globals.maps_by_name[row['ClassName']]
-            map['Link_Maps'] = [globals.get_map_link(name) for name in row['PhysicalLinkZone'].split('/')]
+                map = globals.maps_by_name[row['ClassName']]
+                map['Link_Maps'] = [globals.get_map_link(name) for name in row['PhysicalLinkZone'].split('/')]
 
-            map_link = globals.get_map_link(map['$ID_NAME'])
+                map_link = globals.get_map_link(map['$ID_NAME'])
 
             # Floors
-            if map['WorldMap'] is not None and map['WorldMap'][2] > 0:
-                map_ground_floor = globals.maps_by_position['-'.join([str(i) for i in (map['WorldMap'][0:2] + [1])])]
-                map_ground_floor['Link_Maps_Floors'].append(map_link)
+                if map['WorldMap'] is not None and map['WorldMap'][2] > 0:
+                    map_ground_floor = globals.maps_by_position['-'.join([str(i) for i in (map['WorldMap'][0:2] + [1])])]
+                    map_ground_floor['Link_Maps_Floors'].append(map_link['$ID'])
+        except:
+            pass
 
 
 def parse_links_npcs():

@@ -94,4 +94,5 @@ def parse_links_items_bonus_stat(stat):
         'MaxSta_BM': 'Stamina',
         'MaxAccountWarehouseCount': 'Team Storage Slots',
         'MaxWeight_Bonus': 'Weight Limit',
+        'MaxWeight_BM': 'Weight Limit'
     }[stat]

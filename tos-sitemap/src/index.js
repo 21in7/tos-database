@@ -13,12 +13,11 @@ function log(...msg) {
 
 const REGION_iTOS = 'iTOS';
 const REGION_jTOS = 'jTOS';
-const REGION_kTEST = 'kTEST';
 const REGION_kTOS = 'kTOS';
 const REGION_twTOS = 'twTOS';
 const REGION = process.argv[2] || REGION_iTOS;
 
-if ([REGION_iTOS, REGION_jTOS, REGION_kTOS, REGION_kTEST, REGION_twTOS].indexOf(REGION) === -1)
+if ([REGION_iTOS, REGION_jTOS, REGION_kTOS, REGION_twTOS].indexOf(REGION) === -1)
     throw Error('Invalid region: ' + REGION);
 
 let folder_assets = path.join('..', 'tos-build', 'dist', 'assets');
@@ -42,7 +41,7 @@ let files = fs.readdirSync(folder_data);
             .data
             .forEach((row) => {
                 let url = xml.ele('url');
-                    url.ele('loc', 'https://21in7.github.io//' + REGION.toLowerCase() + '/database/' + dataset + '/' + row.$ID + '/');
+                    url.ele('loc', 'https://21in7.github.io/tos-database/' + REGION.toLowerCase() + '/database/' + dataset + '/' + row.$ID + '/');
                     url.ele('lastmod', new Date().toISOString().slice(0, 10));
                     url.ele('changefreq', 'weekly');
             });
@@ -50,7 +49,7 @@ let files = fs.readdirSync(folder_data);
 
 // Add additional URLs
 let url = xml.ele('url');
-    url.ele('loc', 'https://21in7.github.io//' + REGION.toLowerCase() + '/simulator');
+    url.ele('loc', 'https://21in7.github.io/tos-database/' + REGION.toLowerCase() + '/simulator');
     url.ele('lastmod', new Date().toISOString().slice(0, 10));
     url.ele('changefreq', 'weekly');
 

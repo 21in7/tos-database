@@ -44,6 +44,7 @@ class TOSMonsterRank(TOSEnum):
     NORMAL = 5
     NPC = 6
     SPECIAL = 7
+    MONSTER = 8
 
     @staticmethod
     def value_of(string):
@@ -56,6 +57,7 @@ class TOSMonsterRank(TOSEnum):
             'NORMAL': TOSMonsterRank.NORMAL,
             'NPC': TOSMonsterRank.NPC,
             'SPECIAL': TOSMonsterRank.SPECIAL,
+            'MONSTER': TOSMonsterRank.MONSTER,
         }[string.upper()]
 
 
@@ -145,28 +147,28 @@ def parse_monsters(file_name):
             obj['Race'] = TOSMonsterRace.value_of(row['RaceType'])
             obj['Rank'] = TOSMonsterRank.value_of(row['MonRank'])
             obj['Size'] = TOSMonsterSize.value_of(row['Size']) if row['Size'] else None
-            obj['EXP'] = int(LUA_RUNTIME['SCR_GET_MON_EXP'](row)) if obj['Level'] < 999 else 0
-            obj['EXPClass'] = int(LUA_RUNTIME['SCR_GET_MON_JOBEXP'](row)) if obj['Level'] < 999 else 0
+            #obj['EXP'] = int(LUA_RUNTIME['SCR_GET_MON_EXP'](row)) if obj['Level'] < 999 else 0
+            #obj['EXPClass'] = int(LUA_RUNTIME['SCR_GET_MON_JOBEXP'](row)) if obj['Level'] < 999 else 0
             obj['Stat_CON'] = int(row['CON'])
             obj['Stat_DEX'] = int(row['DEX'])
             obj['Stat_INT'] = int(row['INT'])
             obj['Stat_SPR'] = int(row['MNA'])
             obj['Stat_STR'] = int(row['STR'])
-            obj['Stat_HP'] = int(LUA_RUNTIME['SCR_Get_MON_MHP'](row))
-            obj['Stat_SP'] = int(LUA_RUNTIME['SCR_Get_MON_MSP'](row))
-            obj['Stat_ATTACK_MAGICAL_MAX'] = int(LUA_RUNTIME['SCR_Get_MON_MAXMATK'](row))
-            obj['Stat_ATTACK_MAGICAL_MIN'] = int(LUA_RUNTIME['SCR_Get_MON_MINMATK'](row))
-            obj['Stat_ATTACK_PHYSICAL_MAX'] = int(LUA_RUNTIME['SCR_Get_MON_MAXPATK'](row))
-            obj['Stat_ATTACK_PHYSICAL_MIN'] = int(LUA_RUNTIME['SCR_Get_MON_MINPATK'](row))
-            obj['Stat_DEFENSE_MAGICAL'] = int(LUA_RUNTIME['SCR_Get_MON_MDEF'](row))
-            obj['Stat_DEFENSE_PHYSICAL'] = int(LUA_RUNTIME['SCR_Get_MON_DEF'](row))
-            obj['Stat_Accuracy'] = int(LUA_RUNTIME['SCR_Get_MON_HR'](row))
-            obj['Stat_Evasion'] = int(LUA_RUNTIME['SCR_Get_MON_DR'](row))
-            obj['Stat_CriticalDamage'] = int(LUA_RUNTIME['SCR_Get_MON_CRTATK'](row))
-            obj['Stat_CriticalDefense'] = int(LUA_RUNTIME['SCR_Get_MON_CRTDR'](row))
-            obj['Stat_CriticalRate'] = int(LUA_RUNTIME['SCR_Get_MON_CRTHR'](row))
-            obj['Stat_BlockRate'] = int(LUA_RUNTIME['SCR_Get_MON_BLK'](row))
-            obj['Stat_BlockPenetration'] = int(LUA_RUNTIME['SCR_Get_MON_BLK_BREAK'](row))
+            #obj['Stat_HP'] = int(LUA_RUNTIME['SCR_Get_MON_MHP'](row))
+            #obj['Stat_SP'] = int(LUA_RUNTIME['SCR_Get_MON_MSP'](row))
+            #obj['Stat_ATTACK_MAGICAL_MAX'] = int(LUA_RUNTIME['SCR_Get_MON_MAXMATK'](row))
+            #obj['Stat_ATTACK_MAGICAL_MIN'] = int(LUA_RUNTIME['SCR_Get_MON_MINMATK'](row))
+            #obj['Stat_ATTACK_PHYSICAL_MAX'] = int(LUA_RUNTIME['SCR_Get_MON_MAXPATK'](row))
+            #obj['Stat_ATTACK_PHYSICAL_MIN'] = int(LUA_RUNTIME['SCR_Get_MON_MINPATK'](row))
+            #obj['Stat_DEFENSE_MAGICAL'] = int(LUA_RUNTIME['SCR_Get_MON_MDEF'](row))
+            #obj['Stat_DEFENSE_PHYSICAL'] = int(LUA_RUNTIME['SCR_Get_MON_DEF'](row))
+            #obj['Stat_Accuracy'] = int(LUA_RUNTIME['SCR_Get_MON_HR'](row))
+            #obj['Stat_Evasion'] = int(LUA_RUNTIME['SCR_Get_MON_DR'](row))
+            #obj['Stat_CriticalDamage'] = int(LUA_RUNTIME['SCR_Get_MON_CRTATK'](row))
+            #obj['Stat_CriticalDefense'] = int(LUA_RUNTIME['SCR_Get_MON_CRTDR'](row))
+            #obj['Stat_CriticalRate'] = int(LUA_RUNTIME['SCR_Get_MON_CRTHR'](row))
+            #obj['Stat_BlockRate'] = int(LUA_RUNTIME['SCR_Get_MON_BLK'](row))
+            #obj['Stat_BlockPenetration'] = int(LUA_RUNTIME['SCR_Get_MON_BLK_BREAK'](row))
 
             obj['Link_Items'] = []
             obj['Link_Maps'] = []

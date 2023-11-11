@@ -30,6 +30,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.1.1",
     "@ng-bootstrap/ng-bootstrap": "^4.0.0",
     "@types/lunr": "^2.1.6",
+    "angular-cli-ghpages": "^0.5.3",
     "bootstrap": "^4.1.2",
     "clean-css": "^4.2.1",
     "core-js": "^2.5.4",

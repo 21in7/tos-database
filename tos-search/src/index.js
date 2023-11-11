@@ -20,12 +20,12 @@ function log(...msg) {
 
 const REGION_iTOS = 'iTOS';
 const REGION_jTOS = 'jTOS';
-const REGION_kTEST = 'kTEST';
+
 const REGION_kTOS = 'kTOS';
 const REGION_twTOS = 'twTOS';
 const REGION = process.argv[2] || REGION_iTOS;
 
-if ([REGION_iTOS, REGION_jTOS, REGION_kTOS, REGION_kTEST, REGION_twTOS].indexOf(REGION) === -1)
+if ([REGION_iTOS, REGION_jTOS, REGION_kTOS, REGION_twTOS].indexOf(REGION) === -1)
     throw Error('Invalid region: ' + REGION);
 
 let documents = {};
@@ -56,7 +56,7 @@ log('Building index...');
 var idx = lunr(function () {
     if (REGION === REGION_jTOS)
         this.use(lunr.multiLanguage('en', 'jp'));
-    if (REGION === REGION_kTOS || REGION === REGION_kTEST)
+    if (REGION === REGION_kTOS)
         this.use(lunr.multiLanguage('en', 'kr'));
     if (REGION === REGION_twTOS)
         this.use(lunr.multiLanguage('en', 'ch'));

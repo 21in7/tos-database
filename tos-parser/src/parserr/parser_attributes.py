@@ -76,10 +76,10 @@ def parse_links_jobs():
                     attribute['LevelMax'] = int(row['MaxLevel'])
 
                     # Parse attribute cost
-                    if row['ScrCalcPrice']:
-                        for lv in range(int(row['MaxLevel'])):
-                            attribute['UpgradePrice'].append(LUA_RUNTIME[row['ScrCalcPrice']](None, row['ClassName'], lv + 1, attribute['LevelMax'])[0])
-                        attribute['UpgradePrice'] = [value for value in attribute['UpgradePrice'] if value > 0]
+                    #if row['ScrCalcPrice']:
+                        #for lv in range(int(row['MaxLevel'])):
+#                            attribute['UpgradePrice'].append(LUA_RUNTIME[row['ScrCalcPrice']](None, row['ClassName'], lv + 1, attribute['LevelMax'])[0])
+#                        attribute['UpgradePrice'] = [value for value in attribute['UpgradePrice'] if value > 0]
 
                     # Parse attribute skill (in case it is missing in the ability.ies)
                     if not attribute['Link_Skills'] and row['UnlockArgStr'] in globals.skills_by_name:

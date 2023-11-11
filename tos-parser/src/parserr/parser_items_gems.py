@@ -57,7 +57,10 @@ def parse_gems_bonus(is_rebuild):
 
     # example: <Item Name="gem_circle_1">
     for item in xml:
-        gem = globals.gems_by_name[item.get('Name')]
+        try:
+            gem = globals.gems_by_name[item.get('Name')]
+        except:
+            logging.warning('gem not found {}'.format(item.get('Name')))
 
         for level in item:
             if level.get('Level') == '0':

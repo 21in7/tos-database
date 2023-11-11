@@ -15,13 +15,13 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20020,soldier6_KNOCKDOWN,,,倒れた兵士,2
 20021,wizardmaster,,minimap_man_wizard,ウィザードマスター,2
 20022,archermaster,,minimap_man_archer,アーチャーマスター,2
-20023,swordmaster,,minimap_man_master,ソードマンマスター,2
+20023,swordmaster,,minimap_man_master,QUEST_JOBSTEP_20150317_000166,2
 20024,Hiddennpc_move,,,,2
 20025,Hiddennpc,,,,2
 20026,HiddenTrigger6,,,,2
-20027,pyromancer,,minimap_man_wizard,パイロマンサーマスター,2
-20028,peltasta,,minimap_man_master,ペルタストマスター,2
-20029,highlander,,minimap_man_master,ハイランダーマスター,2
+20027,pyromancer,,minimap_man_wizard,QUEST_JOBSTEP_20150317_000012,2
+20028,peltasta,,minimap_man_master,QUEST_JOBSTEP_20150317_000004,2
+20029,highlander,,minimap_man_master,QUEST_JOBSTEP_20150317_000008,2
 20030,Hiddennpc_Godness,,minimap_goddess,女神像,2
 20031,Emilia,,,雑貨商人エミリア,2
 20032,SCO_M,,,南十字騎士団の将校(男),2
@@ -44,7 +44,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20053,HiddenWall_200_200_500,,,,2
 20054,HiddenWall_150_150_150,,,,2
 20055,npc_alf,,minimap_man_shop,オルシャ雑貨商人 アルフ,2
-20056,npc_julla,,minimap_man_armor,装備商人 ユルラ,2
+20056,npc_julla,,minimap_man_armor,QUEST_LV_0200_20151223_009954,2
 20057,npc_yurrs,,minimap_man_ace,アクセサリ商人 ユルス,2
 20058,npc_toras,,minimap_man_companion,コンパニオン商人 トラス,2
 20059,orsha_soldier_f,,,オルシャ兵士女,2
@@ -54,7 +54,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20063,orsha_m_1,,,オルシャ住民男1,2
 20064,orsha_m_2,,,オルシャ住民男2,2
 20065,Inesa_Hamondail,,,イネッサ・ヘモンデール,2
-20066,npc_illanai,,minimap_man_smith,鍛冶屋 イルラナイ,2
+20066,npc_illanai,,minimap_man_smith,QUEST_LV_0200_20151223_009948,2
 20067,npc_aisah,,minimap_werehouse,倉庫番アイサ,2
 20068,npc_letizia,,minimap_man_tpshop,TP商人レティーシャ,2
 20070,SkillTrigger1,,,,2
@@ -67,6 +67,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20084,HiddenObbBox_Photowall_Chess2,,,,2
 20085,HiddenObbBox_Photowall_Chess3,,,,2
 20086,HiddenObbBox_Photowall_Chess4,,,,2
+20087,HiddenObbBox_photowall_chef1,,,,2
+20088,HiddenObbBox_photowall_chef2,,,,2
 20100,npc_combat_transport_section_2_sit,,,休暇中の補給兵,2
 20101,HiddenTrigger5,,,　,2
 20102,npc_combat_transport_section_1,,,商人1,2
@@ -79,7 +81,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20109,npc_miner,,,ベテラン鉱員,2
 20110,npc_mining_alchemist,,minimap_man_wizard,鉱山の村の錬金術師,2
 20111,npc_equipment_dealers,,minimap_man_armor,装備商人,2
-20112,npc_healer,,minimap_man_cleric,クレリックマスター,2
+20112,npc_healer,,minimap_man_cleric,QUEST_JOBSTEP_20150317_000063,2
 20113,npc_knight,,,ウスカ,2
 20114,npc_matron,,,中年の婦人,2
 20115,npc_tool_merchants,,minimap_man_shop,雑貨商人,2
@@ -99,7 +101,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20129,npc_knight2,,,バセニン,2
 20135,npc_wizdom_owl,,,予知のフクロウ,2
 20136,npc_bocormaster,,minimap_man_wizard,ボコルマスター,2
-20137,npc_cryomancer,,minimap_man_wizard,クリオマンサーマスター,2
+20137,npc_cryomancer,,minimap_man_wizard,QUEST_JOBSTEP_20150317_000019,2
 20138,npc_village_uncle_3,,,村のおじさん3,2
 20139,npc_village_uncle_4,,,村のおじさん4,2
 20140,npc_auctioneer,,minimap_man_auction,競売人,2
@@ -152,6 +154,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20187,musicbox_popolion,,,ポポリオンウォーターボールオルゴール,2
 20188,npc_sailor_f,,minimap_event_1,イベント受付,2
 20189,npc_sailor_m,,minimap_event_1,飲食受付,2
+20190,npc_city_alchemist,,minimap_man_wizard,専門アルケミスト,2
 40000,Obstacle_box,,,箱,2
 40001,Warp_arrow,,minimap_portal,WarpSpot,2
 40010,Obstacle_table,,,机,2
@@ -323,6 +326,24 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 47264,Hidden_Mon_01,,,透明モンスター,2
 47265,npc_zachariel_lantern_2,,,王陵の灯篭,2
 47266,treasure_box3_2,,,宝箱3,2
+47267,Event_treasure_box3_2,,minimap_event_1,クリスマスロイヤルボックス,2
+47268,Event_treasure_box4,,minimap_event_1,ふしぎなクリスマスボックス,2
+47269,pradziatemple_warp_npc,,minimap_portal,プラージャ神殿,2
+47270,kruvina_wall,,minimap_portal,クルビナ障壁,2
+47271,fire_tree_wall,,minimap_portal,燃える木,2
+47272,black_crack,,minimap_portal,黒い亀裂,2
+47273,npc_paulius,,,パウリウス,2
+47274,ep13_2_d_prison_1_EyeEffect_hiddennpc,,,UnvisibleName,2
+47275,surgery_switch,,,アシャーク地下監獄のレバー,2
+47276,ep13_2_d_prison_experiment_by-product_apparatus,,,アシャーク地下監獄プロップ1,2
+47277,ep13_2_d_prison_ExperimentTable,,,アシャーク地下監獄プロップ2,2
+47278,ep13_2_d_prison_prop_plus_01,,,アシャーク地下監獄プロップ3,2
+47279,ep13_2_d_prison_prop_plus_02,,,アシャーク地下監獄プロップ4,2
+47280,ep13_2_d_prison_shifter,,,アシャーク地下監獄プロップ5,2
+47281,ep13_2_d_prison_WasteProduct,,,アシャーク地下監獄プロップ6,2
+47282,surgery_prop,,,アシャーク地下監獄の実験台,2
+47283,ep13_2_d_prison_WasteProduct_OBB,,,アシャーク地下監獄プロップ6_OBB,2
+47284,npc_paulius_2,,,倒れたパウリウス,2
 47413,npc_lecifer,モンスター,icon_item_nothing,レキシファー人間型,2
 48002,f_katyn_owl02,,,フクロウの彫像,2
 48003,f_katyn_owl03,,,フクロウの彫像,2
@@ -360,6 +381,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 58602,pet_fruits_plate,モンスター,icon_item_nothing,トゥーカンの餌,2
 58738,npc_raid_gimmick,モンスター,icon_item_nothing,保護の段,2
 59066,farmer_plant_step_01,モンスター,icon_item_nothing,,2
+59785,mon_kupole_Lutha,モンスター,icon_item_nothing,クポル ルタ,2
 101001,mon_paladin_follower1_2_hp,モンスター,icon_item_nothing,パラディン追従者A2,2
 101002,mon_paladin_follower1_3_hp,モンスター,icon_item_nothing,パラディン追従者A3,2
 103015,mon_paladin_follower1_3_Q,モンスター,icon_item_nothing,ルクリス部隊員,2
@@ -383,10 +405,10 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 147322,Treasure_box_siaul,,,宝箱シャウレイ,2
 147323,Treasure_box_table,,,宝箱孤立高原,2
 147325,npc_HOP_master,,minimap_man_master,ホプライトマスター,2
-147326,npc_CEN_master,,minimap_man_master,センチュリオンマスター,2
+147326,npc_CEN_master,,minimap_man_master,QUEST_JOBSTEP_20150317_000304,2
 147327,npc_CAT_master,,minimap_man_master,カタフラクトマスター,2
-147328,npc_PSY_master,,minimap_man_wizard,サイコキノマスター,2
-147329,npc_SOR_master,,minimap_man_wizard,ソーサラーマスター,2
+147328,npc_PSY_master,,minimap_man_wizard,QUEST_JOBSTEP_20150317_000041,2
+147329,npc_SOR_master,,minimap_man_wizard,QUEST_JOBSTEP_20150317_000269,2
 147336,cablecar,,,壊れた装置,2
 147337,cemetery_irongate,,,鉄門,2
 147338,katyn_rock,,,岩,2
@@ -483,20 +505,20 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 147432,npc_potter,,,陶器を作る老人,2
 147433,npc_p_villageuncle1_cart1,,,フェディミアンの荷車(男),2
 147434,npc_SAP_master,,minimap_man_archer,サッパーマスター,2
-147435,npc_THA_master,,minimap_man_scout,ソーマタージュマスター,2
-147436,npc_FLT_master,,minimap_man_archer,フレッチャーマスター,2
+147435,npc_THA_master,,minimap_man_scout,QUEST_JOBSTEP_20150317_000325,2
+147436,npc_FLT_master,,minimap_man_archer,QUEST_JOBSTEP_20150317_000359,2
 147437,npc_village_uncle_1_nonwindow,,,村のおじさん1,2
 147438,npc_COS_master,,minimap_man_scout,コルセアマスター,2
 147439,npc_SQR_master,,minimap_man_scout,スクワイアマスター,2
 147440,npc_village_uncle_8_nowindow,,,村のおじさん8,2
-147441,npc_PDN_master,,minimap_man_cleric,パードナーマスター,2
+147441,npc_PDN_master,,minimap_man_cleric,QUEST_JOBSTEP_20150317_000538,2
 147442,npc_WRC_master,,minimap_man_wizard,エレメンタリストマスター,2
 147443,npc_DOP_master,,minimap_man_master,ドッペルゾルドナーマスター,2
 147444,npc_village_uncle_4_nowindow,,,村のおじさん4,2
 147445,npc_QRS_master,,minimap_man_archer,クォレルシューターマスター,2
-147446,npc_NEC_master,,minimap_man_wizard,ネクロマンサーマスター,2
+147446,npc_NEC_master,,minimap_man_wizard,QUEST_JOBSTEP_20150317_000273,2
 147447,npc_ARC_master,,minimap_man_archer,アーチャーマスター,2
-147448,npc_CHR_master,,minimap_man_wizard,クロノマンサーマスター,2
+147448,npc_CHR_master,,minimap_man_wizard,QUEST_JOBSTEP_20150317_000579,2
 147449,npc_grita,,,グリタ,2
 147450,npc_Carnivore,,,カーニバー,2
 147451,npc_Panto,,,パントベビー,2
@@ -564,7 +586,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 147517,npc_fishing_manager,,,釣り場管理人,2
 147518,npc_diana,,,ディアナ,2
 148001,blank_npc_moon,,,空NPC,2
-150000,npc_junk_shop,,,行商人ゲラルダス,2
+150000,npc_junk_shop,,minimap_kedora,行商人ゲラルダス,2
 150001,npc_skill_misc_shop_2,,,スキル材料商人,2
 150002,npc_skill_misc_shop_3,,,スキル材料商人,2
 150003,npc_equip_shop_270_315,,,装備補給兵,2
@@ -628,6 +650,100 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150203,Shadowmancer_seal_cage,,,影監獄,2
 150204,HiddenWall_500_300_300,,,,2
 150205,npc_stockades_uphill,,,ステイクスタッケイド,2
+150206,npc_Ragana,,,魔神ラガナ,2
+150207,npc_holy_romuva,,,神聖のナムト,2
+150208,npc_terramancer_master,,minimap_man_wizard,テラマンサーマスター,2
+150209,npc_MEI_master,,minimap_man_master,梅花剣士マスター,2
+150210,npc_baiga,,,QUEST_LV_0300_20170309_007814,2
+150211,npc_Zofija_Eleonora,,minimap_man_cleric,QUEST_LV_0300_20200227_008494,2
+150212,npc_rangda_master,,minimap_man_scout,ランダマスター,2
+150213,npc_Arbalester_master,,minimap_man_archer,アバリスターマスター,2
+150214,npc_thetree_root,,,神樹の根,2
+150215,npc_raima_wheel,,,ライマの糸車,2
+150216,npc_MasterRangda_Barong,,,ミエラス,2
+150217,npc_Crusader_01,,,クルセイダー1,2
+150218,npc_Crusader_02,,,クルセイダー2,2
+150219,npc_kingdom_soldier,,,王国軍兵士,2
+150220,npc_kingdom_schaffenmem1,,,抵抗軍団員1,2
+150221,npc_kingdom_schaffenmem2,,,抵抗軍団員2,2
+150222,npc_kingdom_schaffenmem3,,,抵抗軍団員3,2
+150223,npc_kingdom_schaffencap,,,抵抗軍幹部,2
+150224,npc_kingdom_paladin_follower1,,,パラディン追従者1,2
+150225,npc_kingdom_paladin_follower2,,,パラディン追従者2,2
+150226,npc_kingdom_owl_statue,,,フクロウの彫像,2
+150227,npc_goddess_Laima_ep12,,,捕らわれたライマ,2
+150228,npc_glacier_tuto_rp_mon,,,UnvisibleName,2
+150229,npc_glacier_tuto_rp_NPC_01,,,寒気が凝縮された装置,2
+150230,npc_rangdagirl_01,,,ランダの少女,2
+150231,npc_memorialstone_remains,,,碑石の残骸,2
+150232,npc_ancientmonument,,,古代碑石,2
+150233,npc_f_castle_101_alter_01,,,祭壇,2
+150234,npc_f_castle_101_altar_02,,,中央祭壇,2
+150235,npc_bower_stone,,,バウアー魔石,2
+150236,npc_bower_branch_01,,,バウアーの木の枝,2
+150237,npc_goddess_Ausirine,,,女神アウシュリネ,2
+150238,npc_rangdagirl_02,,,白いランダの少女,2
+150239,npc_MasterRangda_Barong2,,,ミエラス,2
+150240,npc_rangdagirl_03,,,黒いランダの少女,2
+150241,npc_giltine_01,,,ギルティネ,2
+150242,npc_rada_goddess_ep13_1,,,女神ラダ,2
+150243,black_crack_Q1,,,黒い亀裂,2
+150244,ep13_mine_cart_Q1,,,亀裂採掘用荷車,2
+150245,blackman_crystal_Q1,,,注視者の黒い水晶,2
+150246,blackman_crystal_find,,,UnvisibleName,2
+150247,blackman_crystal_center,,,UnvisibleName,2
+150248,TOSHero_Grid_Object_1,,,排除の光,2
+150250,TOSHero_Grid_Object_3,,,忘れ去られた物語,2
+150251,TOSHero_HiddenTrigger_360,,,UnvisibleName,2
+150252,TOSHero_Buff_Avatar_Summon_1,,,結束された魂,2
+150253,TOSHero_Buff_Avatar_Summon_2,,,結束された魂,2
+150254,TOSHero_Buff_Avatar_Summon_3,,,結束された魂,2
+150255,TOSHero_Buff_Avatar_Summon_4,,,契約者,2
+150256,TOSHero_TUTO_NPC_1,,,謎の語り手,2
+150257,npc_MasterLuchador,,minimap_man_master,ルチャドールマスター,2
+150258,ep14_1_orsha_flag1,,,オルシャの旗1,2
+150259,ep14_1_orsha_flag2,,,オルシャの旗2,2
+150260,ep14_1_royal_flag1_1,,,王国軍の旗1,2
+150261,ep14_1_royal_flag1_2,,,王国軍の旗2,2
+150262,ep14_1_royal_flag2,,,王国軍の旗3,2
+150263,ep14_1_arrow,,,突き刺さってる矢,2
+150264,ep14_1_ballista,,,バリスタ,2
+150265,ep14_1_barricade1_1,,,戦争のバリケード,2
+150266,ep14_1_barricade1_2,,,戦争のバリケード2,2
+150267,ep14_1_barricade2_1,,,戦争のバリケード3,2
+150268,ep14_1_barricade2_2,,,戦争のバリケード4,2
+150269,ep14_1_large_barricade_1,,,戦争のバリケード5,2
+150270,ep14_1_large_barricade_2,,,戦争のバリケード6,2
+150271,ep14_1_large_barricade_orsha,,,戦争のバリケード7,2
+150272,ep14_1_large_barricade_royal,,,戦争のバリケード8,2
+150273,ep14_1_sand_barricade_1,,,戦争のバリケード9,2
+150274,ep14_1_sand_barricade_2,,,戦争のバリケード10,2
+150275,ep14_1_scarecrow_barricade_1,,,戦争のバリケード11,2
+150276,ep14_1_scarecrow_barricade_2,,,戦争のバリケード12,2
+150277,ep14_1_broken_orsha_flag1,,,折れたオルシャの旗1,2
+150278,ep14_1_broken_orsha_flag2,,,折れたオルシャの旗2,2
+150279,ep14_1_broken_royal_flag1_1,,,折れた王国軍の旗1,2
+150280,ep14_1_broken_royal_flag1_2,,,折れた王国軍の旗2,2
+150281,ep14_1_broken_royal_flag2,,,折れた王国軍の旗3,2
+150282,ep14_1_ballista2,,,バリスタ2,2
+150283,ep14_1_f_castle_3_mq_3_Object_1,,,四散した痕跡,2
+150284,ep14_1_f_castle_3_mq_4_Object_1,,,ブリークフェレットのテント,2
+150285,npc_Kaoneela,,,摂政 カオニーラ・ヘンリュシィ,2
+150286,npc_Heoshaa,,,護衛隊長 ヘオシャ,2
+150287,npc_Ramin,,,大将軍ラミン,2
+150288,npc_Veliuona,,,魔神ヴェリウオナ,2
+150289,npc_RoyalGuard,,,王室近衛隊,2
+150290,ep14_1_kingdomsodier,,,王国軍,2
+150291,npc_MasterHwarang,,minimap_man_archer,花郎マスター,2
+150292,ep14_1_blackman_crystal,,,注視者の黒い水晶,2
+150293,ep14_1_Raid_Track_prop,,,レイド演出用プロップ,2
+150294,ep14_1_kingdomsodier_hide,,,隠れている兵士,2
+150295,ep14_1_kingdomsodier_rescue,,,はぐれた偵察兵,2
+150296,ep14_1_f_castle_3_mq_4_Object_2,,,ブリークフェレットのテント,2
+150297,ep14_1_f_castle_5_mq_1_Object_1,,,補給品の荷車,2
+150298,EP14_1_FCASTLE2_MQ_4_FIELDSOLDIER,,,王国軍,2
+150299,EP14_1_FCASTLE2_MQ_5_FIELDSOLDIER,,,王国軍,2
+150300,EP14_1_FCASTLE2_MQ_6_FIELDSOLDIER,,,王国軍,2
 151000,closing_device,,,閉鎖装置,2
 151001,spell_crystal_red,,,魔力が宿った結晶,2
 151002,spell_crystal_gem_red,,,紅炎の宝石,2
@@ -677,7 +793,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151046,star_stone_01,,,スターストーン,2
 151047,candlestick_01,,,燭台,2
 151048,star_stone_01_small,,,スターストーンの結晶,2
-151049,npc_FAL_master,,minimap_man_archer,ファルコナーマスター,2
+151049,npc_FAL_master,,minimap_man_archer,QUEST_JOBSTEP_20150414_002566,2
 151050,ftower_sealstorn,,,封印石,2
 151051,pillarobb_crystal,,,黒い水晶,2
 151052,npc_zacharial_desk2,,,王陵の机2,2
@@ -691,19 +807,19 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151060,npc_catacomb_tomb_02,,,カタコム墓02,2
 151061,npc_hawk,,,鷹,2
 151062,npc_warehouse_fedimian,,minimap_werehouse,フェディミアン倉庫番(臨時),2
-151063,npc_FNC_master,,minimap_man_master,フェンサーマスター,2
+151063,npc_FNC_master,,minimap_man_master,QUEST_LV_0200_20151028_009676,2
 151064,npc_wooden_romuva_white,,,抑制のナムト,2
 151065,soul_gathering_mchn_5,,,吸魂門,2
 151066,c_orsha_wood,,,オルシャの木,2
 151067,old_wooden_box_S,,,小さな木の箱,2
-151068,npc_DRG_master,,minimap_man_master,ドラグーンマスター,2
-151069,npc_WAR_master,,minimap_man_wizard,ウォーロックマスター,2
-151070,npc_FTF_master,,minimap_man_wizard,フェザーフットマスター,2
-151071,npc_CNN_master,,minimap_man_archer,キャノニアマスター,2
-151072,npc_MSK_master,,minimap_man_archer,マスケティアマスター,2
+151068,npc_DRG_master,,minimap_man_master,QUEST_LV_0300_20151223_000758,2
+151069,npc_WAR_master,,minimap_man_wizard,QUEST_LV_0300_20151223_000775,2
+151070,npc_FTF_master,,minimap_man_wizard,QUEST_LV_0300_20151223_000784,2
+151071,npc_CNN_master,,minimap_man_archer,QUEST_LV_0300_20151223_000793,2
+151072,npc_MSK_master,,minimap_man_archer,QUEST_LV_0300_20151223_000803,2
 151073,npc_PGD_master,,minimap_man_cleric,プレイグドクターマスター,2
-151074,npc_KBL_master,,minimap_man_cleric,カバリストマスター,2
-151075,npc_SNB_master,,minimap_man_scout,シノビマスター,2
+151074,npc_KBL_master,,minimap_man_cleric,QUEST_LV_0300_20151223_000819,2
+151075,npc_SNB_master,,minimap_man_scout,QUEST_LV_0300_20151223_000836,2
 151076,noshadow_npc_128,,,影の無いNPC,2
 151077,npc_mardas,,,連絡兵マルダス,2
 151078,orsha_soldier_f_2,,,オルシャ兵士女 2,2
@@ -761,7 +877,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151131,d_firetower_book_pile_1,,,本の山 1,2
 151132,d_firetower_book_pile_2,,,本の山 2,2
 151133,d_firetower_book_pile_3,,,本の山 3,2
-151134,npc_vincentass,,,ヴィンセンタス,2
+151134,npc_vincentass,,,QUEST_LV_0200_20161012_010512,2
 151135,npc_plaguedoctor_m_2,,,プレイグドクター ユグリナス,2
 151136,austeja_alter2,,,ユデイアン祭壇,2
 151146,npc_poodle_m,,,プードル(男),2
@@ -771,13 +887,13 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151151,klaipeda_balloons,,,お祭り用風船売り場,2
 151152,klaipeda_christmas_tree_npc,,,2周年記念樹,2
 151153,NPC_Golddog,,,黄金の,2
-151154,treeday_1,,,苗木,2
-151155,treeday_2,,,苗木,2
-151156,treeday_3,,,若木,2
-151157,treeday_4,,,若木,2
-151158,treeday_5,,,青々と茂る大木,2
-151159,treeday_6,,,青々と茂る大木,2
-151160,treeday_7,,,青々と茂る大木,2
+151154,treeday_1,,,[Lv.1] 育樹祭の記念樹,2
+151155,treeday_2,,,[Lv.2] 育樹祭の記念樹,2
+151156,treeday_3,,,[Lv.3] 育樹祭の記念樹,2
+151157,treeday_4,,,[Lv.4] 育樹祭の記念樹,2
+151158,treeday_5,,,[Lv.5] 育樹祭の記念樹,2
+151159,treeday_6,,,[Lv.6] 育樹祭の記念樹,2
+151160,treeday_7,,,[Lv.7] 育樹祭の記念樹,2
 151161,treeday_square,,,花壇,2
 151162,npc_2017wedding_1_f,,,2017MayWeddingLadyNPC,2
 151163,npc_artefact_bouquet01,,,新婦のブーケ,2
@@ -796,6 +912,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151176,npc_kupole_6_event,,minimap_event_1,イベントクポル6,2
 151177,npc_giltine_weapon_event,,minimap_event_1,イベント武器でもギルティネ,2
 151178,npc_goldpig,,minimap_event_1,金ぴかピッグ,2
+151180,gacha_cube1_event,,minimap_event_1,福袋キューブ,2
 152000,npc_husband_1,,,平凡な夫,2
 152001,npc_wife_1,,,平凡な妻,2
 152002,npc_oldman_1,,,平凡な老人,2
@@ -877,6 +994,10 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 152078,velniasprison_warp_mini,,minimap_portal,空間移動の魔法陣(ミニ),2
 152079,npc_3cmlake_27_riddle_device,,,水盤施設,2
 152080,npc_3cmlake_27_bracken_leaves,,,水草,2
+152081,npc_Underaqueduct_Gimmick,,,マーズルースの魔力の塊,2
+152082,npc_Underaqueduct_Pc_Life_1,,,PCカウント1,2
+152083,npc_Underaqueduct_Pc_Life_2,,,PCカウント2,2
+152084,npc_Underaqueduct_Skill_Gimmick,,,マーズルースの魔力水晶,2
 153000,npc_matron_aquamarine,,,中年の婦人(アクアマリン),2
 153001,npc_matron_blue,,,中年の婦人(ブルー),2
 153002,npc_matron_darkbrown,,,中年の婦人(ダークブラウン),2
@@ -1012,10 +1133,10 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 153165,npc_dorong,,,トロン,2
 153167,stonepillar_1_no_obb,,,石材1(obbなしバージョン),2
 153168,remains_vine_01_S,,,遺跡地帯用の蔦(小さいバージョン),2
-153169,npc_INQ_master,,minimap_man_cleric,インクイジターマスター,2
-153170,npc_ENC_master,,minimap_man_scout,エンチャンターマスター,2
-153171,npc_SAG_master,,minimap_man_wizard,セージマスター,2
-153172,npc_DAO_master,,minimap_man_wizard,タオイストマスター,2
+153169,npc_INQ_master,,minimap_man_cleric,QUEST_LV_0300_20161012_005396,2
+153170,npc_ENC_master,,minimap_man_scout,QUEST_LV_0300_20161012_005382,2
+153171,npc_SAG_master,,minimap_man_wizard,QUEST_LV_0300_20161012_005376,2
+153172,npc_DAO_master,,minimap_man_wizard,QUEST_LV_0300_20161012_005390,2
 153173,npc_MIKO_master,,minimap_man_cleric,巫女マスター,2
 153174,npc_KANU_master,,minimap_man_cleric,神官,2
 153175,bracken43_4_obj,,,ワラビオブジェクト,2
@@ -1036,7 +1157,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 153190,npc_whitetrees_22_1_elt,,,白木の森 22_1エレベーター,2
 153191,npc_whitetrees_22_3_elt,,,白木の森 22_3エレベーター,2
 153192,maple_43_tree,,,紅葉の森の木,2
-153193,npc_BLM_master,,minimap_man_scout,バレットマーカーマスター,2
+153193,npc_BLM_master,,minimap_man_scout,QUEST_LV_0300_20171110_008259,2
 153194,npc_MTD_master,,minimap_man_master,マタドールマスター,2
 153195,npc_SHM_master,,minimap_man_wizard,シャドウマンサーマスター,2
 153196,npc_ZLT_master,,minimap_man_cleric,ジーロットマスター,2
@@ -1080,6 +1201,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 153236,npc_Lapezard_statue,,,ラペザードの彫像,2
 153237,npc_Lapemiter_statue,,,ラペマイターの彫像,2
 153238,npc_Lapeman_statue,,,ラペマンの彫像,2
+153240,npc_nicopolis_obj3,,,ニコポリス 造形物3,2
+153241,npc_nicopolis_obj4,,,怪しい造形物,2
 154000,velniasprison_warp,,minimap_portal,空間移動の魔法陣,2
 154001,velniasp_block,,,,2
 154002,npc_velniasp_mage,,,ポータル魔術師,2
@@ -1101,7 +1224,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154018,npc_warehouse,,minimap_werehouse,倉庫番,2
 154019,npc_bocor_edita,,,ボコル エディータ,2
 154020,npc_cryomancer_kostas,,,クリオマンサー コスタス,2
-154021,npc_CHR_sabina,,,クロノマンサー サビナ,2
+154021,npc_CHR_sabina,,,QUEST_LV_0200_20150317_000187,2
 154022,npc_ALC_saliamonas,,,アルケミスト サリアモナス,2
 154023,npc_flash_soldier_01,,,石化した警備兵01,2
 154024,npc_flash_male_01,,,石化した盗掘師01,2
@@ -1112,8 +1235,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154029,npc_flash_soldier_05,,,石化した警備兵05,2
 154030,npc_flash_male_02,,,石化した盗掘師02,2
 154031,npc_flash_male_03,,,石化した盗掘師03,2
-154032,npc_kaliss_karriat,,,ヴィルヘルミナ・キャリオット,2
-154033,npc_kaliss_hans,,,副官ハンス,2
+154032,npc_kaliss_karriat,,,QUEST_LV_0200_20150317_000338,2
+154033,npc_kaliss_hans,,,QUEST_LV_0200_20150317_000291,2
 154034,npc_kaliss_soldier,,,カリス騎士団員,2
 154035,npc_flash_box_1,,,石化した箱,2
 154036,npc_flash_grass_1,,,石化した草,2
@@ -1199,14 +1322,17 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154116,HiddenWall_60_60_500,,,,2
 154117,HiddenWall_40_40_500,,,,2
 154118,HiddenWall_25_25_500,,,,2
-154119,Event_FishingBox,,minimap_event_1,ゴールデンウィークは釣り三昧！,2
+154119,Event_FishingBox,,,ヨハのドジョウ桶,2
 154120,npc_pajauta_1,,,パヤウタ,2
 154121,npc_MasterSheriff,,minimap_man_scout,シェリフマスター,2
 154122,npc_MasterMatross,,minimap_man_archer,マトロスマスター,2
 154123,npc_MasterArditi,,minimap_man_scout,アルディーティマスター,2
 154124,npc_MasterTigerHunter,,minimap_man_archer,タイガーハンターマスター,2
+154125,npc_kupole_7,,minimap_personal_house,クポル7,2
+154129,npc_washstand_1,,minimap_event_1,噴水,2
+154130,npc_Ragana_shop,,minimap_event_1,魔神ラガナの幻影,2
 155000,npc_crystal_machine,,,水晶加工マシン,2
-155001,farm49_sapling,,,神秘の苗木,2
+155001,farm49_sapling,,,QUEST_LV_0200_20150323_004547,2
 155002,dirt_ground,,,土壌の標本,2
 155003,dirt_heal_2,,,土の塊,2
 155004,small_dandelion,,,幼いタンポポ,2
@@ -1221,7 +1347,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 155013,mine2_crystal_red,,,レッドクリスタル,2
 155014,mine2_crystal_blue,,,ブルークリスタル,2
 155015,mine2_crystal_yellow,,,イエロークリスタル,2
-155016,npc_rich_shaton,,,ゴルドー・シャトン,2
+155016,npc_rich_shaton,,,QUEST_LV_0200_20150323_004111,2
 155017,npc_rich_baron,,,アレルノー男爵,2
 155018,npc_druid_m,,,ドルイド男,2
 155019,npc_druid_f,,,ドルイド女,2
@@ -1254,7 +1380,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 155046,npc_friar_05,,,修道士5,2
 155047,npc_friar_down01,,,修道士3 ダウン,2
 155048,npc_friar_down02,,,修道士4 ダウン,2
-155049,npc_abbot,,,修道院長,2
+155049,npc_abbot,,,QUEST_LV_0200_20150714_007854,2
 155050,carpet,,,カーペット,2
 155051,npc_circle_trigger,,,高原魔法陣活性化装置,2
 155052,npc_vine2,,,演出用の蔦,2
@@ -1370,6 +1496,9 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 155169,d_startower_velnias_stone,,,魔族の装置,2
 155170,star_stone_01_small_startower,,,魔力残留物,2
 155171,npc_crystal_machine_event,,minimap_event_1,タルト加工装置,2
+155172,kruvina_center_Q,,,クルビナ中央装置,2
+155173,kruvina_center2_Q,,,巨大クルビナの中央装置,2
+155174,dungeon_tower_1,,minimap_erosion,未知の聖域,2
 156000,npc_gintas,,,信徒ギンタス,2
 156001,npc_margiris,,,マルギリス,2
 156002,npc_bocor_juta,,,ボコル ユタ,2
@@ -1395,7 +1524,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 156022,npc_necromancer_m_2,,,ネクロマンサー男_2,2
 156023,npc_Pinscher,,,シュトリガイラ,2
 156024,npc_alchemist_f,,,アルケミスト女,2
-156025,npc_friar_04_2,,,エルゴスの修道士,2
+156025,npc_friar_04_2,,,QUEST_LV_0300_20160512_001121,2
 156026,npc_Carnivore_down,,,倒れたカーニバー,2
 156027,npc_fedimian_storekeeper,,minimap_werehouse,フェディミアン倉庫番,2
 156028,vine_4,,,枯れ果てた蔦,2
@@ -1427,9 +1556,9 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 156108,riddle_device,,,謎の装置(大きいバージョン),2
 156109,npc_gele_sanctuary_1_hit,,,ゲリー高原の結界(HP UI),2
 156110,npc_Corsair_m2,,,海賊コスチューム（男）,2
-156111,Onmyoji_Paper_Doll_white,,,紙人形(白),2
-156112,Onmyoji_Paper_Doll_red,,,紙人形(赤),2
-156113,Onmyoji_Paper_Doll_black,,,紙人形(黒),2
+156111,Onmyoji_Paper_Doll_white,,,式札(白),2
+156112,Onmyoji_Paper_Doll_red,,,式札(赤),2
+156113,Onmyoji_Paper_Doll_black,,,式札(黒),2
 156114,npc_schaffenstar_executive1_1,,,シャッフェンスター幹部 男1,2
 156115,npc_schaffenstar_executive1_2,,,シャッフェンスター幹部 男2,2
 156116,npc_schaffenstar_executive1_3,,,シャッフェンスター幹部 男3,2
@@ -1457,7 +1586,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 156152,npc_colony_sutler,,,従軍商人,2
 156153,Colony_Woodenwall_Trap,,icon_item_woodenwall_trap3,木柵,2
 156154,Colony_Divine_Flag,,icon_item_divine_flag,聖なる旗,2
-156155,npc_ASS_master,,minimap_man_scout,アサシンマスター,2
+156155,npc_ASS_master,,minimap_man_scout,QUEST_LV_0300_20190117_008440,2
 156156,npc_OLW_male_master,,minimap_man_scout,アウトローマスター男,2
 156157,npc_OLW_female_master,,minimap_man_scout,アウトローマスター女,2
 156158,npc_goddess_medeina,,,女神メデイナ,2
@@ -1470,6 +1599,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 156165,maple_24_tree_young,,,紅葉の幼木,2
 156166,HiddenWall_Vivid,,,,2
 156167,pvp_battle_shop,,minimap_erosion,装備レンタル商店,2
+156168,dirt_heal_5,,,土の山(大バージョン),2
+156169,npc_intermediate_officer_men3,,,中級管理将校(男)3,2
 157000,3cmlake_ruins,,,湖の残骸,2
 157001,coral_tent_01,,,クラントテント,2
 157002,PCStatue,,,,2
@@ -1490,9 +1621,9 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 157017,soul_gathering_mchn_6,,,ガーディアンオーブ,2
 157018,soul_gathering_mchn_7,,,守護のオーブ,2
 157019,npc_dcapital_20_5_elt,,,ジェロメル移動装置,2
-157020,npc_MUR_master,,minimap_man_master,ムルミロマスター,2
-157021,npc_LAN_master,,minimap_man_master,ランサーマスター,2
-157022,npc_MER_master,,minimap_man_archer,メルゲンマスター,2
+157020,npc_MUR_master,,minimap_man_master,QUEST_LV_0300_20161012_006361,2
+157021,npc_LAN_master,,minimap_man_master,QUEST_LV_0300_20161012_006351,2
+157022,npc_MER_master,,minimap_man_archer,QUEST_LV_0300_20161012_006306,2
 157023,d_limestonecave_52_1_elt,,,鍾乳洞移動装置,2
 157024,maple_25_tree_Q2,,,紅葉の森の木_Q2,2
 157025,d_castle_20_4_elt,,,20_4移動装置,2
@@ -1526,10 +1657,195 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 157053,d_fantasylibrary_48_4_elt,,,幻想図書館移動装置,2
 157054,halloween_scarecrow,,,ハロウィーンカカシ,2
 157055,magictrap_core_gimmick2,,,魔力の核,2
-157056,npc_junk_shop_2,,,[ケドラ商団員]{nl}リーシェ,2
-157057,npc_junk_shop_3,,,[ケドラ商団員]{nl}ジェラルドソン,2
+157056,npc_junk_shop_2,,minimap_kedora,[ケドラ商団員]{nl}リーシェ,2
+157057,npc_junk_shop_3,,minimap_kedora,[ケドラ商団員]{nl}ジェラルドソン,2
+157100,npc_sage_female_2,,,セージ 女2,2
+157101,blackman_crystal,,,注視者の黒い水晶,2
+157102,glacier_crystal_unique,,,ユニークグレイシアの水晶,2
+157103,glacier_crystal_legend,,,レジェンドグレイシアの水晶,2
+157104,crusader_quest_npc_01,,,古い袋,2
+157105,npc_fedimian_merchant_5,,minimap_man_smith,鍛冶屋見習い,2
+157110,TOSHERO_WHEEL_MAPPATTERN_OBJECT,,,UnvisibleName,2
+157111,EP13_2_DPRISON2_MQ_5_LOSTARTICLE,,,落とした貴族の紛失物,2
+157112,EP13_2_DPRISON2_MQ_6_STORAGEBOX,,,壊れた保管箱,2
+157113,EP13_2_DPRISON2_MQ_7_SOULFRAGMENT,,,欠片となったパウリウスの魂,2
+157114,EP13_2_DPRISON3_TRAPSPOT,,,爆弾設置地点,2
+157115,ep14_1_npc_pajauta,,,パヤウタ,2
+157116,ep14_1_blackball,,,UnvisibleName,2
+157117,DelmoreCastleGate_SKL3_SKLOBJ,,,UnvisibleName,2
+157118,DelmoreCastleGate_SKL5_SKLOBJ,,,UnvisibleName,2
+157119,DelmoreCastleGate_KruvinaBullet,,,クルビナの弾丸,2
 158000,npc_paladin_follower1_3_copy,,minimap_team,チームバトルリーグ,2
 158001,npc_friar_02_blacksmith,,minimap_man_smith,修道士2鍛冶屋,2
+160000,h_GuildHousing_farmer_girl,,,農場の管理人,2
+160001,h_GuildHousing_farmer_boy,,,農場の管理人,2
+160002,h_GuildHousing_manager,,,ギルドアジトの管理人(男),2
+160003,flower_keep_water_yellow,,,水を含んだ花(黄色),2
+160004,flower_keep_water_red,,,水を含んだ花(赤色),2
+160005,flower_keep_water_white,,,水を含んだ花(白色),2
+160006,SHADOW_CURSE_PURIFICATION,,minimap_portal,浄化の祭壇,2
+160007,SHADOW_LEGEND_SOLO_CURSE_PURIFICATION,,minimap_portal,浄化の祭壇,2
+160008,Hiddennpc_Moringponia,,,召喚ポータル,2
+160009,moringponia_spell_crystal_red,,,浄化石,2
+160010,moringponia_star_stone,,,浄化石,2
+160011,moringponia_ignore_raise,,minimap_portal,,2
+160012,HiddenWall_600_400_300,,,,2
+160013,HiddenWall_800_400_300,,,,2
+160014,npc_Xmas_Evt_NPC,,minimap_event_1,クリスマスNPC,2
+160015,npc_Xmas_Evt_NPC2,,minimap_event_1,クリスマスNPC2,2
+160016,rokas_pot3_small_E1,,,ラッキーポット,2
+160018,Hiddennpc_RiftMode_Start,,,次元の崩壊地点入場,2
+160019,event_2001_cat,,minimap_event_1,釣り場の猫,2
+160020,HiddenWall_moring,,,,2
+160021,MORINGPONIA_HARD_PURIFYING_STONE,,,浄化石,2
+160022,WEEKLY_PURIFYING_STONE,,,浄化石,2
+160023,npc_kupole_3_event_2004,,minimap_event_1,みどりの日イベントガイド,2
+160024,NPC_goddess_Roulette,,minimap_event_1,[イベント]女神のルーレット,2
+160025,ANCIENT_QUEST_OBJECT,,minimap_portal,浄化の祭壇,2
+160026,ANCIENT_QUEST_OBJECT2,,minimap_portal,浄化の祭壇,2
+160027,Glacier_magictrap_core,,,魔力宝珠,2
+160028,Glacier_Spear,,,,2
+160029,Glacier_HiddenTrigger,,,,2
+160030,npc_Irredians_TelHarsha,,,テルハルシャ,2
+160031,PillarOfIce,,,氷柱,2
+160032,Hiddennpc_Challenge_HardMode_Reward_Multiple,,,倍数券,2
+160033,Hiddennpc_Challenge_HardMode_Reward_Exit,,,モード終了,2
+160034,npc_elevator,,minimap_elevator,マップ移動装置,2
+160035,Glacier_ColdBlast_Obj,,,寒気爆破活性化装置,2
+160036,Hiddennpc_ExpertChallenge_Start,,,チャレンジモード：分裂特異点入場,2
+160037,MORINGPONIA_HARD_SOLO_PURIFYING_STONE,,,浄化石,2
+160038,HiddenWall_moring2,,,,2
+160039,FIELD_PURIFYING_STONE,,,浄化石,2
+160040,Giltine_Raid_Cristalobj,,,封玉,2
+160044,npc_huevill_female_1_Ev,,minimap_event_1,[EP.13]特別なケドラ商人,2
+160046,npc_baubas,,,魔神バウバス,2
+160047,npc_Ragana_EP13,,,魔神ラガナ,2
+160048,weekly_flower_yellow,,,,2
+160049,weekly_flower_red,,,,2
+160050,weekly_flower_white,,,,2
+160051,Ev_Npc_barrack_snowman,,minimap_event_1,[ウィンフェス]スノーヤクマンボ,2
+160052,Ev_Npc_baby_marnoks,,minimap_event_1,[1周年]まるのっくす,2
+160053,npc_ARQ_master,,minimap_man_archer,アークィバスマスター,2
+160054,npc_CLO_master,,minimap_man_scout,クラウンマスター,2
+160055,Hiddennpc_Challenge_Auto_HardMode_Reward_Multiple,,,追加報酬券,2
+160056,Event_supply_NPC_1,,minimap_event_1,[イベント]王国再建団・補給官,2
+160057,Event_supply_NPC_2,,minimap_event_1,[イベント]王国再建団・見習い兵士,2
+160058,Event_supply_NPC_3,,minimap_event_1,[イベント]王国再建団・補給兵,2
+160059,Event_supply_NPC_4,,,補給官のリュック,2
+160060,Event_supply_NPC_5,,,補給官の古箱,2
+160061,Event_supply_NPC_6,,minimap_event_1,王国再建団の補給品の荷車,2
+160062,Event_supply_NPC_7,,minimap_event_1,[イベント]オルシャの避難民,2
+160063,Hiddennpc_Challenge_Auto_End,,,モード終了,2
+160064,Hiddennpc_Mythic_Auto_Reward_Multiple,,,レリックレイド倍数券,2
+160065,Hiddennpc_MGame_EndPortal,,,終了,2
+160066,EVENT_dievdirbys_m,,minimap_event_1,[イベント]ティルトルビー派遣員,2
+160067,EVENT_goddess_statue,,minimap_event_1,[イベント]古びた女神像,2
+160070,npc_huevill_female_1_Ev_2,,minimap_event_1,[イチオシマスターSS]{nl}キュービッド,2
+160071,npc_RUN_masterEv,,minimap_event_1,[イベント]{nl}ルーンキャスターマスター,2
+160072,npc_MIKO_masterEv,,minimap_event_1,[イベント]{nl}巫女マスター,2
+160073,npc_SHM_masterEv,,minimap_event_1,[イベント]{nl}シャドウマンサーマスター,2
+160074,EV_SCS_M1,,minimap_event_1,[イベント]街の自警団,2
+160075,Giltine_Raid_Cristalobj2,,,封玉,2
+160078,leather_bag_event,,,[イベント]{nl}旅人の荷物,2
+160079,Hiddennpc_SoloDungeon_Mini_End,,,モード終了,2
+160080,Event_Camping_npc,,minimap_event_1,[イベント]青葉キャンプの{nl}旅人,2
+160081,Event_Camping_Ax_Man_npc,,minimap_event_1,[イベント]ズボラな木こり,2
+160082,Event_2105_bonfir,,minimap_event_1,[イベント]キャンプファイヤー,2
+160085,Hiddennpc_Mythic_Auto_Hard_Reward_Multiple,,,追加報酬券,2
+160086,boss_Vasilissa_Center_Hidden_Mon,,,,2
+160088,npc_kupole_Bernice,,,[エーテルジェム強化]{nl}クポル,2
+160089,Event_2106_Summer_npc,,minimap_event_1,[21Summer]イベント案内人,2
+160090,npc_hawk_vibora,,,,2
+160091,boss_Vasilissa_Hidden_Mon_PoisonSmog,,,,2
+160092,Test_Server_Shop1,,minimap_event_1,[クポル]{nl}テストサーバーアイテム商店,2
+160093,Test_Server_Shop2,,minimap_event_1,[クポル]{nl}テストサーバーアイテム商店2,2
+160094,Test_Server_Shop3,,minimap_event_1,[クポル]{nl}テストサーバーアイテム商店3,2
+160096,Event_2108_Npc,,minimap_event_1,[イベント]{nl}駆け出しの考古学者,2
+160097,npc_toucan_vibora,,,,2
+160098,BattleField_HiddenMonster,,,,2
+160101,weekly_Asiomage_ArmorBrake,,,,2
+160103,Event_2110_Npc,,minimap_event_1,[イベント]{nl}幽霊少女,2
+160104,Event_2110_npc_cauldron_stew,,minimap_event_1,[イベント]{nl}カボチャシチュ―の釜,2
+160105,Event_2110_Npc2,,minimap_event_1,[イベント]廃都の避難民,2
+160106,Event_2111_npc,,minimap_event_1,[イベント]{nl}村の青年,2
+160107,npc_Move_to_Floor_2,,,,2
+160108,npc_Move_to_Floor_1,,,,2
+160109,boss_RevivalPaulius_Center_Hidden_Mon,,,,2
+160110,boss_RevivalPaulius_Eyes_Hidden_Mon,,,UnvisibleName,2
+160111,event_2112_npc_kupole,,minimap_event_1,[イベント]クポル ルタ,2
+160112,EarringRaidGabiaPadHiddenMon,,,,2
+160113,boss_RevivalPaulius_ballista_Arrow_Box,,,バリスタの矢の山,2
+160114,boss_RevivalPaulius_ballista_Arrow_Pos,,,UnvisibleName,2
+160115,boss_RevivalPaulius_Kruvina_Pillar,,,UnvisibleName,2
+160116,boss_RevivalPaulius_incomplete_kruvina,,,UnvisibleName,2
+160117,boss_RevivalPaulius_RockFall_CamHidden_Mon,,,,2
+160118,earring_raid_npc_gabia_goddess,,,焔の記憶,2
+160119,Event_2201_Npc,,minimap_event_1,[イベント]{nl}賀春祭の主催リトルバーク,2
+160120,archeology_compass_arrow,,minimap_portal,,2
+160121,gacha_machine,,minimap_man_tpshop,女神のキューブ,2
+160122,master_Lama_npc,,minimap_man_cleric,[ラママスター]{nl}アスティユス,2
+160123,Event_bonfire_npc,,minimap_event_1,焚き火,2
+160124,boss_Jellyzele_find_pattern_Mon,,,,2
+160125,Event_2204_hidden_npc,,,,2
+160126,ep14_2_red_crystal,,,クルビナが宿った赤い水晶,2
+160127,raid_jellyzele_npc_frair_f_03,,,伝承者ニヨーレ,2
+160128,ep14_2_Object_root_crystal_broken,,,崩れた神樹の根の水晶,2
+160129,ep14_2_Object_UnknownTriplehelix,,,マティネス,2
+160130,toy_ep14zemina_cloud,,, ,2
+160135,raid_castle_ep14_2_soldier6_knockdown,,,倒れた兵士,2
+160136,boss_Spreader_Kruvina_Pillar,,,UnvisibleName,2
+160137,event_2207_npc_kupole,,minimap_event_1,[イベント]{nl}ハーモニーサポーター,2
+160138,Spreader_hidden_NPC,,minimap_portal,,2
+160139,toy_laima_flag,,icon_item_divine_flag,ライマの御旗,2
+160140,toy_ep14rider,,, ,2
+160141,Falouros_Sphere_Driving_HiddenMonster,,,,2
+160142,Falouros_Sphere_Driving_HiddenMonster_Electric,,,,2
+160143,Falouros_TransmutationPeople_StartNPC,,,,2
+160144,ep15_edmonda,,,エドムンダス,2
+160145,ep15_1_DevilgloveCapsule,,,デビルグローブがあるカプセル,2
+160146,master_JAG_npc,,minimap_man_scout,[ジャガーマスター]{nl} エル・イッサァ,2
+160147,guild_baubas_raid_start_npc,,,女神ラダ,2
+160148,boss_roze_kupole_light_mon,,,,2
+160149,roze_kruvina_canine,,,UnvisibleName,2
+160150,ep15_1_bracken,,,赤ワラビ,2
+160151,ep15_1_bottle,,,アウシュリネのヒョウタン,2
+160152,roze_raid_strat_npc,,minimap_event_1,,2
+160153,roze_multi_kruvina_canine,,,UnvisibleName,2
+160154,ep15_1_sealstone,,,封印石,2
+160155,raid_auto_sweep_npc,,minimap_event_1,オート掃討,2
+160156,master_SpearMaster_npc,,minimap_man_scout,[神戟マスター]{nl}段雅,2
+160157,Tos_Event_Coin_NPC,,minimap_event_1,TOSコイン案内役,2
+160158,tb_jellyzele_rising_reefpiles,,,UnvisibleName,2
+160159,Event_2304_ARBOR_DAY_NPC,,minimap_event_1,[イベント]新芽交換担当員{nl},2
+160160,bridge_wailing_section1_npc,,,第1区域,2
+160161,bridge_wailing_section2_npc,,,第2区域,2
+160162,bridge_wailing_section3_npc,,,第3区域,2
+160163,tree_1,,,苗木,2
+160164,tree_2,,,若木,2
+160165,bridge_wailing_hidden_npc,,,UnvisibleName,2
+160166,Hiddennpc_BridgeWailing_Reward_Multiple,,,倍数券,2
+160167,tosw_colony_flag_klapeda,,icon_item_divine_flag,クラペダの旗,2
+160168,tosw_colony_flag_orsha,,icon_item_divine_flag,オルシャの旗,2
+160169,tosw_colony_flag_fedimian,,icon_item_divine_flag,フェディミアンの旗,2
+160170,master_Engineer_npc,,minimap_man_archer,[エンジニアマスター]{nl}マーガレット・イネイザ,2
+160171,upinis_illusion_wedge,,,,2
+160172,upinis_white_black_gate,,,,2
+160173,upinis_sap,,,樹液,2
+160174,upinis_sleep_powder,,,睡眠の粉,2
+160175,guild_agit_extension_trans_dummy_npc_agit_in,,,アジト内部,2
+160176,guild_agit_extension_trans_dummy_npc_agit_out,,,アジト外部,2
+160177,guild_agit_extension_trans_dummy_npc_board,,,貢献度掲示板,2
+160178,Tos_Coin_Shop_NPC,,minimap_event_1,過去の女神の証商店,2
+160179,upinis_raid_strat_npc,,minimap_event_1,,2
+160180,slogutis_raid_strat_npc,,minimap_event_1,,2
+160181,guild_fallendragoon_raid_start_npc,,,碑石,2
+160182,hiddennpc_solo_reward_multiple,,,倍数券,2
+160183,slogutis_projectile,,,,2
+160184,papaya_colony_flag_klapeda,,icon_item_divine_flag,クラペダの旗,2
+160185,papaya_colony_flag_orsha,,icon_item_divine_flag,オルシャの旗,2
+160186,papaya_colony_flag_pedimian,,icon_item_divine_flag,フェディミアンの旗,2
+160187,event_2023_moon_rabit_start_npc,ラピンディオンは以前から幻想図書館の本棚の間などに生息していました。女神バイボラとクポルたちは特に捕まえようとしませんでした。それは本のページの2次元に生息する魔法生物であるが故に、危険を察知するとそこに隠れるからというのが一番の理由であったことや、加えて特に害を及ぼすこともなかったからです。一部では女神バイボラに仕える個体もいました。しかし、神樹の日とそれらに繋がる一連の事態によって全てが変わってしまいました。,mon_lapindion,月ウサギ,2
+160188,event_2023_moon_rabit_whorfzone,,minimap_portal,ワープの魔法陣,2
 161000,E_statue_zemina,,minimap_goddess,ジェミナ女神像,2
 161001,npc_kupole_Velcoffer,,,クポル シモナ,2
 161002,npc_Teliavelis,,minimap_man_smith,鍛冶屋 テリアベリス,2
@@ -1554,3 +1870,17 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 161022,uniq_id_nicopolis_mana_effect_mon,,,,2
 161023,uniq_id_nicopolis_mana_effect_onwer,,,,2
 161024,uniq_id_nicopolis_boss_room_potal,,,,2
+300023,pcskill_tutu,モンスター,icon_item_nothing,金ぴかトゥートゥー,2
+300033,pcskill_DesperateDefense, ,icon_item_nothing,デスパレートディフェンスの旗,2
+2000127,gimmick_fireball_E1,モンスター,,熱いアメ,2
+2000128,farm47_circle_01_E1,モンスター,,魔法陣,2
+2000129,halloween_scarecrow_E1,モンスター,,ハロウィーンカカシ,2
+2000130,lockdoor_npc_E1,モンスター,,閉ざされた扉,2
+2000131,pumpkin_bonus_E1,モンスター,,甘い魔法陣,2
+2000132,middle_boss_board_E1,モンスター,,住民が残したメモ,2
+2000201,creto_E1,村人たちがモンスターに扮して妨害します。,mon_creto,変装した村人,2
+2000202,cretobiang_E1,熱情的な村人たちがモンスターに扮して妨害します。,mon_cretobiang,熱情的な村人,2
+2000203,boss_summon_spiderweb_E1,村人たちが設置しておいたトラップです。しばらくの間、移動を邪魔します。,,,2
+2000204,velniasprison_warp_mini_E1,足場を踏むと、最高速度で走ることができます。,,加速足場,2
+2000206,hidden_monster_E1,出発地点透明オブジェクト,,,2
+2000207,event_npc_village_male_b3,出発地点透明オブジェクト,minimap_event_1,[イベント]村の青年B3,2

@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "console-stamp": "^0.2.7",
+    "java": "^0.9.1",
     "lunr": "^2.3.6",
     "lunr-languages": "^1.1.0",
     "nodejieba": "^2.3.0",

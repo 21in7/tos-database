@@ -328,6 +328,22 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 47266,treasure_box3_2,,,寶箱 3,2
 47267,Event_treasure_box3_2,,minimap_event_1,皇家聖誕寶箱,2
 47268,Event_treasure_box4,,minimap_event_1,神秘聖誕寶箱,2
+47269,pradziatemple_warp_npc,,minimap_portal,弗萊吉亞神殿,2
+47270,kruvina_wall,,minimap_portal,克魯比那屏障,2
+47271,fire_tree_wall,,minimap_portal,燃燒的樹木,2
+47272,black_crack,,minimap_portal,黑色裂縫,2
+47273,npc_paulius,,,帕烏魯斯,2
+47274,ep13_2_d_prison_1_EyeEffect_hiddennpc,,,UnvisibleName,2
+47275,surgery_switch,,,亞夏克地牢控制桿,2
+47276,ep13_2_d_prison_experiment_by-product_apparatus,,,亞夏克地牢支架1,2
+47277,ep13_2_d_prison_ExperimentTable,,,亞夏克地牢支架2,2
+47278,ep13_2_d_prison_prop_plus_01,,,亞夏克地牢支架3,2
+47279,ep13_2_d_prison_prop_plus_02,,,亞夏克地牢支架4,2
+47280,ep13_2_d_prison_shifter,,,亞夏克地牢支架5,2
+47281,ep13_2_d_prison_WasteProduct,,,亞夏克地牢支架6,2
+47282,surgery_prop,,,亞夏克地牢實驗台,2
+47283,ep13_2_d_prison_WasteProduct_OBB,,,亞夏克地牢支架6_OBB,2
+47284,npc_paulius_2,,,倒下的帕烏魯斯,2
 47413,npc_lecifer,怪物,icon_item_nothing,雷克西波人類型,2
 48002,f_katyn_owl02,,,貓頭鷹雕像,2
 48003,f_katyn_owl03,,,貓頭鷹雕像,2
@@ -365,6 +381,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 58602,pet_fruits_plate,怪物,icon_item_nothing,大嘴鳥飼料,2
 58738,npc_raid_gimmick,怪物,icon_item_nothing,保護的祭壇,2
 59066,farmer_plant_step_01,怪物,icon_item_nothing,,2
+59785,mon_kupole_Lutha,怪物,icon_item_nothing,奎波爾路塔,2
 101001,mon_paladin_follower1_2_hp,怪物,icon_item_nothing,聖殿十字軍追隨者A2,2
 101002,mon_paladin_follower1_3_hp,怪物,icon_item_nothing,聖殿十字軍追隨者A3,2
 103015,mon_paladin_follower1_3_Q,怪物,icon_item_nothing,露克立斯部隊員,2
@@ -655,6 +672,78 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150225,npc_kingdom_paladin_follower2,,,聖殿十字軍追隨者2,2
 150226,npc_kingdom_owl_statue,,,貓頭鷹雕像,2
 150227,npc_goddess_Laima_ep12,,,被監禁的拉伊瑪,2
+150228,npc_glacier_tuto_rp_mon,,,UnvisibleName,2
+150229,npc_glacier_tuto_rp_NPC_01,,,濃縮寒氣的裝置,2
+150230,npc_rangdagirl_01,,,冉達少女,2
+150231,npc_memorialstone_remains,,,碑石的殘骸,2
+150232,npc_ancientmonument,,,古代碑石,2
+150233,npc_f_castle_101_alter_01,,,祭壇,2
+150234,npc_f_castle_101_altar_02,,,中央祭壇,2
+150235,npc_bower_stone,,,鮑爾魔石,2
+150236,npc_bower_branch_01,,,鮑爾樹枝,2
+150237,npc_goddess_Ausirine,,,女神奧施莉奈,2
+150238,npc_rangdagirl_02,,,白冉達少女,2
+150239,npc_MasterRangda_Barong2,,,米爾拉斯,2
+150240,npc_rangdagirl_03,,,黑冉達少女,2
+150241,npc_giltine_01,,,吉特涅,2
+150242,npc_rada_goddess_ep13_1,,,女神拉達,2
+150243,black_crack_Q1,,,黑色裂縫,2
+150244,ep13_mine_cart_Q1,,,開採裂縫用推車,2
+150245,blackman_crystal_Q1,,,觀看者的黑色水晶,2
+150246,blackman_crystal_find,,,UnvisibleName,2
+150247,blackman_crystal_center,,,UnvisibleName,2
+150248,TOSHero_Grid_Object_1,,,排除之光,2
+150250,TOSHero_Grid_Object_3,,,被遺忘的故事,2
+150251,TOSHero_HiddenTrigger_360,,,UnvisibleName,2
+150252,TOSHero_Buff_Avatar_Summon_1,,,團結的靈魂,2
+150253,TOSHero_Buff_Avatar_Summon_2,,,團結的靈魂,2
+150254,TOSHero_Buff_Avatar_Summon_3,,,團結的靈魂,2
+150255,TOSHero_Buff_Avatar_Summon_4,,,立誓者,2
+150256,TOSHero_TUTO_NPC_1,,,謎樣說書人,2
+150257,npc_MasterLuchador,,minimap_man_master,摔角手大師,2
+150258,ep14_1_orsha_flag1,,,歐勒夏旗幟1,2
+150259,ep14_1_orsha_flag2,,,歐勒夏旗幟2,2
+150260,ep14_1_royal_flag1_1,,,王國軍旗幟1,2
+150261,ep14_1_royal_flag1_2,,,王國軍旗幟2,2
+150262,ep14_1_royal_flag2,,,王國軍旗幟3,2
+150263,ep14_1_arrow,,,插在地下的箭,2
+150264,ep14_1_ballista,,,弩炮,2
+150265,ep14_1_barricade1_1,,,戰爭路障1,2
+150266,ep14_1_barricade1_2,,,戰爭路障2,2
+150267,ep14_1_barricade2_1,,,戰爭路障3,2
+150268,ep14_1_barricade2_2,,,戰爭路障4,2
+150269,ep14_1_large_barricade_1,,,戰爭路障5,2
+150270,ep14_1_large_barricade_2,,,戰爭路障6,2
+150271,ep14_1_large_barricade_orsha,,,戰爭路障7,2
+150272,ep14_1_large_barricade_royal,,,戰爭路障8,2
+150273,ep14_1_sand_barricade_1,,,戰爭路障9,2
+150274,ep14_1_sand_barricade_2,,,戰爭路障10,2
+150275,ep14_1_scarecrow_barricade_1,,,戰爭路障11,2
+150276,ep14_1_scarecrow_barricade_2,,,戰爭路障12,2
+150277,ep14_1_broken_orsha_flag1,,,斷裂的歐勒夏旗幟1,2
+150278,ep14_1_broken_orsha_flag2,,,斷裂的歐勒夏旗幟2,2
+150279,ep14_1_broken_royal_flag1_1,,,斷裂的王國軍旗幟1,2
+150280,ep14_1_broken_royal_flag1_2,,,斷裂的王國軍旗幟2,2
+150281,ep14_1_broken_royal_flag2,,,斷裂的王國軍旗幟3,2
+150282,ep14_1_ballista2,,,弩炮2,2
+150283,ep14_1_f_castle_3_mq_3_Object_1,,,散亂的痕跡,2
+150284,ep14_1_f_castle_3_mq_4_Object_1,,,變異雪貂的帳篷,2
+150285,npc_Kaoneela,,,攝政卡歐尼拉·亨留西,2
+150286,npc_Heoshaa,,,護衛隊長 黑歐夏,2
+150287,npc_Ramin,,,大將軍拉明,2
+150288,npc_Veliuona,,,魔神貝利烏歐那,2
+150289,npc_RoyalGuard,,,王室禁衛隊,2
+150290,ep14_1_kingdomsodier,,,王國軍,2
+150291,npc_MasterHwarang,,minimap_man_archer,花郎大師,2
+150292,ep14_1_blackman_crystal,,,觀看者的黑色水晶,2
+150293,ep14_1_Raid_Track_prop,,,遠征隊演出用prop,2
+150294,ep14_1_kingdomsodier_hide,,,躲藏的士兵,2
+150295,ep14_1_kingdomsodier_rescue,,,掉隊的偵查兵,2
+150296,ep14_1_f_castle_3_mq_4_Object_2,,,變異雪貂的帳篷,2
+150297,ep14_1_f_castle_5_mq_1_Object_1,,,補給品推車,2
+150298,EP14_1_FCASTLE2_MQ_4_FIELDSOLDIER,,,王國軍,2
+150299,EP14_1_FCASTLE2_MQ_5_FIELDSOLDIER,,,王國軍,2
+150300,EP14_1_FCASTLE2_MQ_6_FIELDSOLDIER,,,王國軍,2
 151000,closing_device,,,封鎖裝置,2
 151001,spell_crystal_red,,,凝結魔力的結晶,2
 151002,spell_crystal_gem_red,,,紅焰的寶石,2
@@ -798,13 +887,13 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151151,klaipeda_balloons,,,慶典用氣球攤販,2
 151152,klaipeda_christmas_tree_npc,,,2周年紀念樹,2
 151153,NPC_Golddog,,,金剛天狗,2
-151154,treeday_1,,,樹苗,2
-151155,treeday_2,,,樹苗,2
-151156,treeday_3,,,成木,2
-151157,treeday_4,,,成木,2
-151158,treeday_5,,,茂密的成木,2
-151159,treeday_6,,,茂密的成木,2
-151160,treeday_7,,,茂密的成木,2
+151154,treeday_1,,,[Lv.1] 植樹節紀念樹,2
+151155,treeday_2,,,[Lv.2] 植樹節紀念樹,2
+151156,treeday_3,,,[Lv.3] 植樹節紀念樹,2
+151157,treeday_4,,,[Lv.4] 植樹節紀念樹,2
+151158,treeday_5,,,[Lv.5] 植樹節紀念樹,2
+151159,treeday_6,,,[Lv.6] 植樹節紀念樹,2
+151160,treeday_7,,,[Lv.7] 植樹節紀念樹,2
 151161,treeday_square,,,花壇,2
 151162,npc_2017wedding_1_f,,,2017 五月新娘 NPC,2
 151163,npc_artefact_bouquet01,,,新娘捧花,2
@@ -812,7 +901,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151165,playground_goalpost,,,足球球門柱,2
 151166,strongbox_1_event,,minimap_event_3,金庫,2
 151167,treasure_box5_event,,minimap_event_2,寶箱 5,2
-151168,npc_moon,,,滿月,2
+151168,npc_moon,,minimap_event_1,滿月,2
 151169,stone_hill_show_name,,,石堆,2
 151170,dirt_heal_2_show_name,,,沙堆,2
 151171,npc_kupole_1_event,,minimap_event_1,活動奎波爾1,2
@@ -1077,7 +1166,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 153199,npc_circle_trigger_white,,,高原魔法陣啟動裝置,2
 153200,npc_circle_trigger_yellow,,,高原魔法陣啟動裝置,2
 153201,npc_RET_master,,minimap_man_master,網鬥士大師,2
-153202,npc_NAK_master,,minimap_man_master,泰拳大師,2
+153202,npc_NAK_master,,minimap_man_master,泰拳專家大師,2
 153203,npc_ONM_master,,minimap_man_wizard,陰陽師大師,2
 153204,f_nicopolis_pendulum,,,UnvisibleName,2
 153207,npc_PID_master,,minimap_man_archer,吹笛手大師,2
@@ -1112,6 +1201,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 153236,npc_Lapezard_statue,,,拉沛查特雕像,2
 153237,npc_Lapemiter_statue,,,拉沛瑪伊德雕像,2
 153238,npc_Lapeman_statue,,,拉沛蒙雕像,2
+153240,npc_nicopolis_obj3,,,尼柯波爾利斯雕塑3,2
+153241,npc_nicopolis_obj4,,,奇怪的雕塑,2
 154000,velniasprison_warp,,minimap_portal,空間移動魔法陣,2
 154001,velniasp_block,,,,2
 154002,npc_velniasp_mage,,,傳點魔法師,2
@@ -1231,7 +1322,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154116,HiddenWall_60_60_500,,,,2
 154117,HiddenWall_40_40_500,,,,2
 154118,HiddenWall_25_25_500,,,,2
-154119,Event_FishingBox,,minimap_event_1,悠夏的泥鰍桶,2
+154119,Event_FishingBox,,,悠夏的泥鰍桶,2
 154120,npc_pajauta_1,,,帕亞烏塔,2
 154121,npc_MasterSheriff,,minimap_man_scout,警長大師,2
 154122,npc_MasterMatross,,minimap_man_archer,砲衛軍大師,2
@@ -1239,6 +1330,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154124,npc_MasterTigerHunter,,minimap_man_archer,虎獵師大師,2
 154125,npc_kupole_7,,minimap_personal_house,奎波爾7,2
 154129,npc_washstand_1,,minimap_event_1,噴水池,2
+154130,npc_Ragana_shop,,minimap_event_1,魔神羅迦娜的幻影,2
 155000,npc_crystal_machine,,,水晶加工機械,2
 155001,farm49_sapling,,,神祕的樹苗,2
 155002,dirt_ground,,,土壤標本,2
@@ -1404,6 +1496,9 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 155169,d_startower_velnias_stone,,,魔族的裝置,2
 155170,star_stone_01_small_startower,,,魔力殘留物,2
 155171,npc_crystal_machine_event,,minimap_event_1,活動水晶加工機械,2
+155172,kruvina_center_Q,,,克魯比那中央裝置,2
+155173,kruvina_center2_Q,,,巨大克魯比那中央裝置,2
+155174,dungeon_tower_1,,minimap_erosion,未知的聖域,2
 156000,npc_gintas,,,信徒金塔斯,2
 156001,npc_margiris,,,瑪魯基利斯,2
 156002,npc_bocor_juta,,,邪靈祭司 尤塔,2
@@ -1565,6 +1660,21 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 157056,npc_junk_shop_2,,minimap_kedora,[凱都拉商團員]{nl}凱拉爾達西亞,2
 157057,npc_junk_shop_3,,minimap_kedora,[凱都拉商團員]{nl}凱拉爾達遜,2
 157100,npc_sage_female_2,,,賢者 女2,2
+157101,blackman_crystal,,,觀看者的黑色水晶,2
+157102,glacier_crystal_unique,,,獨特格萊伊希歐的水晶,2
+157103,glacier_crystal_legend,,,傳說格萊伊希歐的水晶,2
+157104,crusader_quest_npc_01,,,破掉的袋子,2
+157105,npc_fedimian_merchant_5,,minimap_man_smith,鐵匠見習生,2
+157110,TOSHERO_WHEEL_MAPPATTERN_OBJECT,,,UnvisibleName,2
+157111,EP13_2_DPRISON2_MQ_5_LOSTARTICLE,,,貴族掉落的遺失物,2
+157112,EP13_2_DPRISON2_MQ_6_STORAGEBOX,,,故障的保管箱,2
+157113,EP13_2_DPRISON2_MQ_7_SOULFRAGMENT,,,破碎的帕烏魯斯的靈魂,2
+157114,EP13_2_DPRISON3_TRAPSPOT,,,設置炸彈地點,2
+157115,ep14_1_npc_pajauta,,,帕亞烏塔,2
+157116,ep14_1_blackball,,,UnvisibleName,2
+157117,DelmoreCastleGate_SKL3_SKLOBJ,,,UnvisibleName,2
+157118,DelmoreCastleGate_SKL5_SKLOBJ,,,UnvisibleName,2
+157119,DelmoreCastleGate_KruvinaBullet,,,克魯比那彈藥,2
 158000,npc_paladin_follower1_3_copy,,minimap_team,隊伍戰鬥聯賽,2
 158001,npc_friar_02_blacksmith,,minimap_man_smith,修道士2鐵匠,2
 160000,h_GuildHousing_farmer_girl,,,農場管理員,2
@@ -1585,7 +1695,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160015,npc_Xmas_Evt_NPC2,,minimap_event_1,聖誕節 NPC2,2
 160016,rokas_pot3_small_E1,,,新年福罐,2
 160018,Hiddennpc_RiftMode_Start,,,次元崩壞地點入場,2
-160019,event_2001_cat,,,釣魚場小貓,2
+160019,event_2001_cat,,minimap_event_1,釣魚場小貓,2
 160020,HiddenWall_moring,,,,2
 160021,MORINGPONIA_HARD_PURIFYING_STONE,,,淨化石,2
 160022,WEEKLY_PURIFYING_STONE,,,淨化石,2
@@ -1593,6 +1703,146 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160024,NPC_goddess_Roulette,,minimap_event_1,[活動] 女神的輪盤,2
 160025,ANCIENT_QUEST_OBJECT,,minimap_portal,淨化的祭壇,2
 160026,ANCIENT_QUEST_OBJECT2,,minimap_portal,淨化的祭壇,2
+160027,Glacier_magictrap_core,,,魔力寶珠,2
+160028,Glacier_Spear,,,,2
+160029,Glacier_HiddenTrigger,,,,2
+160030,npc_Irredians_TelHarsha,,,泰哈爾沙,2
+160031,PillarOfIce,,,冰柱,2
+160032,Hiddennpc_Challenge_HardMode_Reward_Multiple,,,倍數券,2
+160033,Hiddennpc_Challenge_HardMode_Reward_Exit,,,模式結束,2
+160034,npc_elevator,,minimap_elevator,地圖移動裝置,2
+160035,Glacier_ColdBlast_Obj,,,寒氣爆破啟動裝置,2
+160036,Hiddennpc_ExpertChallenge_Start,,,進入挑戰模式 : 分裂特別傳點,2
+160037,MORINGPONIA_HARD_SOLO_PURIFYING_STONE,,,淨化石,2
+160038,HiddenWall_moring2,,,,2
+160039,FIELD_PURIFYING_STONE,,,淨化石,2
+160040,Giltine_Raid_Cristalobj,,,封玉,2
+160044,npc_huevill_female_1_Ev,,minimap_event_1,[5週年]特別的凱都拉商人,2
+160046,npc_baubas,,,魔神巴烏巴斯,2
+160047,npc_Ragana_EP13,,,魔神羅迦娜,2
+160048,weekly_flower_yellow,,,,2
+160049,weekly_flower_red,,,,2
+160050,weekly_flower_white,,,,2
+160051,Ev_Npc_barrack_snowman,,minimap_event_1,[冬季慶典] 亞克曼波雪人,2
+160052,Ev_Npc_baby_marnoks,,minimap_event_1,[1週年] 馬魯若斯寶寶,2
+160053,npc_ARQ_master,,minimap_man_archer,火繩槍兵大師,2
+160054,npc_CLO_master,,minimap_man_scout,小丑大師,2
+160055,Hiddennpc_Challenge_Auto_HardMode_Reward_Multiple,,,追加獎勵券,2
+160056,Event_supply_NPC_1,,minimap_event_1,[活動]王國重建團補給官,2
+160057,Event_supply_NPC_2,,minimap_event_1,[活動] 王國重建團見習補給兵,2
+160058,Event_supply_NPC_3,,minimap_event_1,[活動]王國重建團補給兵,2
+160059,Event_supply_NPC_4,,,補給官的背包,2
+160060,Event_supply_NPC_5,,,補給官的老舊箱子,2
+160061,Event_supply_NPC_6,,minimap_event_1,王國重建團補給品推車,2
+160062,Event_supply_NPC_7,,minimap_event_1,[活動]歐勒夏難民,2
+160063,Hiddennpc_Challenge_Auto_End,,,模式結束,2
+160064,Hiddennpc_Mythic_Auto_Reward_Multiple,,,聖物遠征隊倍數券,2
+160065,Hiddennpc_MGame_EndPortal,,,結束,2
+160066,EVENT_dievdirbys_m,,minimap_event_1,[活動] 雕刻師派遺員,2
+160067,EVENT_goddess_statue,,minimap_event_1,[活動] 老舊的女神像,2
+160070,npc_huevill_female_1_Ev_2,,minimap_event_1,[兒童節活動]{nl}女神姐姐,2
+160071,npc_RUN_masterEv,,minimap_event_1,[活動]{nl}符文師大師,2
+160072,npc_MIKO_masterEv,,minimap_event_1,[活動]{nl}巫女大師,2
+160073,npc_SHM_masterEv,,minimap_event_1,[活動]{nl}暗影師大師  ,2
+160074,EV_SCS_M1,,minimap_event_1,[活動] 村莊自衛隊,2
+160075,Giltine_Raid_Cristalobj2,,,封玉,2
+160078,leather_bag_event,,,[活動]{nl}遊客的行李,2
+160079,Hiddennpc_SoloDungeon_Mini_End,,,模式結束,2
+160080,Event_Camping_npc,,minimap_event_1,[活動] 春季露營{nl} 遊客,2
+160081,Event_Camping_Ax_Man_npc,,minimap_event_1,[活動] 懶惰樵夫,2
+160082,Event_2105_bonfir,,minimap_event_1,[活動] 露營營火,2
+160085,Hiddennpc_Mythic_Auto_Hard_Reward_Multiple,,,追加獎勵券,2
+160086,boss_Vasilissa_Center_Hidden_Mon,,,,2
+160088,npc_kupole_Bernice,,,[強化乙太寶石]{nl} 奎波爾,2
+160089,Event_2106_Summer_npc,,minimap_event_1,[21Summer] 活動嚮導,2
+160090,npc_hawk_vibora,,,,2
+160091,boss_Vasilissa_Hidden_Mon_PoisonSmog,,,,2
+160092,Test_Server_Shop1,,minimap_event_1,[奎波爾]{nl}測服道具商店 1,2
+160093,Test_Server_Shop2,,minimap_event_1,[奎波爾]{nl}測服道具商店 2,2
+160094,Test_Server_Shop3,,minimap_event_1,[奎波爾]{nl}測服道具商店 3,2
+160096,Event_2108_Npc,,minimap_event_1,[活動]{nl}新手考古學家,2
+160097,npc_toucan_vibora,,,,2
+160098,BattleField_HiddenMonster,,,,2
+160101,weekly_Asiomage_ArmorBrake,,,,2
+160103,Event_2110_Npc,,minimap_event_1,[活動]{nl}幽靈少女,2
+160104,Event_2110_npc_cauldron_stew,,minimap_event_1,[活動]{nl}南瓜濃湯鑄鐵鍋,2
+160105,Event_2110_Npc2,,minimap_event_1,[活動] 廢都難民,2
+160106,Event_2111_npc,,minimap_event_1,[活動]{nl}村莊青年,2
+160107,npc_Move_to_Floor_2,,,,2
+160108,npc_Move_to_Floor_1,,,,2
+160109,boss_RevivalPaulius_Center_Hidden_Mon,,,,2
+160110,boss_RevivalPaulius_Eyes_Hidden_Mon,,,UnvisibleName,2
+160111,event_2112_npc_kupole,,minimap_event_1,[活動] 奎波爾路塔,2
+160112,EarringRaidGabiaPadHiddenMon,,,,2
+160113,boss_RevivalPaulius_ballista_Arrow_Box,,,弩炮箭矢堆,2
+160114,boss_RevivalPaulius_ballista_Arrow_Pos,,,UnvisibleName,2
+160115,boss_RevivalPaulius_Kruvina_Pillar,,,UnvisibleName,2
+160116,boss_RevivalPaulius_incomplete_kruvina,,,UnvisibleName,2
+160117,boss_RevivalPaulius_RockFall_CamHidden_Mon,,,,2
+160118,earring_raid_npc_gabia_goddess,,,煙火的記憶,2
+160119,Event_2201_Npc,,minimap_event_1,[活動]{nl} 新年哈勃克寶寶,2
+160120,archeology_compass_arrow,,minimap_portal,,2
+160121,gacha_machine,,minimap_man_tpshop,女神魔方,2
+160122,master_Lama_npc,,minimap_man_cleric,[喇嘛大師] {nl} 阿斯蒂尤斯,2
+160123,Event_bonfire_npc,,minimap_event_1,營火,2
+160124,boss_Jellyzele_find_pattern_Mon,,,,2
+160125,Event_2204_hidden_npc,,,,2
+160126,ep14_2_red_crystal,,,充滿克魯比那的紅色水晶,2
+160127,raid_jellyzele_npc_frair_f_03,,,繼承者尼悠雷,2
+160128,ep14_2_Object_root_crystal_broken,,,破碎的神樹之根水晶,2
+160129,ep14_2_Object_UnknownTriplehelix,,,莫提尼斯,2
+160130,toy_ep14zemina_cloud,,, ,2
+160135,raid_castle_ep14_2_soldier6_knockdown,,,倒下的士兵,2
+160136,boss_Spreader_Kruvina_Pillar,,,UnvisibleName,2
+160137,event_2207_npc_kupole,,minimap_event_1,[活動]{nl}和諧的小幫手,2
+160138,Spreader_hidden_NPC,,minimap_portal,,2
+160139,toy_laima_flag,,icon_item_divine_flag,拉伊瑪旗幟,2
+160140,toy_ep14rider,,, ,2
+160141,Falouros_Sphere_Driving_HiddenMonster,,,,2
+160142,Falouros_Sphere_Driving_HiddenMonster_Electric,,,,2
+160143,Falouros_TransmutationPeople_StartNPC,,,,2
+160144,ep15_edmonda,,,愛德文多斯,2
+160145,ep15_1_DevilgloveCapsule,,,放置黑色惡魔葛洛夫的膠囊,2
+160146,master_JAG_npc,,minimap_man_scout,[捷豹大師]{nl}艾爾伊特夏,2
+160147,guild_baubas_raid_start_npc,,,女神拉達,2
+160148,boss_roze_kupole_light_mon,,,,2
+160149,roze_kruvina_canine,,,UnvisibleName,2
+160150,ep15_1_bracken,,,紅蕨葉,2
+160151,ep15_1_bottle,,,奧施莉奈的葫蘆瓶,2
+160152,roze_raid_strat_npc,,minimap_event_1,,2
+160153,roze_multi_kruvina_canine,,,UnvisibleName,2
+160154,ep15_1_sealstone,,,封印石,2
+160155,raid_auto_sweep_npc,,minimap_event_1,自動掃蕩,2
+160156,master_SpearMaster_npc,,minimap_man_scout,[神戟師大師]{nl}丹雅,2
+160157,Tos_Event_Coin_NPC,,minimap_event_1,TOS鑄幣天使,2
+160158,tb_jellyzele_rising_reefpiles,,,UnvisibleName,2
+160159,Event_2304_ARBOR_DAY_NPC,,minimap_event_1,[活動] 新芽商人{nl},2
+160160,bridge_wailing_section1_npc,,,第1區,2
+160161,bridge_wailing_section2_npc,,,第2區,2
+160162,bridge_wailing_section3_npc,,,第3區,2
+160163,tree_1,,,樹苗,2
+160164,tree_2,,,成木,2
+160165,bridge_wailing_hidden_npc,,,UnvisibleName,2
+160166,Hiddennpc_BridgeWailing_Reward_Multiple,,,倍數券,2
+160167,tosw_colony_flag_klapeda,,icon_item_divine_flag,柯拉佩達的旗幟,2
+160168,tosw_colony_flag_orsha,,icon_item_divine_flag, 歐勒夏的旗幟,2
+160169,tosw_colony_flag_fedimian,,icon_item_divine_flag,佩迪米安的旗幟,2
+160170,master_Engineer_npc,,minimap_man_archer,[工程師大師]{nl}瑪格麗特·伊內薩,2
+160171,upinis_illusion_wedge,,,,2
+160172,upinis_white_black_gate,,,,2
+160173,upinis_sap,,,樹液,2
+160174,upinis_sleep_powder,,,睡眠粉,2
+160175,guild_agit_extension_trans_dummy_npc_agit_in,,,基地內部,2
+160176,guild_agit_extension_trans_dummy_npc_agit_out,,,基地外部,2
+160177,guild_agit_extension_trans_dummy_npc_board,,,貢獻度佈告欄,2
+160178,Tos_Coin_Shop_NPC,,minimap_event_1,古老的女神的信物商店,2
+160179,upinis_raid_strat_npc,,minimap_event_1,,2
+160180,slogutis_raid_strat_npc,,minimap_event_1,,2
+160181,guild_fallendragoon_raid_start_npc,,,碑石,2
+160182,hiddennpc_solo_reward_multiple,,,倍數券,2
+160183,slogutis_projectile,,,,2
+160187,event_2023_moon_rabit_start_npc,拉賓迪溫以前也曾經住在幻想圖書館的書櫃之間。巴伊寶拉女神和奎波爾並沒有硬要抓他，但因為他是住在書櫃2次元的魔法生物，所以感覺到危險自然會往該處躲，這是他待在該處最大的原因，而他也不會造成什麼大傷害。其中也有一部分侍奉巴伊寶拉女神的個體。但神樹之日和後續事態完全改變了所有事情的局面。,mon_lapindion,月兔,2
+160188,event_2023_moon_rabit_whorfzone,,minimap_portal,傳送魔法陣,2
 161000,E_statue_zemina,,minimap_goddess,女神澤米娜之像,2
 161001,npc_kupole_Velcoffer,,,奎波爾西姆那,2
 161002,npc_Teliavelis,,minimap_man_smith,鐵匠戴利亞貝利斯,2
@@ -1617,6 +1867,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 161022,uniq_id_nicopolis_mana_effect_mon,,,,2
 161023,uniq_id_nicopolis_mana_effect_onwer,,,,2
 161024,uniq_id_nicopolis_boss_room_potal,,,,2
+300023,pcskill_tutu,怪物,icon_item_nothing,金色毒魔蛙,2
+300033,pcskill_DesperateDefense, ,icon_item_nothing,危急防禦旗幟,2
 2000127,gimmick_fireball_E1,怪物,,嗆辣的糖果,2
 2000128,farm47_circle_01_E1,怪物,,魔法陣,2
 2000129,halloween_scarecrow_E1,怪物,,萬聖節稻草人,2
@@ -1624,8 +1876,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 2000131,pumpkin_bonus_E1,怪物,,甜蜜的魔法陣,2
 2000132,middle_boss_board_E1,怪物,,居民留下的紙條,2
 2000201,creto_E1,村民們扮成怪物妨礙。,mon_creto,變裝的村民,2
-2000202,cretobiang_E1,熱情的村民扮成怪物防礙。,mon_cretobiang,熱情的村民,2
-2000203,boss_summon_spiderweb_E1,村民們設置的陷阱，防礙暫時的移動。,,,2
+2000202,cretobiang_E1,熱情的村民扮成怪物妨礙。,mon_cretobiang,熱情的村民,2
+2000203,boss_summon_spiderweb_E1,村民們設置的陷阱，妨礙暫時的移動。,,,2
 2000204,velniasprison_warp_mini_E1,踩下踏板會以最高速度奔跑。,,加速踏板,2
 2000206,hidden_monster_E1,出發點透明物件,,,2
 2000207,event_npc_village_male_b3,出發點透明物件,minimap_event_1,[活動]村莊青年B3,2

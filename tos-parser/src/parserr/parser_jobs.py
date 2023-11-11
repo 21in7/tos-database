@@ -123,42 +123,6 @@ def parse_jobs():
             globals.jobs_by_name[obj['$ID_NAME']] = obj
 
 
-def parse_jobs_images(region, version_update):
-    if not ((region == TOSRegion.kTEST or region == TOSRegion.kTOS) and version_update):
-        return
-
-    logging.debug('Parsing Jobs images...')
-    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'job.ies')
-
-    with open(ies_path, 'rb') as ies_file:
-        for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
-            image_path = os.path.join(constants.PATH_BUILD_ASSETS_IMAGES, 'classes', row['ClassName'])
-            image_path_f = image_path + '_f.gif'
-            image_path_m = image_path + '_m.gif'
-
-            if os.path.exists(image_path_f):
-                continue
-
-            treeofsavior_domain = 'http://tosweb.vod.nexoncdn.co.kr'
-            treeofsavior_path_female = '/Job_sd_w/' + row['ClassID'] + '.gif'
-            treeofsavior_path_male = '/Job_sd_m/' + row['ClassID'] + '.gif'
-
-            if treeofsavior_domain.startswith('https://'):
-                conn = httplib.HTTPSConnection(treeofsavior_domain.split('://')[1])
-                conn.request('HEAD', treeofsavior_path_female)
-            else:
-                conn = httplib.HTTPConnection(treeofsavior_domain.split('://')[1])
-                conn.request('HEAD', treeofsavior_path_female)
-
-            response = conn.getresponse()
-            conn.close()
-
-            if response.status != 200:
-                logging.warn('Failed to retrieve job image: %s, status %s', treeofsavior_domain + treeofsavior_path_female, response.status)
-                continue
-
-            urllib.urlretrieve(treeofsavior_domain + treeofsavior_path_female, image_path_f)
-            urllib.urlretrieve(treeofsavior_domain + treeofsavior_path_male, image_path_m)
 
 
 def parse_jobs_stats():

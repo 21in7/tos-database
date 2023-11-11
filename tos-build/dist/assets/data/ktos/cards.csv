@@ -1,5 +1,6 @@
 $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Monster,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,MonsterElement,MonsterRace,Name,Price,Stat_Height,Stat_Legs,Stat_Weight,TimeCoolDown,TimeLifeTime,Tradability,Type,TypeCard,Weight
-644001,card_Gaigalas,[슬롯 장착 효과] 땅 속성 추가 대미지 +[★*10],icon_item_card_util,027_boss_gaigalas,,,,,41220,,,,1,0,가이갈라스 카드,500,205,4,201,0.0,0.0,TTTT,4,5,1.0
+92110,Episode_Select_Monster_NoTrade,"사용 시 다음 아이템중 1개를 선택하여 획득할 수 있으며,{nl}{#ff0000}구성품은 획득 시 팀 창고 이동만 가능하도록 변경됩니다.{/}{nl}- 석화고래 카드{nl}- 자우라 카드{nl}- 누아엘레 카드{nl}- 게이징 골렘",icon_item_event_roulette_master,,,,,,,,,,,,[에피소드] 몬스터 카드 선택 카드첩,0,,,,0.0,0.0,FFFT,4,,0.0
+644001,card_Gaigalas,[슬롯 장착 효과] 추가 대미지 + [★ * 10],icon_item_card_util,027_boss_gaigalas,,,,,41220,,,,1,0,가이갈라스 카드,500,205,4,201,0.0,0.0,TTTT,4,5,1.0
 644002,card_GazingGolem,[슬롯 장착 효과] 피격 시 [★]% 확률로 페인배리어 사용 (지속시간 15초),icon_item_card_util,108_boss_gazinggolem,,,,,47322,,,,0,4,게이징 골렘 카드,500,324,2,4860,0.0,0.0,TTTT,4,5,1.0
 644003,card_Gorgon,[슬롯 장착 효과] 때리기류 방어력 +[★*10],icon_item_card_def,064_boss_gorgon,,,,,800042,,,,0,1,고르곤 카드,500,190,4,1360,0.0,0.0,TTTT,4,1,1.0
 644004,card_Golem,[슬롯 장착 효과] HP 포션 종류 사용 시 10초간 물리 방어력 +[★]%,icon_item_card_def,003_boss_golem,,,,,450221,,,,1,4,골렘 카드,500,215,2,6192,0.0,0.0,TTTT,4,1,1.0
@@ -7,7 +8,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644006,card_Glass_mole,[슬롯 장착 효과] SP 포션 종류 사용 시 6초간 물리 대미지 +[★]%,icon_item_card_atk,012_boss_glass_mole,,,,,41367,,,,4,0,글래스몰 카드,500,192,4,860,0.0,0.0,TTTT,4,0,1.0
 644007,card_ginklas,[슬롯 장착 효과] 판금 갑옷 대상에게 주는 대미지[★/2]% 증가,icon_item_card_atk,091_boss_ginklas,[642013],,,,41208,,[18018],,2,4,긴클라스 카드,500,320,2,1053,0.0,0.0,TTTT,4,0,1.0
 644008,card_NetherBovine,[슬롯 장착 효과] 힘 스탯 +[★],icon_item_card_stat,026_boss_netherbovine,,,,,800001,,,,0,1,네더보바인 카드,500,195,4,966,0.0,0.0,TTTT,4,4,1.0
-644009,card_necrovanter,[슬롯 장착 효과] 어둠 속성 추가 대미지 +[★*10],icon_item_card_util,044_boss_necrovanter,[642011],"[642907, 642919, 642941]",,,800002,,,,0,1,네크로벤터 카드,500,416,1,144,0.0,0.0,TTTT,4,5,1.0
+644009,card_necrovanter,[슬롯 장착 효과] 추가 대미지 + [★ * 10],icon_item_card_util,044_boss_necrovanter,[642011],"[642907, 642919, 642941]",,,800002,,,,0,1,네크로벤터 카드,500,416,1,144,0.0,0.0,TTTT,4,5,1.0
 644010,card_deadbone,[슬롯 장착 효과] 물리 치명타 공격력 +[★*20],icon_item_card_atk,014_boss_deadbone,,,,,41203,,,,0,4,데드본 카드,500,333,2,207,0.0,0.0,TTTT,4,0,1.0
 644011,card_Devilglove,[슬롯 장착 효과] 변이형 속성 몬스터에게 주는 대미지[★]% 증가,icon_item_card_atk,072_boss_devilglove,,,,,41385,,,,0,4,데블글로브 카드,500,127,5,98,0.0,0.0,TTTT,4,0,1.0
 644012,card_Denoptic,[슬롯 장착 효과] 마법 방어력 +[★*10],icon_item_card_def,024_boss_denoptic,,,,,41368,,,,7,4,덴옵틱 카드,500,388,6,205,0.0,0.0,TTTT,4,1,1.0
@@ -17,7 +18,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644017,card_lecifer,[슬롯 장착 효과] 마법 치명타 공격력 +[★*10],icon_item_card_atk,030_boss_lecifer,,,,,800043,,,,0,1,렉시퍼 카드,500,213,2,123,0.0,0.0,TTTT,4,0,1.0
 644018,card_Reaverpede,[슬롯 장착 효과] 중형 대상에게 주는 대미지[★/2]% 증가,icon_item_card_atk,051_boss_reaverpede,,,,,800044,,,,7,2,리버피드 카드,500,276,6,1200,0.0,0.0,TTTT,4,0,1.0
 644019,card_spector_gh,[슬롯 장착 효과] SP 포션 종류 효과 +[★]%,icon_item_card_util,010_boss_spector_gh,,,,,800045,,,,0,1,리카우스 카드,500,230,2,76,0.0,0.0,TTTT,4,5,1.0
-644022,card_mineloader,[슬롯 장착 효과] 공격 시 [★/3]% 확률로 상대방에게 3초간 감전 상태,icon_item_card_util,092_boss_mineloader,[642014],"[642904, 642921]",,,800024,,,,5,4,마인로더 카드,500,345,4,863,0.0,0.0,TTTT,4,5,1.0
+644022,card_mineloader,[슬롯 장착 효과] 공격 시 [★/3]% 확률로 상대방에게 3초간 감전 상태{nl}(감전 디버프의 대미지는 1로 고정 됩니다.),icon_item_card_util,092_boss_mineloader,[642014],"[642904, 642921]",,,800024,,,,5,4,마인로더 카드,500,345,4,863,0.0,0.0,TTTT,4,5,1.0
 644023,card_Malletwyvern,[슬롯 장착 효과] 대형 몬스터에게 피격 시 [★]% 확률로 SP 3% 회복{nl}재사용 대기 시간 5초,icon_item_card_util,106_malletwyvern,,,,,47502,,,,4,0,말렛와이번 카드,500,222,4,1605,0.0,0.0,TTTT,4,5,1.0
 644024,card_MagBurk,[슬롯 장착 효과] 변이형 몬스터 처치 시 [★]% 확률로 SP 5% 회복,icon_item_card_util,049_boss_magburk,[642014],,,,41350,,,,2,4,매그버크 카드,500,197,4,409,0.0,0.0,TTTT,4,5,1.0
 644025,card_Manticen,[슬롯 장착 효과] STA 포션 종류 사용 시 10초간 이동속도+[★/5],icon_item_card_util,114_boss_manticen,,"[642906, 642922]",,,800030,,,,7,2,맨티켄 카드,500,255,4,214,0.0,0.0,TTTT,4,5,1.0
@@ -28,7 +29,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644030,card_moa,[슬롯 장착 효과] 악마형 몬스터에게 주는 대미지[★]% 증가,icon_item_card_atk,083_boss_moa,,,,,41378,,,,0,0,모아 카드,500,340,2,1120,0.0,0.0,TTTT,4,0,1.0
 644031,card_Moyabruka,[슬롯 장착 효과] 가죽 갑옷 대상에게 주는 대미지[★/2]% 증가,icon_item_card_atk,115_boss_moyabruka,[642012],,,,47325,,,,1,0,모야브루카 카드,500,200,4,1288,0.0,0.0,TTTT,4,0,1.0
 644032,card_Moldyhorn,[슬롯 장착 효과] 석화 상태 이상에 걸린 대상에게 주는 대미지[★]% 증가,icon_item_card_atk,109_boss_moldyhorn,[642012],,,,47323,,,,7,0,몰디혼 카드,500,307,2,421,0.0,0.0,TTTT,4,0,1.0
-644033,card_molich,[슬롯 장착 효과] 블럭 +[★ * 2],icon_item_card_util,021_boss_glass_mole,[642012],"[642908, 642915, 642923]",,,400421,,,,0,0,몰렉 카드,500,540,2,2075,0.0,0.0,TTTT,4,5,1.0
+644033,card_molich,[슬롯 장착 효과] 블록 +[★ * 2],icon_item_card_util,021_boss_glass_mole,[642012],"[642908, 642915, 642923]",,,400421,,,,0,0,몰렉 카드,500,540,2,2075,0.0,0.0,TTTT,4,5,1.0
 644034,card_Minotaurs,"[슬롯 장착 효과] 민첩 스텟 +[★/2], 정신 스탯 +[★/2] ",icon_item_card_stat,090_boss_minotaurs,,,,,800004,,,,2,1,미노타우로스 카드,500,242,2,560,0.0,0.0,TTTT,4,4,1.0
 644035,card_mirtis,[슬롯 장착 효과] 소형 몬스터에게 주는 대미지[★/2]% 증가,icon_item_card_atk,007_boss_mirtis,,,,,800048,,,,0,1,미르티스 카드,500,346,2,192,0.0,0.0,TTTT,4,0,1.0
 644036,card_bebraspion,[슬롯 장착 효과] 양손 무기 착용 시 공격 속도 +[★],icon_item_card_util,005_boss_bebraspion,,,,,41222,,,,5,0,베브라스피온 카드,500,345,2,860,0.0,0.0,TTTT,4,5,1.0
@@ -41,7 +42,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644043,card_Strongholder,[슬롯 장착 효과] 스태미너 +[★],icon_item_card_util,082_boss_strongholder,[642011],,,,800005,,,,0,1,사이클롭스 카드,500,251,2,456,0.0,0.0,TTTT,4,5,1.0
 644044,card_Saltistter,[슬롯 장착 효과] 얼음 속성 저항력 +[★*10],icon_item_card_def,085_boss_saltistter,,,,,41207,,,,4,0,살티스터 카드,500,300,2,685,0.0,0.0,TTTT,4,1,1.0
 644045,card_salamander,[슬롯 장착 효과] 불 속성 몬스터 처치 시 [★]% 확률로 SP 5% 회복,icon_item_card_util,054_boss_salamander,[642014],,,,41205,,,,2,0,샐러맨더 카드,500,202,4,524,0.0,0.0,TTTT,4,5,1.0
-644046,card_ShadowGaoler,[슬롯 장착 효과] 침묵 상태이상 저항 +[★ * 2],icon_item_card_util,093_boss_shadowgaoler,,"[642901, 642918, 642940]",,,800006,,,,0,1,섀도게일러 카드,500,290,1,161,0.0,0.0,TTTT,4,5,1.0
+644046,card_ShadowGaoler,[슬롯 장착 효과] 침묵 상태이상 저항 +[★ * 2],icon_item_card_util,093_boss_shadowgaoler,,"[495031, 642918, 642940]",,,800006,,,,0,1,섀도게일러 카드,500,290,1,161,0.0,0.0,TTTT,4,5,1.0
 644047,card_stone_whale,[슬롯 장착 효과] 공격 시 [★/3]% 확률로 5초간 받는 대미지 10%감소,icon_item_card_util,075_boss_stone_whale,,,,,41209,,,,1,4,석화고래 카드,500,226,1,5288,0.0,0.0,TTTT,4,5,1.0
 644048,card_Shnayim,[슬롯 장착 효과] 전기 속성 저항력 +[★*10],icon_item_card_def,033_boss_shnayim,[642013],,,,41241,,,,5,4,쉬나임 카드,500,270,2,3100,0.0,0.0,TTTT,4,1,1.0
 644049,card_Confinedion,[슬롯 장착 효과] 찌르기류 방어력 +[★*10],icon_item_card_def,096_boss_confinedion,,,,,41379,,,,7,0,스콜피오 카드,500,355,8,644,0.0,0.0,TTTT,4,1,1.0
@@ -53,7 +54,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644055,card_Unknocker,"[슬롯 장착 효과] 정신 스탯 +[★/2], 체력 스탯 +[★/2]",icon_item_card_stat,040_boss_unknocker,,,,,800010,,,,0,1,언낙커 카드,500,383,2,782,0.0,0.0,TTTT,4,4,1.0
 644056,card_Achat,[슬롯 장착 효과] 전기 속성 몬스터에게 주는 대미지[★]% 증가,icon_item_card_atk,032_boss_achat,,,,,41240,,,,5,4,에하트 카드,500,220,2,2403,0.0,0.0,TTTT,4,0,1.0
 644057,card_ellaganos,[슬롯 장착 효과] 민첩 스탯 +[★],icon_item_card_stat,037_boss_ellaganos,,,,,800013,,,,0,1,엘라가노스 카드,500,392,6,1060,0.0,0.0,TTTT,4,4,1.0
-644058,card_yekub,[슬롯 장착 효과] 신성 속성 추가 대미지 +[★*10],icon_item_card_util,011_boss_yekub,,,,,41234,,,,4,0,예쿱 카드,500,340,8,316,0.0,0.0,TTTT,4,5,1.0
+644058,card_yekub,[슬롯 장착 효과] 추가 대미지 + [★ * 10],icon_item_card_util,011_boss_yekub,,,,,41234,,,,4,0,예쿱 카드,500,340,8,316,0.0,0.0,TTTT,4,5,1.0
 644059,card_yonazolem,[슬롯 장착 효과] 신성 속성 저항력 +[★*10],icon_item_card_def,055_boss_yonazolem,[642014],,,,41211,,,,1,4,요나졸렘 카드,500,410,2,3170,0.0,0.0,TTTT,4,1,1.0
 644061,card_werewolf,[슬롯 장착 효과] 공격 시 [★]% 확률로 후방 공격 판정,icon_item_card_util,070_boss_werewolf,,,,,41247,,,,0,0,웨어울프 카드,500,378,2,982,0.0,0.0,TTTT,4,5,1.0
 644062,card_unicorn,[슬롯 장착 효과] 어둠 속성 몬스터에게 주는 대미지[★]% 증가,icon_item_card_atk,050_unicorn,,,,,800051,,,,0,1,유니콘 카드,500,329,4,460,0.0,0.0,TTTT,4,0,1.0
@@ -66,13 +67,13 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644072,card_onion_the_great,[슬롯 장착 효과] 대형 몬스터에게 주는 대미지[★/2]% 증가,icon_item_card_atk,058_boss_onion_the_great,,,,,41201,,,,0,4,케파치프틴 카드,500,465,2,680,0.0,0.0,TTTT,4,0,1.0
 644073,card_Colimencia,[슬롯 장착 효과] 독 속성 저항력 +[★*10],icon_item_card_def,101_boss_colimencia,,,,,47318,,,,4,5,콜리멘시아 카드,500,340,6,386,0.0,0.0,TTTT,4,1,1.0
 644074,card_Clymen,[슬롯 장착 효과] 독 속성 몬스터에게 주는 대미지[★]% 증가,icon_item_card_atk,117_boss_clymen,,,,,47316,,,,7,5,클라이멘 카드,500,364,2,314,0.0,0.0,TTTT,4,0,1.0
-644075,card_Kimeleech,[슬롯 장착 효과] 블럭 관통 +[★ * 1.5],icon_item_card_util,048_boss_kimeleech,,,,,800054,,,,7,2,키르멜리치 카드,500,246,14,780,0.0,0.0,TTTT,4,5,1.0
+644075,card_Kimeleech,[슬롯 장착 효과] 블록 관통 +[★ * 1.5],icon_item_card_util,048_boss_kimeleech,,,,,800054,,,,7,2,키르멜리치 카드,500,246,14,780,0.0,0.0,TTTT,4,5,1.0
 644076,card_tutu,[슬롯 장착 효과] 휴대 가능무게 +[★]%,icon_item_card_util,076_boss_tutu,,,,,57161,,,,7,0,투투 카드,500,230,4,1168,0.0,0.0,TTTT,4,5,1.0
 644077,card_TombLord,[슬롯 장착 효과] 보스 몬스터에게 주는 대미지[★/2]% 증가,icon_item_card_atk,034_boss_tomblord,,,,,800055,,,,0,1,툼로드 카드,500,201,2,180,0.0,0.0,TTTT,4,0,1.0
 644078,card_poata,[슬롯 장착 효과] HP 회복력 +[★ * 30],icon_item_card_util,001_boss_poata,,,,,41202,,,,7,0,포아타 카드,500,310,2,427,0.0,0.0,TTTT,4,5,1.0
 644079,card_Sequoia_blue,"[슬롯 장착 효과] 물리 방어력 +[★*5], 마법 방어력 +[★*5]",icon_item_card_def,015_boss_sequoia,,,,,401661,,,,2,5,세콰이아 카드,500,356,2,866,0.0,0.0,TTTT,4,1,1.0
 644080,card_Harpeia,[슬롯 장착 효과] 전기 속성 몬스터 처치 시 [★]% 확률로 SP 5% 회복,icon_item_card_util,107_boss_harpeia,,"[642905, 642921]",,,800012,,,,5,1,하르피아 카드,500,230,2,197,0.0,0.0,TTTT,4,5,1.0
-644081,card_honeypin,[슬롯 장착 효과] 독 속성 추가 대미지 +[★*10],icon_item_card_util,047_boss_honeypin,,,,,800056,,,,7,2,허니핀 카드,500,218,6,240,0.0,0.0,TTTT,4,5,1.0
+644081,card_honeypin,[슬롯 장착 효과] 추가 대미지 + [★ * 10],icon_item_card_util,047_boss_honeypin,,,,,800056,,,,7,2,허니핀 카드,500,218,6,240,0.0,0.0,TTTT,4,5,1.0
 644082,card_helgasercle,[슬롯 장착 효과] 마법 공격력 +[★*5],icon_item_card_atk,053_boss_helgasercle,,,,,800057,,,,0,1,헬가 세르클 카드,500,298,1,142,0.0,0.0,TTTT,4,0,1.0
 644083,card_Spector_F,[슬롯 장착 효과] 최대 SP +[★ * 30],icon_item_card_util,009_boss_spector_f,,,,,800080,,,,0,1,현혹의 스펙터 카드,500,162,1,45,0.0,0.0,TTTT,4,5,1.0
 644084,card_hydra,[슬롯 장착 효과] 결빙 상태 이상에 걸린 대상에게 주는 대미지[★]% 증가,icon_item_card_atk,099_boss_hydra,,,,,47313,,,,4,4,히드라 카드,500,353,4,1624,0.0,0.0,TTTT,4,0,1.0
@@ -88,7 +89,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644098,card_Golem_gray,[슬롯 장착 효과] 물리 방어력 +[★*10],icon_item_card_def,134_boss_graygolem,,,,,450222,,,,1,4,회색 골렘 카드,500,213,2,6193,0.0,0.0,TTTT,4,1,1.0
 644099,card_Naktis,[슬롯 장착 효과] 명중 +[★ * 1.5],icon_item_card_util,066_boss_naktis,,,,,800058,,,,0,1,나크티스 카드,500,344,2,128,0.0,0.0,TTTT,4,5,1.0
 644100,card_RingCrawler,[슬롯 장착 효과] 정신 스탯 +[★],icon_item_card_stat,067_boss_ringcrawler,,,,,41232,,,,5,4,링크롤러 카드,500,382,1,372,0.0,0.0,TTTT,4,4,1.0
-644101,card_Durahan,[슬롯 장착 효과] 전투 불능 시 [★]% 확률로 10%의 HP가 회복된 상태로 부활 ,icon_item_card_util,071_durahan,,,,,800014,,,,0,1,듀라한 카드,500,245,6,482,0.0,0.0,TTTT,4,5,1.0
+644101,card_Durahan,"[슬롯 장착 효과] 전투 불능 시 [★]% 확률로 10%의 HP가 회복된 상태로 부활.{nl}(팀 배틀리그 토너먼트에서는 전투 불능 상태가 되었을 때, 바로 전투 불능이 되지 않고 10초 동안 유지 후 전투 불능 됨)",icon_item_card_util,071_durahan,,,,,800014,,,,0,1,듀라한 카드,500,245,6,482,0.0,0.0,TTTT,4,5,1.0
 644102,card_Riteris,[슬롯 장착 효과] 암흑 상태이상 저항 +[★ * 2],icon_item_card_util,073_riteris,,"[642909, 642915, 642923]",,,800015,,,,0,1,리테리스 카드,500,221,2,308,0.0,0.0,TTTT,4,5,1.0
 644103,card_Nuaele,[슬롯 장착 효과] 마법 방어력 +[★]%,icon_item_card_def,074_nuaele,,,,,800016,,,,0,1,누아엘레 카드,500,186,1,91,0.0,0.0,TTTT,4,1,1.0
 644104,card_Neop,[슬롯 장착 효과] HP 포션 종류 효과 +[★]%,icon_item_card_util,113_neop,,,,,800059,,,,7,2,네옵 카드,500,368,2,912,0.0,0.0,TTTT,4,5,1.0
@@ -103,7 +104,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644114,card_Velpede,[슬롯 장착 효과] 공격 시 [★/3]% 확률로 6초간 이동속도 +4,icon_item_card_util,123_velpede,,,,,800064,,,,1,2,벨피드 카드,500,270,6,504,0.0,0.0,TTTT,4,5,1.0
 644117,card_Pyroego,[슬롯 장착 효과] 지능 스텟 +[★] ,icon_item_card_stat,057_boss_pyroego,,,,,800065,,,,2,1,파이로에고 카드,500,391,1,100,0.0,0.0,TTTT,4,4,1.0
 644118,card_Mandala,[슬롯 장착 효과] 넉다운 중인 대상에게 주는 대미지[★]% 증가,icon_item_card_atk,065_mandala,,,,,57707,,,,0,4,만다라 카드,500,229,2,270,0.0,0.0,TTTT,4,0,1.0
-644119,card_LithoRex,[슬롯 장착 효과] 전기 속성 추가 대미지 +[★*10],icon_item_card_util,079_boss_lithorex,,,,,800017,,,,5,1,리토렉스 카드,500,317,2,483,0.0,0.0,TTTT,4,5,1.0
+644119,card_LithoRex,[슬롯 장착 효과] 추가 대미지 + [★ * 10],icon_item_card_util,079_boss_lithorex,,,,,800017,,,,5,1,리토렉스 카드,500,317,2,483,0.0,0.0,TTTT,4,5,1.0
 644120,card_Nuodai,"[슬롯 장착 효과] 스턴 상태이상 저항 +[★], 수면 상태이상 저항 +[★] ",icon_item_card_util,086_nuodai,,,,,800066,,,,4,1,누오다이 카드,500,330,6,480,0.0,0.0,TTTT,4,5,1.0
 644121,card_Centaurus,[슬롯 장착 효과] 광역 공격 비율 +[★/5],icon_item_card_atk,088_centaurus,,,,,800067,,,,4,1,켄타우로스 카드,500,230,4,227,0.0,0.0,TTTT,4,0,1.0
 644122,card_Yeti,[슬롯 장착 효과] 최대 HP +[★ * 180],icon_item_card_util,089_yeti,,,,,57415,,,,4,0,예티 카드,500,235,2,360,0.0,0.0,TTTT,4,5,1.0
@@ -111,10 +112,10 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644125,card_Marionette,[슬롯 장착 효과] 공격 시 [★/3]% 확률로 상대방에게 3초간 슬로우 상태,icon_item_card_util,105_marionette,,,,,800068,,,,0,1,마리오네트 카드,500,318,2,211,0.0,0.0,TTTT,4,5,1.0
 644126,card_Canceril,[슬롯 장착 효과] 중형 대상에게 피격 시 [★]% 확률로 HP 2% 회복{nl}재사용 대기 시간 15초,icon_item_card_util,110_canceril,,,,,800025,,,,4,2,캔서릴 카드,500,212,6,256,0.0,0.0,TTTT,4,5,1.0
 644127,card_Crabil,[슬롯 장착 효과] 스턴 상태이상 저항 +[★ * 2],icon_item_card_util,111_crabil,,,,,47505,,,,1,0,크래빌 카드,500,270,8,400,0.0,0.0,TTTT,4,5,1.0
-644128,card_Genmagnus,[슬롯 장착 효과] 보조 물리 공격력 +[★*3],icon_item_card_atk,069_boss_genmagnus,,,,,800069,,,,4,1,마스터 지니 카드,500,380,1,83,0.0,0.0,TTTT,4,0,1.0
-644129,card_merregina,[슬롯 장착 효과] 얼음 속성 추가 대미지 +[★*10],icon_item_card_util,077_merregina,,,,,800070,,,,4,1,머레지나 카드,500,363,1,208,0.0,0.0,TTTT,4,5,1.0
+644128,card_Genmagnus,[슬롯 장착 효과] 물리 공격력 +[★ * 3],icon_item_card_atk,069_boss_genmagnus,,,,,800069,,,,4,1,마스터 지니 카드,500,380,1,83,0.0,0.0,TTTT,4,0,1.0
+644129,card_merregina,[슬롯 장착 효과] 추가 대미지 + [★ * 10],icon_item_card_util,077_merregina,,,,,800070,,,,4,1,머레지나 카드,500,363,1,208,0.0,0.0,TTTT,4,5,1.0
 644130,card_Templeshooter,"[슬롯 장착 효과] 힘 스텟 +[★/2], 정신 스탯 +[★/2] ",icon_item_card_stat,063_boss_templeshooter,,,,,800021,,,,0,1,템플슈터 카드,500,230,2,224,0.0,0.0,TTTT,4,4,1.0
-644131,card_Fireload,[슬롯 장착 효과] 불 속성 추가 대미지 +[★*10],icon_item_card_util,129_boss_firelord,,[642902],,,800023,,,,2,1,파이어로드 카드,500,274,2,207,0.0,0.0,TTTT,4,5,1.0
+644131,card_Fireload,[슬롯 장착 효과] 추가 대미지 + [★ * 10],icon_item_card_util,129_boss_firelord,,[642902],,,800023,,,,2,1,파이어로드 카드,500,274,2,207,0.0,0.0,TTTT,4,5,1.0
 644132,card_Kubas,"[슬롯 장착 효과] 지능 스텟 +[★/2], 정신 스탯 +[★/2] ",icon_item_card_stat,130_boss_kubas,,,,,41373,,,,5,4,큐바스 카드,500,253,2,1620,0.0,0.0,TTTT,4,4,1.0
 644133,card_Deathweaver,[슬롯 장착 효과] 대형 몬스터에게 피격 시 [★]% 확률로 HP 3% 회복{nl}재사용 대기 시간 15초,icon_item_card_util,081_boss_deathweaver,,,,,800026,,,,0,1,데스위버 카드,500,430,8,364,0.0,0.0,TTTT,4,5,1.0
 644134,card_Flammidus,[슬롯 장착 효과] 불 속성 저항력 +[★*10],icon_item_card_def,132_boss_flammidus,,"[642910, 642920, 642942]",,,800031,,,,0,1,플람미두스 카드,500,211,2,55,0.0,0.0,TTTT,4,1,1.0
@@ -134,7 +135,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644148,card_varleking,[슬롯 장착 효과] 치유력 +[★ * 5],icon_item_card_def,144_boss_varleking,,"[642928, 642944]",,,57866,,,,2,0,바를킹 카드,500,,,,0.0,0.0,TTTT,4,1,1.0
 644149,card_payawoota,[슬롯 장착 효과] 모든 스탯  +[★ * 0.4],icon_item_card_stat,001_npc_payawoota,,,,,,,,,,,파야우타 카드,500,,,,0.0,0.0,TTTT,4,4,1.0
 644150,card_skiaclips,"[슬롯 장착 효과] 지능, 체력 + [★]",icon_item_card_stat,156_boss_skiaclipse,,[642948],,,57866,,,,2,0,스키아클립스 카드,500,,,,0.0,0.0,TTTT,4,4,1.0
-644151,card_Moringponia,[슬롯 장착 효과] 빙결 상태이상 저항 +[★]{nl} 최대 HP +[100 * ★],icon_item_card_util,157_boss_moringponia,,,,,800090,,,,6,2,모링포니아 카드,500,,,,0.0,0.0,TTTT,4,5,1.0
+644151,card_Moringponia,[슬롯 장착 효과] 결빙 상태이상 저항 +[★]{nl} 최대 HP +[100 * ★],icon_item_card_util,157_boss_moringponia,,,,,800090,,,,6,2,모링포니아 카드,500,,,,0.0,0.0,TTTT,4,5,1.0
 644152,card_Misrus,[슬롯 장착 효과] 암흑 상태이상 저항 +[★]{nl} 최대 SP +[60 * ★],icon_item_card_util,158_boss_misrus,,[642953],,,57866,,,,2,0,머즈루스 카드,500,,,,0.0,0.0,TTTT,4,5,1.0
 644153,card_tantaliser,"[슬롯 장착 효과] 힘, 체력 + [★]",icon_item_card_stat,159_boss_tantaliser,,[642957],,,800091,,,,6,2,탄타이저 카드,500,,,,0.0,0.0,TTTT,4,4,1.0
 644154,card_vaidotas,"[슬롯 장착 효과] 물리 공격력, 마법 공격력 + [★ * 10]",icon_item_card_atk,002_npc_vaidotas,,,,,,,,,,,바이도타스 카드,500,,,,0.0,0.0,FFFT,4,0,1.0
@@ -142,17 +143,49 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644156,card_uska,[슬롯 장착 효과] 모든 스탯 + [★ * 0.4],icon_item_card_stat,004_npc_uska,,,,,,,,,,,우스카 카드,500,,,,0.0,0.0,FFFT,4,4,1.0
 644157,card_cyrenia,"[슬롯 장착 효과] 스태미너 + [★], 최대 HP + [100 * ★]",icon_item_card_util,006_npc_cyrenia,,,,,,,,,,,시레니아 카드,500,,,,0.0,0.0,FFFT,4,5,1.0
 644158,card_Neringa,[슬롯 장착 효과] 모든 스탯 + [★ * 0.5],icon_item_card_stat,007_npc_neringa,,,,,,,,,,,네링가 카드,500,,,,0.0,0.0,TTTT,4,4,1.0
+644159,card_Glacier,"[슬롯 장착 효과] 정신, 체력 + [★]",icon_item_card_stat,160_boss_glacier,,[642960],,,59374,,,,4,4,글레이시어 카드,500,,,,0.0,0.0,TTTT,4,4,1.0
 644501,Master_card_Boruble,[슬롯 장착 효과] 치유력 +[★ * 30],icon_item_card_def,008_npc_boruble,,,,,,,,,,,보러블 카드,500,,,,0.0,0.0,TTTT,4,1,1.0
 644502,Master_card_MariaLeed,[슬롯 장착 효과] 피격 시 10% 확률로 10초간 최대 HP의 [★ /2]% 실드 생성{nl}재사용 대기 시간 30초,icon_item_card_def,009_npc_maria,,,,,,,,,,,마리아 리드 카드,500,,,,0.0,0.0,TTTT,4,1,1.0
 644503,Master_card_JuraSwajone,[슬롯 장착 효과] 회피 +[★ * 10],icon_item_card_def,010_npc_juraswajone,,,,,,,,,,,유라 스와요네 카드,500,,,,0.0,0.0,TTTT,4,1,1.0
 644504,Master_card_Kamiya,[슬롯 장착 효과] 광역 방어 비율 +[★/5],icon_item_card_util,011_npc_kamiya,,,,,,,,,,,카미야 카드,500,,,,0.0,0.0,TTTT,4,5,1.0
+644505,Master_card_EckipseUbik,[슬롯 장착 효과] 어둠 속성 마법 공격 시 대미지 [★]% 증가,icon_item_card_atk,012_npc_eclipseubik,,,,,,,,,,,이클립스 유빅 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644506,Master_card_AbrehMelinn,[슬롯 장착 효과] 불 속성 마법 공격 시 대미지 [★]% 증가,icon_item_card_atk,013_npc_abrehmelinn,,,,,,,,,,,아브레 멜린 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644507,Master_card_Rashn,[슬롯 장착 효과] 힘 스탯 + [★ * 4],icon_item_card_stat,014_npc_rashn,,,,,,,,,,,라슈아 카드,500,,,,0.0,0.0,TTTT,4,4,1.0
+644508,Master_card_Lucia,[슬롯 장착 효과] 지능 스탯 + [★ * 4],icon_item_card_stat,015_npc_lucia,,,,,,,,,,,루치아 카드,500,,,,0.0,0.0,TTTT,4,4,1.0
+644509,Master_card_EdmundasTiller,[슬롯 장착 효과] 민첩 스탯 + [★ * 4],icon_item_card_stat,016_npc_edmundastiller,,,,,,,,,,,에드뮨다스 틸러 카드,500,,,,0.0,0.0,TTTT,4,4,1.0
+644510,Master_card_Rozaliia,[슬롯 장착 효과] 정신 스탯 + [★ * 4],icon_item_card_stat,017_npc_rozaliia,,,,,,,,,,,로잘리야 카드,500,,,,0.0,0.0,TTTT,4,4,1.0
+644511,Master_card_Vilius,[슬롯 장착 효과] 명중 + [★ * 10],icon_item_card_util,018_npc_vilius,,,,,,,,,,,빌리우스 카드,500,,,,0.0,0.0,TTTT,4,5,1.0
+644512,Master_card_JenaHavindar,[슬롯 장착 효과] 추가 대미지 + [★ * 40],icon_item_card_atk,019_npc_jenahavindar,,,,,,,,,,,예나 하빈다르 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644513,Master_card_ReamToiler,[슬롯 장착 효과] 블록 + [★ * 10],icon_item_card_def,020_npc_reamtoiler,,,,,,,,,,,리엄 토일러 카드,500,,,,0.0,0.0,TTTT,4,1,1.0
+644514,Master_card_NoirParesseus,[슬롯 장착 효과] 블록 관통 + [★ * 10],icon_item_card_util,021_npc_noirparesseus,,,,,,,,,,,노어 파레세우스 카드,500,,,,0.0,0.0,TTTT,4,5,1.0
+644515,Master_card_Mei,[슬롯 장착 효과] 치명타 발생 +[★ * 10],icon_item_card_util,022_npc_mei,,,,,,,,,,,메이 카드,500,,,,0.0,0.0,TTTT,4,5,1.0
+644516,Master_card_ShellyPennington,[슬롯 장착 효과] 치명타 저항 +[★ * 10],icon_item_card_util,023_npc_shellypennington,,,,,,,,,,,쉘리 페닝튼 카드,500,,,,0.0,0.0,TTTT,4,5,1.0
+644517,Master_card_Winona_Ende,[슬롯 장착 효과] 주변 100범위 내에 적이 7명 이상일 때 대미지 증가 +[★ * 1.3]%{nl}(PvP지역에서는 [★ * 0.8]%),icon_item_card_atk,024_npc_winonaende,,,,,,,,,,,위노나 엔데 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644518,Master_card_Feliksia,[슬롯 장착 효과] 보스에게 받는 피해 감소 +[★ * 0.4]%,icon_item_card_def,025_npc_feliksia,,,,,,,,,,,펠릭시아 카드,500,,,,0.0,0.0,TTTT,4,1,1.0
+644519,Master_card_MistesGoldmund,[슬롯 장착 효과] 신성 속성 마법 공격 시 대미지 [★]% 증가,icon_item_card_atk,026_npc_mistesgoldmund,,,,,,,,,,,마이스테스 골드문트 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644520,Master_card_AleisterCrowley,[슬롯 장착 효과] 얼음 속성 마법 공격 시 대미지 [★]% 증가,icon_item_card_atk,027_npc_feliksiaaleistercrowley,,,,,,,,,,,알리스터 크로울리 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644521,Master_card_Tesla,[슬롯 장착 효과] 최대 SP +[★ * 90],icon_item_card_util,028_npc_tesla,,,,,,,,,,,테슬라 카드,500,,,,0.0,0.0,TTTT,4,5,1.0
+644522,Master_card_KiolRuarawa,[슬롯 장착 효과] HP 회복력 +[★ * 60],icon_item_card_util,029_npc_kiolruarawa,,,,,,,,,,,키올 루아라와 카드,500,,,,0.0,0.0,TTTT,4,5,1.0
+644523,Master_card_LucidWinterspoon,[슬롯 장착 효과] 캐스팅 시간 [★ * 0.5]% 감소,icon_item_card_util,030_lucidwinterspoon,,,,,,,,,,,루시드 윈터스푼 카드,500,,,,0.0,0.0,TTTT,4,5,1.0
+644524,Master_card_BangomontBorjigin,[슬롯 장착 효과] 광역 공격 비율 +[★ * 0.3],icon_item_card_atk,031_bangomontborjigin,,,,,,,,,,,뱅고몬트 보르이긴 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644525,Master_card_DamirBorkhan,[슬롯 장착 효과] 땅 속성 마법 공격 시 대미지 [★]% 증가,icon_item_card_atk,032_damirborkhan,,,,,,,,,,,다미르 보르칸 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644526,Master_card_KhanomCaolaw,[슬롯 장착 효과] 때리기 속성 공격 시 대미지 [★]% 증가,icon_item_card_atk,033_khanomcaolaw,,,,,,,,,,,카놈 차올라우 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644527,Master_card_Rudmila,[슬롯 장착 효과] 총기 속성 공격 시 대미지 [★]% 증가,icon_item_card_atk,034_rudmila,,,,,,,,,,,루드밀라 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644528,Master_card_Flintess,[슬롯 장착 효과] 베기 속성 공격 시 대미지 [★]% 증가,icon_item_card_atk,035_flintess,,,,,,,,,,,플린테스 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644529,Master_card_SorshaHutton,[슬롯 장착 효과] 찌르기 속성 공격 시 대미지 [★]% 증가,icon_item_card_atk,036_sorshahutton,,,,,,,,,,,소르샤 허턴 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644530,Master_card_IliTerid,[슬롯 장착 효과] 염 속성 마법 공격 시 대미지 [★]% 증가,icon_item_card_atk,037_iliterid,,,,,,,,,,,일리 테리드 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644531,Master_card_LufasKehel,[슬롯 장착 효과] 무 속성 마법 공격 시 대미지 [★]% 증가,icon_item_card_atk,038_lufaskehel,,,,,,,,,,,루파스 케헬 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644532,Master_card_VisavaldasBlack,[슬롯 장착 효과] 활 속성 공격 시 대미지 [★]% 증가,icon_item_card_atk,039_visavaldasblack,,,,,,,,,,,비스발다스 블랙 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644533,Master_card_Pauline,[슬롯 장착 효과] 캐논 속성 공격 시 대미지 [★]% 증가,icon_item_card_atk,040_pauline,,,,,,,,,,,폴린 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644534,Master_card_GeHong,[슬롯 장착 효과] 전기 속성 마법 공격 시 대미지 [★]% 증가,icon_item_card_atk,041_gehong,,,,,,,,,,,갈홍 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
+644535,Master_card_PhilipAureolus,[슬롯 장착 효과] 독 속성 마법 공격 시 대미지 [★]% 증가,icon_item_card_atk,042_philipaureolus,,,,,,,,,,,필립 아우뢸루스 카드,500,,,,0.0,0.0,TTTT,4,0,1.0
 644900,Legend_card_Marnoks,[슬롯 장착 효과] 최소 치명타 확률 [★ * 2]% 증가,icon_item_card_legend,139_boss_marnoks,,,,,800078,,,,1,1,마군주 마르녹스 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
 644901,Legend_card_Blud,[슬롯 장착 효과] PVP시 받는 대미지 [★ * 3]% 감소,icon_item_card_legend,112_blud,,,,,800060,,,,0,1,마군주 블룻 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
 644902,Legend_card_Zawra,[슬롯 장착 효과] 물리 방어력 [★ * 10]% 증가,icon_item_card_legend,140_boss_zawra,,,,,800072,,,,0,1,마군주 자우라 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
 644903,Legend_card_Nuaele,[슬롯 장착 효과] 마법 방어력 [★ * 10]% 증가,icon_item_card_legend,074_nuaele,,,,,800016,,,,0,1,마군주 누아엘레 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
 644904,Legend_card_Helgasercle,[슬롯 장착 효과] 몬스터 처치 시 1마리당 SP [★ * 20]회복,icon_item_card_legend,053_boss_helgasercle,,,,,800057,,,,0,1,마군주 헬가 세르클 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
 644905,Legend_card_Lecifer,[슬롯 장착 효과] 이동속도 [★] 증가,icon_item_card_legend,030_boss_lecifer,,,,,800043,,,,0,1,마군주 렉시퍼 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
-644906,Legend_card_Mirtis,[슬롯 장착 효과] 공격 시 속성 상성에 따른 페널티 [★ * 10]% 감소 ,icon_item_card_legend,007_boss_mirtis,,,,,800048,,,,0,1,마군주 미르티스 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
+644906,Legend_card_Mirtis,[슬롯 장착 효과] 공격 시 유리한 상성이 아닐 때 최종 대미지 [★ * 0.4]%{nl}(PvP지역에서 효과 반감),icon_item_card_legend,007_boss_mirtis,,,,,800048,,,,0,1,마군주 미르티스 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
 644907,Legend_card_Kucarry_Balzermance,[슬롯 장착 효과] 경험치 획득량 [★]% 증가,icon_item_card_legend,151_boss_kucarry_balzermancer,,[642926],,,58818,,,,0,0,영험한 쿠게리 발저맨서 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
 644908,Legend_card_PantoRex,[슬롯 장착 효과] 야수형 몬스터에게 주는 대미지 [★ * 7]% 증가,icon_item_card_legend,150_boss_pantorex,,,,,,,,,,,이단자 판토렉스 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
 644909,Legend_card_Velcoffer,[슬롯 장착 효과] 몬스터에게 받는 대미지 [★ * 3]% 감소,icon_item_card_legend,136_raid_boss_blackgargoyle,,[642916],,,58690,,,,0,0,벨코퍼 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
@@ -161,13 +194,34 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644912,Legend_card_Wastrel,[슬롯 장착 효과] 최대 HP +[★ * 500],icon_item_card_legend,153_boss_wastrel,,[642931],,,59172,,,,0,4,웨이스트럴 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
 644913,Legend_card_ignas,[슬롯 장착 효과] 치명타 공격시 [★ * 5]% 확률로 6초 동안 은신합니다.,icon_item_card_legend,154_boss_ignas,,[642934],,,800089,,,,0,1,이그나스 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
 644914,Legend_card_boruta,[슬롯 장착 효과] 보스 몬스터에게 대미지 [★ * 5]% 증가 ,icon_item_card_legend,155_boss_boruta,,,,,59208,,,,0,0,보루타 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
+644915,Legend_card_Marnoks_JP,[슬롯 장착 효과] 최소 치명타 확률 [★ * 2]% 증가,icon_item_card_legend,139_boss_marnoks,,,,,800078,,,,1,1,마군주 마르녹스 카드,0,,,,0.0,0.0,FFFT,4,2,1.0
+644916,Legend_card_Blud_JP,[슬롯 장착 효과] PVP시 받는 대미지 [★ * 3]% 감소,icon_item_card_legend,112_blud,,,,,800060,,,,0,1,마군주 블룻 카드,0,,,,0.0,0.0,FFFT,4,2,1.0
+644917,Legend_card_Zawra_JP,[슬롯 장착 효과] 물리 방어력 [★ * 10]% 증가,icon_item_card_legend,140_boss_zawra,,,,,800072,,,,0,1,마군주 자우라 카드,0,,,,0.0,0.0,FFFT,4,2,1.0
+644918,Legend_card_Nuaele_JP,[슬롯 장착 효과] 마법 방어력 [★ * 10]% 증가,icon_item_card_legend,074_nuaele,,,,,800016,,,,0,1,마군주 누아엘레 카드,0,,,,0.0,0.0,FFFT,4,2,1.0
+644919,Legend_card_Helgasercle_JP,[슬롯 장착 효과] 몬스터 처치 시 1마리당 SP [★ * 20]회복,icon_item_card_legend,053_boss_helgasercle,,,,,800057,,,,0,1,마군주 헬가 세르클 카드,0,,,,0.0,0.0,FFFT,4,2,1.0
+644920,Legend_card_Lecifer_JP,[슬롯 장착 효과] 이동속도 [★] 증가,icon_item_card_legend,030_boss_lecifer,,,,,800043,,,,0,1,마군주 렉시퍼 카드,0,,,,0.0,0.0,FFFT,4,2,1.0
+644921,Legend_card_Mirtis_JP,[슬롯 장착 효과] 공격 시 유리한 상성이 아닐 때 최종 대미지 [★ * 0.4]%{nl}(PvP지역에서 효과 반감),icon_item_card_legend,007_boss_mirtis,,,,,800048,,,,0,1,마군주 미르티스 카드,0,,,,0.0,0.0,FFFT,4,2,1.0
+644922,Legend_card_FrosterLord_JP,[슬롯 장착 효과] 소환수의 최소 공격력과 최대 공격력의 차이가 [★ * 10]% 감소{nl}(10LV 달성 시 소환수의 최소 공격력이 최대 공격력과 동일하게 변경됩니다.),icon_item_card_legend,149_boss_frosterlord,,,,,800076,,,,0,1,마군주 프로스터 로드 카드,0,,,,0.0,0.0,FFFT,4,2,1.0
 644923,Legendcard_skiaclips,[슬롯 장착 효과] 곤충형 대상 공격력 750 * [★],icon_item_card_legend,156_boss_skiaclipse,,[642949],,,57866,,,,2,0,해방된 스키아클립스 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
 644924,Legendcard_Moringponia,[슬롯 장착 효과] 중형 대상 공격력 300 * [★],icon_item_card_legend,157_boss_moringponia,,,,,800090,,,,6,2,마군주 모링포니아 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
 644925,Legendcard_Misrus,"[슬롯 장착 효과] 실드 사용 중인 적에게 1,000 * [★] 추가 대미지",icon_item_card_legend,158_boss_misrus,,[642953],,,57866,,,,2,0,분노한 머즈루스 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
 644926,Legendcard_bayl,"[슬롯 장착 효과] 팀 레벨이 50 이하 일 때, 경험치 흭득량 [★ * 10]% 증가",icon_item_card_legend,005_npc_bayl,,,,,,,,,,,바일 카드,0,,,,0.0,0.0,FFFT,4,2,1.0
-644927,Legendcard_tantaliser,"[슬롯 장착 효과] 불, 얼음, 독, 전기, 염, 땅, 신성, 어둠 [★ * 50] 추가 대미지",icon_item_card_legend,159_boss_tantaliser,,[642958],,,800091,,,,6,2,마군주 탄타이저 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
-650001,legend_reinforce_card_lv1,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV4까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv1,legend_card_fragment_lv1,,,,,,,,,,,찢어진 레전드 강화용 카드,0,,,,0.0,0.0,TTTT,4,3,1.0
-650002,legend_reinforce_card_lv2,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV6까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv2,legend_card_fragment_lv2,,,,,,,,,,,오래된 레전드 강화용 카드,0,,,,0.0,0.0,TTTT,4,3,1.0
-650003,legend_reinforce_card_lv3,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV8까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv3,legend_card_fragment_lv3,,,,,,,,,,,레전드 강화용 카드,0,,,,0.0,0.0,TTTT,4,3,1.0
+644927,Legendcard_tantaliser,[슬롯 장착 효과] 추가 대미지 + [★ * 400],icon_item_card_legend,159_boss_tantaliser,,"[642958, 642965]",,,800091,,,,6,2,마군주 탄타이저 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
+644928,Legendcard_Glacier,[슬롯 장착 효과] 변이형 대상 공격력 750 * [★],icon_item_card_legend,160_boss_glacier,,"[642963, 642964]",,,59374,,,,4,4,한 서린 글레이시어 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
+644929,Legendcard_TelHarcha,[슬롯 장착 효과] 식물형 대상 공격력 750 * [★],icon_item_card_legend,161_boss_telharsha,,[642966],,,59477,,,,2,4,텔하르샤 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
+644930,Legendcard_Leticia,[장착 불가] [강화 불가] 레전드 카드 강화용으로 사용됩니다. ,icon_item_card_legend,028_npc_leticia,,,,,,,,,,,레티샤 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
+644931,Legendcard_Guilty,[슬롯 장착 효과] 보스 몬스터에게 대미지{nl}[★ * 8]% 증가 ,icon_item_card_legend,162_boss_guilty,,,,,,,,,,,길티네 카드,0,,,,0.0,0.0,TFFT,4,2,1.0
+644932,Legendcard_Avataras,[슬롯 장착 효과] 악마형 대상 공격력 750 * [★],icon_item_card_legend,163_boss_avataras,,[642967],,,,,,,,,아바타라스 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
+644933,Legend_card_Vasilisa,"[슬롯 장착 효과] 보스 몬스터를 제외한 모든 몬스터 대상 최종 대미지 증가 [★ * 1.5]%, 받는 피해 감소 [★]%",icon_item_card_legend,164_boss_vasilisa,,[642969],,,59451,,,,1,0,바실리사 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
+644934,Legend_card_RevivalPaulius,[슬롯 장착 효과] 명중 확률 [★ * 5]% 증가,icon_item_card_legend,165_boss_revivalpaulius,,[642972],,,59690,,,,0,4,부활자 파울루스 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
+644935,Legend_card_Jellyzele,[슬롯 장착 효과] 블록 관통 확률 [★ * 5]% 증가,icon_item_card_legend,166_boss_jellyzele,,[642978],,,59730,,,,5,5,젤리젤 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
+644936,Legend_card_Spreader,[슬롯 장착 효과] 블록 확률 [★ * 3]% 증가,icon_item_card_legend,167_boss_transmutationspreader,,[642981],,,59754,,,,6,4,변질의 전파자 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
+644937,Legend_card_Falouros,[슬롯 장착 효과] 회피 확률 [★ * 5]% 증가,icon_item_card_legend,168_boss_falouros,,[642984],,,59760,,,,6,0,팔로우로스 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
+644938,Legend_card_Rozethemiserable,"[슬롯 장착 효과] 모든 방어구 재질 공격력 [★ * 800] 증가, 최대 HP [★ * 4000] 증가",icon_item_card_legend,169_boss_roze,,[642987],,,59773,,,,6,4,로제 더 미저러블 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
+644939,Legend_card_Upinis,스킬 재사용 대기시간 [★ * 1]% 감소,icon_item_card_legend,170_boss_upinis,,[642991],,,59795,,,,6,2,우피니스 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
+644940,Legend_card_Slogutis,보스 몬스터에게 주는 대미지 [★ * 10]%,icon_item_card_legend,171_boss_slogutis,,,,,59798,,,,6,1,슬로거티스 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
+650001,legend_reinforce_card_lv1,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV4까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.{nl}LV4를 초과하는 레전드 카드에서 강화 재료로 사용 중 실패 시 카드가 파괴될 수 있습니다.,icon_item_legend_card_fragment_lv1,legend_card_fragment_lv1,,,,,,,,,,,찢어진 레전드 강화용 카드,0,,,,0.0,0.0,TTTT,4,3,1.0
+650002,legend_reinforce_card_lv2,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV6까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.{nl}LV6을 초과하는 레전드 카드에서 강화 재료로 사용 중 실패 시 카드가 파괴될 수 있습니다.,icon_item_legend_card_fragment_lv2,legend_card_fragment_lv2,,,,,,,,,,,오래된 레전드 강화용 카드,0,,,,0.0,0.0,TTTT,4,3,1.0
+650003,legend_reinforce_card_lv3,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV8까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.{nl}LV8을 초과하는 레전드 카드에서 강화 재료로 사용 중 실패 시 카드가 파괴될 수 있습니다.,icon_item_legend_card_fragment_lv3,legend_card_fragment_lv3,,,,,,,,,,,레전드 강화용 카드,0,,,,0.0,0.0,TTTT,4,3,1.0
 650004,legend_reinforce_card_lv4,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV10까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv4,legend_card_fragment_lv4,,,,,,,,,,,빛나는 레전드 강화용 카드,0,,,,0.0,0.0,TTTT,4,3,1.0
-650005,legend_reinforce_card_lv2_Team,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV6까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv2,legend_card_fragment_lv2,,,,,,,,,,,오래된 레전드 강화용 카드,0,,,,0.0,0.0,FFFT,4,3,1.0
+650005,legend_reinforce_card_lv2_Team,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV6까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.{nl}LV6을 초과하는 레전드 카드에서 강화 재료로 사용 중 실패 시 카드가 파괴될 수 있습니다.,icon_item_legend_card_fragment_lv2,legend_card_fragment_lv2,,,,,,,,,,,오래된 레전드 강화용 카드,0,,,,0.0,0.0,FFFT,4,3,1.0
