@@ -1,6 +1,0 @@
-<div *ngIf="entity['Description'] || entity['DescriptionHTML']">
-  <div class="w-100" *ngIf="divider"><hr></div>
-  <h5 *ngIf="header">Description</h5>
-
-  <p class="text-multiline mb-0" [innerHTML]="((entity['Description'] || '') + (entity['DescriptionRequired'] || '')) | sanitizeHTML"></p>
-</div>

@@ -1,4 +1,0 @@
-**/*.pid
-/logs
-/node_modules
-revision.txt
