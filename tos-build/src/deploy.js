@@ -3,7 +3,7 @@ const fs = require('fs');
 const fsExtra = require('fs-extra');
 const path = require('path');
 const shared = require("./shared");
-const sharedVariables = require("../../variables");
+//const sharedVariables = require("../../variables");
 
 // Add timestamp to logs
 require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
@@ -73,11 +73,11 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
     }
 
     // 5. Patreon
-    shared.log(`5. Patreon`);
-    cwd = path.join('..', 'tos-patreon');
+    //shared.log(`5. Patreon`);
+    //cwd = path.join('..', 'tos-patreon');
 
-    result = childProcess.spawnSync(`npm run main`, { cwd, shell: true, stdio: 'inherit' });
-    result.status !== 0 && shared.logError('Failed to patreon', result);
+    //result = childProcess.spawnSync(`npm run main`, { cwd, shell: true, stdio: 'inherit' });
+    //result.status !== 0 && shared.logError('Failed to patreon', result);
 
     // 6. Commit changes
     is_new_patch = commitChanges('Patreon', 6) || is_new_patch;

@@ -1,12 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 const request = require('sync-request');
-const sharedVariables = require("../../variables");
+//const sharedVariables = require("../../variables");
 
 exports.IS_FORCE_DEPLOY = process.argv.length > 2 && !!process.argv.find(value => value === 'deploy');
 exports.IS_PROD = process.argv.length > 2 && !!process.argv.find(value => value === 'prod');
 exports.REGIONS = process.argv.length > 2 && process.argv.filter(value => !!value.startsWith('region=')).map(value => value.split('region=')[1]);
-exports.REGIONS = exports.REGIONS.length ? exports.REGIONS : ['twTOS', 'jTOS', 'iTOS', 'kTOS', 'kTEST'];
+exports.REGIONS = exports.REGIONS.length ? exports.REGIONS : ['twTOS', 'jTOS', 'iTOS', 'kTOS'];
 
 //======================================================================================================================
 // Methods
