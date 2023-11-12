@@ -128,60 +128,60 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
         }
 
         // 10. Clear CloudFlare cache
-        shared.log('10. Clear CloudFlare cache');
-        let cf = require('cloudflare')({ id: sharedVariables.CF_EMAIL, key: sharedVariables.CF_KEY});
-        let manifest = JSON.parse(fs.readFileSync(path.join('..', 'tos-build', 'dist', 'tos-sw.manifest.js'), { encoding: 'utf8' }));
-        let assetGroup = manifest.assetGroups.find(value => value.name === 'app');
-        let urls = Object
-            .keys(assetGroup.versions)
-            .concat([
-                '/manifest.json',
-                '/ngsw.js',
-                '/ngsw-worker.js',
-                '/robots.txt',
-                '/tos-sw.manifest.js',
-                '/tos-sw.worker.js',
+        //shared.log('10. Clear CloudFlare cache');
+        //let cf = require('cloudflare')({ id: sharedVariables.CF_EMAIL, key: sharedVariables.CF_KEY});
+        //let manifest = JSON.parse(fs.readFileSync(path.join('..', 'tos-build', 'dist', 'tos-sw.manifest.js'), { encoding: 'utf8' }));
+        //let assetGroup = manifest.assetGroups.find(value => value.name === 'app');
+        //let urls = Object
+            //.keys(assetGroup.versions)
+            //.concat([
+                //'/manifest.json',
+                //'/ngsw.js',
+                //'/ngsw-worker.js',
+                //'/robots.txt',
+                //'/tos-sw.manifest.js',
+                //'/tos-sw.worker.js',
                 // Note: PWA icons will be manually cleared when necessary
-            ]);
+            //]);
 
-        urls = urls.map(value => 'https://21in7.github.io/tos-database/' + value);
+        urls = urls.map(value => 'tos-database.pages.dev' + value);
 
-        try {
-            await cf.zones.purgeCache(sharedVariables.CF_ZONE, { files: urls });
-        } catch (error) {
-            shared.logError('Failed to purge cache', error)
-        }
+        //try {
+            //await cf.zones.purgeCache(sharedVariables.CF_ZONE, { files: urls });
+        //} catch (error) {
+            //shared.logError('Failed to purge cache', error)
+        //}
 
     //} //else {
         //shared.log('No new patch nor revision available. No deployment is needed.');
     //}
 
     // Update revision
-    fs.writeFileSync(revision_path, childProcess.execSync('git rev-parse HEAD').toString());
+    //fs.writeFileSync(revision_path, childProcess.execSync('git rev-parse HEAD').toString());
 
-    shared.singletonUnlock();
+    //shared.singletonUnlock();
 
 })();
 
 //----------------------------------------------------------------------------------------------------------------------
 
-function commitChanges(region, step) {
-    let cwd, result;
-    let changes = childProcess.execSync('git status --porcelain', { encoding: 'utf8', shell: true }).toString();
-    if (changes.split('\n').length <= 1 || !shared.IS_PROD)
-        return false;
+//function commitChanges(region, step) {
+    //let cwd, result;
+    //let changes = childProcess.execSync('git status --porcelain', { encoding: 'utf8', shell: true }).toString();
+    //if (changes.split('\n').length <= 1 || !shared.IS_PROD)
+        //return false;
 
-    shared.log(`[${ region }] ${ step }. Commit changes`);
-    cwd = path.join('..');
+    //shared.log(`[${ region }] ${ step }. Commit changes`);
+    //cwd = path.join('..');
 
-    result = childProcess.spawnSync(`git add .`, { cwd, shell: true, stdio: 'inherit' });
-    result.status !== 0 && shared.logError('Failed to add', result);
+    //result = childProcess.spawnSync(`git add .`, { cwd, shell: true, stdio: 'inherit' });
+    //result.status !== 0 && shared.logError('Failed to add', result);
 
-    result = childProcess.spawnSync(`git commit -m "Updated ${ region } as of ${ new Date().toISOString().slice(0, 10) }"`, { cwd, shell: true, stdio: 'inherit' });
-    result.status !== 0 && shared.logError('Failed to commit', result);
+    //result = childProcess.spawnSync(`git commit -m "Updated ${ region } as of ${ new Date().toISOString().slice(0, 10) }"`, { cwd, shell: true, stdio: 'inherit' });
+    //result.status !== 0 && shared.logError('Failed to commit', result);
 
-    result = childProcess.spawnSync(`git push`, { cwd, shell: true, stdio: 'inherit' });
-    result.status !== 0 && shared.logError('Failed to push', result);
+    //result = childProcess.spawnSync(`git push`, { cwd, shell: true, stdio: 'inherit' });
+    //result.status !== 0 && shared.logError('Failed to push', result);
 
-    return true;
-}
+    //return true;
+//}

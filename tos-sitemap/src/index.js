@@ -41,7 +41,7 @@ let files = fs.readdirSync(folder_data);
             .data
             .forEach((row) => {
                 let url = xml.ele('url');
-                    url.ele('loc', 'https://21in7.github.io/tos-database/' + REGION.toLowerCase() + '/database/' + dataset + '/' + row.$ID + '/');
+                    url.ele('loc', 'https://tos-db.pages.dev/' + REGION.toLowerCase() + '/database/' + dataset + '/' + row.$ID + '/');
                     url.ele('lastmod', new Date().toISOString().slice(0, 10));
                     url.ele('changefreq', 'weekly');
             });
@@ -49,7 +49,7 @@ let files = fs.readdirSync(folder_data);
 
 // Add additional URLs
 let url = xml.ele('url');
-    url.ele('loc', 'https://21in7.github.io/tos-database/' + REGION.toLowerCase() + '/simulator');
+    url.ele('loc', 'https://tos-db.pages.dev/' + REGION.toLowerCase() + '/simulator');
     url.ele('lastmod', new Date().toISOString().slice(0, 10));
     url.ele('changefreq', 'weekly');
 
