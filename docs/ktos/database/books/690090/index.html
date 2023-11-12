@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="니코폴리스의 기원에 관한 이야기. 마우스 우클릭으로 읽을 수 있습니다. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>니코폴리스의 기원 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690090" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690090" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690090" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>니코폴리스의 기원</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>니코폴리스의 기원<br/>- 왕국력 1096년,<br/>세이지 마스터 루파스 케헬<br/>{np} 제14대 국왕이셨던 발티넬 국왕의 재기 기간 15년은 건국초의 활기가 쇠퇴하고 정파와 당파들의 분쟁이 극에 달한 시기였다.<br/> 정확히 기술하자면 왕국력 348년부터 363년까지의 시기이며 지금으로부터 700년도 넘은 옛 시기였다.<br/> 발티넬 국왕은 불안한 내정을 쉽게 수습하지 못하자, 여러 군제를 개혁해 왕국군의 기반을 닦은 재위기간으로 평가된다.<br/> 제로멜 국왕 시대의 법전과 귀족에 대한 여러 규율이 왕국의 오랜 안정을 가져왔던 점을 생각하면 발티넬 국왕의 이러한 군사제도 정비는 문제를 다른 방향에서 접근하여 문제 해결을 돕는 방식이었다고 생각한다.<br/> 또한 발티넬 국왕 말기와 다음 대 국왕 유스엘 시대의 초기에 조정에 있었던 정치적 분쟁을 해결할 수 있었던 바탕이 된 것도 이러한 군제 개혁이 큰 도움이 되었다.<br/> 이리하여 유스엘 국왕 시대에 이르러 정치적인 정파와 당파들은 상당히 수습하였으나, 발티넬 국왕 시대부터 물려받은 조정 밖의 상황을 수습하는 일은 새로운 시작이 필요했다.<br/>{np} 그 중에서 가장 중요하고 큰 문제는 마법사들이었다.<br/> 이 때에 이르러 일부 마법사들이 연맹을 결성하고 다른 마법사들에게 가입을 강권하였다.<br/>{np} 그리고 일단 가입하면 강력한 규약을 따르도록 만들었다. 결과적으로 당시의 마법사 사회는 연맹파와 비연맹파로 대립되었다.<br/> 그리고 자연스럽게 조직력에서 앞설 수밖에 없는 연맹파가 비연맹파에 비해 힘이 강했다.<br/>{np} 여신들의 힘을 지닌 성직자와 강력한 무사들이 다수 존재하는 왕국 사회기에 망정이지 그렇지 않다면 연합된 마법사들의 힘만으로 나라를 뒤엎을 수도 있다는 걱정이 세간에 떠돌 정도였다.<br/> 결성된 마법사 연맹이 단순히 힘만 지니고 있었다면, 나오지 않았을 소문이었으니, 당시 분명히 연맹에 가담한 마법사들 가운데 적어도 상층부는 그 힘을 사용해 권력을 누리겠다는 마음도 분명히 있었다고 여겨진다.<br/>{np} 그에 비해 비연맹파는 독자 행동을 하는 마법사들이고, 기본적으로 은자형이거나 연구자형의 인물들이었다.<br/>따라서 굳이 연맹파 마법사들이 세속적인 권력을 노리지 않더라도 최소한 마법사들 사회의 주도권과 분위기는 연맹측이 원하는 방향으로 흐를 것이 분명했다.<br/>{np} 그리고 이것을 방치하여 세월이 많이 흐르면 후대에는 마법사 사회의 성격이 어떤 방향으로 어떻게 변할지 모른다는 우려가 제기되었다.<br/> 조금이라도 식견이 있는 사람들의 생각으로 이것은 왕국 사회 전체에 심각한 위기를 가져올 수 있는 현상이었다.<br/>{np} 그리하여 유스엘 국왕께서 당시에 실행한 대책은 비연맹파 마법사들을 지원하는 방법이었다.<br/>그들의 연구와 생계를 정책적으로 재정적으로 후원하는 조치를 취한 것이다.<br/>그러자 연맹파의 마법사들은 이에 반발하여 비싼 가격으로 마법을 팔고, 용병으로 나서는 등 자금을 모으며 힘을 길렀다.<br/>{np} 비연맹파 마법사들은 은거형이나 연구형의 인물이 많았기 때문에 친화력이 없는 반면에 연맹파는 적극적으로 그리고 조직적으로 부유층과 귀족층에 마법물품을 팔고 마법용역을 받아 수행하면서 인맥의 저변을 넓히고 자금을 모았다.<br/> 유스엘 국왕께서는 왕국의 신민간 계약과 거래를 통제할 수 없기에 이를 막을 수 없었다.<br/>{np} 그러나 조정이 우회적인 규제 수단을 내고, 심지어 새로운 조세 항목까지 만들어 연맹의 수익에서 세금을 걷었으며 왕실에 우호적인 비연맹파를 적극적으로 움직여 저렴한 마법물품과 용역을 시장에 제공하자 연맹파의 입지는 차츰 줄어들기 시작했다.<br/>이 과정에서 당시 왕국 관료들은 왕국 고관들의 압박을 받아 은거형이나 연구형인 비연맹파 마법사들을 끊임없이 자주 방문하여 이런 성과를 이루는 일에 대단한 수고를 했다고 한다.<br/>{np} 사태가 이런 식으로 전개되자 연맹파는 왕실에 조치에 항의할 수는 있었지만, 그 이상은 어려웠다.<br/>그 이상은 반역과 내란 말고는 다른 방법이 없었기 때문이었다.<br/>{np} 마법사들이 강하고 비연맹파는 속세의 일에 나서기 싫어하는 사람이 많다지만, 사태가 반역에 이르면 전부는 몰라도 일부는 왕실의 편에 설 것이고, 여신의 힘을 지닌 성직자들과 왕국의 모든 귀족과 장군 및 그 병사들을 상대해야 했다. 연맹 내부적으로도 사태가 반역에 이른다면 탈퇴자가 반드시 나올 것이 분명했다.<br/>{np} 그리고 무엇보다 봉기의 명분이 없었다.<br/>하지만 연맹파는 여기서 굴하지 않고 다른 방법을 생각했다.<br/>연맹파가 왕국의 테두리 안에서 가능한 독립된 자치령을 요구한 것이다.<br/>세상의 주도권을 쥘 수 없다면, 그들만의 도시이자 세상에서 가장 빛나는 도시를 만들어보자는 뜻이었다고 한다.<br/>{np} 연맹파가 이전에 벌인 행태와 동기가 불순했지만, 그럼에도 유스엘 국왕으로서는 이를 딱히 막을 수단이 없었다.<br/>내부적으로는 달라도 이것은 법률상 귀족 영주가 다스리는 영지의 모양을 갖추었기 때문이었다.<br/>{np} 따라서 연맹파가 그들이 지닌 모든 수단을 활용하고 또한 그간 모은 자금으로 그들의 영지가 될 땅을 구입한 뒤, 연맹의 대표자를 그곳의 통치자로 신청했을 때 왕실은 반쯤 포기한 심정으로 너희들끼리 거기 모여있으면 사고를 쳐도 거기서만 칠 것이라는 사실을 위안 삼으며 그것을 인가하였다.<br/>{np} 이에 연맹파는 그 도시에 니코폴리스라는 이름을 붙이고 자신들의 승리를 축하하였다.<br/> 니코폴리스는 그 후 한동안 번영을 구가하였다.<br/>그들이 한 곳에 모이자 효율이 올랐고, 그에 따라 그들이 공급하는 마법물품과 마법용역의 질과 양이 향상되고 가격은 내렸기 때문이었다.<br/>{np} 왕실로서도 니코폴리스가 번영하면 조정에 바치는 조세도 늘어나니 이점은 나름대로 긍정적인 면이었다.<br/>그리고 이런 변화에 따라 비연맹파 마법사들을 지원하는 부담도 더 이상 지지 않아도 되었다.<br/>니코폴리스에 모인 마법사들이 외부에 나와서 엉뚱한 일만 벌이지 않는다면 모두가 행복했을 결말이었을 수도 있었다.<br/>{np} 그러나 우리가 알다시피 일은 그렇게 진행되지 않았다.<br/>지금도 그 전말이 알려지지 않은 일이지만, 니코폴리스의 마법사들은 그 정체가 명확하지 않은 전대미문의 마법실험을 시도하다가 그 부작용으로 연맹에 속한 마법사 전체는 물론이고 니코폴리스에 거주하던 일반 시민들 전부가 사라지는 대사고가 일어났다.<br/>{np} 훗날의 조사의 추정에 의하면, 이 실험은 마법사들의 마력을 극도로 강화하려는 실험이 실패한 부작용이어서 니코폴리스의 건물 등에는 영향을 미치지 못했고, 해당 마법에 참여하여 연결된 연맹소속 마법사들과 도시의 모든 생명체에게만 어떤 알 수 없는 부작용이 나타나 모두 어딘가로 사라지게 되었다고 결론지어졌다.<br/>{np} 이후 빈 도시가 되었지만, 그럼에도 세월이 흘러도 마법사들이 노력하여 지은 도시는 시간의 풍화작용에 놀라운 저항력을 보였고, 아무도 돌보지 않는 도시임에도 바로 어제 모든 사람이 이사간 도시처럼 유지되며 낡아지지 않았다. 여전히 강력한 마법이 작용하는 덕분이었다.<br/>{np} 따라서 세월이 더 흐르고 사람 없는 유령도시에 대한 두려움이 희석되자 도시는 점차 이주해온 왕국의 백성들에 의해 활용되어 신수의 날에 이르기까지 평범한 도시로 이어져 내려왔다.<br/>그러나 후대에 니코폴리스에 정착한 시민들이 도시의 수선과 보강 공사를 덜 하여도 되도록 불편을 덜어주었던 마법은 신수의 날에는 재앙으로 돌아왔다.<br/>{np} 아무도 몰랐던 도시에 잠복된 마법력 때문에 페디미안이나 다른 도시에 비해 더 큰 피해가 발생했고, 이는 특히 인간에게 해로워서 시민들의 상당수가 도시에서 떠나게 된다.<br/> 다만 신수의 날로 어차피 왕국 전체에 온전한 곳이 드물고, 이곳은 마법에 의해 도시의 건물과 시설은 다른 지역에 비해 양호한 탓에 머무른 시민도 있다고 한다.<br/>{np} 또한 소문에 의하면 이후 도시의 마법력에 이끌린 몬스터가 모여들어 위험한 상태가 되고, 왕국에서는 도시를 다시 확보할 여유가 없기에 일반인이 진입을 삼가도록 권고하고 있다.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>니코폴리스의 기원에 관한 이야기. 마우스 우클릭으로 읽을 수 있습니다. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

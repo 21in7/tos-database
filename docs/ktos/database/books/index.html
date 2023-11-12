@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="List of Books, with advanced filtering and sorting">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <h1>Books</h1>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>$ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="d-table-row">
+                <td><a href="/ktos/database/books/661203"><img height="40px" width="40px" src="/assets/icons/icon_item_diary.png" /></a></td>
+                <td><a href="/ktos/database/books/661203">661203</a></td>
+                <td><a href="/ktos/database/books/661203">미하일의 감상평</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/663196"><img height="40px" width="40px" src="/assets/icons/icon_item_collection_01red.png" /></a></td>
+                <td><a href="/ktos/database/books/663196">663196</a></td>
+                <td><a href="/ktos/database/books/663196">세이지의 기준점</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/663197"><img height="40px" width="40px" src="/assets/icons/icon_item_collection_03blue.png" /></a></td>
+                <td><a href="/ktos/database/books/663197">663197</a></td>
+                <td><a href="/ktos/database/books/663197">몬데롤 산의 여신의 처소 1권</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/663198"><img height="40px" width="40px" src="/assets/icons/icon_item_collection_00basic.png" /></a></td>
+                <td><a href="/ktos/database/books/663198">663198</a></td>
+                <td><a href="/ktos/database/books/663198">공간의 책</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690001"><img height="40px" width="40px" src="/assets/icons/icon_item_spellbook_1.png" /></a></td>
+                <td><a href="/ktos/database/books/690001">690001</a></td>
+                <td><a href="/ktos/database/books/690001">책 이름</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690002"><img height="40px" width="40px" src="/assets/icons/icon_item_collection_00basic.png" /></a></td>
+                <td><a href="/ktos/database/books/690002">690002</a></td>
+                <td><a href="/ktos/database/books/690002">리디아 샤펜과 플레쳐</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690003"><img height="40px" width="40px" src="/assets/icons/icon_item_collection_01red.png" /></a></td>
+                <td><a href="/ktos/database/books/690003">690003</a></td>
+                <td><a href="/ktos/database/books/690003">페디미안의 은화</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690004"><img height="40px" width="40px" src="/assets/icons/icon_item_collection_04black.png" /></a></td>
+                <td><a href="/ktos/database/books/690004">690004</a></td>
+                <td><a href="/ktos/database/books/690004">리디아 샤펜의 교차선</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690005"><img height="40px" width="40px" src="/assets/icons/icon_item_collection_01red.png" /></a></td>
+                <td><a href="/ktos/database/books/690005">690005</a></td>
+                <td><a href="/ktos/database/books/690005">리디아 샤펜의 오늬</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690006"><img height="40px" width="40px" src="/assets/icons/icon_item_collection_02green.png" /></a></td>
+                <td><a href="/ktos/database/books/690006">690006</a></td>
+                <td><a href="/ktos/database/books/690006">리디아 샤펜과 럼펠스틸스킨</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690007"><img height="40px" width="40px" src="/assets/icons/icon_item_collection_03blue.png" /></a></td>
+                <td><a href="/ktos/database/books/690007">690007</a></td>
+                <td><a href="/ktos/database/books/690007">아트만의 확장</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690008"><img height="40px" width="40px" src="/assets/icons/icon_item_collection_04black.png" /></a></td>
+                <td><a href="/ktos/database/books/690008">690008</a></td>
+                <td><a href="/ktos/database/books/690008">카듀멜 시대의 갑주</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690009"><img height="40px" width="40px" src="/assets/icons/icon_item_spellbook_1.png" /></a></td>
+                <td><a href="/ktos/database/books/690009">690009</a></td>
+                <td><a href="/ktos/database/books/690009">클라페다의 내기꾼</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690010"><img height="40px" width="40px" src="/assets/icons/icon_item_paperpiece.png" /></a></td>
+                <td><a href="/ktos/database/books/690010">690010</a></td>
+                <td><a href="/ktos/database/books/690010">찢어진 일기의 일부 1</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690011"><img height="40px" width="40px" src="/assets/icons/icon_item_paperpiece.png" /></a></td>
+                <td><a href="/ktos/database/books/690011">690011</a></td>
+                <td><a href="/ktos/database/books/690011">찢어진 일기의 일부 2</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690012"><img height="40px" width="40px" src="/assets/icons/icon_item_paperpiece.png" /></a></td>
+                <td><a href="/ktos/database/books/690012">690012</a></td>
+                <td><a href="/ktos/database/books/690012">찢어진 일기의 일부 3</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690013"><img height="40px" width="40px" src="/assets/icons/icon_item_paperpiece.png" /></a></td>
+                <td><a href="/ktos/database/books/690013">690013</a></td>
+                <td><a href="/ktos/database/books/690013">찢어진 일기의 일부 4</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690014"><img height="40px" width="40px" src="/assets/icons/icon_item_diary.png" /></a></td>
+                <td><a href="/ktos/database/books/690014">690014</a></td>
+                <td><a href="/ktos/database/books/690014">이름 모를 모험가의 일지</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690015"><img height="40px" width="40px" src="/assets/icons/icon_item_indulgence.png" /></a></td>
+                <td><a href="/ktos/database/books/690015">690015</a></td>
+                <td><a href="/ktos/database/books/690015">베이키얼의 답장</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690016"><img height="40px" width="40px" src="/assets/icons/icon_item_paper1.png" /></a></td>
+                <td><a href="/ktos/database/books/690016">690016</a></td>
+                <td><a href="/ktos/database/books/690016">주문 내역서</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690017"><img height="40px" width="40px" src="/assets/icons/icon_item_collection_04black.png" /></a></td>
+                <td><a href="/ktos/database/books/690017">690017</a></td>
+                <td><a href="/ktos/database/books/690017">남작 비서 안돌의 일지</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690018"><img height="40px" width="40px" src="/assets/icons/icon_item_magicpaper.png" /></a></td>
+                <td><a href="/ktos/database/books/690018">690018</a></td>
+                <td><a href="/ktos/database/books/690018">부스러져가는 공문</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690019"><img height="40px" width="40px" src="/assets/icons/icon_item_paper.png" /></a></td>
+                <td><a href="/ktos/database/books/690019">690019</a></td>
+                <td><a href="/ktos/database/books/690019">바스러져 가는 쪽지</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690020"><img height="40px" width="40px" src="/assets/icons/icon_item_paper1.png" /></a></td>
+                <td><a href="/ktos/database/books/690020">690020</a></td>
+                <td><a href="/ktos/database/books/690020">순례자의 쪽지</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690021"><img height="40px" width="40px" src="/assets/icons/icon_item_magicpaper.png" /></a></td>
+                <td><a href="/ktos/database/books/690021">690021</a></td>
+                <td><a href="/ktos/database/books/690021">찢어진 일기</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690022"><img height="40px" width="40px" src="/assets/icons/icon_item_paperpiece.png" /></a></td>
+                <td><a href="/ktos/database/books/690022">690022</a></td>
+                <td><a href="/ktos/database/books/690022">마지막 기록</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690023"><img height="40px" width="40px" src="/assets/icons/icon_item_paper1.png" /></a></td>
+                <td><a href="/ktos/database/books/690023">690023</a></td>
+                <td><a href="/ktos/database/books/690023">유언장</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690024"><img height="40px" width="40px" src="/assets/icons/icon_item_pilgrim_piece.png" /></a></td>
+                <td><a href="/ktos/database/books/690024">690024</a></td>
+                <td><a href="/ktos/database/books/690024">그을린 실마리</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690025"><img height="40px" width="40px" src="/assets/icons/icon_item_collection_00basic.png" /></a></td>
+                <td><a href="/ktos/database/books/690025">690025</a></td>
+                <td><a href="/ktos/database/books/690025">버려진 일기장</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690026"><img height="40px" width="40px" src="/assets/icons/icon_item_magicpaper.png" /></a></td>
+                <td><a href="/ktos/database/books/690026">690026</a></td>
+                <td><a href="/ktos/database/books/690026">분노로 휘갈긴 일지</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690027"><img height="40px" width="40px" src="/assets/icons/icon_item_diary.png" /></a></td>
+                <td><a href="/ktos/database/books/690027">690027</a></td>
+                <td><a href="/ktos/database/books/690027">남작 사병 차고스의 일지</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/books/690028"><img height="40px" width="40px" src="/assets/icons/siaul_act3_confirmation.png" /></a></td>
+                <td><a href="/ktos/database/books/690028">690028</a></td>
+                <td><a href="/ktos/database/books/690028">마족 처단 명령서</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/"><img height="40px" width="40px" src="" /></a></td>
+                <td><a href="/ktos/"></a></td>
+                <td><a href="/ktos/"></a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="솔콤에 대한 이야기. 마우스 우클릭으로 읽을 수 있습니다. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>솔콤의 별의 탑 공략기록3 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690077" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690077" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690077" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>솔콤의 별의 탑 공략기록3</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>호숫물을 살펴본 결과는 아무런 성과가 없었다. 단순히 여신들이 신성력을 쏟아 부은 성수였다면,해법이 있을 수도 있겠지만, 이것은 그렇게 간단한 것이 아니었다. 마법과 연금술 그리고 당대의 신학이 모두 동원되었으리라고 짐작될 뿐, 뚜렷한 해법이 보이지 않았다. 파헤치다 보면 해법이 나오겠지만, 당장은 어쩔 수 없었다.{np}부하들을 희생한 추가 탐색에서 얻은 성과라면 일종의 성수반이라고 할 물체가 존재하고 거기서 나오는 액체가 호숫물에 섞여 마족에게만 해로운 인간이나 다른 동식물에게는 아무런 문제가 없는 괴상한 호숫물을 만든다는 사실이었다.<br/>그 수반 장치들을 다 파괴하면 언젠가는 호숫물의 농도가 낮아지다가 평범한 호숫물이 되겠지만, 곳곳에 산재한 시설은 샤펜스타 단원들의 방해가 없더라도 파괴가 쉽지 않았다. 발목 정도만 차는 물이라지만 젖지 않고는 접근할 방법이 없었기 때문이다.{np} 솔콤은 부유하거나 나는 능력이 있는 부하들이 있었지만, 샤펜스타 단원들은 모두가 명사수였다.압도적인 숫자를 보내지 않는 한 수반시설에 접근하기도 전에 화살밥이 될 것이 틀림없었다.<br/>아니나 다를까 정찰을 위해 호수의 상공을 날던 비행형 마족들은 별의 탑에서 발사된 대형 노포의 공격을 받고 죽거나, 죽다 살아났다.{np} 그래서 다음으로 시도한 것이 배를 이용하는 수상 공격이었다. 이 별깃든 호수라는 곳은 깊이를 알 수 없는 심연을 지닌 호수에 마법으로 탑을 세운 후 그 탑에 걸어서 접근할 수 있는 길을 역시 마법으로 만들었다. 이 길은 매우 넓어서 길이 아니라 광장이나 다른 명칭으로 불러도 될 정도였다.<br/> 하여간 이것들은 모두 마법으로 만들어진 석재로 이루어졌고, 마법의 힘으로 심연의 호수 위에 떠있었다. 넓은 호수의 절반 정도가 이런 부유 마법석으로 이루어진 지역 아니 수역이었고, 다른 지역은 그냥 호수였다. 따라서 부유 마법석이 없는 지역 아니 수역 위로 배를 띄워 탑을 공격해보겠다는 계획이었다.{np}그렇지만 배는 필요하다고 당장 뚝딱 만들어 낼 수 있는 물건이 아니었다.<br/>배를 준비하고 사는데 시간이 들었다. 프베타가 마계에서 배를 모으고, 그 배를 다룰 수 있는 마족을 수배해도 수가 부족해서 결국 비밀리에 프리미어 에미넌트에 접촉하였다. 그는 인간 세상에서 상당한 자금을 모아두고 있었는데 그것을 지원받아 인간들의 배도 사들여서 별깃든 호수로 날라왔다.{np}일단 배를 타니 호숫물에 부하들이 상하는 일은 없었다. 별의 탑에 딱히 수군이나 수상 병력이 있다는 낌새도 없었다.<br/>한참 접근할 때까지 공격도 없었다.<br/>그러나 아니나 다를까 별의 탑의 모습이 웬만큼 보이는 수상의 어느 장소에 도달하자 별의 탑에서 투사무기들이 사정없이 발사되었다.<br/>직접 맞지 않아도 물이 튀면 피해를 입었고, 정통으로 맞지 않고 빗맞아도 그 작은 파손 부위로 물이 새어 들기 시작했다.<br/>몸에 닿으면 피해를 입히니 퍼낼 방법도 없었다.{np}하지만 솔콤이 멍청이라서 적에게 이런 강력한 원거리 투사무기가 있으리란 예상을 못하고 덤빈 것은 아니었다.{np}솔콤의 목적은 별의 탑에 투사무기 말고 호수 수면 위의 적을 공격할 수단이 있는지 파악하는 것이었다.<br/>엄청난 희생을 무릅쓰고 별의 탑에 다가갔지만, 거리가 가까워지자 투사무기 외에 샤펜스타 단원들의 화살이 추가되긴 했어도, 다른 공격 수단이 없다는 사실은 확인할 수 있었다. 솔콤은 그 점을 확실히 확인하고 후퇴를 명령했다.{np}한편으로는 비행형 몬스터를 총동원하여 육상과 수상에서 동시에 접근해도 별의 탑에 도달할 수 없다는 점도 명확해졌다. 하지만 그렇게 뻔하게 예상되는 사실을 직접 확인하기 위해 배를 만들고 부하들을 희생한 것은 아니었다.<br/>그에게는 다음 계획이 있었다.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>솔콤에 대한 이야기. 마우스 우클릭으로 읽을 수 있습니다. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

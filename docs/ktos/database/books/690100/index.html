@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="불릿 마커 마스터인 플린트 윈터우드에 관한 이야기. 마우스 우클릭으로 읽을 수 있습니다. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>겨울의 부싯돌 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690100" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690100" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690100" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>겨울의 부싯돌</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p> *겨울의 부싯돌<br/>{np} 수 세기를 내려온 저택에 그 세월만큼이나 무거운 분위기가 깔려 있었다.<br/>이 장소가 항상 그랬던 것은 아니었다.<br/>불과 몇 주일 전만 해도 대저택은 세월이 쌓아온 위엄은 있을지언정 결코 어두운 분위기는 아니었다.<br/>{np} 그러나 근래에 발생한 어떤 일은 가문의 어떤 사람에게 우환이 되었고, 마침내 가문공회가 열리는 상황이 되자 어두운 분위기는 어떤 사람들을 넘어 이 저택뿐 아니라 모든 가문의 구성원들에게 미치게 되었다.<br/>그 가문공회가 열리는 저택내의 장소를 향해 2남1녀가 함께 복도를 따라 걷고 있었다.<br/>{np} 이 세 사람 가운데 가장 오른 쪽에 걷던 바이도타스 윈터스푼이 그의 왼쪽 즉, 중앙에서 걷던 남자에게 말을 걸었다.<br/>[그냥 무조건 잘못했다. 앞으로는 안 그러겠다. 그렇게 말씀하시는 겁니다. 형님 아셨죠? 다른 이야기는 하지 마세요.]<br/>{np} 그 말이 끝나자마자 여자가 말했다.<br/>[아니 플린트 오빠가 무슨 잘못을 했다고 빌어요? 바이도타스 오빠도 참 답답해요.]<br/>[답답한 건 너다. 루시엔. 그러면 너는 플린트 형님이 벌을 받으면 좋겠다는 말이냐?]<br/>[플린트 오빠가 뭘 잘못했다고 벌을 받나요?]<br/>{np} [나도 플린트 형님이 잘못했다고는 생각하지 않아. 하지만 그렇게 간단한 일이면 어르신들이 가문공회까지 열었을 리가 없지 않냐?]<br/>[별 잘못도 아닌 일로 가문공회까지 열 생각을 하다니 어르신들은 너무 고리타분하다니까요. 플린트 오빠가 가주 자리를 이어받으면 우리 가문도 달라져야 해요.]<br/>{np} [형님이 가주 자리를 받으려면 일단 오늘 공회를 무사히 넘어가는 일이 중요하다.]<br/>그러나 플린트는 친족 동생들의 말을 귀담아 들으면서도 딱히 말을 하지 않았다.<br/>그들에게 대꾸를 하기 싫다거나 하는 이유가 아니라 그 자신 어떻게 할지 아직 생각을 확실히 정하지 못했기 때문이었다.<br/>{np} 플린트가 반응을 보이든 보이지 않든 루시엔과 바이도타스가 비슷한 그런 말을 주고받는 사이에 세 사람은 공회가 열리는 방의 문 앞에 도착하였다.<br/>문을 열기 전 바이도타스는 다시 한번 같은 말을 플린트에게 강조한 뒤 문을 열었다.<br/>{np} 안으로 들어서자 수십 명의 남녀가 앉아있는 것이 보였다.<br/>척 봐도 심문을 받거나 마치 법정의죄인석 마냥 동떨어진 의자가 하나 마련되어 있었고, 정면과 그 정면의 비스듬한 좌우에 수 십의 남녀가 앉아 있었다.<br/>{np} 바이도타스와 루시엔도 그 중 비어있는 자신의 자리를 찾아가 앉았다.<br/>그리고 말할 것도 없이 동떨어진 자리에 두 사람이 데려온 남자 플린트 윈터스푼이 별다른 말이 없었어도 스스로 걸어가서 앉았다.<br/>{np} 어찌 보면 오늘 이 모임은 그를 위해 열린 자리이고, 그 자리가 법정의 죄인석 같더라도 오늘의 주인공은 그였기 때문이다.<br/>다만 그 주인공이 단순한 주연일지 악역이 될지는 다른 사람들이 결정할 문제이긴 했다.<br/>그런 면에서는 재판을 기다리는 죄인의 처지보다는 관객의 평가를 기다리는 배우의 입장이라고 할 수도 있었다.<br/>{np} 이제 실내에 빈 자리는 가장 상석의 한 자리만이 비어있었다.<br/>그 자리 마저 누군가 채운다면, 이 곳에는 총 33명이 앉을 수 있었다.<br/>그러니까 일종의 피고석 같은 곳에 앉은 한 남자를 제외하면 31인이 그 남자를 정면과 그 비스듬한 정면의 좌우에서 바라보고 앉아 있었다.<br/>{np} 비어있는 가장 상석의 우측에 앉은 노인이 입을 열었다.<br/>[이로써 현재 우리 윈터스푼 가문의 통과의례를 완수한 모든 일족이 한 분을 제외하고 모두 이 자리에 모였다. 여기에 참석한 모든 일족 가운데 최연장자로서 내가 공석인 가주를 대신하여 제817차 가문공회의 개회를 선언하는 바이다.]<br/>{np} 노인은 잠시 말을 끊었다가 이렇게 이었다.<br/>[코하트Kohath 윈터스푼은 미리 신청한 발언권을 이용하여 발언하라.]<br/>우측에 앉은 무리 가운데 한 중년 남자가 일어나면서 다른 일족들에게 고개를 숙여 인사한 후 말했다.<br/>{np} [본래 이 자리는 그간 비어있던 가주의 공석을 메우는 기쁨에 찬 공회가 될 예정이었습니다. 그러나 불행히도 그 가주 자리에 가장 물망에 올랐던 일족의 한 사람이 가문의 율법, 나아가 연금술사 전체의 귀감이 된 금칙을 어겼다고 혐의를 받아 그것을 조사하는 자리를 겸하게 되었습니다.<br/>{np} 수 세기를 왕국 제일의 명문이자 연금술의 종주로 추앙 받은 우리 윈터스푼 가문의 수치라 아니할 수 없습니다.]<br/>{np} 코하트는 잠시 쉬었다가 이렇게 다시 말을 이었다.<br/>[하나. 모든 알케미스트의 연구와 결과는 모든 여신의 섭리를 거스르지 않아야 한다.<br/>하나. 모든 알케미스트의 연구와 결과는 선과 여신을 해쳐서는 안 된다.<br/>{np} 하나. 모든 알케미스트는 여신과 인간을 재료로 절대 쓰지 않는다.<br/>모든 알케미스트는 위의 조항을 지키며 다른 사람들이 지키도록 노력한다.<br/>모두가 아시다시피 일족의 사람이라면 태어나 글을 배우는 때 가장 처음 배우는 문장이며 이후 죽을 때까지 지켜야 할 가언입니다.<br/>{np} 그런데 플린트 윈터스푼은 이 가언이 지닌 바 정신을 져버렸다고 생각합니다. 그는 연금술을 이용해 강력한 무기를 제조하려 합니다. 우리 가문이 지닌 기술과 역량으로 일단 무기를 만들기 시작하면 세상에 무슨 일이 일어나겠습니까?<br/>{np} 그 무기들이 이 세상을 얼마나 끔직한 곳으로 만들겠습니까? 저는 이런 시도와 연구는 마땅히 중단되어야 한다고 생각합니다. 윈터스푼 가문의 역사에서 연금술을 직접적으로 이용해 무기를 만들어 낸 사람은 없었습니다.<br/>{np} 아니 누구도 그런 생각조차 하지 않았습니다. 그런데 이제 와서 가문의 가주로까지 거론되던 사람이 연금술에 기초한 무기를 만들어내겠다는 발상은 용납할 수 없습니다.]<br/>그 말이 끝나자 한 청년이 손을 들어 발언권을 요구했다.<br/>앞서의 노인이 눈빛으로 허락하자 일어나 발언을 시작했다.<br/>{np} 바이도타스 윈터스푼이었다.<br/>[방금 그 말씀은 사실과 부합하지 않습니다. 케미니스 소드, 바인 장비, 리에나 장비 등은 모두 우리 가문이 제조하거나 그 기술을 제공하여 만든 것들입니다. 이 장비로 왕국에 공을 세운 자 많은 생명을 구하는 일에 성과를 낸 사람이 적지 않습니다.<br/>{np} 이런 사례를 생각한다면 단순히 무기를 만드는 일에 연금술이 사용되어서 문제라는 것은 세상의 모든 대장장이와 무기제작자가 생명의 존엄성을 모르는 파괴광이거나 살인마라는 주장만큼이나 터무니 없다고 생각합니다.]<br/>{np} 일부 일족들이 바이도타스의 말에 고개를 끄덕였지만, 코하트도 물러서지 않았다.<br/>[내가 그런 사실을 모른다고 생각하나? 그러나 조카는 하나만 알고 둘은 모르는 이야기를 하고 있는 걸세. 화약이 발명된 지 얼마나 오래되었나?<br/>{np} 그러나 소셀 2세 시절에 우리 가문이 화약을 만들어낸 이후로 오랜 세월이 흘렀으나 그 위력에도 불구하고 화약 병기는 무기의 대세가 아니네.  심지어 왕국군 병사들의 대부분은 여전히 창이나 도검을 사용하고 있네. 이것이 무슨 이유 때문이라고 생각하는 건가?]<br/>{np} 바이도타스가 바로 반론을 제시하려 했으나 먼저 손을 든 사람이 있었다.<br/>루시엔 윈터스푼이었다.<br/>역시 의장격인 노인의 무언의 허락이 떨어지자 그녀가 말하기 시작했다.<br/>{np} [그럼에도 불구하고 왕국군에는 새퍼가 있고, 캐노니어도 있습니다. 왕국에 화약 병기가 크게 유행하지 않은 것은 소셀 2세께서 남기신 유훈도 있지만, 마법과 마법 병기 및 신성력에 기반한 아이템들이 화약 병기 못지 않은 위력을 지녔기 때문입니다.<br/>{np} 하지만 그렇다고 그건 화약 병기가 약하다는 뜻도 아닙니다. 화약병기든 냉병기든 그건 그냥 병기에 불과합니다. 우리 가문이 냉병기에 연금술을 적용하였다면, 화약병기에도 그것을 적용하지 못할 이유가 없습니다.<br/>{np} 우리 가문이 발명한 화약 역시 바로 우리에 의해서 새로운 발전의 단계로 나아갈 때가 온 것이라고 생각해 주세요. 아버지.]<br/>루시엔 윈터스푼의 말은 끝에 가서는 청유형으로 부드럽게 끝났다.<br/>{np} 그러나 코하트의 말은 여전히 엄격하였다.<br/>[내가 딸을 잘못 가르쳤구나. 바로 네가 말한 소셀 2세 폐하의 유훈과 함께 지난 수 세기 동안 여러 가주께서 그런 연구에 힘쓰지 않은 것이 호기심이나 재능이 모자라서 생각하는 게냐? 그것은 다 거기에 포함된 위험성을 깨달을 정도의 현명함과 신중함이 서린 행동이었던 것이다.]<br/>{np} 루시엔에 이어 바이도타스 윈터스푼이 다시 발언권을 얻으려 할 때, 돌연 문이 열리며 한 사람이 들어왔다.<br/>가문의 공회가 열릴 때마다 항상 그 사람을 위한 자리를 비워두었으나 실제로 참석한 일은 많지 않은 사람이었다.<br/>{np} 자주 보는 사람이 아님에도 실내의 모든 일족은 그 사람의 얼굴을 알고 있었다. <br/>이 사람은 한 번 보면 수십 년 후에도 대부분의 일족들이 그 얼굴을 잊지 않았다.<br/>수십 년의 세월에도 얼굴이 변하지 않으니 못 알아볼 일이 없었기 때문이었다.<br/>{np} 그 얼굴을 지닌 사람이 실내에 들어서자 그 사람을 알아본 모든 일족이 자리에서 일어나 고개를 숙여 일족의 최연장자에 대한 예를 나타냈다.<br/>들어온 사람은 미모의 여인이었는데 걸음을 떼면서 이렇게 말했다.<br/>{np} [그간 적지 않은 공회에 참석했지만, 이렇게 시작부터 열띤 토론 분위기의 공회는 오랜만이군.]<br/>회의에 주재자였던 노인이 고개 숙인 일족을 대표해 인사의 말을 꺼냈다.<br/>[오랜 만에 뵙습니다. 대고모님.]<br/>들어선 미모의 여인 루시드 윈터스푼은 가볍게 고개를 끄덕여 그 인사를 받고는 그 자리에서 모습을 감췄다.<br/>{np} 그리고 한 순간 후 비어있던 가장 상석의 자리에 나타났다.<br/>[할머니, 증조 할머니, 고조 할머니 하는 식으로 세월 지날 때마다 점점 듣기 싫은 호칭으로 부르는지라 앞으로는 세대가 얼마나 흐르든 대고모라고 부르라고 했지만, 그래도 케나즈Kenaz 너 같은 노인에게 그런 말을 들으니 기분이 이상한 것은 마찬가지로군.]<br/>{np} 루시드 윈터스푼이 착석하자 일족이 모두 다시 제자리에 앉았다.<br/>주재자 케나즈 윈터스푼이 뭔가 말을 하려 하자 루시드 윈터스푼이 제지했다.<br/>[문에서 이 자리로 이동하는 동안에 이곳에서 이루어진 모든 일을 시간을 돌려서 봤다. 내게 사정을 설명하지 않아도 된다.]<br/>{np} 그렇게 말하고 루시드 윈터스푼은 마치 죄인이나 피고 같이 배치된 자리에 앉은 플린트 윈터스푼을 바라보며 말했다.<br/>[모처럼 열띤 토론이 벌어지는 상황을 식히는 일이 과연 잘하는 일인지는 모르겠으나,<br/>{np} 때로는 서로 다른 의견을 경쟁시킬 때가 있는가 하면, 반대로 의견 대립으로 감정의 골이 깊어지기 전에 식혀야 할 때도 있다고 본다. 그리고 내가 생각하기에 지금이 그 때인 것 같다.]<br/>{np} 루시드 윈터스푼은 그런 말을 한 뒤 잠시 쉬며 실내의 일족들을 하나 하나 일별하였다. 수백 년 전에 죽은 그녀의 형제자매들이 낳은 아이들의 먼 후손인 그들을 그렇게 둘러 본 그녀가 다시 입을 열었다.<br/>{np} [너희들이 서로 의견을 교환하고 가진 지혜를 모아 합당한 결론에 이르도록 지켜보고 싶은 마음도 적지 않으나, 불행히도 우리에게는 시간이 부족하다는 사실을 나는 알고 있다. 안타깝게도 너희들에게 그런 사정을 말할 수 없다.]<br/>{np} 의장 역할을 하던 노인 케나즈 윈터스푼이 말했다.<br/>[시간의 관찰자이시며 일족의 최연장자이신 대고모님께서 그렇게 말씀하신다면 저희는 굳이 듣지 않아도 무방합니다. 대고모님께서는 가문과 일족의 일은 물론 세간의 모든 일에 한 발짝 떨어져 지내시지만,<br/>{np} 가끔 개입하시는 일은 그럴 만한 이유가 있었고, 그때는 밝히지 못한 이유도 훗날에는 납득할 수 있는 것이었습니다. 저희는 대고모님의 조언을 새겨들을 준비가 되어 있으며, 저희들의 모든 능력을 모아서 도달할 결론이 지니지 못한 지혜를 담고 있을 것이리 믿습니다.<br/>{np} 대고모님께서 불민한 후손을 위해 조언을 주신다면 저희가 어찌 마다하겠습니까?]<br/>[내 해답이 그렇게까지 대단한 지혜를 품고 있지는 않을 것이다. 그리고 때로는 현명한 결론보다 그 결론에 도달하는 과정이 더 중요한 경우도 많다.<br/>{np} 그러나 아쉽게도 시간이 부족하다. 그러니 내가 이 공회를 주재하는 일을 너희들이 인내했으면 한다.]<br/>[말씀하십시오.]<br/>케나즈가 대답했지만, 루시드 윈터스푼의 질문은 플린트 윈터스푼에게 떨어졌다.<br/>{np} [아직은 아무도 네 의견을 묻지 않은 것 같구나. 다른 일족들의 의견과 그들의 이해도 중요하지만, 일단은 네 말부터 들어보자. 네 생각은 무엇이냐? 연금술을 이용해 위력적인 총탄을 만들고 배포하고 싶다는 것이냐?]<br/>{np} 플린트 윈터스푼은 말로만 듣던 전설적인 일족의 인물이 등장한 충격에 아직도 빠져있어서 잠시 그 질문에 답할 수 없었다.<br/>그러나 루시드 윈터스푼이 그의 대답을 기다리고 조용히 있자 결국 이렇게 말했다.<br/>{np} 언젠가 루시드 윈터스푼을 직접 만나면 하겠다던 인사말이나 질문 등은 그 순간에는 어디론가 날아가 버리고 간신히 이렇게 짧게만 말했다.<br/>[그렇게 요약하고 싶은 내용은 아니지만, 그렇게 요약해도 틀린 말은 아닙니다. 대고모님.]<br/>{np} 루시드 윈터스푼은 좌중을 둘러보더니 말했다.<br/>[몇몇 사람을 제외하고는 여기 모인 일족의 대다수는 그 생각에 반대하는 모양이다. 내 개인적으로는 지난 이백 년 동안 손을 놓은 연금술에 다시 손을 대보고 싶을 만큼 흥미로운 발상이다만..]<br/>{np} 코하트 윈터스푼이 자기도 모르게 입을 열어 약간은 격앙된 목소리로 말했다.<br/>[대고모님!]<br/>{np} 하지만 루시드 윈터스푼이 손짓으로 그 뒤에 이어질 말들을 제지했다.<br/>[흥분할 것 없다. 얘야. 예나 지금이나 나는 가문의 일에 이래라 저래라 하고 싶지 않으니까 말이다. 그리고 흥미로운 발상이라는 이유로 실행하던 나이는 이미 지났고..<br/>{np} 잠시 말을 멈췄던 루시드 윈터스푼이 이윽고 다시 말을 이었다.<br/>[이 자리에 있는 대다수 일족들의 의견은 듣지 않아도 알 수 있다. 혹시 다른 의견이 있는 사람이라면 언제든지 말해도 좋다. 그러니 이제 플린트 네게 묻겠다. 네가 원하는 일을 하는데 일족과 가문의 힘을 업어야만 할 수 있는 일이냐?]<br/>{np} 플린트 윈터스푼의 표정이 변했다.<br/>그런 방향으로는 생각해 본 적이 없었기 때문이다.<br/>일족과 함께 앉아 있던 루시엔과 바이도타스도 이 새로 던져진 개념이 흥미로웠는지 서로 눈빛을 교환하고, 곧 이어 플린트 윈터스푼의 대답이 궁금해져 그를 주목했다.<br/>{np} 두 사람 이외 다른 일족들 역시 비슷한 심정으로 플린트를 쳐다보았다.<br/>플린트 윈터스푼의 고민은 깊었지만, 시간은 짧았고, 스스로에게 자문한 대답은 그보다 더 간결하였다.<br/>그래서 그 대답은 쉽게 나왔다.<br/>{np} [당연히 아닙니다. 윈터스푼 가문이 지닌 힘과 역량을 제게 집중할 필요가 없습니다. 다만 제가 지닌 능력을 가문과 일족을 위해서 쓰지 못하는 문제는 있습니다.]<br/>{np} [그렇다면 일족을 설득할 필요가 어디 있느냐? 네가 가주 자리에 관심이 없다면 독립하여 네가 하고 싶은 바를 하면 될 일 아니냐? 그리고 네 재주가 대단하다고는 하여도 너 한 사람의 재주를 가문에 더하지 못하고 뺀다고 하여도 우리 일족이 망하지 않으리라 본다.<br/>{np} 그것은 지난 수 세기 동안 가문에 공헌하지 않은 이 몸을 봐도 알 수 있는 일이지.]<br/>코하트 윈터스푼을 포함하여 몇몇 윈터스푼 일족이 반대하고 싶었지만,<br/>{np} 루시드 윈터스푼 같은 연금술의 대가가 빠져도 수 세기 동안 문제없던 가문이 플린트가 빠진다고 해서 문제가 된다고 주장할 수 없기에 반박할 근거를 금방 찾지 못해 입을 열지 못했다.<br/>{np} 하지만 플린트는 이제까지 자신이 가문을 벗어나 그런 식으로 산다는 생각은 하지 않았기에 약간 충격을 받은 듯했다. 하지만 잠시 생각하더니 결국은 그 방법이 마음에 든 모양이었다.<br/>루시드 윈터스푼이 그런 심적인 변화의 모습을 지켜보면서 말을 이었다.<br/>{np} [플린트가 가문 외부로 나간다면 그가 무슨 일을 하든 본가가 간섭할 이유가 없다. 그러나 플린트는 자신이 그런 일을 할 수 있는 바탕이 결국은 우리 가문의 가르침이 그 바탕이라는 사실도 간과해서는 안 될 것이다.<br/>{np} 그러니 너는 윈터스푼 가문의 이름을 계속 달고는 네가 하고 싶은 일을 할 수는 없다. 그러나 다른 무엇이 되기도 곤란하고 우리 일족과 연을 끊어서도 곤란하니 앞으로는 윈터우드라는 이름을 사용하도록 하자.<br/>{np} 그 이름이 네가 가문에서 배운 것과 네가 하고 싶은 일 사이에서 중용의 길을 걸을 수 있도록 항상 네게 지침이 되기를 바란다.]<br/>{np} 코하트가 말했다.<br/>[그러나 연금술의 규례는 그가 가문을 나간다고 해서 무시될 수 있는 것이 아닙니다. 그것은 이미우리 일족의 가언이 아니라 왕국의 모든 연금술사 아니 세상 모든 연금술사의 철칙입니다.]<br/>{np} 루시드 윈터스푼이 말했다.<br/>[무엇을 염려하는지 안다. 그러나 플린트 윈터우드는 자신이 배운 것을 함부로 사용하거나 아무에게나 마구 전파할 사람이 아니다. 너도 그 정도는 알지 않느냐? 그리고 나는 이것이 우리 가문과 나아가 세상에 있어 장기적으로 좋은 일이 될 것이라는 확신이 있다.<br/>{np} 내가 크로노맨서라는 사실을 잊은 것은 아닐 테지? 그리고 연금술사의 규례로 말하자면 바로 내가 그것을 만들 때 참여한 사람 가운데 하나다. 내 앞에서 가언의 무거움으로 나를 묶을 생각은 버려라.]<br/>{np} 오랜 만에 공회에 참여한 루시드 윈터스푼을 가문에 묶어둘 기회를 놓치고 싶지 않았던 노인 케나즈 윈터스푼이 말했다. <br/>[하오시면, 다음 가주도 한번 봐주시는 편이 어떻습니까? 가장 가주로 촉망 받던 사람을 말씀 한 마디로 내보내시면 그 정도는 해주시고 가셔야 할 듯합니다.]<br/>{np} 다음 가주를 루시드 윈터스푼이 정하는 사람으로 정한다면, 그래서 당분간 두고두고 루시드 윈터스푼의 도움을 받을 수 있다면 차후 일족이 얻을 복락은 지대할 것이다.<br/>루시드 윈터스푼의 조언 한 마디를 듣기 위해 애걸복걸한 역대 가주들이 적지 않았음을 생각하면 이것은 정말 일족에게는 놓칠 수 없는 기회였다.<br/>{np} [어차피 다음 세대에서 사람을 고르면 될 일이다. 바이도타스 정도면 충분하겠지. 가문의 원로들이 젊은 가주를 잘 돕고 이끌면 될 테고..]<br/>코파트가 케파즈의 눈짓을 무시하고 이번에도 반대 의사를 나타냈다.<br/>케파즈는 저게 다 된 일을 망치려고 한다고 속으로 질책했지만 별 수 없었다.<br/>{np} [바이도타스의 연금술 실력은 괜찮습니다. 하지만 그는 플린트 같은 강인함이 없습니다. 다시 말해 학자형의 성격입니다. 아시다시피 가주라면 전투에도 어느 정도는 실력을 갖출 필요가 있습니다.]<br/>{np} 케파즈는 코파트의 말을 듣고 나자 코파트가 바이도타스를 반대하는 것이 아니라 부족한 가주를 보살피라는 명목으로 루시드 윈터스푼의 발목을 확실히 잡아두고자 하는 뜻이라는 것을 알아챘다.<br/>그래서 자신도 한 마디 보태서 이를 확실히 하려는데 루시드 윈터스푼이 먼저 말했다.<br/>{np} [아직 젊은데 천천히 갖추면 될 일이다. 오히려 그 나이에 연금술 하나만이라도 그만한 성취를 이룬 점을 높이 평가해야 할 일이다.<br/>그의 다른 능력이 연금술보다 낮은 것을 문제 삼을 일이 아니라 그의 다른 능력이 낮아 보이도록 대단히 높이 솟은 연금술의 성취를 인정하는 편이 낫다.<br/>{np} 그리고 정 불안하다면, 모자란 점은 훈련을 시키면 된다. 이렇게 하자. 최근에 소드맨 마스터가 관직을 내려놓고 클라페다로 낙향했다. 바이도타스를 클라페다로 보내 그의 지도를 받도록 하자.]<br/>노인 케나즈가 말했다.<br/>{np} [전사들의 전투 기술을 배워두는 일도 나쁘지 않지만, 이왕이면 대고모님이 마법사의 전투를 가르치시면 더 간단하지 않겠습니까?]<br/>{np} [내가 바이도타스에게 마법전투를 지도한다면 마법사 사회 전체가 시끄러워질 일이다. 자기 가문만 편애한다고 떠들 테고, 그러나 내가 주장한 일이니 어느 정도 책임은 져야 하겠지. 바이도타스를 남부로 보내라.<br/>{np} 대삼림지대와 여러 지역을 거치면서 내가 각 지방의 풍토와 특산물 재료에 대해 가르치겠다. 내가 연금술을 손수 지도하는 일도 백 년도 넘은 일이다. 이 정도면 나로서는 충분히 양보했다고 본다. 그러면 클라페다에는 늦게 도착하겠지만, 뭐 전투훈련은 그렇게까지 급하지는 않다.]<br/>{np} 여기서 루시드 윈터스푼은 잠시 눈을 감고 말을 멈췄다.<br/>‘아니 오히려 우리 가문의 사람이 세계를 구하는 일에 발가락이라도 걸치려면, 너무 열심히 해서도 곤란하지. 때를 잘 맞춰야 하니까...<br/>{np} 그 시기에 맞춰서 너무 강하지도 약하지도 않게 그 때에 딱 맞도록.. 뭐 굳이 바이도타스일 필요는 없지만, 그가 아니어야 할 이유도 없으니 여신의 예정과 섭리를 비틀지 않는 범위에서라면 괜찮겠지..’<br/>그녀는 잠시 떠올린 그런 생각을 지웠다.<br/>{np} 물론 그 생각은 어차피 말로는 나타낼 수 없었다.<br/>루시드 윈터스푼은 플린트를 보며 말했다.<br/>[가주의 짐은 내려놓았으나 네게는 감당할 다른 일이 있을 것이다.<br/>{np} 여신께서 너를 축복하시고, 너를 통해 그 영광을 드러내시기를 기원하겠다. 그러니 항상 그에 합당한 사람으로 살아라. 가문의 이름을 일부만 지녔더라도 일족의 명성을 같이 짊어진 사람으로 살아라.]<br/>{np} 플린트가 그 말에 대답했다.<br/>[일족의 다른 어르신이라면 모를까 대고모님이 그렇게 말씀하시니 참 뭐합니다.]<br/>루시드 윈터스푼이 그 말에 고소를 짓더니 이렇게 말했다.<br/>[그런가? 그러나 어쩌겠느냐? 너나 나나 각자 원하는 길을 가되 아무리 멀리 가도 끊을 수 없는 일도 있기 마련이니 말이다.]<br/>{np} 그 말을 끝으로 루시드 윈터스푼은 별다른 인사도 없이 실내에서 사라지기 시작했다.<br/>남은 일족들은 한 두 번 겪은 혹은 들어본 일이 아닌지라 고개를 숙여 인사함으로 그녀를 전송하였다.<br/>{np} 비록 시간을 통해 남들보다 많은 미래를 내다보는 루시드 윈터스푼만큼은 아니어도 그렇게 새로운 시대가 시작되고 있다는 사실을 그 자리에 모든 사람들이 어느 정도는 느끼고 있었다.<br/>다만 그 시대가 얼마나 가혹할지는 자리에 남은 일족 가운데 아직은 아무도 모르고 있었다.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>불릿 마커 마스터인 플린트 윈터우드에 관한 이야기. 마우스 우클릭으로 읽을 수 있습니다. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

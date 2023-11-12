@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="마타도르 마스터인 크리델라 오테로에 관한 이야기. 마우스 우클릭으로 읽을 수 있습니다. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>크리델라 오테로 이야기 2권 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690097" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690097" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690097" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>크리델라 오테로 이야기 2권</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p> *크리델라 오테로 이야기 2권<br/>{np} 크리델라 오테로는 어두운 복도를 한 남자와 걷고 있었다.<br/>등을 들고 앞장 서 걷고 있는 남자는 프리엄이란 이름을 지녔다.<br/>크리델라는 그를 전혀 좋아하지 않았기 때문에 그에게 말을 걸지 않았지만, 긴 통로와 오랜 침묵에 먼저 항복한 프리엄이 먼저 입을 열었다.<br/>{np} [솔직히 나는 항상 네게 감탄해왔다. 마스터께서 후원하신 스물 아홉 명의 소년 소녀 가운데 마스터께서 원하시는 수준에 도달한 사람은 무척 드무니까 말이다. 그런데 너는 그 수준이 아니라 그 이상의 성취를 거뒀지.<br/>{np} 너와 비슷한 나이에 너와 무예로 견줄 수 있는 사람은 아마 펜서 마스터 소르샤 허턴을 제외하곤 없으리라 본다. 소르샤 허턴이 숟가락을 쥐기 전에 검부터 쥐는 허턴 가문의 사람이라는 점을 고려하면 네가 5년 만에 도달한 지금의 성취는 아마 역사에도 유래가 없지 않을까 싶다.]<br/>{np} 크리델라는 그 말에 어쩐지 참을 수 없는 기분이 들어 이렇게 말했다.<br/>[그 스물 여덟 명 가운데 가장 뒤쳐지는 사람이라도 그렇게 버려질 실력은 아니었습니다. 나는 당신들이 쓸데 없이 기준을 높이 두었다고 생각합니다.]<br/>{np} [그렇게 생각하나? 하지만 우리가 높이 걸어둔 기준은 너희들의 성취한 실력이 아니었어. 뭐랄까 충성심과 성실성 그런 것이었지. 그것이 없다면 그런 것이 없어도 좋을 정도로 실력이 뛰어났어야 하겠지.<br/>{np} 솔직히 말하면 나는 네가 그렇게 믿을 만한 여자는 아니라고 생각한다. 그러나 못 믿을 사람도 아니지. 그런데 매우 확실하게 믿을 수 있는 사실은 네가 무서울 정도로 뛰어난 실력자라는 점이지.]<br/>{np} [당신은 정말 특이한 사람입니다. 무예도 별로인 사람이 자기에게 호의를 지니지 않은 사람과 단 둘이 있을 때도 전혀 두려움을 느끼지 않으니 말입니다.]<br/>{np} [실력자, 강자, 살인자 이런 사람들을 매일 보는 것이 투기장 관리인이다. 그런 것에 겁을 먹어서야 이런 일을 할 수 없지. 무엇보다 정말 바라는 꿈이 있다면 두려움 같은 사소한 감정에서는 자유롭지.]<br/>{np} [확실히 그런 것 같습니다. 그것을 확실하게 배운 것은 바로 프리엄 당신한테서 입니다. 확실히 당신은 인정이나 윤리의식 같은 소위 사소한 감정에서 자유로워 보이니 말입니다.]<br/>{np} [그래 그렇게 날카롭게 마음을 갈아두라고 그래야 네가 바라는 대로 우리를 떠날 날도 빠르게 다가오겠지. 과연 떠나면 뭘 할 수 있을지는 의문이지만 말이지.]<br/>{np} 프리엄이 그렇게 말했을 때 마침내 그의 걸음이 멈췄다.<br/>프리엄이 그의 앞에 있는 문을 정해진 약속에 따라 두드린 후 문을 열자 투박한 탁자와 의자 말고는 아무 것도 없는 방에 앉아 있는 몽크 마스터가 보였다.<br/>{np} 프리엄은 굳이 안으로 들어서지 않고 크리델라 오테로가 안으로 들어서자 몽크 마스터에게 고개만 숙여 인사하고 문을 닫아주고는 멀어져 갔다.<br/>[앉지.]<br/>몽크 마스터 올파스 그림이 말했지만, 크리델라는 잠시 머뭇거렸다.<br/>{np} 올파스 그림은 고소를 지으며 말했다.<br/>[그렇게 망설여서야 나를 죽일 수 있겠나? 하고 싶은 마음이 들었으면 결행을 했어야지. 실력이 없는 것도 아니고..]<br/>{np} 크리델라는 그 말에 대꾸하지 않고 의자를 끌어 거기 앉았다.<br/>[아직은 이 몸을 죽일 자신이 없다는 것인가? 뭐 그것도 있겠지만 스스로 나는 귀족이라는 긍지를 지키고 싶은 마음이 아무래도 더 큰 것 이겠지. 그렇지 않은가?]<br/>{np} [잡담은 그만 하시고, 부른 용건이나 말씀하시죠.]<br/>[그러지. 꽤 열심히 네가 있을 자리를 모색했지만, 지금껏 좋은 기회가 닿지 않았다. 알다시피 마스터 자리라는 것이 그렇게 쉽게 공석이 생기는 자리가 아니니까 당연한 일이지.<br/>{np} 그렇다고 너를 어떤 교단에 넣거나 마법을 배우게 할 수도 없는 일이니까. 하지만 이번에 운 좋게 기회가 생길 것 같다.]<br/>이 말에는 크리델라 오테로도 관심을 지니고 반응을 보였다.<br/>{np} [어느 마스터께서 은퇴하시나요?]<br/>[마타도르 마스터다.]<br/>그 말에 크리델라의 표정이 굳어지며 이렇게 말했다.<br/>[하지만 나는 마타도르의 기술을 수련한 적이 없습니다. 그리고 솔직히 투기장 관련 마스터는 별로 내키지도 않고 말입니다.]<br/>{np} [운이 좋으면 다른 공석이 생길 수도 있지만, 잘못하면 네가 할머니가 될 때까지 빈자리가 안 날 수도 있는 것이 이런 일이다. 그러니 이 기회를 잡아야 한다. 그리고 수련으로 말하자면 너라면 마타도르로서 필요한 모든 것을 익히는 데 긴 시간이 걸리지 않으리라 본다.<br/>{np} 그리고 무엇보다 무예로만 치자면 너는 이 계통의 어느 마스터를 하기에도 부족하지 않으리라 본다. 네가 소르샤 허턴의 펜서 마스터에 관심이 있다는 사실은 알지만, 그 애는 아직 젊고 실력도 좋아서 흔들기 어렵다. 추문 따위를 만들어야 먹힐 대상도 아니고.. 그러니 이 자리를 맡아라.]<br/>{np} [투기장의 다른 관련자들 무엇보다 현재 마타도르 마스터의 제자들이 그냥 있겠습니까? 갑자기 엉뚱한 사람이 그 자리를 하겠다고 나서는데..]<br/>[그쪽은 나와 프리엄이 해결하겠다. 그리고 너는 잘 모르지만 마타도르 마스터 주변의 사람들은 사실 너를 좋아한다. 역시 여자는 외모가 출중하면 덕 볼 일이 많다는 증거겠지.<br/>{np} 그러니 네가 실력으로도 그들을 압도하고 마타도르로서 기술도 쳐지지 않는다는 것을 알게 되면 문제 없다고 본다. 또한 나는 아마도 평생 그걸 한 그 녀석들보다 내년 이 맘 때는 네가 더 뛰어날 것이라 생각한다.]<br/>크리델라는 더 이상 다른 소리를 하지 않았지만 아직 승낙하지도 않은 채 뭔가를 잠시 생각하였다.<br/>{np} 몽크 마스터가 그런 모습을 보고 물었다.<br/>[뭐 또 걸리는 것이 있는데 말을 못하는 것을 보니 아마도 내게 관련된 일인가 보군.]<br/>[그저 잠시 마스터간에는 사적인 대결을 금한다는 왕국법을 생각하고 있었습니다.]<br/>{np} 몽크 마스터가 그 말에 약간 소리를 내어 웃었다.<br/>[하하. 그런가? 뭘 염려하는지 알겠군. 하지만 마타도르는 투기장 마스터이다. 나 역시 투기장에 자주 서는 취미를 지닌 마스터이고 말이다. 너에게 기회는 충분할 것이다.<br/>{np} 하지만 나를 죽이고 싶다면 먼저 내게 빚진 것을 갚아야 하지 않겠나? 나는 네가 빚진 것을 갚기 전에는 나를 어떻게 못할 것이라는 확신이 있었다. 네 실력도 실력이지만 네 그런 가치관이 마음에 들어서 너를 끝까지 거둔 것이다.]<br/>{np} [5년!]<br/>[뭐?]<br/>[5년입니다. 나를 부양한 시간이 5년이니 앞으로 5년이라는 말입니다. 그 이후에는 더 이상 내게 뭘 요구할 생각을 안 했으면 합니다.]<br/>{np} [아니지. 그건 계산이 맞지 않는다. 우리가 네게 의식주만을 제공했다면 그래도 충분하겠지. 그러나 우리는 네가 최고의 무예 실력을 지닌 사람이 되도록 필요한 모든 검법을 제공하고, 훈련시키고 또한 네 어린 시절의 빚뿐만 아니라 네 가문이 지닌 오래된 빚을 청산해주었고, 또..]<br/>{np} [5년 그리고 세 가지 임무. 더 이상은 안 됩니다.]<br/>크리델라가 몽크 마스터의 이어지는 말들을 큰 소리를 내 똑바로 쳐다보면서 단호하게 말했다.<br/>{np} 몽크 마스터 올파스 그림은 그 눈빛을 지지 않고 잠시 마주보다가 이윽고 다시 웃었다.<br/>[하하. 좋다. 5년간 우리를 위해 일한다. 그 5년이 지나면 세 가지 임무를 줄 테니 그것을 완수하라. 그 다음에는 너는 자유다. 네가 자랑하는 귀족 가문의 긍지를 생각하건대 너는 반드시 해낼 것 같군.]<br/>{np}[그렇다고 무조건 시키는 대로 하지는 않습니다. 특히 마지막 임무로 올파스 그림의 생명을 지켜라 그런 임무는 안 됩니다.]<br/>[나는 바보가 아니다. 네가 할 수 있는 일, 네가 거절하지 않을 일 혹은 거절할 수 없는 일을 시킬 것이다. 5년 동안이든 그 이후 세 가지 임무든 말이다.<br/>{np} 그리고 나의 목숨으로 말하자면 너 같은 강자가 싸워보는 일을 피할 만큼 나는 약하지 않다. 내가 죽음 따위를 두려워하는 사람으로 보였나? 내가 지금 죽지 않는 것은 이루고 싶은 일이 있기 때문이다. 결코 살고 싶기 때문이 아니다.]<br/>{np} [이루지 못할 꿈을 보통 뭐라고 하는지 아시는지..]<br/>[마음껏 비꼬아도 좋다. 하지만 그 전에 마타도르 마스터가 될 준비부터 해주면 좋겠군. 그 시작은 여기 이 책을 읽는 것이 좋겠네.]<br/>{np} 그렇게 말하고는 몽크 마스터는 책 무더기를 책상에 쏟아놓고는 그 방을 나섰다.크리델라 오테로는 그 뒷모습을 잠시 쏘아보다가 자리를 잡고 앉아 가장 위의 책을 집고 등불을 당겨 그것을 읽기 시작했다.<br/>{np} .. 전략 ..<br/>왕국의 역사에서 최초의 투기장과 검투사가 출현한 때는 약 900년전 멜키엘 국왕 시대이다.<br/>이후 투기장과 검투사는 점점 발전하였고, 다양한 하위 구분을 만들어내며 현재까지 이어져왔다.<br/>{np} 그러다 약 300년전 프리넬Freenel 국왕의 재위기에 왕국 외부의 풍습이 유입되면서 투기장에 기존의 검투사에서 발생한, 여러 하위 직업과는 성격상 큰 차이가 있는 새로운 투기장 관련 직업인 마타도르가 나타나게 된다.<br/>{np} 조금 더 자세히 서술하자면, 우리 세계의 동물이나 마족 그리고 같은 인간 검투사를 상대로 전투와 공연을 하던 투기장에서 마수를 상대하는 새로운 형태의 투기 공연과 전투가 이루어지게 된다.<br/>{np} 마수는 같은 마계에 속한 피조물이기는 하지만, 마족과는 구별되는 지능이 없거나 낮은 야수로서 우리 세계에는 존재하지 않는 종류이며, 마계 특유의 동물이라고 할 수 있다.<br/>이러한 마수를 상대하는 일, 그 중에서도 투기장에서 상대하는 일은 기존의 우리 세계의 동물을 상대로 하는 투기 공연을 펼치던 검투사들이 경험한 것과는 또 다른 기술과 정보가 필요한 일이었다.<br/>{np} 이 때 왕국 외부 사회에서 마수를 상대한 경험을 지녔던 부족 사회가 축적한 정보와 기술이 우연히 왕국의 투기장 관련자에게 알려지게 되었고, 그는 자신이 접한 정보와 기술을 참고하여 마수를 상대하는 완전히 새로운 방식을 고안해낸다.<br/>{np} 이것은 완전히 새로운 형태와 방식의 투기장 종사자의 탄생이었다.<br/>그는 말년까지 자신이 파악한 왕국 외부 기술에 스스로 창안한 기술을 더하고, 모든 것을 더 가다듬었으며, 결국에는 마스터의 지위를 공인 받음으로써 마타도르라는 새로운 직종의 탄생을 확고히 한다.<br/>{np} 초대 마타도르가 창시한 마타도르의 기술과 방식은 실제 전투에 필요한 사항과 그것을 투기장 관람객들에게 보여주기 위한 예술과 예능성을 모두 포함하는 종합 격투 예술이었다고 할 수 있다.<br/>{np} 그리고 다시 300년의 시간이 흐르면서 마타도르의 기술 역시 시간의 흐름에 따라 변화를 겪게 된다.<br/>그 가운데 가장 특기할 ?변화를 꼽자면 바로 마타도르의 기술이 비단 마수를 상대하는 일뿐 아니라 일대일의 대결에도 강력한 점이 있다는 사실이다.<br/>{np} 마타도르는 그 진행과정에서 보조자들의 도움을 받기도 하지만 종국에는 단신으로 마계의 마수와 맞설 필요가 있었고, 이렇게 강력한 마수를 홀로 상대하는 과정이 3 세기를 거쳐 흐르면서 그 같은 일에 특화된 방향으로 더욱 발전하게 된 것이다.<br/>{np} 따라서 현대의 마타도르는 마스터는 과거에 마계의 마수를 전문으로 공연하던 선배 마타도르와 달리 오히려 일대일의 대결의 전문가로서 더 큰 명성을 얻는 일이 많아졌다<br/>.. .. 후략 .. ..<br/>{np} 거기까지 읽던 크리델라 오테로는 책을 덮고 남은 책들을 하나씩 들어서 본 다음 이렇게 말했다.<br/>[죄다 책을 통해 이론으로만 익히라는 건가? 그러지 않으려면 최소한 내일부터는 관람석에서 기존 마타도르들을 잘 관찰해야 하겠군..]<br/>{np} 혼잣말을 그친 크리델라 오테로는 책들을 모아서 정리하여 싼 다음 불을 끄고 방을 나섰다.<br/>어차피 밤새 읽을 책이라면 자신의 숙소에서 그러는 것이 낫기 때문이었다.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>마타도르 마스터인 크리델라 오테로에 관한 이야기. 마우스 우클릭으로 읽을 수 있습니다. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

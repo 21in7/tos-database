@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="하이레이번에 대한 이야기. 마우스 우클릭으로 읽을 수 있습니다. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>하이레이번의 비공식 항해일지1 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690082" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690082" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690082" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>하이레이번의 비공식 항해일지1</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>*하이레이번의 비공식 항해일지1{np}대해적 블라디슬로바스.<br/>그가 걸음을 옮길 때마다 그의 발자국엔 그가 쓰러뜨린 적의 피로 찰랑거렸으며,마족도 고개를 숙이고 뒷걸음 칠 정도로 사악하고 잔혹하기 그지 없었다.그 무자비한 블라디슬로바스 앞에 채 솜털도 벗겨지지 않은 하이레이번이 서 있었다.<br/>철썩이는 파도, 흔들리는 조각배..머리 위를 떠도는 갈매기들마저 숨죽여 바라보고 있었다.<br/>이 싸움의 승리자에겐 아무것도 없었다.그저 대해적의 이름을 지키느냐,빼앗느냐 그것뿐.<br/> 하이레이번은 자신의 커틀러스를 빼어 들고 눈 앞에 있는 블라디슬로바스에게 질풍 같은 공격을 시작했다.{np}가슴팍을 향해서 찌르기 한 번,양 옆구리를 향해서 두 번.<br/>그러나 블라디슬로바스에겐 너무 빤히 보이는 공격이었다.<br/>블라디슬로바스는 하이레이번의 커틀러스를 맞받아 친 뒤,발로 하이레이번의 명치를 걷어 차 쓰러뜨렸다.<br/>그리곤 마치 어린 해적을 가르치듯이..칼자루 끝으로 하이레이번을 마구 내려쳤다.{np}간신히 빠져 나와서 다시 자세를 고쳐 잡은 하이레이번.<br/>하지만 이미 하이레이번은 지쳐 있었고 전세는 블라디슬로바스에게로 기운 것 같았다.하이레이번은 침을 꿀꺽 삼켰다.{np}아마 항복한다면,잔인하지만 유능한 해적인 블라디슬로바스는그를 부하로 삼을지도 몰랐다.끝낼 수 있었으면서도 한 수 늦춰준 것을 보면 그럴 가능성이 있었다.<br/>그러나 하이레이번은 마음속으로 고개를 저으며 상대가 볼 수 없는 그 마음속에서 블라디슬로바스에게 교활한 미소를 지어주었다.{np}그리곤 그에게 달려들어 고집스럽게도 같은 공격을 되풀이했다.그에게 통하지 않을 것을 알면서도..<br/>블라디슬로바스는 이제 젊은 하이레이번을 가지고 노는 게 지겨워졌다.이번엔 칼자루가 아닌 칼 끝을 하이레이번의 핏줄 선 목에 꽂으리라.{np}그러나 하이레이번은 갑자기 몸을 틀더니,허리춤에서 권총을 꺼내 방아쇠를 당겼다.탄환은 정확히 블라디슬로바스의 미간에 박혔고,그의 커다란 몸뚱이는 천천히 하이레이번 쪽으로 넘어졌다.<br/>'철썩!' 그 작은 조각배는 블라디슬로바스와 하이레이번의 무게를 이기지 못하고 그만 뒤집히고 말았다.{np}파도는 계속 조각배의 옆구리를 때렸고,숨 죽여 구경하던 갈매기들도 꺼억꺼억 울어댔다.<br/>그리고 바다 위엔 아무도 없었다.그렇게 대해적의 이름은 파도에 휩쓸려갔다.<br/>먼 바다가 조각배와 두 명의 대해적을 삼킨 장소에서 멀리 떨어진 곳에 거대한 하나의 배가 있었다.{np}그 위에서 두 무리의 남자들이 나뉘어서 각기 배의 이물과 고물을 중심으로 중간을 비우고 진영을 형성하고 있었다.<br/>보통 이런 상황에서는 서로가 서로를 쳐다보고 있기 마련이지만,그들은 곁눈으로 가끔 서로를 보면서도 대부분의 시선은 다른 방향을 보고 있었다.{np}그 방향은 그들 양측 무리의 두목이 조각배 하나에 같이 타고 떠난 방향이었다.<br/>이틀 밤낮을 쉬지 않고 싸운 양측의 전투는 결국 단 한 척의 배만을 남겼다.그리고 그 시간 동안 적으로 싸운 남자들은 이제는 전투를 중지한 채,무언의 대치를 이어가고 있었다.{np}한 쪽은 원래 이 배의 주인들이었고,다른 쪽은 전투의 와중에 자신들의 배가 침몰당하고 적선에 올라 백병전을 벌이던 남자들이었다.<br/>그러나 합의된 사항이 지켜진다면,두 무리의 남자들은 오늘 이후 누가 원래 이 배의 사람들이었느냐에 상관없이 모두 이 배의 선원들이 될 예정이었다.{np}다만 누가 이 배의 선장이 될지 누가 그들의 두목이 될지는 정해지지 않았다.블라디슬로바스나 하이레이번 둘 중 살아서 돌아오는 쪽이 그 역할을 맡도록 그들 모두가 동의하였다.블라디슬로바스를 거역할 해적은 없었으며,젊은 하이레이번이 그를 죽였다면,그 역시 마찬가지였다.{np}지루한 무언의 대치는 고물쪽을 차지한 블라디슬로바스의 부하 가운데 한 사람이 입을 열면서 처음 깨졌다.블라디슬로바스의 2항사로 시독SeaDog이라는 별명으로 불리는 남자였다.<br/>가슴팍에 큰 개가 그려진 문신을 지닌 큰 덩치를 약간 세우며 이렇게 입을 열었다.{np}[만약 다음 번 해가 질 때까지도 아무도 돌아오지 않는다면, 닻을 올리고 이 해역을 떠나는 편이 낫지 않겠나?]<br/>이물쪽을 차지하고 있던 하이레이번의 생존자 무리 가운데 가장 선임자인 3항사가 반걸음 앞으로나섰다.여자의 다리통 굵기의 팔뚝을 지녔고,<br/>그 팔뚝을 타고 오르는 바닷뱀의 문신을 한 오세아니드Oceanid라는 어울리지 않는 이름을 지닌 남자의 입에서 시독의 질문에 대한 답변이 나왔다.<br/>[베르니케 섬 근처에 갈 때까지 싸우지 않겠다고 유라테 여신을 두고 맹세한다면 그렇게 하지.]{np}시독이 주저 없이 그 말을 받았다.<br/>[베르니케 섬에 도달하기 전에 이 배위에서 싸움을 하는 자들은 영원히 키보토스의 바닥짐이 되어 굴러다닐 것을 유라테 여신께 맹세한다.]<br/>시독이 이렇게 말하자 오세아니드 역시 같은 말을 반복했고, 곧 동시에 이물과 고물에서 양측 모두 같은 말을 외쳤다.{np}모두의 맹세의 외침이 끝나자 시독이 하늘을 살짝 올려다보고는 말했다.[만약 그전에라도 폭풍이 분다면 그렇게 했으면 좋겠군.뭐 그럴 날씨로는 보이지 않지만..]오세아니드 역시 오래 묵은 뱃사람이라 누구에게 묻지 않아도 아직은 폭풍의 조짐은 느낄 수 없었으나,시독의 말에 동의하는 표정을 지으며 말했다.{np}[어차피 양측의 남은 인원으로는 폭풍을 감당하면서 배를 움직이는 일은 불가능하다.뭐 다시 한 번 말해두지만,유라테 여신께서 좋은 날씨를 주셔도 현재 양측의 인원이 다 달려들어 합심해야 겨우 베르니케 섬까지 항해할 수 있을 테니.그 때까지는 싸우고 싶어도 싸울 수 없지.]{np}그랬다.<br/>블라디디슬로바스와 하이레이번의 부하들이자 왕국의 바다를 누비는 해적들인 그들이 약속을 매우 잘 지키는 사람들이라 각자 자기 두목들의 결투 결과를 기다리는 것은 아니었다.<br/>겉만 보면 그들의 두 선장은 왕국의 바다를 지배하는 대해적의 이름과 마지막 남은 이 배의 선장 자리와 한 무리는 적의 부하들이었던,두 무리의 해적들의 두목 자리를 걸고 결투를 떠난 것으로 보였다.그러나 그것은 사실이 아니었다.{np}한 가지 점에만 합의한다면 그들의 두 무리 부하들은 지금이라도 서로의 혹은 상대방의 선장을 버려두고 닻을 올리고 배를 움직여 떠나버릴 수도 있었다.<br/>그리고 그런 행위야 말로 그들의 그간 행태와 그들의 성격에 잘 들어맞는 일이었다.그들이 그렇게 하지 못하는 이유는 지난 이틀간의 해상전이 너무 치열했기 때문이었다.{np}그들은 이제 새로 선장을 정하는 일로 다투고 싶지 않았다.<br/>아니 다투고 싶었지만,그것이 그들 모두에게 이익이 되지 않는다는 점을 명확히 알고 있었다.<br/>블라디슬로바스와 하이레이번 둘 중 하나가 돌아온다면,그가 누구든 그들 모두의 선장이 될 것이다.{np}그러나 돌아오지 않는다면 일단은 이 해역을 떠나겠지만,결국 누가 선장이 되느냐를 놓고 다시 싸움이 벌어질 수밖에 없었다.이틀간의 치열한 전투 끝에 남은 인원이 다시 반이나 반의 반으로 줄어도 배를 운용하는데 문제가 없을 정도로 육지나 항구에 가까운 곳까지 예컨대 베르니케 섬까지 간 다음의 일이지만 말이다.{np}그 정도까지 인원이 줄면,누가 두목이 되든 과거의 위세를 회복하는 일은 무척 어려울 것이고,결국은 다른 해적들의 밑으로 들어가거나 당할 수도 있었다.<br/>한 척의 배와 그것을 양측이 합쳐야 겨우 운용하여 위험한 이 해역을 벗어날 정도의 인원만 남을 때까지,<br/>이틀간의 전투를 벌인 뒤에야 깨닫게 된 사실 때문에 양측 두목에서 말단에 이르기까지,이 대결은 수장간의 결투로 승부를 짓는다는 합의에 도달하였고,이런 상황 가운데 두 무리는 어느 쪽이든 승자가 돌아오기를 정해진 시간까지 기다리고 있었다.{np}시독과 오세아니드로 대표되는 양측은 다시 침묵에 잠겼다.<br/>말끝에 혹은 불편한 시선 끝에 다시 언제든 싸움이 발화될 수 있었기 때문이다.{np}따라서 가능한 상대가 아닌 멀리 수평선이나 뱃전에 시선을 두었다.<br/>어느 시선 끝에'너 이 자식 눈빛이 건방져'라는 한 마디면 만사가 망쳐질 수 있었기 때문이었다.{np}살아남은 양측의 현재 선임이 시독과 오세아니드라는 그래도 머리를 조금 쓰는 성향의 해적이라 그 점에서는 다행이었다.<br/>그리고 마침내 누군가 뱃전에 걸린 줄사다리를 이용해 올라오는 소리를 들을 수 있었다.{np}<br/>정상적인 배라면 항상 있어야 할 망꾼 자리 돛대 위에는 사정상 서로가 서로를 견제하느라 아무도 배치할 수 없었기에 누가 올라오는지 보려면 몸을 내밀어 아래를 내려다 볼 수밖에 없었으나,양측 중 아무도 뱃전으로 갈 생각을 하지 않았다.{np}선장들이 타고 나간 조각배가 노를 저어 다가오는 소리도 듣지 못했으니 아마도 지금 올라 오고 있는 사람은 헤엄을 쳐서 돌아온 것이 분명했다.{np}그렇다고 하기에는 믿기 힘들 정도로 먼 거리라고 생각되었지만,다른 누군가가 뜬금없이 헤엄쳐 배에 접근한다고는 생각할 수 없는 해역이었다.<br/>갑판을 메운 사람들이 올라오는 자의 기척에 집중하고 있었고,결국 그 사람의 손이 뱃전을 굳게 붙잡았다.{np}그러나 뱃전에 올라온 손은 누구에게도 낯익지 않았다.<br/>피와 바닷물 그리고 햇볕의 세례를 받으며 먼 거리의 바다를 몸으로 헤엄쳤다면 그럴 수 있었다.<br/>누구도 그 손을 돕기 위해 접근할 수 없었다.{np}무언의 분위기가 그것을 막고 있었다 행여라도 자기들의 원래 선장이 아니기에 밀어버리거나 해치려고 접근한다고 반대측이 오해할 수 있었기 때문이었다.{np}시독과 오세아니드 역시 누구냐고 묻지 않고 조용히 두 눈과 두 귀로 뱃전에 집중하고 두 손으로는 자기 측의 생존자들이 움직이지 않도록 막는 자세를 취했다.<br/>이윽고 뱃전을 붙잡은 그 손이 힘겹게 무겁기 그지 없는 몸을 끌어당겨 한 사람의 얼굴이 마침내 뱃전 위로 올라왔다.{np}원래 부하들도 알아보기 힘들만큼 피로와 부상의 고통,그 이상의 무엇을 담고 있는 하이레이번의 얼굴이었다.<br/>원래 누구의 부하였던지 해적들은 승자가 있다는 사실에 오랜 만에 유라테 여신에게 마음속으로 감사를 드렸다.{np}하이레이번은 완전히 배 위로 올라온 후 갑판의 해적들을 천천히 좌에서 우로 훑어보면서 이렇게 말했다.<br/>[너희 모두에게 내 배에 승선을 허락한다.]{np}마치 그 혼자 있던 배에 다른 해적들이 방금 힘겹게 올라온 상황을 묘사하는 듯한 말투였다.<br/>사실과는 일치하지 않는 말이지만,뱃사람들에게 승선허가는 매우 중요한 의식이었다.<br/>다른 어떤 예식이나 취임식 따위가 없어도 그것으로 모든 문제가 해결되었다는 사실을 모두가 알았다.그리고 이제 와서 불복할 해적도 나오지 않았다.<br/>그 사실을 확인한 하이레이번이 다시 말했다.<br/>[나를 선장실로..]{np}미처 말을 맺지 못하고 쓰러지는 하이레이번이 갑판 바닥에 닿기 전에 조금 전까지 꼼짝도 하지 않던 사람들이라고는 믿어지지 않을 정도의 속도로 부하들이 달려들어 그를 부축했다.<br/>이미 기절한 선장은 옛 부하들과 새 부하들의 손으로 선장실에 눕혀졌다.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>하이레이번에 대한 이야기. 마우스 우클릭으로 읽을 수 있습니다. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

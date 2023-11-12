@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="전설의 궁사와 전설의 화살제조자의 이야기. 읽어볼 수 있습니다.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>리디아 샤펜과 플레쳐 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690002" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690002" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690002" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>리디아 샤펜과 플레쳐</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>{s35}<br/>리디아 샤펜과 플레쳐{/}{np} 가장 뛰어난 궁수라도 반드시 겪는 문제는 화살은 소비재라는 사실이다. <br/> 리디아 샤펜이 사용하는 활은 그녀가 심혈을 기울여 만들어 낸 희대의 명궁이었고, 화살 역시 그러했다. <br/> 그러나 만들어 놓으면 계속 사용 가능한 활과 달리 좋은 화살은 영구적일 수 없었다. <br/>{np} 영구적으로 회수하여 사용할 수 있는 화살을 만들기란 불가능한 일이었고, 리디아 샤펜이 본인의 화살을 직접 제조하는 일은 너무 많은 시간을 들이는 작업이었다. <br/>그리고 여기에는 재료의 조달이라는 또 다른 문제도 있었다. <br/>{np} 리디아 샤펜이 이런 문제에 직면한 것은 그녀가 아직 자신의 문호를 크게 열기 전이었기에 그녀의 곤란은 자못 심각했다. <br/> 따라서 우연이든 여신의 섭리든 그녀가 마스터 플레쳐를 만나지 못했다면, 이후 별의 탑의 건설과 그에 따른 문호의 창건도 없었다는 것이 여러 사학자들의 정설이다. <br/>{np} 세상의 수많은 화살제조자 가운데 가장 유명해지고 이후 마스터 플레쳐라면, 바로 이 사람을 가리키는 대명사가 된 인물이지만, 리디아 샤펜과 달리 마스터 플레쳐의 본명은 확실치 않다. <br/>{np} 그의 시대부터 그는 마스터 플레쳐란 이름으로 자주 불렸고, 당대의 사람들은 혹시 보편적으로 알고 있었을 본명은 의외로 세월의 흐름에 묻혔다. <br/> 몇몇 전승에 의하면 그의 본명은 존 블랙스미스(John Blacksmith)라고 하지만, 이 이름 자체가 고유명사가 아니라 보통명사일 가능성을 비롯하여 신뢰할 수 없는 이유가 많아 학자들의 지지를 얻지 못하고 있다. <br/>{np} 아무튼, 리디아 샤펜은 마스터 플레쳐란 화살 명인을 얻으며, 이후 본격적인 세력을 모을 수 있었고, 별의 탑의 완공 같은 대역사도 시작할 기반을 얻게 되었다고 볼 수 있다. <br/>불행히도 마스터 플레쳐의 화살제조 비법은 그 당시에도 비밀이었고, 지금은 세월에 묻혀 더욱 알기 어렵다. <br/>{np}다만 후대의 궁수들에게 실낱 같은 희망이라면, 마스터 플레쳐의 화살제조는 여신의 축복에 기인한 바가 크다는 점이다. <br/>따라서 누구든 여신의 축복을 얻은 사람은 마스터 플레쳐가 만들고, 리디아 샤펜이 사용한 화살과 동일한 화살을 만들 수 있다는 점이다. <br/>{np}또 하나 희망을 추가한다면, 마스터 플레쳐는 그의 비법이 실전되지 않도록 제조비법서를 어딘가에 확실히 비장해두었다는 점이다. {np}그런 점에서 마스터 플레쳐의 빠른 생산력은 전적으로 그의 재능이었지만, 강력한 화살을 만드는 비법은 지금이라도 세상 어딘가에서 발견될 날을 기다리며 잠들어 있다고 볼 수 있다.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>전설의 궁사와 전설의 화살제조자의 이야기. 읽어볼 수 있습니다.</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="세이지 마스터가 직접 작성한 책으로, 현대 마스터 총람의 속편이다. 마우스 우클릭으로 읽을 수 있습니다.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>현대 마스터 총람 2권 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690058" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690058" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690058" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>현대 마스터 총람 2권</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_01red.png" />
+            <h3>Content</h3>
+            <p>현대 마스터 총람<br/>{np}1. 소르샤 허턴(Sorsha Hutton)<br/><br/>허턴 가문의 시조는 라엘2세 시대에 태어나 훗날 왕위계승분쟁 코소멜 국왕을 도와 공을 세웠고, 이로 인해 귀족의 지위와 영지를 얻었습니다.<br/>이후 수 세기 동안 허턴 가문은 가문 비전의 검술을 발전시켰으며, 귀족으로서의 교육, 영지의 운영, 무예에 대한 소질이라는 세 가지 기준에 미달하는 사람들은 영지 밖으로 내보내 독립시키며 검술 향상에만 매진하였습니다.<br/>{np}소르샤 허턴은 어린 나이에 오랜 가문의 역사에서도 보기 힘든 비범한 재능을 꽃피웠으며, 펜서 마스터의 자리에 자원하였습니다.<br/>역사상 모든 펜서 마스터가 허턴 가문의 사람은 아니었지만, 허턴 가문의 사람이 마스터를 자원할 경우 실력으로 그 자리를 대신할 사람은 없었기에 그녀의 요청은 가문 내부의 승인과 외부의 전적인 지지를 받았습니다.<br/>{np}2. 로레타 님버스(Loreta Nimbus)<br/><br/>로레타 님버스는 다미엘 국왕의 치세 말기 즈음에 태어났으며, 프리넬 국왕의 재위 기간에 마스터의 지위에 올랐습니다.<br/>선대 마스터들을 넘어서는 그녀의 가장 큰 업적은 생명력을 흡수하여 장수를 누릴 방법을 발견한 것입니다.<br/>물론 이 방법의 첫 수혜자는 본인이었고, 로레타가 암지나스의 일원이 되면서 네크로맨서 마스터 역시 몇몇 마스터처럼 후임자를 선정할 필요가 없게 되었습니다.<br/>{np}3. 지나 그린(Gina Green)<br/><br/>그린 가문은 왕국 곳곳에 가장 넓은 영지를 보유한 귀족입니다.<br/>지나 그린은 어려서부터 가문의 영지 곳곳에서 지내왔으며, 드루이드가 되기로 결심한 일과 마스터의 지위에 오른 일에 이러한 어린 시절부터의 경험이 큰 도움이 되었다고 합니다.<br/>{np}또한 훗날 그녀가 가문 소유 중 가장 많은 토지를 상속하자 드루이드 마스터가 특정한 장소에 더 관심을 지니고 관리하는 일은 옳지 않다고 생각하여 대부분의 토지를 매각한 후 케도라 상단에 예치하였기에 그녀는 파드너 마스터가 부러워하는 부자이기도 합니다.<br/>절대 투자나 미래를 내다본 행동은 아니었지만, 신수의 날로 전국의 대부분의 토지와 농장이 엉망이 되자 그녀의 선택은 본의 아니게 엄청난 수익을 가져다 준 셈이 되었습니다.<br/>{np}물론 지나의 관심은 돈에 있지 않기 때문에 그녀는 피해를 입은 가문의 다른 친척들은 물론 많은 사람들에게 경제적 지원을 하고 있습니다.<br/>{np}4. 레오나르드 퀵통(Leonard Quicktongue)<br/><br/>레오나르드 퀵통은 새퍼 마스터의 본명이 아닙니다.<br/>10대 시절부터 이름을 날린 도둑인 그는 군대의 물품을 훔쳤고, 그로 인해 군인이었던 부친은 그 사건 때 대신 누명을 썼습니다.<br/>아들의 일이기에 변명도 하지 못했던 부친은 죽을 때까지 새퍼 마스터를 만나지 않았다고 합니다.<br/>{np}퀵통은 훗날 반성을 겸해 군인이 되었고 공병 장교로 많은 공을 세우기도 했지만, 거듭된 면담 요청에도 부친은 상급자로서 명령이라면 출두하겠다고 대답했다고 합니다.<br/>이런 사연 탓인지 새퍼 마스터는 지금도 알게 모르게 선행을 한다고 합니다.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>세이지 마스터가 직접 작성한 책으로, 현대 마스터 총람의 속편이다. 마우스 우클릭으로 읽을 수 있습니다.</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="투기장에 대한 이야기. 마우스 우클릭으로 읽을 수 있습니다. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>투기장의 주인2 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690087" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690087" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690087" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>투기장의 주인2</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>*투기장의 주인2{np}시간이 흐르고 이번에 방문을 두드리고 들어온 사람은 두 명이었다. 남자 하나와 여자 하나였는데 프리엄의 태도는 그가 마스터에게 보이던 태도보다 한결 더 공손하였다. 올파스 그림을 상대할 때만큼의 진심은 없었으나 태도 만은 그에 못지 않다고 할 수 있었다.{np}간단히 말해 니모켄이나 펠릭시아에게 한 것 보다는 조금 더 정중한 태도를 보였다.<br/>프리엄이 크게 허리를 굽혀 인사하면서 말했다.<br/>[헤오샤 장군님과 앨러너데일님이 이런 곳까지 와주시다니 영광입니다.]{np}남자가 앞에 나서며 말했다.<br/>[너무 환대를 해주시니 몸 둘 바를 모르겠군요.]<br/>프리엄도 나름대로 온갖 예법에 능숙하다고 자부하는 사람이었지만, 이 남자처럼 자연스럽게 궁정 예법을 몸으로 나타낼 수 있는 사람은 처음 보았다. 여하간 프리엄은 상대가 누구인지 알고 있었기에 이렇게 응했다.{np}[궁정악사장이시자 계관시인을 이렇게 직접 뵙는 것만으로도 영광입니다.]<br/>[국왕 폐하의 과분한 영광을 입었을 뿐, 허명만 있는 시인이며 음악가 따위와는 비교할 수 없는 분이 여기 있죠.]<br/>그렇게 말하면서 동행한 여자를 가리켰다.{np}[알고 있습니다. 왕국군 제일의 무예를 지니셨다는 헤오샤 장군을 어찌 모르겠습니까? 과연 가까이서 뵈니 기세가 대단하십니다. 제가 무예는 모르지만, 투기장을 운영하다 보니 검투사는 많이 봐서 무사들의 위엄에 쉽게 움츠러들지 않는데 헤오샤 장군님은 척 봐도 다르십니다.]{np}헤오샤는 프리엄의 칭찬에 형식적인 반응을 보였고, 분위기를 이끄는 사람은 앨러너데일이었다. 주고받을 인사성 대화가 대충 마무리되자 비로소 대화는 용건에 들어갔다.<br/>[라민 장군님은 다음 주의 투기장 행사가 이제까지와 달랐으면 하십니다.]{np}프리엄이 알기에 라민 장군과 헤오샤는 같은 계급의 장군이었다. 그리고 앨러너데일은 계통은 다르지만 여하간 관직에 있는 몸이고 궁정악사장이니 조금도 존칭을 쓸 이유는 없었다.{np}오히려 헤오샤는 국왕의 장녀이신 카오닐라 공주와 절친한 사이라고 하니, 반대로 그녀가 위세를 떨고 다니며 같은 계급의 다른 장군들을 무시하고 다녀도 될 상황이라고 할 수 있었다.<br/>그럼에도 헤오샤와 엘러너데일은 라민 장군이 마치 상급자나 대장군이라도 되는 듯 존경을 담아 말하고 있었다.{np}마치 그가 몽크 마스터님을 대하는 것 같다고 프리엄이 생각했을 정도다.<br/>말하는 일은 앨러너데일의 몫이라고 생각했는데 헤오샤가 직접적으로 용건을 말했다.{np}[이것 저것 필요 없고, 공연히 피 튀기는 행사를 할 필요가 없다는 뜻이야. 비록 국왕께서 베푸시는 위문잔치라지만 병사들은 평소에 하는 일이 전투고, 보는 게 마족이야.사람끼리 싸우든 동물이나 마족을 붙잡아두고 싸우든 별로 재미있지 않다고,{np}그렇지만 국왕께서 베푸시는 행사를 취소할 수 없으니 살벌한 전투가 아닌 다른 것으로 병사들을 즐겁게 해주었으면 하는 게 라민 장군님 생각이야.뭐 서커스나 연극이나 그런 것 있잖아. 좋은 생각이 없으면 여기 앨러너데일도 도와줄 거야.{np}명색이 시인이고 문장가니까 연극 대본 정도는 쓸 수 있겠지. 그러니까 결론적으로 다시 수도를 떠나 변경으로 갈 병사들을 재미있게 해주면 돼. 단 실제 전투 없이 말이야. 그런 것은 수도의 시민들에게나 보여주도록 해.]{np}[무슨 말씀이신지 알겠습니다. 걱정하지 마십시오. 라민 장군님과 헤오샤 장군님의 뜻을 알아 모시겠습니다.]<br/>[뭐 내 생각은 아니야. 라민 장군님 생각이지.]<br/>그냥 묻어가도 될 텐데 헤오샤는 굳이 이 의견이 라민 장군의 것이며 라민 장군이 얼마나 병사들을 세심하게 살피는 지휘관인지 강조하는 태도를 보였다.{np}프리엄은 헤오샤와 앨러너데일을 상대로 조금 더 대화를 나누고 그들을 정중하게 전송했다.<br/>그리고 그가 다시 혼자되었나 싶을 때 몽크 마스터 올파스 그림이 소리 없이 다시 방에 나타났다.그리고 프리엄에게 말했다.<br/>[나갈 준비를 하게.]{np}프리엄은 어디 가는지 따위는 묻지도 않고 옷장에서 긴 로브를 꺼내 걸치면서 말했다.<br/> [밖이 소란스러운 것을 보니 무르밀로 마스터가 성을 내며 이리로 오겠군요.]<br/>프리엄이 로브를 입고 두건을 내리자 얼굴이 완전히 가려지며, 가까이서 보지 않으면 누구도 알아볼 수 없는 모습이 되었다.{np}그런 모습의 프리엄에게 몽크 마스터가 말했다.<br/>[자기 무리를 다 데리고 올까?]<br/>[그렇지는 않을 겁니다. 그렇다고 하더라도 무르밀로 마스터가 움직일 수 있는 검투사는 20명 정도 입니다.]<br/>[하긴 그렇게 한다면 펠릭시아는 생각보다 멍청한 여자일 테지. 그건 그렇고 현재 우리가 보유한 검투사의 수가 얼마지?]{np}[512명입니다.<br/>투기장 전체로는 천 명이 조금 넘습니다.무르밀로 마스터 같은 검투 관련 마스터를 개인적으로 따르는 일부를 제외하고는 모두 마스터께서 명령을 내리시면 마스터의 뜻을 따를 사람들입니다.]{np}[그렇기는 하겠지만, 돈이나 계약으로 묶여서 그러는 자들은 깊이 신뢰하지 않는 편이 좋다. 최근에 두각을 보인다던 그 격투가는 어떻게 되었나?]<br/>[실력이 뛰어나서 도저히 빠져나갈 수 없는 계약으로 더 단단히 묶어둘 생각입니다. 제 생각으로는 어지간한 마스터들도 감당하지 못할 정도로 강하다고 봅니다.]{np}[헤오샤와 앨러너데일이 다녀간 모양이던데 별 일 없었나?]<br/>[별 일 없었습니다.]<br/>[오늘은 어쩔 수 없었지만, 왕국군의 핵심인물들이 투기장에 자주 드나드는 것은 좋지 않아.헤오샤는 무예만 높을 뿐 상황을 파악하는 능력은 떨어지는 장군이니 괜찮을지도 모르지만,{np}라민 장군이라면 문제는 다르지. 감이 좋은 장군이라면 뭔가 문제의식을 느낄 테고, 그러면 문제가 커질 수 있어.다시 말해서 라민이든 누구든 통제를 받지 않는 1천명의 잘 단련된 무장병력이 합법적으로 투기장에 상시 거주하고 있다는 발상을 해내선 안 돼.{np}그러니까 검투사들의 숙소를 방문하겠다고 하면 무슨 구실을 대서라도 허락해서는 안 돼.정 힘들면 무르밀로 마스터나 그쪽 사람들에게 안내하라고 우리측 검투사들이 규율과 소속감을 지닌 무장병력이란 사실은 드러나선 안 돼. 그러느니 싸움꾼이 떼로 모인 패거리 정도로 생각해 주는 편이 낫지.]{np}[그들은 다 편견에 사로잡혀 있습니다. 검투사가 상시 대기중인 무장병력이라는 관념을 떠올리지 못할 겁니다. 설령 그런 생각을 떠올려도 투기장의 마스터들이 왕실에 충성하니 문제될 것 없다고 생각할 겁니다.그리고 검투사들이 문제를 일으켜도 수도에 주둔중인 왕국군이 훨씬 많다고 생각할 테니 걱정하지 않을 겁니다.{np}왕실경비대와 삼중성벽의 주둔군 병력은 객관적으로 투기장 검투사들보다 숫자도 많고 훨씬 강하다고 생각할 겁니다.]<br/>[그것은 사실이지. 하지만 우리 검투사들이 수도 적고 그들보다 전투력도 떨어져도 파악되지 않은 병력이라는 점은 중요하다. 어둠에 숨은 병력은 때로 실제 이상의 힘을 발휘하는 법이니까.]{np}[그렇게 생각하면, 투기장을 암중에서 장악하신 마스터님의 계획은 정말 탁월했습니다. 수도에 합법적인 병력을 보유할 편법을 지니면서 동시에 투기장 운영에서 오는 자금 덕분에 돈 문제까지 해결되는 셈이니까요. 다시 생각해도 정말 잘한 일이었습니다.]{np}[그래 그런 점에 비하면 나를 드러내지 않고 투기장에 관련된 마스터들을 다독이고 관리해야 되는 문제는 사소한 대가에 불과하지.]<br/>[네 맞습니다. 그건 그렇고 펠릭시아가 와서 되도 않는 불평을 터뜨리기 전에 오세아니드를 만나러 가시죠.{np}전에 저 혼자 갔을 때는 제 딴에는 해적이라고 얼마나 위세를 떨며 겁을 주어서 협상을 유리하게 하려 드는지 혼났습니다.]<br/>[무예실력은 없어도 투기장에서 매일 보는 것이 검투사라 폭력적인 협박에는 눈도 꿈쩍하지 않는 게 자네 아니었나? 그렇게 말하니 이상하군.]{np}[우스워서 혼났다는 말이죠. 그러니 오늘은 동행해주셔야 하겠습니다. 저쪽의 폭압적인 자세에 이쪽이 흔들리지 않는 것은 둘째치고 마스터께서 나서서 위엄을 보이시면 그 해적이 그 때도 당당하게 협상에 임할 수 있을지 궁금합니다. 혹시라도 겁먹어주면 협상이 유리하지 않겠습니까?]{np}[어차피 오늘은 그럴 생각으로 여기 자네를 보러 온 것이니 어서 같이 나가세. 아까 말대로 펠릭시아 오기 전에 말이지. 그런데 이미 늦은 것 같군.]<br/>[네?]<br/>[방문 앞에 지금 막 누가 도착한 기척이 있어.]{np}[펠릭시아가 벌써 왔을 리가 없는데요. 아직은 죽은 제자를 붙들고 있을 텐데…]<br/>그 말과 함께 문을 두드리는 소리가 나더니 응대도 하지 않았는데 한 청년이 문을 열고 들어왔다.{np}당당한 기세로 문을 열고 들어온 청년은 몽크 마스터와 프리엄을 보더니 말했다.<br/>[이런 손님이 계셨군요. 실례했습니다. 하지만 앨러너데일이 뭔가 빠뜨린 것이 있어서 급히 오다 보니 사전에 통보도 드리지 않고, 다른 손님이 계실지도 모르는데 무작정 찾아오게 되었습니다.{np}본래 군인이란 예고 없이 원하는 장소에 상대가 뜻하지 않은 시간에 나타나는 것을 목표로 사는 사람이니 너그럽게 양해해주셨으면 합니다. 물론 제가 두 분을 적으로 여긴다는 뜻은 아닙니다. 아, 제 소개도 안 했군요. 저는…]{np}몽크 마스터 올파스 그림이 앞으로 나서며 인사하며 말했다.<br/>[알고 있습니다. 라민 장군이시죠. 장차 왕국군의 최고 지휘관인 대장군이 되실 분이라는 명성은 익히 들어 알고 있었습니다. 이렇게 뵈니 영광입니다. 저는 몽크들의 마스터 직을 맡고 있는 올파스 그림입니다.{np}아 손님이 주인을 두고 먼저 인사를 하는 결례를 범했습니다. 이미 아시고 오셨겠지만, 이 분은 이 방의 주인이시고 이곳 투기장의 운영자이신 프리엄님이십니다. 여신의 열렬한 신도로서 저희 교단을 크게 후원해주고 계시기에 제가 가끔 찾아 뵙고 인사를 드리고 있습니다.]{np}프리엄이 인사를 마쳤을 때 라민 장군이 말했다.<br/>[차림새를 보니 막 외출하려던 모양입니다. 그런데 프리엄님은 추위를 많이 타시나 봅니다. 그렇게 얼굴도 안 보이게 차려 입으신 걸 보니 별로 추운 날씨도 아닌데 말입니다.]{np}프리엄이 어색하게 웃으며 말했다.<br/>[몽크 마스터님 같이 수련으로 단련된 분이나 장군님처럼 험한 군생활을 겪으신 분들과 달리 저는 신체를 단련하지 않아서 그런가 봅니다. 하하. 그나저나 왕국의 장군께서 오셨는데 저희가 시간이 없어서 나중에 다시 만나 뵈어야 하겠습니다.]{np}[어쩔 수 없지요. 예고도 없이 찾아온 제 잘못입니다. 다만 제 부하들이 다음 주에 이 시설에 모여 공연을 본다고 하니 사전답사라고나 할까요… 한 번 투기장 곳곳을 둘러보고 싶은데 그래도 별 문제 없겠죠?]{np}프리엄과 올파스 그림은 둘 다 잠시 답을 못하고 망설였다. 딱히 안 된다는 핑계를 대기 어려웠는데 상대가 하려는 일은 두 사람이 가장 꺼려하는 일이었다.무엇보다 상대인 라민 장군은 왕실경비대의 대장 겸 왕실기사단 부단장이었다.{np}이 두 직책을 겸직한 일은 천 년 왕국 역사에 오직 아홉 명 밖에 없었고, 그 아홉 명은 예외 없이 훗날 대장군 에 올랐다. 왕실기사단장은 왕국군 전체의 총사령관인 대장군이 자동으로 겸직하는 자리다.{np} 궁성을 책임지는 왕실경비대 대장은 전임자인 소드맨 마스터 라슈아 상장군이 물러나면서 강력하게 추천하여 라민을 앉혔다고 한다. 아직은 직책에 맞는 상장군으로 진급은 안 했지만, 둘 중 어느 직책을 내세울지라도, 딱히 별다른 이유 없이도 수도내의 시설인 투기장을 보겠다고 한다면, 막기가 어려웠다.{np}더구나 상대에게는 지휘 책임을 맡은 부하들이 올 곳을 사전에 시찰한다는 더할 나위 없는 명분이 있었다.차선책은 프리엄이 시설을 직접 안내하는 것인데 하이레이번의 부하인 오세아니드와 약속이 코 앞에 걸려 있었다.{np}시간이 지체되면 오세아니드가 지루함을 참지 못하고 투기장 안을 돌아다니다가 라민 장군의 눈에 띄지 말란 법도 없었다. 라민 장군이 오세아니드의 얼굴은 모르고 그도 겉옷은 걸쳤겠지만, 팔뚝만 걷어 뱀 문신만 확인해도 상대방이 누군지 라민 장군이 모를 리가 없었다.{np}라민 장군이 지상군 지휘관이라지만 왕국 해군의 골칫거리인 하이레이번의 유명한 부하 해적의 특징 정도는 들어서 알고 있다고 봐야 했다. 아니 꼭 군부에 있지 않더라도 이런 일에 관심이 있다면 알만한 사람은 아는 특징이다.{np} 프리엄과 올파스 두 사람은 이 상황을 해결할 묘수를 고민하고 있었는데 라민 장군의 뒤쪽으로 두 사람이 더 나타났다.<br/>[그것 보라고. 내가 이리로 오셨을 거라고 했잖아.]<br/>그 말을 하며 나타난 사람은 아까 나타났던 앨러너데일이었고, 그 옆에 따라온 여자는 역시 헤오샤 장군이었다. {np}혼자만 오면 어쩌냐? 이왕 온 김에 같이 투기장을 돌아보자 그런 말이 오가는 동안에도 올파스와 프리엄은 결정을 내리지 못하고 있었다.<br/>그 때 결국 무르밀로 마스터 펠릭시아가 나타났다. 펠릭시아는 예상치 못한 사람들이 있자, 애초에 여기에 온 목적을 꺼낼 수 없었다.{np}투기장 관련자가 아닌 외부인들 앞에서 갑자기 대진표를 바꾼 프리엄과 아무리 투기장에서 적수로 만났기로서니 상대를 그냥 죽여버린 몽크 마스터에게 지닌 불만을 표출하기 어려웠다.{np}따지고 보면 투기장에서 대진표가 바뀌거나 사람이 죽는 일은 흔한 일이었다. 투기장 관련자들끼리 있을 때는 아끼는 사람이 죽었으니 화를 참지 못하고 언성을 높이는 일 정도는 할 수 있지만, 투기장과 관련이 없는 사람들 앞에서는 그렇게 하기 어려웠다.{np}서로간에 인사가 오간 다음에 펠릭시아는 처음 만난 헤오샤 장군에게 시선을 줄 수밖에 없었다.왕국군 제일의 무예를 지녔다는 소문을 지닌 헤오샤이니 그 소문은 자연히 여자 가운데 최강자는 헤오샤라는 평판으로 이어지기 마련이었다.{np}비록 상대가 왕국군의 장군이니 가서 따지는 사람은 없었지만, 여성 마스터로서 정말 이 여자가 나보다 명성이 뛰어나도 될만한 사람인지 알아보고 싶은 마음이 드는 것은 어쩔 수 없었다.{np}펠타스타 마스터 마리아 리드는 헤오샤 장군보다 오래 전에 명성을 얻었으니 별로 헤오샤를 의식하지 않는 것 같고, 드라군 마스터인 발레스카 히밀이나 펜서 마스터인 소르샤 허턴은 원래 명망 높은 귀족 가문 출신이니 뭘 해보고 싶어도 할 수 없을 것이다.{np}시노비 마스터인 유라 스와요네는 왕실의 그림자이니 양지로 나와서 호승심을 발휘하는 일은 생각하기 어렵다. 그런 면에서는 무르밀로 마스터 역시 헤오샤가 장군복을 벗고 투기장에라도 서지 않는 한, 궁금증을 풀 길은 없다.{np}물론 궁금증을 풀 방법이 없는 것은 마스터 상호간에도 마찬가지다.거의 천 년 전 타니엘 2세 시대에 이미 마스터 사이에 무익한 호승심에 의한 상호대결을 금지한 왕국법이 반포되었으므로, 특별한 사유 없이 누가 더 나은가를 이유로는 싸울 수 없었고,{np}그 이후로 이 왕국법 때문에 마스터 간에 생사를 건 싸움은 무척 일어나기 어려운 일이 되었다.그럼에도 루클리스와 리디아 샤펜의 경우라든가 하는 예외는 적지 않았지만, 오직 대결만을 목적으로 마스터간의 전투가 벌어지는 일은 없었다.{np}그런 일이 벌어졌을 때 왕국 법정에서 뚜렷한 사유를 증명하지 못하면 해당자는 마스터에서 죄수로 순식간에 신분전환이 되기 때문이다.{np}아무튼, 펠릭시아가 등장하여 인사를 나누고 라민 장군이 여기 온 목적을 다시 밝히자 결론은 자연스럽게 투기장의 마스터이자 지분소유주이기도 한 펠릭시아가 투기장 이곳 저곳을 안내하는 것으로 결정되었다.{np} 예의 바른 인사를 나누고 펠릭시아가 라민 장군 일행을 이끌고 사라지자 프리엄이 몽크 마스터에게 말했다.{np}[우리측 검투사들에게 급히 말을 전달하겠습니다. 라민 장군이라도 특별히 탐지할 것은 없다고 봅니다. 펠릭시아의 성격을 고려하면 투기장 전역을 다 보여주며 다니지도 않을 겁니다.]<br/>[나도 그렇게 생각하네. 라민의 갑작스러운 방문은 예상치 못한 일이지만, 문제가 되진 않겠지. 설령 아니라 해도 일단은 오세아니드를 만난 다음에 의논해보세.]{np}그렇게 말하고 두 사람 역시 프리엄의 방을 떠났다. 모두가 떠난 프리엄의 방이 어둠과 고요가 찾아왔다.<br/>그 때는 아무도 몰랐지만, 이 날의 일은 왕국 수도에서 투기장이 폐장되고, 프리엄이 재판에 회부되는 엄청난 사건의 시작이었다.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>투기장에 대한 이야기. 마우스 우클릭으로 읽을 수 있습니다. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

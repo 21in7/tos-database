@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="미르티스에 대한 이야기. 마우스 우클릭으로 읽을 수 있습니다. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>미르티스 이야기 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690071" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690071" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690071" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>미르티스 이야기</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_04black.png" />
+            <h3>Content</h3>
+            <p>제스티의 명령으로 여러 마군주들이 라이마의 뒤를 추적한 지 오랜 시간이 지났지만,성공한 마군주는 아무도 없었다.<br/>한 발 앞서 모든 일을 내다보고 피할 수 있는 예지의 여신을 찾아내는 일은 절대 쉬울 수가 없기에 당연한 일일 수 있었지만,최근 들어 라이마의 행보를 추적하는 일에 진전이 있었다.{np}에미넌트는 이것이 그가 라이마가 선택한 루클리스를 죽인 탓에 라이마가 충격을 받았다는 주장을 하기도 했지만, 미르티스가 보기에는 말도 안 되는 일이었다.{np}그 보다는 라이마가 계시를 만드는 일이 힘겨워서 점점 그 능력이 줄어들고 있는 것이 아닌지 의심하는 것이 타당했다.<br/>아무튼 미르티스가 보기에 마군주들이 라이마를 추격하기 시작한 이래 그 어느 누구보다 그리고 그 어느 때보다 지금이 라이마를 바짝 추적하고 있다는 생각이 들었다.<br/>샤울레이 숲에서는 거의 뒷덜미를 잡을 수 있지 않을까 싶을 정도로 접근한 일도 있었다.그 뒤로 현재 잠시 놓치기는 했지만,다시 찾아내는 일은 어렵지 않게 여겨졌다.무엇보다 미르티스에게는 다른 마군주들에게는 없는 정찰 수단도 있었다.<br/>아니나 다를까 인간이 만든 감옥에 한 남자와 같이 있던 라이마를 발견하였으나 여기서도 아슬아슬한 차이로 상대를 놓쳤다.<br/>그러나 이제까지 라이마를 추적한 이래 잠시라도 한 장소에서 라이마를 직접 볼 정도로 접근했던 마군주도 없었다.{np}미르티스는 이것을 매우 긍정적인 진전으로 생각했고,다음 번에 발견할 때는 절대로 놓치지 않을 것이란 확신이 들었다.<br/>미르티스가 잠시 본 바로는 라이마는 그냥 봐도 연약해 보이는 인간 소녀의 모습이었고,기본적으로 상태 자체가 정상이 아니라고 보여서 미르티스를 감당할 능력이 없어 보였다.{np}그리하여 마침내 수정광산의 한 갱도에 있는 라이마를 탐지한 순간,미르티스는 혹시라도 라이마가 달아날 곳이 있는지 점검하였다.<br/>그 점검에는 순간이동의 가능성을 없애는 것도 포함되었다.<br/>라이마든 누구든 이제 이 광산에서 순간이동을 하려면 광산이 무너져 이동을 하기 전에 묻힐 것이다.<br/>라이마가 현재 있는 장소에서 도저히 달아날 수 없다는 점을 깨닫고 미르티스는 더욱 즐거운 마음이 들었다.{np}그런 탓인지 라이마 앞에 출현할 때까지 라이마 옆에 한 인간 남자가 있다는 사실은 신경도 쓰지 않고 있었다.<br/>라이마 앞에 선 미르티스가 대화를 시작했다.[이 일이 시작된 이래 그대를 직접 마주한 자는 오직 나뿐인 듯하오. 모든 마군주들이 그대의 그림자도 보지 못하고 뒤를 따르다 그치고 말았지. 하지만 이제 길었던 추적도 여기서 나에 의해 막을 내리게 되었소.]<br/>라이마는 아무 말도 하지 않았지만, 라이마의 옆에 선 인간 남자; 커닝햄이 입을 열었다.[우리가 일부러 너를 여기서 기다렸다는 생각은 해본 적이 없나?]{np}미르티스가 말했다.[말투가 불손하구나.그러나 하여간 라이마와 네가 지쳐서 여기서 멈췄더라도 결과는 다를 바가 없다.그리고 인간이 우리의 일에 끼어들 주제가 된다고 생각하는 것인가?]{np}미르티스는 커닝햄에는 더 이상 개의치 않고 라이마에게 다시 말을 걸었다.[길티네님의 엄격한 명령에 따라 그대를 마주치면 우리는 일단 다시 한 번 그대를 권면하도록 되어 있소.<br/>하지만 끝까지 우리의 권면을 받아들이지 않는다면 무슨 수단을 쓰든 그대와 그대가 준비하고 있는 소위 계시를 포획하라는 것이 또한 우리가 받은 명령이오.그러니 아직 우리가 당신을 예우로 대할 때 협조하도록 하시오.]{np}그러나 라이마는 아무 말도 하지 않았고 커닝햄은 말을 계속 이었다.[우리가 이곳에서 너를 기다리기로 한 것은 물론 더 이상 도망치기 어렵기 때문이다. 그런데 네가 아는지 모르겠으나 수정광산은 수 백 년을 채굴해 온 광산이다.]<br/>[그것이 어쨌다는 것이냐?]<br/>미르티스가 이렇게 말하자 커닝햄이 대답했다.[오래된 광산이기에 더 이상 수정이 나오지 않는 광구는 폐쇄된다는 뜻이지. 따라서 이곳은 설령 무너져도 다시는 아무도 여기에 사람이 있었다는 것도 모를 테고 구태여 다시 파낼 가능성도 없다는 말이다.]<br/>[그래서?]{np}그 질문에 커닝햄이 대답했다.<br/>[그래서 너를 여기 봉인하고 이곳 광구를 무너뜨리면 너는 봉인의 마력 탓에 영원히 갇히고, 광부들이 어쩌다 이곳을 파서 널 꺼내줄 리도 없다는 말이다. 그리고 라이마님의 말씀에 따르면 네가 실패하면 네 상관이라는 마왕도 너를 구해줄 리가 없다고 하셨다. 그러니까 너는 여기서 끝이란 말이다.]<br/>그 말과 동시에 커닝햄은 동그란 물체를 하나 꺼냈다. 자세히 본다면 실을 자는데 사용하는 물레를 닮았고, 전체적으로 바퀴(wheel) 모양으로 생긴 것이었다.{np}부가해두는 이야기이지만, 이것은 훗날 4대 성구라고 불리며 식물대재앙이 왕도에 발생하여 세계수가 폭주했을 때 그 재앙을 축소시켜 안정시키는데 공헌한 성구가 처음으로 세상에서 사용되는 순간이었다.<br/>훗날 초대 팔라딘 마스터 림가우다스가 남긴 또 다른 성구가 미르티스의 상관인 제스티를 격퇴하는 일도 여기서 멀리 떨어지지 않은 곳에서 일어날 사건이지만,여하튼 미르티스는 마족으로서는 처음으로 이 마왕도 격퇴할 수 있다는 성구의 공격을 받은 최초의 사례가 되었다.{np}미르티스가 뭔가 해보려고 했을 때 그녀는 더 이상 자신 주변의 시간이 정상적으로 흐르지 않는다는 사실을 깨달았다.<br/>그것은 시간이라는 격류가 그 물살이 약해지면서 마침내 고요한 상태를 유지하는 호수 같은 상태로 변하고 있음을 의미했다.<br/>시간이 막혔다면 공간을 이동해야 했으나 바로 그 길을 조금 전에 스스로 막았다는 사실을 깨닫자 미르티스는 움직일 수 없었다.{np}미르티스는 그 호수의 물이 더 이상 바람에 잔물결조차 일어나지 않는 동결상태가 되기 전에 자신이 물레바퀴 성구의 영향력 아래에서 빠져나가야 한다고 생각했지만, 이미 몸뿐 아니라 정신 마저 뜻대로 되지 않는 것을 느꼈다.<br/>미르티스가 완전히 묶이고 어디에도 얼음 따위는 보이지 않았으나 얼어붙은 것처럼 보이자 커닝햄이 말했다.[이 성구의 위력이 정말 대단하군요.]<br/>라이마가 말했다.[그것은 내가 바로 그 곁에 있었던 까닭도 있습니다.인간이 홀로 사용한다면 다음 번에는 지금 정도의 위력은 나오지 않을 것입니다.]<br/>커닝햄이 말했다.[상관없습니다. 이 마군주 녀석은 한동안 이곳에 있을 테니까요. 어서 떠나십시오. 제가 마무리를 하겠습니다.]<br/>[당신이 하려는 일 하지 않았으면 좋겠습니다.]<br/>[아니오. 그럴 수 없다는 사실을 아시지 않습니까? 제가 광산을 무너뜨려야 다른 잡다한 마족이나 혹시라도 우연히 이곳에 들어오는 인간이 사달을 일으킬 가능성이 없어집니다. 무엇보다..]{np}커닝햄이 말을 잠시 끊었다가 이었다.[무엇보다 이 성구는 현재 소유자가 죽으면 다른 곳으로 사라진다고 알려준 사람은 라이마님이십니다.미래를 위해서라도 이 성구는 이곳에 남아있으면 안 됩니다.이곳을 무너뜨리고 내가 여기서 죽으면 두 가지 일이 동시에 성공적으로 완료됩니다.<br/>죽은 루클리스도 내 이런 행위를 반드시 칭찬할 겁니다.그렇지 않으면 여신님을 위해 죽은 그 녀석이 가엽지 않습니까?]{np}라이마는 루클리스의 이름이 나오자 다시 슬픔을 느끼며 결국 커닝햄의 말에 동의했다.라이마는 커닝햄의 희생을 축복하고 그 자리를 떠났다. 머지 않아 지금의 기억을 또 다시 오랜 시간 잊고 지낼 것이란 사실이 이 가녀린 여신의 마음을 다시 한번 아프게 만들었다.<br/>다행인지 불행인지 라이마는 커닝햄이 일으킨 폭음을 듣기 전에 수정광산을 벗어날 수 있었다.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>미르티스에 대한 이야기. 마우스 우클릭으로 읽을 수 있습니다. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

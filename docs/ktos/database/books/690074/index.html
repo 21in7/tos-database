@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="솔콤에 대한 이야기. 마우스 우클릭으로 읽을 수 있습니다. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>솔콤 이야기 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690074" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690074" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690074" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>솔콤 이야기</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>소환을 받은 자가 앞에 섰다.[부르셨습니까?]<br/>마족의 군주인 솔콤은 마왕 제스티 앞에 섰다.그리고 제스티의 말을 기다리면서 지금 이 순간 자신의 신세가 무척 복잡하다고 생각했다.<br/>형식상으로는 그는 마왕 카르타스의 부하였다.그러나 실제로 그가 충성을 바치는 마왕은 바이가였다.<br/>그런데 지금은 제스티의 명령을 받기 위해 그 앞에 섰으니 그는 이 순간 3대 마왕 모두의 지휘를 받는 셈이다.{np}그의 신세가 이렇게 된 것은 마왕 바이가가 카르타스를 견제하고 감시하기 위해 솔콤을 파견 근무의 형식으로 카르타스에게 보냈기 때문이다.<br/>이들 마왕의 상급자인 길티네도 카르타스의 광기와 미친 성격을 알고 있기에 그 밑에 합리적이고 지성적인 마군주 솔콤을 넣으면 카르타스가 사고를 덜 치는데 도움이 된다는 바이가의 의견을 받아들였다.{np}그렇게 몇 세기가 지난 어느 날 마왕 제스티에게 라이마를 추적하는 임무가 맡겨졌고,그 임무를 지원하기 위해 다른 마왕이나 마신의 부하 가운데 유능한 자들을 데려다 써도 좋다는 길티네의 선언이 있었다.<br/>길티네의 이러한 지시는 솔콤에게는 뜻밖의 부작용을 불러왔다.마왕 카르타스가 냉큼 솔콤을 제스티를 지원한다는 명목으로 붙여주었기 때문이다.<br/>말이 좋아 출장이고 지원 파견이지 실제로는 가장 싫어하는 부하를 떠넘긴 셈이다.<br/>그런데 카르타스의 부하 중 솔콤이 가장 정상적인 마군주고 똑똑한 편이기 때문에 제스티 처지에서도 솔콤 말고 다른 마군주를 파견하라고 할 수가 없었다.{np}워퓰리스 같은 막무가내의 미친 녀석이 오는 것은 아무런 도움이 되지 않기 때문이다.{np}그런 녀석은 네뷸라스 만으로도 이미 충분했다.이런 사유로 현재 솔콤은 소속을 두 번이나 바꿔서 제스티 밑으로 와있었다.<br/>이렇게 수 세기 단위로 소속과 주인을 바꾼 일은 솔콤 개인에게도 훗날 크게 불리하게 작용할 가능성이 높았다.<br/>어떤 마왕이나 마신도 그의 편에 서서 그를 지원하지 않을 우려가 있기 때문이다.{np} 현재 상관인 제스티도 솔콤을 개인적으로 살펴줄 까닭이 없었다.그 제스티가 솔콤에게 말했다.[라이마의 계시를 추적한지 그간 세월이 얼마나 흘렀는지 아는가? 그간 성과가 없었다는 점도 과히 기분이 좋지 않은데 최근에는 더 나쁜 일이 생기고 있다.]<br/>[무엇입니까?]<br/>[리디아 샤펜이라고 들어보았나?]{np}[네 알고 있습니다.아마 인간 왕국의 역사상 그 어느 누구보다도 심지어 최근에는 역대의 어떤 훌륭한 국왕이나 심지어 스승인 메이번 보다 더 높은 명성과 인기를 누리고 있는 인물이라고 알고 있습니다.]<br/>[너도 인간에게 쓸데 없는 관심을 많이 지니고 있었군. 그래 그건 아무래도 좋다. 중요한 것은 그 인간 여자가 라이마의 계시를 맡아 가지고 있다는 사실이지.<br/>그런데 웃기는 일이 무엇인지 아는가?그녀가 지니고 있는 것을 뻔히 아는데 우리가 얻을 수 없다는 점이야.아니 그것이 아니지.이제까지는 계시를 지닌 자들은 숨기를 잘 하거나 방어를 잘 했거나 우리가 미처 그들이 지녔다는 사실을 몰랐거나 하여간 그런 이유들로 계시를 간직할 수 있었다.<br/>대성당에 쳐 박혀 있는 리디아의 스승이라는 메이번도 그러고 있으니 계시를 지키고 있는 것이고,테슬라가 인간의 수명을 넘어서 저렇게 오래 사는 것은 아무리 봐도 수상해서 그가 계시를 지녔을 것 같기도 한데 과연 그런지 알 수가 없는 경우도 있었지.<br/>그 자가 조각하는 여신상들은 거의 여신이 강림한 힘을 발휘해.내 능력으로는 그 놈을 잡아도 문초할 수가 없으니까 답답하지.{np}주시자님의 예상과 분석으로는 테슬라에겐 계시가 없다는 거야.하여간 리디아 샤펜은 그 어느 경우와도 달라.이 여자는 정말 다르다고.]<br/>솔콤은 제스티의 설명이 더 길어지기 전에 먼저 상대가 할 말을 꺼냈다.[네 다릅니다. 리디아 샤펜은 지난 27년간 무려 여섯 명의 군주급 마족을 죽이거나 퇴치했습니다.지금까지 역사에 기록된 어떤 인간도 아직 못해낸 일입니다.그녀의 화살은 마왕의 심장도, 크흠 죄송합니다.]{np}솔콤은 눈앞의 제스티를 의식해 나오던 말을 잠시 끊었지만 결국 말을 맺었다. [여하간 꿰뚫는다고 인간들은 믿고 있다고 합니다.]<br/>[그래 그리고 더 큰 문제는 그것이 사실이란 점이지.]{np}제스티가 인간의 힘에 대해 이렇게 쉽게 긍정하는 것은 솔콤에게도 당혹스러운 일이었다.<br/>그래서 솔콤은 한 걸음 더 나가보기로 했다.[아실지 모르지만,그 보다 큰 문제도 있습니다.리디아 샤펜을 맡았던 마군주들이 그녀의 교묘한 책략에 말려 모습을 나타내고 당하거나 함정에 걸려 당하거나 했다는 점입니다. 궁술실력 못지 않게 무서운 점은 바로 그녀의 지능적인 계략과 준비성 등등 그런 점입니다.]<br/>[그래 그래서 너를 불렀다. 길티네님이 말씀하시기를 너라면 최소한 그렇게 멍청하게 상대에게 이끌려나가 죽지는 않을 것이라고 하셨다.]{np}[그 말씀은?]<br/>[최근에 지부리나스 그 멍청한 자식이 힘만 믿고 나섰다가 리디아 샤펜의 화살에 죽었다.리디아는 지부리니스의 마력이 담긴 정수까지 탈탈 털어서 가지고 갔다고 하더군.<br/>어차피 폰델 같은 하급자까지 좍 소문이 퍼지겠지만, 아직은 마군주들도 모르는 일이다.아니 도대체 받은 임무도 없는데 왜 나서서 설치다가 죽었는지 모를 일이다.]{np}[그거 참 안타까운 일입니다.]<br/>[네가 리디아에게 죽으면 안타깝게 여길 자도 없을 것이다.]<br/>[네? 그게 무슨 그렇다면 혹시..]<br/>[그래 이제부터 리디아 샤펜이 지닌 라이마의 계시를 우리 손에 넣은 일은 네 임무로 배정되었다. 인간들이 별무슨호수라 부르는 곳으로 가라. 리디아는 요즘 그곳에서 무슨 탑인가 뭔가를 만드느라 바쁘다고 들었다.]<br/>어차피 거절할 수 있는 명령이 아니었기에 솔콤은 복종의 의사를 표시하고 물러났다. 그리고 이후 수 세기 동안 기록될 그의 패배의 역사를 시작하려 하고 있었다.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>솔콤에 대한 이야기. 마우스 우클릭으로 읽을 수 있습니다. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="황금노래용병단에 대한 이야기. 마우스 우클릭으로 읽을 수 있습니다. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>황금노래용병단 일지 : 참전 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690084" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690084" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690084" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>황금노래용병단 일지 : 참전</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>*황금노래 용병단 일지:참전{np}슈바르츠라이터 마스터이자 황금노래 용병단의 단장인 워시스가 야전에 설치된 막사에서 총기를 손질하고 있을 때 부하의 목소리가 들렸다.<br/>[손님이 오셨습니다.]<br/>[뫼시고 들어와라.]<br/>부단장 폴 프앵크는 원숭이 혹은 고릴라처럼 생기긴 했지만,절대 멍청하지도 둔하지도 않은 사내였다.{np}그런 그가 평소에 하던 대로 자기 선에서 의뢰를 결정짓지 않았다는 점은 뭔가 중요한 문제가 있다는 뜻이었다.<br/>아마도 찾아온 의뢰인 손님의 계약에 큰 문제가 있다고 생각해야 했다.아니면 찾아온 손님의 신분이 단장이 직접 만나야 할 정도로 높거나..{np}<br/>[폴라니 영지에서 오신 분입니다.]<br/>[안녕하십니까? 폴라니 영지를 대표해 온, 일트렌이라고 합니다.]<br/>워시스가 일어나서 정중하게 인사를 하였고 의례적인 인사가 오가자 일트렌이 아마도 부단장에게 이미 했을 말을 다시 되풀이하기 시작했다.{np}그렇게 같은 말을 반복하면 귀찮은 표정이 얼굴에 나타날 법도 한데 조금도 얼굴에 그러한 기색이 없으니, 자신이 겪는 수고 따위는 생각하지 못할 정도로 그가 처한 영지의 사정이 급하거나 아니면 이런 협상에 잘 단련된 사람이 틀림없었다. 얼굴에 초조한 기색이나 염려스러운 표정도 없었기에 워시시는 후자라고 판단하였다.{np}[저희 폴라니 영지는 선대 공작께서 세 아드님에게 영지를 분할하여 상속하셨습니다.때문에 작위도 내려가고 각 영지의 규모도 줄었습니다만 최근까지는 이웃한 형제 영주분들이 그럭저럭 잘 지내왔습니다.{np}그러나 최근 맏이이신 영주님이 후계자가 없이 돌아가셔서 본가 영지에 대한 소유권이 자연히 두 분 이웃 형제 영주분들에게로 나눠지게 되었습니다.그런데 두 분 형제 영주님들이 아무도 본가 영지를 반분하는 일에는 동의하지 않아서 결국 무력행사로 접어들게 되었습니다.]{np}워시스는 사연 자체는 뻔한 것이지만,알 수 없는 점이 있기에 질문을 하지 않을 수 없었다.<br/>[반씩 나눠 가지는 일을 싫어하는 것이야 사람 욕심이니 그렇다 치고,우리 왕국에는 영주들간의 분쟁을 조정하는 의전대신께서 분명히 계시는데 두 영지가 그 지경이 되도록 놓아두셨다는 말이오?]{np}[아 물론 다른 두 귀족이 서로 영지를 두고 다툰다면야 의전대신께서 당장 사람을 보내 과거의 문서도 조사하시고,무엇보다 왕국 의전부에 있는 귀족들의 토지대장만 점검해도 누가 옳은지 알아내서 조치를 취하시겠지요.하지만 왕실은 귀족들이 다스리는 영지 내부의 통치와 행정에는 간섭하지 않는 것이 원칙이지 않습니까.{np}영지민에 대한 귀족의 매우 심각하고 부당한 횡포가 있다거나 마족과 결탁을 한다거나 왕실에 모반을 꾸민다거나 여신의 신성에 대한 신성모독을 획책한다거나 뭐 그런 대죄를 저지르고 있다는 고발이나 심증이 있다면,귀족들을 담당하는 의전대신께서 수사를 하실 테고,{np}사실로 판명 나면 당장 왕국군이나 왕국기사단이 출동하여 응징하겠지만,그런 일이 아니라면,자기 영지를 어떻게 다스리냐 하는 문제는 전적으로 영주의 권한입니다.]<br/>[그래도 의전대신의 권한으로 시정 명령 정도는 내리곤 하는 것으로 아는데..]{np}[그렇기는 합니다만,설령 왕국법령을 위반한 영주의 통치 행위도 너무 심각할 정도여야 시정 명령이 내려지는 정도입니다.지방 영주 처지에서는 의전대신의 시정 명령에까지 저항하는 영주는 없지만,반대로 시정명령을 내릴 정도로 심각하다고 판단하는 경우도 별로 없습니다.{np}그런 시정명령을 받으려면 어지간한 학정이 아니면 안 됩니다.]<br/>[하기는 영지민들에 대한 재판을 항상 멍청하게 한다거나 잘못된 정책을 세워서 흉년이 들게 만들었다는 이유로 처벌받은 영주는 없으니까..]<br/>[그렇습니다. 무능력하다는 이유로 처벌받은 영지 귀족은 없는 것이죠.영주가 재판을 잘못해도 가까운 성직자를 찾아가 하소연한다든가 정 안 되면,왕국 수도의 법무대신에게 직소를 하는 방법도 있으니 재판이나 통치가 아주 부당하지 않으면,백성들도 때로는 득도 보고 때로는 손해도 보면서 사는 것이죠.]{np}[그럼 이번 사건도 영지 내부일로 간주되어 조정에서는 개입하지 않는 것인가?]<br/>[그렇기도 하고,본가 영지에 속한 영지민들도 상속자가 없어서 국왕께서 행정관을 파견하여 다스리는 지역보다는 선대 영주님의 아드님이 다스리면 좋겠다고 원하고 있습니다.{np}잘 아시겠지만,<br/>상속자가 없어지거나 영주가 죄를 지어서 귀족 지위를 박탈당하면 해당 영지는 왕국 직할령으로 편입되고 행정관이 파견되어 다스리지 않습니까?<br/>뭐그러다 누군가 공을 세우면 귀족이 되면서 상으로 임자 없던 그 땅을 영지로 받기도 하고요.{np}뭐 하여간 행정관들은 임기 채우고 왔다가 가는 사람이니까 영주만큼 해당 지역에 애정을 지닐 리가 없고,정말 착하고 총명한 관리가 부임해도 몇 년 있으면 떠나기 마련이고 행여 멍청한 관리라도 부임하면 큰일이죠.{np}그래서 대개는 영주가 장기 통치하는 편이 나은 게 사실이고,특히 우리 지역은 선대 영주께서 선정을 베푸셔서 아직도 인기가 높습니다.]<br/>[흥, 우리 왕국의 영주들이 비교적 괜찮은 이유는 그 위에 그들을 통제하는 왕국법이 있고,바로 옆에는 여신의 신탁을 즉각 받을 수 있는 사제들이 어디나 있기 때문이야.{np}비슷한 수준의 통치자가 다스린다면 임기가 짧아 자주 교체되는 행정관보다는 종신토록 다스리는 영주들이 장기적인 관점에서 정책을 세우고 일관성 있게 유지하는 것이 더 나을 수밖에 없지.딱히 영주들이 행정관보다 잘나서 그렇다고는 할 수 없지.]{np}[뭐 어쨌거나 형식상 이 사건은 비록 지금은 세 개의 독립된 영지지만,원래는 하나의 영지가 나뉜 지도 오래되지 않았고,영지민들도 재통합을 원하고 하니 의전대신께서도 너희들 마음대로 하라고 맡긴 셈이 되었습니다.]{np}[아니 의전대신께서 너그럽게 영주들과 지역민들에게 재량권을 주셨으면 감사하게 생각하고 의논이나 잘 할 것이지 뭐 잘났다고 싸움질을 하겠다고 나선 것이지?]<br/>[싸움 안 했습니다.앞으로도 안 할 거고요.싸움 안 하는데 말로도 결판이 안 나니 문제이고,저희에게 그런 문제가 생겼으니 마스터님 같은 분도 용병일로 돈 버시는 것 아닙니까?]{np}[흠, 알겠어.영지병이나 영지민들을 동원해서 사상자가 나오면 조정에서 그냥 둘 리 없으니까 직접 싸울 수는 없는데 그렇다고 말싸움으로는 백 년이 가도 결판이 안 날 테니 용병단을 고용해서 대신 싸우겠다 그런 이야기네.{np}다 좋은데 그냥 의뢰를 받아들이고, 요약해서 보고하면 됐을 일을 의뢰인을 직접 내게로 모셔온 진짜 이유가 뭐지?폴.]<br/>워시스는 간접적으로 의뢰인 혹은 의뢰인 대리인을 직접 만날 필요는 없었다는 말을 한 셈이고,자칫하면 상대방을 무시하는 것으로 비췰 수도 있었으나 크게 신경 쓰지 않고 물었다.{np}부단장 폴 프엥크가 간단하게 답함으로 그 이유를 설명했다.<br/>[상대측이 고용한 용병단이 칼날서약이랍니다.]<br/>[뭐야? 내가 그에라를 두려워할 것 같다는 건가?아니면 상대가 그에라이니 의뢰인께서 단장에게직접 확언을 듣고 싶다는 건가?{np}뭐 어느 쪽이든 상관없지.오히려 이런 상대하고 적당한 보수까지 받으면서 싸울 기회와 경험이 흔하지 않을 텐데 잘 된 일이야.의뢰는 받아들이겠소.세부적인 계약 내용은 우리 부단장과 조율하면 되겠소.]<br/>그런 말과 간단한 인사로 상대방을 내보내고 워시스 크리크는 흡족하게 미소 지으며 말했다.<br/>[이거 모처럼 기대되는 걸.]</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>황금노래용병단에 대한 이야기. 마우스 우클릭으로 읽을 수 있습니다. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

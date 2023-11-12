@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="전설의 용 보루타에 관한 이야기. 마우스 우클릭으로 읽을 수 있습니다. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>태고의 사건들 : 보루타에 관하여 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690093" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690093" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690093" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>태고의 사건들 : 보루타에 관하여</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p> *태고의 사건들 :<br/>보루타Boruta에 관하여<br/>{np} 다섯 명의 신들이 한 자리에 모여 있었다.<br/>이 장소에 도착했을 때부터 불만이 있던 아우스테야 여신이 말했다.<br/>[이건 잘못된 일이에요.]<br/>메데이나 여신이 그 말에 반응했다.<br/>[그러나 아우슈리네님과 길티네님이 결정한 일이다.]<br/>[사실은 길티네님이 일방적으로 주장하고 아우슈리네님이 그 고집에 양보한 것이죠.]<br/>{np} 바로 나온 아우스테야의 반박에 메데이나 역시 동의하는 표정으로 말을 이었다.<br/>[그 말이 맞을지도 모르지만, 일단 결정은 내려졌고, 이제 와서 되돌릴 방법은 없지 않니?]<br/>[물론 그렇지만, 그렇다고 차원 하나를 날려버리는 일이 말이 된다고 생각해요? 그냥 그곳이랑 여기를 서로 오가지 못하게 막을 수도 있었잖아요.]<br/>{np} [그건 길티네님의 취향에 맞지 않았나 보지. 아니면 차원간 이동을 봉인하는 방식은 불완전하다고 아우슈리네님이 생각하셨을 수도 있고..]<br/>그 때 음악회에 끼어든 잡음처럼 거친 목소리가 여신들의 대화 사이에 침입하여 자신의 뜻을 드러냈다.<br/>{np} [그것 참 재미있는 일이군. 너희들은 인간을 위하는 일이라면 사족을 못쓰지 않았나? 다름 아닌 인간의 미래와 그들의 안전을 위해 위험한 녀석들을 미리 치우자는 일인데 아우스테야 네가 불만을 지니다니 의외로군.]<br/>아우스테야가 끼어든 자에게 시선을 돌리며 말했다.<br/>{np} [이봐요. 바우바스 도대체 당신은 그렇게 오랜 세월을 살았는데도 답답한 소리나 하고 있네요. 우리가 인간을 위하는 것과 이건 분명 다른 일입니다. 그리고 창조주께서 세상과 인간을 돌보는 일을 시키신 것은 우리만의 과제가 아니고 당신도 해당하는 일입니다.]<br/>{np} [크크크 그러니 내가 너희들과 이 자리에 있는 것 아닌가? 다만 길티네님의 취향은 모르겠거니와 적어도 내 취향은 봉인보다는 멸절이 훨씬 마음에 드는군. 그리고 차원 하나를 통째로 멸망시키는 일은 길티네님 정도의 능력과 발상이 아니면 불가능한 위대한 행사라 할 수 있지.]<br/>{np} 바우바스의 옆에 서있던 라가나가 하늘을 쳐다보며 뭔가를 가늠하다가 말했다.<br/>[지금쯤이면 길티네님과 그분이 이끌고 간 부하들이 녀석들 차원을 거의 정리했을 것 같아. 아마도 얼마 지나지 않아서 생존한 녀석들이 그 차원에서 도망쳐서 곧 이리로 올 것 같은데..]<br/>{np} 이제까지 조용히 있던 제미나 여신이 중얼거렸다.<br/>[비록 크기가 이쪽 세상의 대륙 정도 밖에 안 되는 작은 차원이라지만 이 정도 시간에 그렇게 쉽게 정리가 될까? 아무리 길티네라고 해도 말이지..]<br/>바우바스가 제미나의 말을 듣자 말했다.<br/>{np} [그쪽에 있는 녀석들을 일일이 상대하는 것이 아니라 그쪽 세상 전체 환경을 지옥처럼 바꾸는 일이지. 어렵기는 해도 일단 성공하면 녀석들도 그곳에서 버틸 수 없지.]<br/>[녀석들이 버틸 수 없을 정도의 지옥 같은 환경이라니 끔직하네.]<br/>제미나의 이어진 혼잣말 비슷한 이야기에 바우바스가 다시 말을 보탰다.<br/>{np} [거기는 여기와 달리 기반이 네가 맡은 이런 대지가 아니지. 아마 길티네님은 그 점을 이용하리라 본다. 프로스터 로드 그 녀석을 데리고 가셨으니 한빙지옥이 되지 않을까 싶다만, 뭐 알 수 없지.]<br/>{np} [그 추측이 사실이라면 거기서 얼어 죽든가 아니면 이리로 살아서 도망친 다음에 우리에게 죽든가 둘 중 하나겠군.]<br/>라가나의 말이었다.<br/>{np} [녀석들 중에 매우 강력한 것은 죽지도 살지도 못하고 꽁꽁 얼어붙은 상태로 그곳에 갇힐 가능성도 있겠네.]<br/>메데이나의 이런 추측도 덧붙여졌다.<br/>{np} 아우스테야는 한숨을 쉬며 말했다.<br/>[아무튼 녀석들도 생명체라 할 수 있는데 세상에 위협이 된다는 이유로 이러는 건 싫어요. 가능하면 어디다 묶어두면 좋을 텐데..<br/>{np} 창조주께서 세상과 인간을 보호하라고 하셨지만, 그 방법을 선택하는 것은 우리에게 달린 일인데 이번 결정은 너무 길티네님의 의견에 휩쓸려 가는 것 같아 별로 마음에 들지 않네요.]<br/>{np} [만약 아까 말한 추측이 사실이라면 그곳의 괴수들이 모두 동면에 들 가능성이 있지. 그럼 묶어두는 셈이고. 우리는 거기서 빠져 나와 여기로 도망 오는 녀석들을 잡으면 되는 거고, 정말 원한다면 여기서도 죽이지 않고, 봉인하더라도 말리지는 않겠다.<br/>{np} 아우스테야 네 혼자 실력으로 그럴 수 있을지는 모르지만 말이지. 하지만 이렇게 마냥 기다릴 줄 알았다면 이미 이 세상에 와있는 녀석들을 사냥하는 임무에 지원하면 좋았다는 생각이 드는군.]<br/>바우바스의 말이었다.<br/>{np} 메데이나 여신이 그 말에 이렇게 말했다.<br/>[그런데 그 녀석들 왜 자기들 세상과 여기를 자유롭게 오갈 수 있는 것치고는 여기 와서 있는 것들 수가 많지 않아 다행이지. 덕분에 도망쳐올 지점에 이렇게 다섯이나 모여 기다릴 수 있는 것이고..]<br/>{np} 제미나 여신이 자매의 말을 보충했다.<br/> [지금은 그렇지만, 신수의 기운이 점점 퍼져서 우리가 인간들을 지상에 내놓을 때가 되면, 녀석들도 살기 좋아진 이곳 세상으로 더 많이 와서 더 오래 머물 거야.<br/>{np} 지금은 인간이 지하에서 우리의 보호를 받으면 지내니 상관없지만, 그 때는 늘어난 인간들과 더 많이 넘어온 저쪽 세계의 괴수들이 마주칠 테고 그건 끔직한 결과를 일으킬 거야. 그 때 가서 인간과 이 세계를 그 녀석들에게서 보호하려고 애쓰느니 지금이 좋아.<br/>{np} 이 세계의 하늘과 땅에 영면하신 창조신의 신수의 기운이 미약하게 퍼져 아직은 다칠 것이 적은 불모의 세계일 때 말이지.]<br/>바우바스가 의미를 알 수 없는 웃음소리와 함께 그 말에 동의했다.<br/>[너희 무리에도 생각을 제대로 하는 자가 있었군.]<br/>{np} 아우스테야가 이 말에 약간 발끈한 기색을 보이며 나섰다.<br/>[우리는 항상 바르게 생각합니다. 바우바스 당신 같은 이들이 창조신의 유지를 제멋대로 해석하고, 자기 입맛대로 행동한단 말입니다. 특히 길티네님이 심합니다.]<br/>{np} 이 말이 다시 라가나를 도발했는지 그녀가 입을 열었다.<br/>[그렇다면 아우슈리네님을 중심으로 모인 너희들은 뭐 하나 단결해서 제대로 된 성취를 해낸 적은 있느냐는 말이다.]<br/>[굳이 우리 자매들이 모여서 뭔가를 해야만 할 일도 없습니다. 각자 맡은 바 일을 충실히 하면 창조신의 유지를 잘 잇는 겁니다.]<br/>{np} [그래서 그렇게 너희 무리 각자가 일을 잘 해서 라이마의 일이 그 모양인가? 창조신에게서 예언과 운명의 권능을 받았으면 뭐 하나? 제대로 맞추는 것도 없잖아? 아니면 다 알면서 너희들끼리만 공유하고 우리에게는 아무 것도 알려주지 않는 것인가? 그런 건가?]<br/>{np} [길티네님이 라이마님이 지니신 은사를 통해 미래를 알기 위해 핍박하는 것을 모르는 자매가 있나요? 라가나 당신도 잘 아는 일이지 않습니까? 라이마님이 지닌 창조신의 예지의 은사와 권능은 우리 각자가 품은 흥미를 위한 것이 아닙니다. 심지어 자기만을 위한 계획이나 야심 깃든 의도와도 무관하게 행사되어야 하는 권능입니다.]<br/>{np} [그래서 너 지금 길티네님이 자신의 야욕을 위해 창조신께서 내려주신 권능을 엿본다고 주장하는 것이냐?]<br/>[그렇다고 말하지는 않았습니다. 다만 이번 일처럼 명분을 앞세워 길티네님의 취향대로 다른 차원의 세계를 멸망으로 이끄는 행태는 지나친 감이 있다는 말입니다..]<br/>아우스테야의 말을 라가나가 끊었다.<br/>{np} [흥, 너희 일단의 무리들이 길티네님을 두고 왈가왈부 하지만 따지고 보면 창조주께서 영면에 드신 이후로 길티네님만큼 강력한 지도자가 우리 사이에 없다는 것은 부인할 수 없는 사실이다.<br/>{np} 더구나 이 일은 아우슈리네님도 어쨌거나 동의하신 일이고, 저 짐승 같은 녀석들이 너희 무리들이 그렇게 죽고 못살도록 좋아하는 세계와 인간에 장차 해가 된다는 사실도 명확하니 너희 처지에서도 어차피 그냥 둘 수 없는 일이다. 즉, 아우스테야 네 하찮은 취향 따위가 고려될 상황이 아니다.<br/>{np} 여기 있는 바우바스님이나 내가 이번 일에 손을 보태는 일이 딱히 인간이 예쁘고 좋아서 하는 일이 아닌 것과 마찬가지로 말이다.]<br/>{np} 라가나가 노려보며 하는 말에 아우스테야는 잠시 그 눈빛을 마주보았으나 딱히 논리로는 반박할 말이 없고 더 나가면 결국 길티네를 성토해야 하므로 결국 고개를 돌려 시선을 피하는 것으로 끝을 내었다.<br/>{np} 그 때 메데이나가 말했다.<br/> [다 같이 창조되어 이 세계의 책임을 맡은 우리입니다. 우리가 서로 맞지 않는 점은 있으나 언쟁 이상의 불화가 있어서는 안 됩니다. 그래야 지금처럼 이 세계를 위해서 일하지 않겠습니까? 그리고 무엇보다도 마침내 기다리던 녀석들이 오나 봅니다.]<br/>{np} 그 순간 아무것도 없던 공중에 검은 점들이 생겼다.<br/>그리고 그것들은 추락하고 있지만, 날개가 있었다.<br/>대부분 의도되지 않은 혹은 성급하게 결행한 차원 이동의 후유증으로 제대로 날개를 사용해 비행을 하지 못했다.<br/>{np} 그들 가운데 가장 뛰어난 몇이 간신히 날개를 펴고 비행이라기 보다는 활공에 가까운 몸짓으로 연착륙을 시도하려 노력했다.<br/>{np} 메데이나 여신이<br/>[그렇게 놓아둘 수는 없지.]<br/>라고 말하면서 공중으로 팔을 뻗자 빛의 화살 같은 것이 창공을 향해 무수히 솟아올랐다.<br/>{np} 가장 먼저 적응하여 활공 자세를 취하던 것들도 아직 정신을 못 차리고 있던 것들도 모두 공평하게 적중 당했고, 활공에 성공했으면 다섯 명의 신들이 기다리던 장소에서 멀리 갈 수도 있었지만, 그러지 못하고 근방의 대지를 향해 낙하하기 시작했다.<br/>{np} 바우바스가 그 모습을 보면서 제미나에게 말했다.<br/>[일단 땅에 닿으면 네가 그 대지의 권능으로 그들을 대지에 묶으라고, 날아다니면 쫓아다니기 귀찮으니까.]<br/>제미나 여신이 답했다.<br/>[그렇게 하겠지만, 저들을 영구히 땅에 묶어서 차후로는 영원히 못 날게 하려면 나라 할지라도 시간이 필요해.]<br/>{np} 라가나가 말했다.<br/>[그럴 필요 있나? 그냥 지금 모두 죽이면 되는데 다 죽일 시간만 벌면 충분해.]<br/>그러나 바우바스는 생각이 다른 모양이었다.<br/>{np} [하나라도 도망가면 귀찮으니 이왕 할 일 제대로 하자고, 혹시 하나라도 놓치면 곤란하니 다시는날지 못하도록 하는 것도 나쁘지 않지. 아우스테야는 전투에 가담하지 말고 제미나가 의식을 마칠 때까지 지키는 편이 좋겠군. 직접 손을 대지 않고도 도움이 되는 일을 할 수 있으니까..]<br/>{np} 바우바스가 그렇게 말하자 두 여신은 찬성하는 의사를 나타냈다.<br/>그리고 금방 시간이 얼마 지나지 않아 까마득한 허공에 점으로 나타났던 것들이 굳이 신의 눈을지니지 않았어도 확연하게 그 특징을 알아볼 수 있는 고도까지 내려왔다.<br/>후대에 전설을 통해서나마 인간에게 알려져 드래곤이라고 부르게 되는 괴수들이었다.<br/>{np} 메데이나의 빛의 화살이 다시 공중으로 치솟았다.<br/>잠시 후 길티네와 그녀가 이끄는 부하들의 공격을 피해 이 세계로 건너온 드래곤들이 대부분 대지에 추락했고, 그 결과 소수를 제외하고 그 자리에서 낙하의 충격을 견디지 못하고 충돌 순간에 죽었고, 아직 숨이 붙은 드래곤들도 사정은 별로 다르지 않았다.<br/>{np} 그러나 땅에 닿기 전에 죽은 일부와 충돌로 사망한 대다수와 달리 메데이나의 공격을 피하고 활공에 성공하여 충격을 줄인 드래곤이 몇 있었다.<br/>착륙했다고 말할 정도의 안정적으로 땅에 도달하지는 않았으나 다른 드래곤처럼 대지에 처박혔다고 표현하기는 어려운 수준이었다.<br/>{np} 그러나 그 가운데 단 한 개체도 완벽한 상태로 어떠한 부상도 없이 대지를 딛고 서있는 드래곤은 없었다.<br/>바우바스가 주위를 둘러보더니 말했다.<br/>[이 정도만 살아서 도착할 줄 알았으면 혼자와도 충분했겠군.]<br/>{np} 다른 여신들이 아니라 라가나가 의외로 그 말에 토를 달았다.<br/>[혼자 왔으면 더 살아남았을 테고, 제미나가 저들을 묶지도 못할 테지.]<br/>[다른 곳에 간 동료들이 제 몫을 해낼지 염려스러워서 해본 소리지.]<br/>[라이마의 예언에 따르면 여기로 올 녀석들이 가장 수가 많았으니까 그리고 나타난 것을 보니 실제로도 그렇고..]<br/>{np} [바로 그 라이마의 예언이라 믿기지 않는다는 말이지..]<br/>그렇게 라가나와 서로 말을 주고받던 바우바스는 그 와중에 빈사 지경의 드래곤 여럿의 숨을 끊었다.<br/>그리고 시선을 돌리며 말했다.<br/>[비교적 멀쩡한 녀석이 있네. 내가 저 녀석을 맡지. 나머지는 너희들이 다 맡아 처리하라고.]<br/>{np} 그렇게 말하고는 대답도 듣지 않고 그가 정한 목표로 다가갔다.<br/>메데이나는 한숨을 쉬며 떠나고, 라가나는 잠시 바우바스의 등을 노려보았으나 이내 생존한 다른 드래곤의 몇 초에서 몇 시간에 이르는 다양한 범위의 남은 생애를 종결시키기 위해서 움직였다.<br/>죽은 드래곤은 정말 죽었는지 확인하는 것도 겸하는 일이었다.<br/>{np} 바우바스가 다가가자 그 드래곤의 의사가 전해졌다.<br/>음성이 아니었으나 바우바스는 그와 소통이 가능하였다.<br/>[사악한 냄새가 진동하는 너는 누구냐? 네 녀석들의 사악함이 우리 고향을 파괴하고 우리를 이곳으로 내몰았다. 도대체 무슨 까닭으로 이런 죄악을 행한 것이냐?]<br/>{np} 바우바스는 상대에 대한 비웃음을 가득 담아 표정과 정신으로 자신의 의사를 전달했다.<br/>그런데 그의 표정은 이 세계의 마신과 여신에 대해서 아무런 정보가 없는 드래곤에게는 무의미한 겉모습의 변화에 불구했기 때문에 조금도 영향이 없었다.<br/>{np} 그러나 드래곤의 뇌리를 울린 바우바스의 의사 표시는 그럼에도 충분히 그 의미를 전달할 수 있었다.<br/>[질문이 많구나. 하지만 내 이름은 네 언어로 전달하기 어렵다. 그건 네가 전해오는 이름도 마찬가지지.<br/>{np} 그럼에도 아무튼 대답한다면 네게 어떻게 들리거나 받아들여지든 나는 바우바스라고 한다. 네가 전해오는 개념은 굳이 우리 식으로 표현하자면 보루타라고 하면 되겠군.<br/>{np} 모처럼 친절을 발휘해 다른 질문에 답하자면, 애초에 네 녀석들이 함부로 이쪽 저쪽을 오가지 않았으면 멸종은 일어나지 않을 수도 있는 일이었다. 하지만 아우스테야에게는 몰라도 적어도 내게는 그런 것은 아무런 의미가 없다. 그러니까 이유나 명분 같은 것으로 짐승들과 논의할 생각은 없다는 말이다.<br/>{np} 지능이 있다고 다같이 존중 받을 존재라고 생각하는 것들이나 그런 것들을 보살피는 것들이나 둘 다 짜증나는 일인데 그런 것을 주구장창 땅속에서 지켜보고 있지나 울화를 풀 대상으로 네 녀석들이 적당하다는 것이지. 동료들과 싸울 수는 없고, 인간은 너무 약하니까 말이야.]<br/>{np} [네 동료? 인간? 그건 무슨 의미인가?]<br/>[아 그런 게 있어. 네 녀석들은 너희들이 오가는 세계가 어떤 곳인지 어떤 존재들이 사는지 관심도 없었겠지만, 그래서 난데 없이 나타나서 여기 동물들이나 집어 삼켜 잡아먹고 돌아가곤 했겠지. 하지만 그런 멍청한 태도 때문에 오늘날 이 꼴을 당한 것이니 이건 당연한 일이라고 생각해라.<br/>{np} 네 녀석들 숫자가 그렇게 많지 않았다면 나 혼자 건너가도 충분했겠지만 길티네님은 더 강하시고 현명하시기 때문에 이렇게 효과적으로 너희를 이리로 몰아주신 것이지. 그러고 보니 앞으로 아우스테야에게도 이런 식으로 주장하면 되겠군.]<br/>{np} [닥쳐라. 무슨 말로도 우리 고향과 동족들을 학살한 책임을 면할 수는 없다. 그리고 이쪽 세상 존재들 사이의 구분 따위 우리에게는 무관하다. 용족이 아니면 어차피 포식자를 피하는 숙명을 지닌 사냥감에 불과하다. 크든 작든 그건 마찬가지다.]<br/>[그래도 주제를 모르고 설치는구나.]<br/>{np} 그 말을 끝으로 바우바스는 말이 아닌 행동을 보여주었다.<br/>바우바스의 손이 보루타의 허리를 공격했다.<br/>보루타는 그것을 충분히 막을 수 있다고 생각했기 때문에 오히려 막지 못했다.<br/>다른 드래곤들과 다툴 때와 달리 끝에서 속도가 더 높아지며 공격이 더 날카롭게 살아났기 때문이었다.<br/>{np} 옆구리에 전해지는 난생 처음 겪는 고통을 느끼며 보루타는 간신히 두 번째로 들어오는 공격을 날개에 달린 발톱으로 저지했다.<br/>아니 그렇게 생각했다.<br/>그러나 막았다고 생각한 순간 그의 발톱이 부러져 나갔다.<br/>{np} 허리와 달리 발톱은 빠른 시일 안에 회복되겠지만, 보루타의 방어를 무너뜨린 바우바스의 손은 다시 허리를 노렸다.<br/>발톱을 뭉갠 상황에서 더 가까운 부위 예를 들어 날개를 공격할 수도 있었는데 다시 몸통을 노린 것은 바우바스가 전력을 다하지 않고 있다는 뜻이었다.<br/>{np} [이 정도면 내 권능은 고사하고 무기도 쓸 필요가 없겠는데..]<br/> 정말 당혹스러운 사실이었지만, 보루타는 자신이 바우바스를 일대일로 상대해서 이길 수 없다는 사실을 깨달았다.<br/>{np} 바우바스가 지나가면서 한 말대로 저들의 동료 숫자가 그렇게 많지 않다면, 그리고 동족들이 무사해서 이들과 제대로 된 싸움을 한다면, 이길 수 있었을지도 몰랐다.<br/> 그러나 충분히 강력하고 수도 많은 동족들은 자신의 세계에서 오랜 세월을 만족하며 살았고,<br/>{np} 이쪽 다른 세상을 발견하고도 자만심에 빠져 이곳에 있는 소위 신들이라는 존재를 깊이 알려 하지 않았다.<br/>하지만 그런 무관심의 결과 치고는 이것은 대가가 너무 컸다.<br/>크게는 동족의 몰살이었고, 보루타에게는 개체의 죽음이 눈앞에 있었다.<br/>{np} 보루타는 오른 날개를 휘둘러 바우바스를 밀어내는데 성공한 보루타는 연달은 공격으로 바우바스를 물려는 시도를 해서 그를 더 멀리 물러나게 하는데 성공했다.<br/>그러자 날개를 강하게 움직여 날아오르려 했다.<br/>도망가려는 의도보다는 위에서 공격하는 것이 더 좋다고 생각했기 때문이었다.<br/>{np} 그렇기 때문에 다음 순간 자신이 날 수 없다는 사실을 깨닫자 그 당혹감은 이루 말할 수 없었다.<br/>여전히 보루타는 바우바스의 표정을 구별할 수 없었지만, 바우바스는 흡족한 미소를 지으며 보루타가 당황한 순간을 놓치지 않았다.<br/>이번에는 보루타의 머리에 제대로 공격이 들어갔다.<br/>{np} 보루타에게는 허리와 머리의 상처에서 오는 고통은 난생 처음 겪는 일이었다.<br/>아무도 그의 가죽을 뚫고 이런 고통을 준 자가 없었기 때문이다.<br/>물론 그의 세계에서도 드래곤 동족간에 전투가 발생하고 그 싸움에서 이 보다 심한 부상을 당한 드래곤도 있었다.<br/>{np} 그 중에는 고통에 울부짖는 녀석도 있고, 더 심한 상처에도 꿋꿋하게 입을 다물고 버티는 녀석도 있었다.<br/>보루타는 그쪽에서는 항상 이기는 입장이었기에 지는 쪽이 입는 상처가 주는 고통의 크기를 체감할 수 없었다.<br/>그런데 이제 자신이 얼마나 신체적으로 강하건 간에 고통을 감내하는 능력에서는 그리 강하지 않다는 비참한 현실을 처음으로 낯선 세상에서 낯선 존재로부터 배우는 중이었다.<br/>{np} 어찌 보면 너무 운이 없었다고도 할 수 있었다.<br/>아무튼 상처에서 오는 고통이 없이 냉정하게 생각해도 그가 이길 가능성은 없었다.<br/>따라서 그는 달아나야 했다.<br/>그러나 비행이 불가능했으니, 상처 입은 몸으로 땅 위를 이동해서 바우바스에게서 벗어날 수밖에 없었다.<br/>{np} 그 뒤를 바우바스가 유유자적하게 잔인한 미소를 지으며 천천히 걸어서 따라갔다.<br/>보루타는 달리고 있었으나 어찌되었든 이 땅의 마신인 바우바스가 천천히 움직이는 속도를 많이 앞서지는 못했다.<br/>보루타의 부상과 바우바스의 권능이 그런 상태의 이상한 추격 상황을 만들고 있었다.<br/>{np} 그 때 소리도 없이 바우바스의 옆에 아우스테야가 내려섰다.<br/>바우바스는 그녀가 곁에 서기 전에날개 소리만으로도 그게 아우스테야라는 사실을 알아차렸다.<br/>바우바스가 고개를 돌려 그녀를 보자 아우스테야가 말했다.<br/>{np} [살려줘.]<br/>[크크 우습지도 않지만 오랜 만에 나긋나긋한 말투로 말하니 물어보지 않을 수도 없군. 왜? 왜 살려주어야 하지?]<br/>[어쩌면 마지막 남은 드래곤일 수도 있으니까..]<br/>{np} [그럴 수도 있지만, 녀석의 본래 세계에도 어딘가 생존한 것이 있을 수도 있어. 우리 말고 다른 동료들이 간 곳에서도 생존한 녀석이 존재할지도 모르고.]<br/>[그렇기는 하지만, 최소한 여기에는 없어.]<br/>[살려두면 인간에게 해를 끼칠 텐데? 저 녀석 인간과 우리와의 차이도 잘 모르더라고 힘이 없으면 그냥 집어 삼킬 걸?]<br/>{np} [아마 어딘가 땅속으로 숨어들 테지. 그러면 대지의 권능을 지닌 제미나는 그게 어디든 알 수 있어. 그러면 다시는 못 나오도록 봉인하면 돼. 일단 대지의 깊은 곳에 봉인되면, 제미나의 힘이나 그것을 넘어서는 창조신의 힘이 없다면 누구도 풀어줄 수 없어. 심지어 아우슈리네님이나 길티네님이라도 어렵지.]<br/>{np} [너다운 물렁한 제안이로군. 좋아. 모처럼 부탁이니 그렇게 하도록 하지. 다만 두 가지가 궁금하군.]<br/>[그게 뭔데?]<br/>[아니 세 가지네. 언제 다시 이렇게 부드러운 네 말을 들을 수 있을지. 언젠가는 아우스테야의 전투적인 모습을 볼 수 있을지. 그리고 언제 다시 보루타가 세상에 풀려날지 그 세 가지가 궁금하다.]<br/>{np} [셋 다 불가능합니다.]<br/>다시 낯빛을 굳힌 아우스테야의 반응이었다.<br/>[크큭, 너무 장담하지 말라고, 언제 다시 내게 뭔가 부탁할 날이 또 올지 모르고, 우리가 끝내는 언젠가 싸우게 될지도 모르고, 창조신께서 다시 깨어나거나 그 힘이 세상에 다시 휘몰아치지 말라는 법도 없으니까 말이지.]<br/>{np} [저 드래곤을 살려준 대가를 원하는 것이라면..]<br/>[그 대가는 당장 받도록 하지. 나는 살생은 좋지만 청소는 싫어. 여기저기 널린 드래곤 시체들 누군가는 정리해야겠지. 내 몫까지 수고해 달라고.]<br/>그렇게 말하고 바우바스는 아우스테야가 뭐라 대답하기도 전에 떠나갔다.<br/>{np} 아우스테야는 바우바스가 떠 넘긴 청소보다는 그가 그 전에 한 말에 잠시 불길한 예감이 들었으나<br/>‘무슨 일이 생긴다면 라이마님이 뭔가 알려주겠지.’<br/>라고 생각하고 곧 이어 눈에 들어온 사방의 드래곤의 시체와 그 잔해에 다시 한숨을 쉬고는 그 정리를 위해 몸을 움직였다.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>전설의 용 보루타에 관한 이야기. 마우스 우클릭으로 읽을 수 있습니다. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

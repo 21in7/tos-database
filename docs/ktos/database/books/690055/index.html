@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="조사원 개스퍼를 돕고서 얻은 역사서입니다. 루시드 윈터스푼의 비망록으로 군데군데 내용이 빈 부분이 있는 것 같습니다. 마우스 우클릭으로 읽을 수 있습니다.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>루시드 윈터스푼 비망록 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690055" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690055" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690055" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>루시드 윈터스푼 비망록</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_01red.png" />
+            <h3>Content</h3>
+            <p>왕국 건국력 679년 어느 날<br/>-<br/>최근에 테슬라님을 만나 담화를 나눌 기회가 있었다. 테슬라님께서는 지난 세월 당신이 조각한 여러 조각상들이 자신의 역사를 증언하고, 추억을 일깨우며 그로 인해 다가올 앞날을 받아들일 힘을 얻는다고 하셨다. 그러면서 내게도 그런 것이 있는지 물으셨다.<br/>나는 없다고 답했고, 테슬라님은 하나 만드는 편이 좋을 것이라는 조언을 주셨다. 나는 테슬라님과 헤어지고 곰곰이 생각한 후 세상에서 유일하게 나보다 연장자인 사람의 충고를 받아들이기로 하였다.<br/>그것이 이 비망록이라는 기록을 남기는 이유이다. <br/>{np}<br/>왕국 건국력 700년 어느 날<br/>-<br/>림가우다스가 겔리 고원에 성당을 지으면서 내게 자문을 구했다. 하지만 나라고 예전에 몇 번 봤을 뿐인, 지금은 사라진 성전의 건축 양식을 기억할 수 있을 리가 있나?<br/>림가우다스는 은근히 내게 시간탐색을 요구하는 듯하지만, 입밖으로 낼 수 없는 비밀을 담을 건축물이라면 과거의 무언가를 따라하는 것보다는 완전히 새로운 편이 비밀을 지키는 것에 더 낫지 않느냐고 말해 줄 생각이다.<br/>뭐 그래 봐야 메이번의 대성당을 좋아하는 모양이니 많이 바뀔 것 같지는 않다. 아무튼 7년 뒤에는 완공 예정이라니 그 때나 한번 축하하러 가면 될 듯하다. <br/>{np}<br/>왕국 건국력 749년 어느 날<br/>-<br/>40년간 우리 왕국을 통치하시던 소셀 국왕의 건강이 좋지 않은 모양이다. 내 생각에 저런 상태로도 2,3년은 더 버틸 것 같지만, 그 이상은 어려울 듯하다.<br/>어언 750년의 세월을 채워가는 왕국의 역사에서 가장 뛰어난 명군으로 평가 받을 군주의 치하에서 지낸 일은 앞으로 내가 얼마를 더 살아가건 좋은 추억이 될 것 같다. <br/>{np}<br/>왕국 건국력 872년 어느 날<br/>-<br/>반백 년간 지속된 네켈 3세의 치세도 이제 슬슬 끝이 보이는 듯하다. 기록을 들추지 않아 확실하지 않아도 이렇게 오랜 기간 재위에 머무르며 장수한 국왕은 이전에 없었고 아마도 앞으로도 없을 듯하다.<br/>소셀 1세 국왕 시절만큼은 못 해도 그 시절을 기억하는 사람이 몇몇 없는 상황에서 주위의 평범한 사람들이 왕국 역사상 최고의 태평성대라고 하는 말도 이해 못할 일은 아니라고 생각한다. <br/>{np}<br/>왕국 건국력 876년 어느 날<br/>-<br/>후후 오윈 딜벤 그렇게 사양하더니 결국 선왕의 유지를 거절하지 못하고 왕실 마법사 자리를 수락하고 말다니… 앞으로가 참 재미있는 시대가 될 듯하다. <br/>{np}<br/>왕국 건국력 879년 어느 날<br/>-<br/>오윈이 내게 와서 언제까지 그렇게 세상에서 한 발 물러나 은자 같은 생활을 할 거냐고 물었다. 아니 자기가 왕실에 발목을 잡혔다고 나까지 끌어들이려 하다니... 약간 당황스러웠다.{np}<br/>아무튼 얼마나 애걸복걸 하는지 결국<br/>그간 내가 이룬 성과물에 대한 기록을 일부 왕실에 기증하기로 하였다.<br/>뭐 그 첫 기증물은 바로 이 비망록이 될 것이다. 언제가 될지는 모르지만…<br/>{np}<br/>왕국 건국력 884년 어느 날<br/>-<br/>마법의 중급자 티를 내는 어린 자들이 나의 뒤에서 은근히 나누는 대화 주제로 현존하는 최강의 마법사가 나인가<br/>아닌가 하는 점을 논한다는 것을 안다.<br/>그들이 내 맞수로 생각하는 대표적인 인물은 오윈 딜벤이다. 그는 세상이 흔히 말하는 마법의 대표자이며, 왕실의 수석마법사이기도 하다. 그는 나보다 거의 백 년이나 수련기간이 짧음에도 나와 필적하는 실력을 지녔다.{np}<br/>그러나 정말 생사를 걸고 단 둘의<br/>결투를 벌인다면 아직은 그가 내 상대는 아니라고 확신한다. 살해 당하거나 스스로 죽지 않는 한 영생하는, 즉 마법으로 시간을 늦춰 사용하는 우리 두 사람의 인생을 고려하면 그가 언젠가는 나를 모든 면에서 넘어설 것은 분명하다.<br/>다만 내 추정으로 그건 아마도 또 다른 백 년의 시간을 필요로 할 것이다.<br/>또 다른 경쟁자로 언급되는 네크로맨서 마스터로 말하자면, 그녀는 내가 백 년간 수련을 쉰다 해도 나를 넘지 못할 것이다. <br/>{np}<br/>왕국 건국력 890년 어느 날<br/>-<br/>언젠가 이 기록에 적은 일에 덧붙여 두고자 한다. 마법사간의 결투에 관해서 언급했지만, 오윈 딜벤이든 나든 그 누구든 현재 시점에서는 아가일라 플러리의 역량에는 미치지 못한다. 이는 단순히 마력의 강함만을 의미하는 것은 아니다.{np}<br/>그녀가 가진 기상은 매우 크고, 시야는<br/>너무나도 넓기에 우리 같은 후학들은 그저 우러를 따름이다.<br/>세상은 잘 알지 못하나, 플러리가 지닌 그릇의 크기를 짐작할 수 있는 대표적인 사건이 존재한다.{np}<br/>그녀는 여신의 간절한 요청을 지켜내기<br/>위해 다른 여신으로 하여금 자신의 뒤를 잇게 만드는 전대미문의 사건을 일으켰다. 더하여 한 마군주가 지닌 매우 원대하지만 그래서 인간에게는 너무나 위험한 야망과 계획을 분쇄하기 위해 계약을 맺어 그를 굴종시켰다.<br/>끝에 가서는 결국 해체에 이르게 만들었으며, 여신과 같은 초월적 존재가 아닌 한낱 인간으로서는 사상 처음으로 환상도서관에 진입하였고, 그 진입사건을 통해 길티네의 계획을 분쇄하는 성과를 거두었다.{np}<br/>그녀가 지닌 선한 목적을 위해 여신을<br/>마법사의 탑에 강림시키고, 마군주를 이용하고 마침내 마신의 계획마저 흔들어버린 성과를 거둔 마법사라는 것만으로도 그녀의 위대함을 알리기에 충분하다고 생각한다.{np}<br/>지금은 몰라도 언젠가는 온 세상이 그<br/>일을 알게 될 것이다. 다만 이런 일이 아니어도 아가일라 플러리의 명성은<br/>너무 높아서 더한다 한들 높아질 곳도 없으리라.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>조사원 개스퍼를 돕고서 얻은 역사서입니다. 루시드 윈터스푼의 비망록으로 군데군데 내용이 빈 부분이 있는 것 같습니다. 마우스 우클릭으로 읽을 수 있습니다.</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>0</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="훈련된 궁수에게 보이지 않는 표적은 없다! 읽어볼 수 있습니다.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>리디아 샤펜의 교차선 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690004" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690004" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690004" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>리디아 샤펜의 교차선</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_04black.png" />
+            <h3>Content</h3>
+            <p>{s35}<br/>리디아 샤펜의 교차선{/}{np} 국왕 카듀멜이 리디아 샤펜에게 나무나 바위 뒤에 숨은 표적은 그녀라도 어쩔 수 없지 않겠냐고 물었을 때 리디아 샤펜은 간명한 그러면서 또렷한 활시위 소리로 대답을 대신하여 표적을 명중시켰다는 기록이 왕실에 전한다. <br/> 그러나 왕실의 공식기록이나 세간에 전하는 이와 관련한 전설에서 언급하지 않는 내용이 있다. 그것은 카듀멜 국왕이 그런 말을 한 배경이 단순히 리디아 샤펜의 궁술을 시험하기 위한 것이 아니었다는 점이다.<br/>{np}그리고 그 보다 더 중요한 사실은 그때 리디아 샤펜이 맞춘 표적이 무엇인지, 아니 정확히 말하면 누구였는지가 중요한 사실이다. <br/>왕실의 기록과 민간의 전설에서 이 일화를 다룰 때는 항상 이것이 언제 일어난 일인지 그 시기를 언급하지 않는다. <br/>{np}다만 리디아 샤펜의 대단한 활솜씨에 초점을 맞춘 영웅담으로만 소개한다. <br/>거기에는 그럴 수밖에 없는 이유가 있다. <br/>그 이유는 이 일화가 내전기의 막바지에 일어난 일이라는 점이다. 일부 알려진 전설과 달리 루클리스는 대지의 요새의 마지막 층에서 카듀멜 국왕의 병사들에게 전사한 것이 아니었다. 루클리스는 어떤 이유로 대지의 요새 마지막 층의 심장부에 외부인을 들이고 싶지 않았다고 전해진다.<br/>{np}그래서 루클리스는 대지의 요새가 함락되기 직전 요새를 탈출하였고, 카듀멜 국왕은 병사들을 움직여 그를 추적하였다. <br/>그 추적의 끝에서 루클리스는 벼랑 끝으로 몰렸다. {np}그 벼랑에 마침 커다란 바위가 있어 루클리스는 그 바위를 등지고 정면으로는 벼랑을 마주 보는 자세로 국왕의 병사를 상대하였다.<br/> 루클리스가 그 바위를 등지자 추적하던 국왕의 궁수들은 루클리스를 공격할 수 없었다. <br/> 다른 장소였다면 돌아가 맞은편과 좌우에서 포위하여 화살을 퍼부을 수도 있었겠지만, 벼랑이란 진형은 그런 공격을 할 수 없는 장소였다. <br/>{np}벼랑을 지나 허공에 뜬 상태로 공격할 수 있는 궁수가 없었기에 카듀멜 국왕은 계속 병사들을 그야말로 벼랑 끝으로 내몰았다. <br/>{np}그러나 루클리스와 그의 남은 부하들은 밀려오는 병사들을 끊임없이 물리쳤고, 그들이 하루 밤낮을 버티는 인간의 한계를 넘어선 능력을 보이자, 카듀멜 국왕의 병사들도 동요하기 시작하였다.<br/> 심지어 루클리스의 영웅적인 분투에 감명을 받은 병사와 장군들의 심적 동요로 항명이 있을 정도였다.<br/> 본래 백성들에게 인기가 없던 카듀멜 국왕은 이런 상황에서 휘하의 장수들을 다그치지 못 하였고, 그렇다고 루클리스가 지쳐 죽거나 굶어 죽기를 기다릴 수도 없었다. <br/>{np}그리고 이런 상황에서 카듀멜 국왕이 꾀를 낸 것이 바로 리디아 샤펜에게 던진 질문이다.<br/>물론 리디아 샤펜이 카듀멜 국왕의 도발에 넘어가 자신의 실력을 보여주려고 바위 뒤의 루클리스를 신묘한 곡사로 죽인 것은 아니다. <br/>여기에는 또 다른 사연이 겹쳐있다. <br/>{np}그러나 그 사연이야 어쨌든 스승의 희망이자 자신의 사형의 목숨을 제 손으로 끊은 리디아 샤펜의 감정이 얼마나 아프고 복잡했을지는 후대의 우리로서는 그저 추측만 할 수 있을 따름이다.<br/> 여하간 이 사건으로 사람들은 리디아 샤펜이 조준하는 교차선은 능히 바위로 가려진 표적도 뚫을 수 있다는 사실을 알게 되었지만, 그녀가 그날 품은 복잡한 감정의 교차선은 헤아릴 수 없음이다. <br/></p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>훈련된 궁수에게 보이지 않는 표적은 없다! 읽어볼 수 있습니다.</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

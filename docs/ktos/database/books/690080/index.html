@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="솔콤에 대한 이야기. 마우스 우클릭으로 읽을 수 있습니다. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>솔콤의 별의 탑 공략기록6 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690080" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690080" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690080" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>솔콤의 별의 탑 공략기록6</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>‘힘으로 하려면 탑이 완성되기 전에 그리 했어야 했었다’고 솔콤은 생각했다. 그렇게 생각하면서도 솔콤은 결국 총공세를 택할 수밖에 없었다. 인간 용병을 사려는 태도가 마계 상급자들의 강력한 비판을 받은 뒤라 강경책을 쓸 필요가 있었다. 그리고 그것이 아니더라도 한 번 정도는 해보지 않을 수 없는 방법이기도 했다.{np}그럴 리 없다고 생각은 하면서도 별의 탑의 샤펜스타가 경계심이 무뎌지길 바라면서, 쓸데없는 도발로 부하들을 희생하지 않고 꾸준히 병력을 모으고 프베타를 혹사시켜 마계에서 마족들을 모집하거나 징병해서 수를 늘렸다.<br/>마계에 솔콤이 마왕들에게서 야단을 맞았다는 소문이 퍼지면서 프베타가 병력과 자원을 조달하는 일이 어렵다는 불만사항을 자주 토로하기도 했다.<br/>그래도 최대한 힘을 모아서 안 해 볼 수 없는 것이 전력을 기울이는 총공세이다. 그리고 솔콤도 이번만큼은 갈 때까지 가볼 마음을 먹고 있었다.{np}그렇게 반 년이 넘게 총공격을 준비하였다. 비행 가능한 마족이 많이 부족하고, 배를 더 구하기 어려워 수상에서의 공격은 포기하여 대부분 육로?로 접근할 수밖에 없었지만, 그래도 달리 방법이 없었다.{np}이 호수의 부유석은 정말 절묘한 높이로 물에 떠 있어서 발목 밖에 안차는 물은 마족에게 충분히 해로우면서도 그 정도 수심으로는 배를 띄울 수 없기에 배를 이용할 길은 막아버렸다.<br/>리디아 샤펜은 호숫물의 수위가 항상 그 발목 정도로 유지되도록 마법 부유석이 떠있는 높이를 조절하였다. 이것은 샤펜스타 단원들에게는 항상 신발이 젖어있는 불편함의 문제였지만, 마족에게는 치명적인 문제가 되었다.{np} 전투나 전투 훈련이 없는 때면 샤펜스타의 수습단원들이 갈퀴 같은 도구 등을 들고 나와 저절로 자라는 바닥의 이끼나 물풀 등을 뜯어냈다.<br/>이들은 마법 부유석의 가장 자리까지 조심스레 나간 다음, 뜯어서 모은 풀과 수초 흙 따위를 호수에 버렸다.<br/>그러면 호수의 여러 수생 동물들이 그 풀을 먹기 위해 모였고, 나중에는 언제 떨어질지 모르는 풀을 먹기 위해 가장 자리에는 항상 모여있게 되었다.{np} 샤펜스타의 신입단원들은 그래서 항상 어디까지가 걸어 다닐 수 있는 마법부유석 지역이고 어디서부터가 한 걸음 내디디면 끝을 알 수 없는 호수심연의 바로 위인지를 입단할 때 철저히 교육받았다.<br/>그리고 수습단원 시절에 하는 이 물풀제초 작업을 통해 풀을 모아 버리는 과정에서 그 위치를 더 확실히 기억하였다. 물론 어떤 초보 단원이 실수로 물에 빠지거나 하지 않도록 노련한 선배들이 작업을 감독하는 것은 당연한 일이었다.{np} 가장자리에서 물에 빠지는 사고는 생각 이상으로 위험하였다.<br/>왜냐하면 이미 말했듯이 그곳에서 버려지는 수초를 먹기 위해 호수의 수생 동물들이 모여있기 때문이었다.<br/>이들은 가장 자리를 밟고 있을 때는 위협이 되지 않지만, 누군가 물에 빠지면 사정없이 공격하였고, 이 공격에서 살아남는 일은 무척 어려웠다.<br/>이러한 공격은 별의 탑을 수상에서 공격하는 일을 어렵게 만드는 다른 이유이기도 했다.<br/>이런 생물들 탓에 수상 공격시 배가 부서졌다면, 비록 마족이 아니라서 헤엄칠 수 있다고 하더라도 상륙할 곳이 없어지기 때문이었다.<br/>수영을 잘 하고 체력이 좋아서 가장자리까지 올 수 있었다 해도 그곳이야 말로 가장 위험한 장소이기 때문이다.{np}따라서 마법부유석이 없는 수역은 마법부유석 주변의 가장자리보다 중심이 더 안전했다.<br/>나중에 체력이 다해 가라앉기 전까지만 그렇겠지만 말이다.<br/>샤펜스타단의 보호를 받는 주민들은 이 점에서도 안전했는데, 호수의 흉포한 생물들이 샤펜스타가 주는 풀을 먹는 것은 먹이로 먹는 것이 아니기 때문이었다.<br/>애초에 그들은 육식성이지만, 리디아 샤펜이 면밀히 세운 장기간의 방어 전략에 따라 생존에 필요 없는 수초에 중독되도록 만들었기 때문이었다.{np}따라서 어민들은 흉포한 어류가 없는 중심 부근의 수역에서 육식성 어류가 없어서 엄청나게 번식한 물고기 등을 풍족하게 잡을 수 있었다.<br/>육식성의 수생 생물들은 정 배가 고파지면 그곳으로 와서 작은 물고기 등을 잡아 먹곤 했지만, 어느 정도 배가 차면 즉시 가장자리로 돌아가곤 했다.<br/>물론 가끔은 어민과 조우할 수도 있지만, 위급한 경우를 대비해 지니도록 한 수초 마른 덩어리를 멀리 던지면 그것을 따라가기 때문에 어민들이 위험한 경우는 없었다.{np}다만 샤펜스타 단원들은 수중 몬스터가 수초 때문에 어민을 노리지 않도록 가능한 자제를 요구했고, 어민들도 매우 위급한 경우에만 사용하여 그 통제를 따랐다.<br/>무엇보다 수초는 가장 자리에서 쏟아지는 양이 훨씬 많기 때문에 수중 몬스터들 역시 그 습성을 바꾸기 어려웠다.{np}그러므로 사람이 딛고 설 수 있는 호수 부분은 항상 깨끗한 상태를 유지하고 있었다.<br/>그 깨끗한 바닥을 통해 솔콤의 부하들이 호수를 통해 별의 탑으로 진격하면서 돌과 바위를 던져 그 위를 밟으며 앞으로 나갔다.{np}엄청난 흙을 날라와 부으면서 한 걸음씩 앞으로 나갔다.<br/>농성전의 기본은 성 주위를 두른 해자를 메우는 일이지만, 호수 전체가 그 해자인 상황에서는 호수 전체를 메워야 하는 황당한 상황은 역사에 유례가 없는 것이었다.<br/>다행히 발목에 겨우 차는 물이라 한 걸음 디딜 자리를 만드는 것은 어렵지 않지만 탑에 이르기까지 건널 호수의 거리와 폭은 매우 멀고 넓었다.<br/>다수의 병력이 넓게 퍼져서 진격하지 않으면 별의 탑에서 쏟아지는 투사 무기의 좋은 표적밖에는 안 된다.{np} 기세 좋게 공격 명령을 내렸는데 아무런 전투 행위가 일어나지 않고 만 하루가 꼬박 지나갔다.<br/>이는 이상한 일이지만 당연한 일이기도 했는데 마족들은 호수 위에 발붙인 공간을 만드느라 정신이 없었고,아직은 별의 탑의 투사무기들이 닿는 사정거리 밖의 공사였다.<br/>아무리 리디아 샤펜이라도 별의 탑에 배치할 수 있는 장거리 노포의 수와 사정거리는 한정될 수밖에 없었기 때문이다.{np}때문에 마법 부유석으로 이루어진 수역은 별의 탑에서 멀리 떨어져 있으면 장거리 공격에서는 안전했다.<br/>샤펜스타로서는 탑에 감시병을 세우고 뻔히 보이는 공사 현황을 살피기만 하면, 휴식을 취하고 있어도 무방했다. 때문에 고래로 적이 성밖의 해자를 메우려 들면 성 위에서는 공성군을 향해 온갖 공격을 쏟아내는 전통적인 전투의 양식은 실종되었다.{np}진격을 개시한 다음 날이 돼서야 그러한 전통적 공격이 시작되었다.<br/>솔콤의 부하들의 공사가 진척되어 사정거리 안으로 들어섰기 때문이다.<br/>샤펜스타 단원들이 멀리 호수 중심에 서있는 별의 탑에서 인간이 만든 것이라고 하기엔 믿을 수 없는 사정거리를 지닌 노포 등의 공격을 마족들 머리 위로 떨어뜨렸다. 솔콤의 부하들은 그 공격에 아무런 반격도 못하고 바닥을 메우는 일만 할 수밖에 없었다.{np} 지붕이 있는 공성탑 등을 미리 장만하여 그 안에서 작업을 하여 피해를 최대한 줄이기는 했지만,그런 장비도 계속되는 공격에는 부서지기 마련이었다.<br/>그나마 위안이 있다면 그런 장비를 부수기 위해 샤펜스타 단원들이 투석기에서 날린 바위들을 그나마 공사에 활용할 수 있다는 점이었다.<br/>별의 탑은 물위에 지어졌기 때문에 다른 공성전에서 사용할 수 있는 많은 선택지가 사라졌다.<br/>예를 들어 전통적으로 공성전에 쓰이는 땅굴파기 같은 것은 설령 물속에 굴을 파는 재주가 있어도 여기서는 쓸 수 없었다.{np}물론 리디아 샤펜이 별의 탑을 지으면서 농성전 상황 같은 기본적인 준비를 안 했을 리가 없다는 점은 솔콤도 익히 생각하고 있었다.<br/>적이 호수라면 자신은 바다처럼 많은 마족과 몬스터를 동원해서라도 이겨야 한다고 생각하였다. 무엇보다 마계의 상급자들이 그런 압박을 그에게 주고 있었다.{np} 그러나 얇은 물을 메우며 진격하는 속도는 더디기만 했고, 피해는 늘어만 갔다.<br/>피해가 늘어도 싸움을 좋아하는 마족과 흉폭한 몬스터라면 불만이 없었던 것이 그간 마계의 성향이었다.<br/>그러나 이곳의 상황은 달랐다. 화끈하게 싸우지는 못하고 물바닥만 쳐다보고 있는데 피해가 나오니 하급 마족들의 불만이 마구 터져 나왔다.<br/>차라리 정말 강한 적과 맞서 싸우면서 죽어나가는 상황이라면 어지간한 경우 마족의 성향상 통제가 가능하다.{np} 그러나 적의 모습은 구경도 못하고 적의 투사 무기나 투석 그리고 화살 말고는 보는 것이 없는 상황에서 솔콤을 향한 하급자들의 불만은 커져만 갔다.<br/>프베타 역시 말은 안 하지만, 솔콤을 보좌하면서 점점 불만이 쌓이고 있는 모양이었다.{np} 그래도 결국 시간이 흘러 공격의 선두가 별의 탑 입구를 코앞에 두는 상황이 되었다.<br/>이제까지 날아오는 투석 따위를 공중에서 요격해 방향을 바꿔 마족의 피해를 줄이는 일에 힘쓰던 비행 마족들을 본격적인 전투에 들어가도록 하고,<br/>일부는 메우기 작업에 남기면서도 많은 마족을 얼마 안 남은 거리는 물을 밟아 피해를 입더라도 돌진하라는 명령을 내려 총공격을 시작한 지 며칠 만에 겨우 총공세다운 총공격을 할 때가 왔다.{np} 당연히 별의 탑에서는 아래를 향해 끓는 물, 투석, 화살, 화염, 각종 마법을 쏟아부었다. 공중에서 공격하는 마족들도 샤펜스타 단원들의 화살을 맞고 호수에 떨어져 가라앉거나 부유석에 떨어져도 그곳이 진격하면서 메운 곳이 아니면 호숫물에 피해를 입고 결국 절명했다.<br/>전황은 조금도 유리하지 않았지만, 그래도 솔콤측으로서는 처음으로 싸움다운 싸움을 하는 셈이었다.{np} 솔콤은 설령 이 공성전에서 이기든 전멸하든 끝장을 볼 생각이었다. 이미 모든 병력이 호수의 수역내로 진입한 상황이었고, 자신도 앞장 서 공격에 나섰다.<br/>농성전에서 난공불락의 성이란 없다는 것은 불변의 사실이었다.<br/>다른 요소가 없다면 일반적으로는 농성자는 결국 물자가 떨어져서 지게 된다.<br/>농성자들의 승리는 적절한 시기에 구원병이 도착하거나 외부에 아군이 있어서 지속적으로 포위자를 괴롭힌 끝에 인내심의 싸움에서 이기는 것이지 방어설비의 단단함은 시간을 벌어주는 기능이 전부다. 그리고 그 시간을 견디지 못하는 측이 패하는 것이다.{np}솔콤은 그렇게 믿고 싸움을 독려하였다.<br/>그 때 갑자기 솔콤은 불길한 예감을 느끼고, 위를 올려다 보다가 리디아 샤펜이 별의 탑의 한 망루 난간에서 자신에게 활을 겨누고 있는 것을 발견하였다.<br/>한참 동안 그러고 있으면서 솔콤이 뭔가를 느끼고 그녀를 보기를 기다렸던 것 같았다.{np}솔콤은 그녀가 쥔 활과 화살이 바로 마왕 지부리나스를 죽인 그 무기라는 사실을 바로 알 수 있었다.<br/>한 발로 자신의 숨통을 끊을 수 있는 화살이다.<br/> 솔콤도 리디아 샤펜이 자신을 저격할 수 있기 때문에 선두에 서는 일이 위험하다는 점을 알고 있었다.<br/>그러나 그렇게라도 하지 않으면 부하부터 상급자까지 마족들의 팽배한 불만을 누를 길이 없다고 판단해 나선 것이었다.{np}제스티에게 불려가는 일까지는 견딜 수 있겠지만, 만약 제스티가 카르타스에게 자신을 도로 보내면 카르타스는 실패에 대한 문책으로 솔콤에게 무슨 짓을 할지 알 수 없었다.<br/>카르타스의 장난감이 되어 고문을 받느니 차라리 리디아 샤펜의 화살에 맞아 죽는 것이 나았다.{np} 솔콤이 리디아 샤펜을 주시했음에도 그녀는 화살을 쏘지 않았다. 도리어 그녀는 화살을 거두더니 이렇게 말했다. [멍청아. 너희들이 딛고 서 있는 것은 마법으로 물에 띄운 석재구조물이라고.]<br/>그 말은 먼 거리에도 불구하고 솔콤 같은 마군주에게는 명확히 들렸다.<br/>하지만 그 의미는 명확하지 않았다. 그러나 다음 순간 그 의미는 설명할 필요도 없이 몸으로 느낄 수 있었다.{np}발이 떨리는 느낌이 들더니 바닥 전체가 아래로 침강하고 있었다.<br/>어지간한 일에는 꿈쩍도 하지 않는 마족 중에도 비명을 지르는 자가 있을 정도였다.<br/>사방에서 물이 쏟아져 들어오면서 마족들을 녹이고 불태웠다.<br/>물속에서 불에 타올라 죽어가는 부하들을 보면서 솔콤은 할 수 있는 일이 없었다.<br/>그제야 상대가 적이 충분히 들어올 때까지 기다렸다는 사실을 알 수 있었다.<br/>공격은 커녕 빠져나가는 거리가 시간이나 분단위가 아니라 날짜 단위로 세야 하는 곳에 있었다.<br/>날거나 부유하는 능력이 있더라도 화살 공격을 받으며 벗어나야 했다.{np}소수와 간신히 살아나왔을 때 마계에서 추가로 데려온 마족들을 이끌고 프베타가 도착하였다.<br/>그리고 넋이 나간 솔콤을 대신해 생존자들을 수습하고 새로 끌고 마족들이 동요하기 않도록 달랬다.{np}프베타가 그 후 조사하여 한 보고에 의하면, 마법부유석을 위아래로 움직이거나 위치를 바꾸는 일은 별의 탑에서도 무척 부담스러운 일로 자주 할 수 없다고 하였다.<br/>한 번 사용하면 몇 십 년은 다시 마력을 충전을 해야 사용할 수 있다는 것이 마법 전문가들의 견해라고 하였다.{np}하지만 당시의 솔콤이나 프베타로서는 거기까지 생각할 여유가 없었다. 부유석이 움직인 탓에 그간 한 진출로 공사가 쓸모 없게 되었기 때문이었다.<br/>물에 쓸려가지 않고 남은 부분은 샤펜스타 단원들이 탑에서 나와 치우기 시작했다. 투석에 쓸만한 것 등은 탑으로, 나머지는 호수에 던져졌다.{np}그 작업을 방해하러 부하들을 보내기도 했지만, 기본적으로 호숫물과 접촉하면서 싸우는 일은 큰 부담이었고, 상황을 훤히 보는 탑 위에서 경고를 발하면 작업하던 샤펜스타 단원들은 조를 나눠 활을 쏘면서 한 조가 탑으로 달리는 동안 다른 조가 공격을 하는 방식으로 침착하게 후퇴하곤 했다.<br/>솔콤은 억울한 면이 없지 않았으나 이 패전으로 마족 사회에서 아래위로 다 신망을 잃었다.<br/>하급마족들은 감히 내놓고 말하지 않았지만, 솔콤도 모르지 않았다.<br/>그러나 위신을 회복할 방법이 떠오르지 않았다.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>솔콤에 대한 이야기. 마우스 우클릭으로 읽을 수 있습니다. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>
