@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="創造梅基耶爾國王時代的達歐卡卡之冒險故事，點擊滑鼠右鍵可以閱讀。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>達歐卡卡的冒險 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/twtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/twtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/twtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/twtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/twtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/twtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/twtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/twtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/twtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/twtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/twtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/twtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/twtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/twtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690095" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690095" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690095" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>達歐卡卡的冒險</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p> 有許多學者推測下面的口傳文學是梅基耶爾王國時期所創作的，是約超過 900年歲月，王國膾炙人口的故事。<br/>有關達歐卡卡的意外冒險故事有非常多的版本，但我認為這是最接近真實的。<br/>{np} - 賢者大師魯帕斯 凱赫爾<br/>{np} *達歐卡卡Taokaka的冒險<br/>{np} 某天，達歐卡卡走在幽靜的道路上遇見了魔族。<br/>達歐卡卡是位不管何時或是什麼情況，都會親切與人打招呼的少年，所以他也向魔族打招呼了。<br/>同時對達歐卡卡來說，遇到魔族或危險並不是他第一次遇過或是陌生的事情了。<br/>{np} [你好，你在做什麼呢？]<br/>[我正打算轉動命運輪盤。]<br/>魔族心不在焉地回答著。<br/>果然那個魔族前面放著輪盤。<br/>{np} [輪盤？為什麼要轉動那個輪盤呢？]<br/>[這個輪盤是命運的輪盤，如轉動這個輪盤，就能夠擁有對方有的東西，也能夠給予對方沒有的東西，同時這樣交換的所有東西都會附著在這輪盤上。然後再次轉動輪盤時，輪盤上的東西就會隨機給予持有者一個。]<br/>{np} [那很好噎。]<br/>[也不一定都很好，雖然能從遇見的對象身上交換到他所擁有的東西中最珍貴的東西，同時也能讓他失去最珍貴的東西，但那在回到輪盤主人那裡時，是無法得知能在其中獲得什麼的。<br/>{np} 但只要擁有一次這個輪盤，就一定要轉動七次，同時在轉動第七次時，就必須要收下跳出來的東西。]<br/>[那你轉到第幾次了呢？]<br/>[第六次了。]<br/>{np} [那不就還要再轉一次嗎？]<br/>[如你說要接受這個。]<br/>[如我說不接受的話？]<br/>[那麼你就得死。]<br/>[那就不能不接受了。]<br/>{np} [沒錯，在遇到你之前，我遇到了另一個人，因他拒絕了我，所以我就把他殺了，所以如果你不想死，就只能接受這個魔法的輪盤，而我則會從這段時間輪盤收集的東西中獲得ㄧ個後離開。<br/>{np} 到目前為止，我都是仔細挑選過對象旋轉輪盤的，所以裡面只有好東西，因此如你現在轉動將能獲得一個最珍貴的東西，輪盤會從以前從其他人那裡搶來的物品中選出兩個，一個給你另一個給我，所以這對你來說也不是件壞事。<br/>{np} 但我要提醒你，如不是第七次，輪盤是不會出現兩個物品的，一般都只會獲得一個，並且給出去一個。]<br/>[我知道了，那快點轉動輪盤，然後給我。]<br/>魔族在感到解放的同時，也對這漫長時間以來累積的一切感到非常有成就，並且轉動了最後一次輪盤。<br/>{np} 雖然魔族和達歐卡卡都知道有某個東西會從達歐卡卡身上消失進入到輪盤裡，但他們都不知道那會是什麼。<br/>魔族看著那個並且開口說。<br/>{np} [看來有某種抽象的概念或心之類的在轉移，因為眼睛看不到啊，如是智力或勇氣的話，你應該會突然變笨或是毫無理由地感受到恐懼，但你看起來不像這樣，看來現在我們不能知道那是什麼。]<br/>{np} 話一說完，又有某個東西從輪盤那裡出來進入到魔族身體裡。<br/>那也是看不見的東西，但這次卻能立刻得知道那是什麼。<br/>因爲魔族的模樣變得比之前還要更加恐怖了。<br/>不管誰看到都會知道魔族獲得了某種強大的力量。<br/>{np} 魔族變兇暴的同時，他露出了滿足的笑容並且開口說。<br/>[我獲得了龐大的力量了，這樣在魔界我就能立刻獲得魔君主的地位了。要是也能獲得無限的生命力，那麼對在魔界戰鬥和繼承地位將會有很大的幫助的，但目前這樣我已經感到滿足了。<br/>{np} 總之，再見了少年，我要走了，你已經不是我的對手了，哈哈哈。]<br/>說完魔族就消失的無影無蹤了。<br/>{np} 達歐卡卡內心看來並沒有受到什麼影響， 拿起了輪盤後又再次散起步來。<br/>[看來馬上又會再次見面的..]<br/>{np} 拿著輪盤散步的達歐卡卡被某處傳來的音樂聲給吸引，他跟隨著音樂聲來到了一個寬廣的森林空地，那裡有一群人正在舉辦面具舞會。<br/>達歐卡卡在那裡轉動了輪盤，接著音樂就被吸道輪盤裡了。<br/>{np} 因音樂在那裡是最好的東西。<br/>但相反地輪盤卻給了那裡沒有的真實，人們全都脫下了面具，大家在看到彼此的真面目後，都認為宴會結束了，因此四散離開了。<br/>{np} 達歐卡卡離開了那裡後又再次踏上了路途。<br/>這時達歐卡卡在路上看到了掉落在地上的玩具劍。<br/>這把劍看起來雖是長劍，但卻是一把只有手掌般大的玩具劍。<br/>達歐卡卡把那把玩具劍放在前面，並且轉動起輪盤。<br/>這時玩具劍中最棒的樂趣跑了出來。<br/>{np} 而在玩具中缺乏最重要的是能和它一起玩的主人，因此輪盤就給了玩具劍一個主人，所以玩具劍也就變成了達歐卡卡的東西了。<br/>{np} 擁有輪盤和玩具劍的達歐卡卡又繼續往前走，這時他在路上遇到了一位面露無趣、正在挖地的工人。<br/>達歐卡卡走向他，並且在他前面轉動了輪盤。<br/>{np} 這時輪盤將玩具劍裡獲得的樂趣給了這個工人，而這個工人也突然發現原本無趣的工作變得有趣了。<br/>同時工人擁有最珍貴的一日工錢也被吸到了輪盤裡了。 <br/>{np} 工人宛如做夢一樣，雖然他知道他無法獲得今天的工錢，但他想著只要明天開心的工作，能獲得明天的工錢就可以了。<br/>{np} 甚至不在現場但卻必須要支付工錢的雇主也不知道自己該何時如何支付工錢，但既然已經發生這種事情了，所以一點也不感到奇怪。<br/>{np} 達歐卡卡在那之後繼續走著，雖然經過了很多地方遇到了很多人，但他都沒有想要轉動輪盤就這樣離開了。<br/>然後他遇到了一個被丟棄的酒瓶，達歐卡卡在酒瓶前轉動了輪盤。<br/>{np} 這時酒瓶上的臭氣和宿醉被吸進了輪盤裡。<br/>輪盤則是給了酒瓶音樂。<br/>就這樣達歐卡卡擁有了喝了就能聽到音樂卻不會醉的酒，然後他又再次踏上了路途。<br/>{np} 隨著時間的流逝，讓達歐卡卡停下腳步的地方是某位騎士的屍體前。<br/>這個人在變成屍體前，看似做出了不少的抵抗。<br/>因為在那屍體附近有把劍，上面充滿著激鬥的痕跡。<br/>{np} 達歐卡卡在那騎士的屍體前轉動了輪盤。<br/>接著那屍體擁有最強烈的死亡被吸進了輪盤裡。<br/>而輪盤則是將最早魔族消失之前所提到的無限生命力給予了那個騎士。<br/>{np} 當屍體在獲得生命力後，騎士復活了。<br/>復活的騎士和達歐卡卡聊了一下，並對他表示謝意。<br/>達歐卡卡在與騎士對話的過程中，得知了殺死騎士的魔族就是把輪盤給他的魔族。<br/>{np} 同時騎士還說，那個魔族在各處獲得好東西的過程中，根本不介意會給對方帶來什麼不好的東西，因此有不少人受害。<br/>騎士表示當初為了追擊犯下暴行的魔族，最後反倒被魔族所殺。<br/>{np} 騎士表示想要再次追擊那麼魔族，而達歐卡卡也說想要出一份力。<br/>因為達歐卡卡因那個魔族的關係，輪盤從他身上拿走了某個東西，他想要再次把那個東西找回來。<br/>{np} 達歐卡卡為了找回自己的東西，他認為如果要對某人轉動輪盤，那麼那個對象就一定要是那個魔族才行。<br/>所以達歐卡卡和騎士兩人就決定一同踏上尋找魔族之路。<br/>因第七次必須要以那個魔族為對象才能轉動輪盤的關係，因此達歐卡卡決定要在轉動一次輪盤。<br/>{np} 達歐卡卡在慎重思考後，選擇了玩具劍並且轉動了輪盤。<br/>這時輪盤給予了玩具劍從騎士屍體上獲得的死亡。<br/>{np} 同時之前玩具劍透過輪盤所獲得的主人也消失了，玩具劍再也不是達歐卡卡的，變成了不屬於任何人的了。<br/>嚴謹地來說，玩具劍的主人變成是輪盤了。<br/>{np} 但輪盤雖從騎士屍體上吸收了死亡，但在把死亡給予玩具劍時，不光只是給予了騎士的死亡，而是讓死亡籠罩在玩具劍上，所以這次說不定不是單純只是玩具劍的主人，也有將‘主人的權利’這個抽象的概念轉移的可能性。<br/>{np} 但不管怎麼樣，玩具劍現在籠罩著死亡，所以不管是誰碰到都只有一死。<br/>另外因它沒有主人，所以也會變成誰都無法操控的恐怖魔劍。<br/>但恰巧的是，再次復活的騎士現在獲得了無限的生命力，因此籠罩在玩具劍上的死亡是無法殺死騎士的。<br/>{np} 所以騎士就變成了唯一能擁有玩具劍的人，<br/>因此騎士收起了死亡的玩具劍，然後兩人又再次踏上了尋找魔族之路。<br/>最後他們終於又遇見了把輪盤給達歐卡卡的魔族了，再次遇到他們兩人的魔族開口說。<br/>{np} [這還真是難得啊，竟然會再次遇見你，而且還有這個騎士，你分明就被我殺了啊，你是怎麼復活的？]<br/>達歐卡卡接著說。<br/>[那些都不重要。]<br/>[那重要的是什麼呢？人類少年。]<br/>{np} 魔族一問，達歐卡卡便回答說。<br/>[我想要拿回你利用輪盤從我這裡拿走的東西。更仔細地說，就是把我失去的東西還回來，不管那是好的還是不好的，因為那都是屬於我的東西。]<br/>{np} 魔族對此話感到好奇地問到。<br/>[那輪盤從你那裡拿走了什麼呢？]<br/>[我聽我奶奶說過，我在出生時曾獲得女神贈與的禮物，那個禮物叫做伴隨幸運的不幸。]<br/>{np} [伴隨幸運的不幸？]<br/>[沒錯，因為我同時擁有幸運和不幸的關係，所以我才常會遇見像你這樣的魔族或是遇到不同的危險，但我同時擁有幸運的關係，所以總是能夠渡過難關。但這次好像只被輪盤吸走了一半。]<br/>{np} 聽完，在一旁的騎士說到。<br/>[看來被輪盤吸走的是幸運，而沒被吸走的不幸因無處可去，所以跑來找到某人的啊。]<br/>{np} 達歐卡卡也點點頭說到。<br/>[好像是這樣沒錯，所以你才會再次遇見拿著輪盤的我的。]<br/>說完，達歐卡卡轉動起輪盤。<br/>魔族想要快速閃避，但已經太遲了，從輪盤裡出來的某個東西已經進入到他的身體裡了。<br/>{np} 雖然轉動了輪盤，但了解輪盤特性的魔族認為自己還有機會。<br/>因此他用盡自己擁有的力量朝向達歐卡卡和騎士，想要再次搶回輪盤。<br/>他認為就算輪盤拿走了曾經給予他的力量，光靠他本來充足的力量，搶回輪盤並不是件困難的事情。<br/>{np} 幸運的是，輪盤沒有奪走曾經給予他的力量。<br/>反而是吸走了再次遇見的達歐卡卡的不幸。<br/>{np} 到目前為止，雖然對魔族是件好事，但輪盤卻將酒瓶那裡吸收來的強烈臭氣和宿醉給了給魔族。<br/>魔族雖然還有意識，但卻無法自由地採取行動。<br/>{np} 最後連話都無法好好說地倒在地上。<br/>達歐卡卡已不想再轉動輪盤了。<br/>因他所獲得的幸運已從輪盤再次會到他身上了，而從魔族身上吸收的不幸也再次與它的另一半幸運結合，並且回到了達歐卡卡的身上。<br/>{np} 但倒地的魔族知道唯一讓自己恢復的方法就只能靠輪盤，因此奮力地用爛醉的身體勉強採取行動，朝向達歐卡卡走來。<br/>達歐卡卡乖乖地將輪盤放在地上並且往後退。魔族露出了酒醉人特有的笑容，用滿足的表情撿起了輪盤。<br/>{np} 然後用那種開心的表情轉動了輪盤。<br/>就在這時，輪盤從魔族身上拿走了宿醉和臭氣，並且給予了主人的資格。<br/>{np} 現在魔族變成了輪盤永遠的主人，而輪盤再也無法給予其他人了。<br/>但魔族雖知道臭氣消失了，但他卻無法得知輪盤給予了他自己什麼。<br/>{np} 這時，騎士站出來用玩具劍抵著還未掌握情況的魔族。<br/>這時的魔族還沒搞清楚狀況，外加看到這有如手掌般大的玩具劍，他完全沒有想過要阻擋或是閃避。<br/>{np} 但殊不知那是把死亡之劍，就這樣魔族被玩具劍給殺死了。<br/>而輪盤也因為擁有主人資格的存在死了，再度變成了無法擁有主人的物品。<br/>{np} 騎士和達歐卡卡只知雖然他們想要嘗試，但都無法再次轉動輪盤，甚至也無法撿取或拿起輪盤。<br/>{np} 最後騎士和達歐卡卡離開了那裡。<br/>在他們離開沒多久後，拉伊瑪女神出現了。<br/>拉伊瑪女神輕輕地拿起了那個誰都無法擁有的輪盤。<br/>{np} 再次確認自己命運的拉伊瑪女神帶著她所創造的命運輪盤消失了。<br/>而這也是擁有不醉歌唱酒瓶的達歐卡卡和擁有必死劍的騎士的故事結尾。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>創造梅基耶爾國王時代的達歐卡卡之冒險故事，點擊滑鼠右鍵可以閱讀。</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

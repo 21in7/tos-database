@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="記載著王國各處流傳下來的神祕場所的書。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>傳說中的洞窟 : 改版 2卷 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/twtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/twtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/twtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/twtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/twtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/twtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/twtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/twtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/twtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/twtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/twtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/twtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/twtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/twtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690052" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690052" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690052" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>傳說中的洞窟 : 改版 2卷</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_01red.png" />
+            <h3>Content</h3>
+            <p>在王國歷史開始被記載的<br/>許久之前，這塊土地上就流傳著<br/>一些關於神秘又驚奇的<br/>故事。<br/>這本書記載著<br/>在那些故事之中，<br/>最為人知曉的三個傳說<br/>故事。{np}在無數的傳說之中<br/>，<br/>選定往後要記錄場所<br/>的原因，是因為<br/><br/> 民眾對寶物與黃金等財富<br/>的關心，相當濃厚，<br/>甚至成為女神信仰<br/>的基石。<br/><br/> 現在在三個故事之中，<br/>我就來為你簡單介紹<br/>阿爾蘭必傳說吧。{np}第2章：被隱藏的王陵傳說<br/>-<br/>大森林地帶自古以來因為蓊鬱的<br/>山林而成為貴族們平時的<br/>狩獵場，也在發生緊急狀況時<br/>變為貴族和一般百姓的避難所<br/>。因此<br/>人們都有<br/>在這裡經歷過一些事<br/>是很理所當然的。但奇怪的是，卻沒有任何跟王室相關的<br/>故事，原因在於這裡有著<br/>坦尼爾2世時期在這裡建造了<br/>秘密王陵後，也把為數眾多的<br/>陪葬品一起埋進去的<br/>謠聞。{np}王室之間因為先王的<br/>秘密陵墓佇列於此，反而對這個地方<br/>裝作漠不關心的樣子。{np}其實，<br/>坦尼爾2世的正式葬禮紀錄<br/>和歷代先王不太一樣，與真實不符的謠言<br/>讓其失去可信度。因為<br/>歷代先王們不管是火葬或是<br/>土葬都會留下明確的紀錄。<br/>不過就算這些傳聞都是真的<br/>，這個墳墓似乎不會有與世人見面的<br/>那一天了。{np}因為想在這樹林深處<br/>到處尋找王陵位置，<br/>再怎麼樣小心也很難逃過掌管大森林地帶的 <br/>梅德依那女神<br/>的法眼。<br/>所以這個傳聞即使<br/>是事實，也只能<br/>永遠當作傳說流傳了。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>記載著王國各處流傳下來的神祕場所的書。</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>0</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

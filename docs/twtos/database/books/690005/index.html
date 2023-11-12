@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="利迪亞夏班傳給弟子們的道具相關教訓。可以閱讀。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>利迪亞夏班的箭尾槽 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/twtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/twtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/twtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/twtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/twtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/twtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/twtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/twtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/twtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/twtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/twtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/twtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/twtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/twtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690005" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690005" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690005" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>利迪亞夏班的箭尾槽</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_01red.png" />
+            <h3>Content</h3>
+            <p>{s35}<br/>利迪亞夏班的箭尾槽{/}{np}根據傳聞，這是某天發生在星之塔的事。<br/>某天，利迪亞夏班的門徒在星之塔中展開爭論。<br/>據說多名門徒在訓練後閒聊途中出現這種話題。<br/>[無論再好的弓，如果使用者能力拙劣就無法把威力發揮出來。因此重要的是自身的能耐。]<br/>其他門徒反駁了某門徒的這種主張。<br/>{np}[你忘了弓箭手的基本。何謂弓箭手？ 弓箭手就是使用弓這種工具的人。沒有弓的弓箭手能存在嗎？ 就算自身的武藝再高，如果用刀與槍施展武藝，那怎麼能成為弓箭手呢？ 總歸，弓箭手必須依賴工具。]<br/>{np}於是有不同見解的門徒再次反駁。<br/>[既然你說工具重要，那我們就針對這點來說吧。<br/>所謂的弓的定義到底是甚麼？就像石弓這種比較不需要使用者能力的武器，以及會被使用者能力大幅左右的巫蠱師的武器，弓箭手能使用的武器也是很多元的。<br/>巫蠱師的風箭是很難以弓去控制的，即使用再好的材料打造，沒經驗的人就是很難上手。]<br/>{np}然而石弓或十字弓真的是誰都能使用的武器嗎？其實不然。<br/>依照你的主張，必須有工具才會有弓箭手的存在，但這是錯的。{np}#VALUE!{np}如果沒有風和空氣，射出的箭與子彈就無法命中目標，如此一來就不會有神射手的存在，而名弓又有什麼意義呢？ 最後，對弓箭手而言，最重要的是去感覺風的流動，並讓自己的意志與風結合。]<br/>{np}此後門生的爭論也不斷持續下去，並演繹出更多樣有趣的主張與理論。<br/>最後門生也開始好奇他們的師父─利迪亞夏班是怎麼想的。<br/>所以門生都去找利迪亞夏班，並把至今的對話告訴他等待利迪亞夏班解答。<br/>{np}據說當門生來找利迪亞夏班時，她正好在用箭頭的尖刃剝栗子吃，並且危險地跨坐在星之塔的欄杆上。<br/>{np} 利迪亞夏班繼續吃著栗子並傾聽門徒們反覆論述的主張，他暫時安靜地不動聲色，接著就用手指撥弄自己吃完後堆積下來的栗子殼，並從中拿起某樣東西如此說道。<br/>[這是什麼？]<br/>一名反應快、眼力好的門徒最先回答。<br/>[那是栗子的內皮。]<br/>{np}那確實是栗子內皮，因此其他門徒也點點頭等待師父開口說話。<br/>於是利迪亞夏班便繼續說下去。<br/>[不對。這是我的箭尾。]<br/>{np}聽說利迪亞夏班說完就把栗子的內皮夾在手指之間，並用它包住時常置於身邊的箭的尾端，將之當成箭尾槽般使用並把箭射向天際。<br/>據說利迪亞夏班用奇怪的方法消除門徒們的爭論，並從欄杆上縱身而下留下不知所措的門徒們離去。<br/></p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>利迪亞夏班傳給弟子們的道具相關教訓。可以閱讀。</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

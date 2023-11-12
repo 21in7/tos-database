@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="賢者大師所執筆的現代大師們的故事，點擊滑鼠右鍵可以閱讀。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>現代大師總覽3卷 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/twtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/twtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/twtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/twtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/twtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/twtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/twtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/twtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/twtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/twtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/twtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/twtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/twtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/twtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690092" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690092" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690092" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>現代大師總覽3卷</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>*現代大師總覽 第3卷<br/>{np}本次的人物大多是奉職期間很長，已經廣為人知的人。<br/>因此即使沒有過去總覽的幫助，也能輕鬆著述。<br/>只是一如既往地，關於當代的大師們，同一個大師在論述時總是會有發生誤會與矛盾的可能。<br/>{np}但若是因為這樣就不留下當代紀錄，尤其是現在這種因神樹之日，導致未被紀錄的事實很可能消失的時期，可能會無法將我們時代的歷史傳給後人，因此我更該對歷史多加一筆紀錄。<br/>{np}賢者大師魯帕斯 凱赫爾<br/>{np}1. 劍士大師 拉修亞<br/> 拉修亞是從軍隊最低階級的出發，進而變成將軍的平民出身大師。<br/>擔任過兩次王室的警衛隊長，就算成為將軍，也不排斥新兵訓練這種相對無聊的工作，是一位以忠實聞名的軍人。<br/>{np}雖然他已正式轉役，但他接到柯拉佩達的新兵募集使命後，臨時回歸，因此在沒有額外指示的現在，有人說他法律上還是現役。<br/>其實拉修亞雖然已卸下警備隊長與訓練所長等職責，若是軍隊請他過去，他還是會接下工作，真正的原因只有他自己知道。<br/>尤其警衛隊長的職位是給了高地戰士大師道格拉斯布雷克之後，又回到他手上，再指名給拉明將軍而為人所知。<br/>{np}除了這些自然而然廣為人知的事件，其他的事情畢竟屬於軍隊機密，在這裡無法仔細說明。<br/>{np}2. 瑪利亞利德輕裝步兵大師<br/>瑪利亞利德在某個方面來說是個奇特的人物。<br/>她與相關領域的其他大師不同，她與軍隊無直接的關係。<br/>這種情況，通常是與傭兵有關，而她也沒有。<br/>{np}兩者都不是的話，可以把她歸類為喜歡獨自行動的大師，但率領著許多弟子的她，也不適用於這種情況。<br/>她與跟隨她的人雖然都被雇為傭兵，或拿取報酬做事，但傭兵不是她的主業。<br/>也許是因為這種個性與率領的集團特色，瑪利亞利德才會一直拒絕高地戰士大師的協力請求。<br/>{np}3. 烈焰法師大師阿布雷梅林<br/>阿布雷梅林是少數並行了女神信仰與魔法學探討這兩種很難雙管齊下的知識，而且還做出成效的魔法師。<br/>{np}由於她對於魔法學術的高度成就，火之女神加比婭的恩寵更甚，她對於火焰的成就被認為達到歷來最高的境界。<br/>就算是鼎盛時期的亞佳伊拉弗羅里與她用火焰魔法對決，只怕也抵擋不住阿布雷梅林的攻勢。<br/>{np}4. 法師大師路其雅<br/>平民出身，連才能也平凡的路其雅，在她還是學徒的時候，學習魔法的資質不足。<br/>{np}但是由於她不屈的意志，克服了資質上的困難，躋身大魔法師之列。由於過去的經驗，她現在扮演著幫助甫學習魔法之人的角色。<br/>路其雅通常都會以鼓勵的方式來進行指導，但對於小看魔法師這條道路，或者不好好修練的人可是非常嚴格的。<br/>{np}5. 牧師大師羅查利亞<br/>羅查利亞是柯拉佩達與夏奧雷伊等地工作的治療師，她發揮治癒與照護等聖職者的才能，幫助了許多人，正因為如此，年紀輕輕就受到了許多人的愛戴。<br/>{np}瘟疫醫生大師由於和羅查利亞的年齡相近，在他引退之際，就算羅查利亞繼承他的位置，也無法長久奉獻，這點令人十分遺憾。<br/>因此也許她無法成為下一代的瘟疫醫生大師，但瘟疫醫生大師指明羅查利亞，要她在自己有個三長兩短的時候，代替自己的位置。<br/>若真的有那麼一天，聽說羅查利亞在牧師大師瘟疫醫生大師時，不管哪一個職業先出現了合適的繼承者，她都會將位置傳給該人。<br/>{np} 6. 聖火祭司大師黑魯庫斯<br/>在所有的聖職者中，聖火祭司是擁有最傳統女神信仰的聖職者。<br/>聖火祭司重視傳統與過去，被認為是平均年紀最大的聖職者職業，也有不少因為這是最傳統也最正統的女神信仰，而早早走上這條路的聖職者。<br/>{np}而且這些人大多不會脫離這條路，他們尋求最誠摯的信仰生活。<br/>黑魯庫斯是一位資深的聖火祭司，他擁有誠摯的嚴肅感，同時擁有能將女神恩惠的傳達給他人的親和力。<br/>{np}他也是聖殿十字軍大師的好友。<br/>這份友誼，在我們這個時代，兩大聖職者古老宗教，關係已經比過去友好了。<br/>與其要說過去有什麼問題，不如說是彼此太疏遠了。<br/>{np} 7. 弓箭手大師艾德蒙達斯提羅<br/>艾德蒙達斯提羅沒落的貴族後裔，在很久以前，他的祖先就已經成了平民。<br/>此後他的家族世代務農，而參軍的他，成功成為了大師。<br/>{np}想到自己的過去，他對協助有能力與處境困難之人很有興趣，也關心星之塔的事。<br/>為了保護柯拉佩達這種大都市的居民，最近也致力於城牆的修繕與物資的存儲。<br/>{np} 8. 弩箭手大師里恩托伊洛<br/>神術之日前的里恩托伊洛，將大多數的時間用於把玩十字弩、改善自己的各種裝備，以及研究利迪亞夏班的傳承等。<br/>{np}聽說他也是屬於微胖的身型。<br/>雖然他是個努力不懈的人，但他會有魁梧的外表，似乎是因為他可以在大師的工作與自己的興趣中取得平衡的緣故。<br/>{np}因此現在看到他外表與他的日常的人，都無法否定他在神樹之日後，為柯拉佩達做的努力。<br/>但某些喜歡說別人閒話的人，就八卦說他是為了討好獵人大師皮歐那伊艾巴，才做那些事情減肥的。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>賢者大師所執筆的現代大師們的故事，點擊滑鼠右鍵可以閱讀。</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

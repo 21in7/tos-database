@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="尼柯波爾利斯的起源故事，點擊滑鼠右鍵可以閱讀。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>尼柯波爾利斯的起源 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/twtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/twtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/twtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/twtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/twtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/twtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/twtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/twtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/twtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/twtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/twtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/twtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/twtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/twtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690090" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690090" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690090" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>尼柯波爾利斯的起源</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>尼柯波爾利斯的起源<br/>- 王國曆 1096年。<br/>賢者大師魯帕斯　凱赫爾<br/>{np}第14代國王巴爾堤內國王在位15年時，建國初期的活力開始衰退，這個時期，黨派與政爭達到了巔峰。<br/> 正確來說，是王國曆348年至363年這段時期，距今約700年前。<br/> 由於巴爾堤內國王無法控制不穩定的內政，即改革各項軍制，在位期間為王國軍打下了基礎。<br/> 以杰洛梅爾國王時代的法典與對貴族實行的各種律法，因而帶來王國的長治久安來看，算是從另一個方向對巴爾堤內國王各種軍事制度進行解決。<br/>同樣地，這種軍制改革對解決巴爾堤內國王後期與下一任國王尤斯爾時代初期的朝廷紛爭有很大的幫助。<br/> 因此，尤斯爾國王時代到這段時期的黨派與政爭受到了相當程度的解決，但巴爾堤內國王時代開始承繼下來的朝外問題則需要一個新的開始。<br/>{np}其中最大且最重要的問題就是魔法師。<br/> 此時的一部份魔法師組成聯盟，且力勸其他魔法師也加入他們。<br/>{np}在魔法師加入後，就會要求他們遵守條約，最終，當時的魔法師社會分成了聯盟派與非聯盟派，兩派對峙的局面。<br/> 而組織能力較為領先的聯盟派，自然比非聯盟派的力量更強大。<br/>{np}所幸王國內有許多擁有女神力量的聖職者與強悍的武士，若非如此，僅靠組成聯盟的魔法師，其力量便足以顛覆社會，造成人心恐慌。<br/> 據傳，當時組成聯盟的魔法師，若是純粹是因為力量強悍，應該不會如此張狂，那些參與聯盟的魔法師裡，至少聯盟內地位一些相對高階的魔法師，肯定有人想藉由聯盟的力量來得到權力。<br/>{np}比起聯盟派，非聯盟派內多是獨自行動的隱士型魔法師，或是專攻研究的研究型魔法師。<br/>因此即使聯盟派的魔法師不追求世俗權力，魔法師社會的主導權與氛圍，仍然會偏向聯盟所期盼的方向走。<br/>{np}但一些眼光較長遠的人們開始擔心，若對這個部份置之不理，時間一久，魔法師社會的核心不知道會如何發展。<br/>因為這可能會對整個王國社會帶來嚴重的危機。<br/>{np}因此尤斯爾國王當時的對策，便是援助非聯盟派的魔法師們。<br/>王國在政策上與財政上支援他們的研究與生計。<br/>得知此事的聯盟派的魔法師們對此十分不滿，用高價販賣魔法、參與傭兵等方式賺取資金來培養力量<br/>{np}由於非聯盟派的魔法師多是隱士與研究型魔法師，因此較無親和力。反之，聯盟派的魔法師都積極地將魔法商品賣給富有階層與貴族，並且接洽與魔法有關的工作，藉此累積人脈並賺取資金。<br/>而尤斯爾國王無法管制民間的契約與交易，對此也束手無策。<br/>{np}然而朝廷祭出了迂迴的規制手段，甚至制定新的租稅項目，從聯盟的收益中抽取稅金，然後積極指派非聯盟派對市場提供價格低廉的魔法商品與勞務人力，為此，聯盟派漸漸失去立足之地。<br/>在這個過程中，聽說當時王國的官僚們受到高官的壓迫，經常去看望隱士或研究型的魔法師，才能達到這種成果，可謂是十分艱辛。<br/>{np}事態變成如此，聯盟派對王國的政策雖可以抗議，但也無法再說什麼。<br/>因為除了反叛與內亂，再無他法。<br/>{np}雖然非聯盟的魔法師們大多不喜歡介入世俗之事，但若聯盟派做出反叛亂行動，至少會有一部份的非聯盟派支持王室，他們也必須面對擁有女神力量的聖職者，以及王國的所有貴族與軍隊。而聯盟內部肯定也有人會退出。<br/>{np}最重要的是，聯盟派沒有起義的名義。<br/>但聯盟派卻沒有因此退縮，他們想到了其他的辦法。<br/>聯盟派對王國提出了在王國範圍內設置自治區的要求。<br/>他們認為，如果得不到王國的主導權，那至少要創造只屬於他們的最閃耀的都市。<br/>{np}雖然對聯盟派造成的狀況與動機不滿，但尤斯爾身為國王，卻沒有辦法阻止此事。<br/>雖然自治區不是王國管轄的區域，法律上還是擁有貴族領主統治的制度。<br/>{np}因此聯盟派活用他們擁有的所有手段，並用他們這段期間賺取的資金購買那塊領地後，申請將聯盟的代表者做為那塊土地的統治者時，王室幾乎是以半放棄的心情同意了申請，王室的態度是，只要他們不在王國的其他地區惹出事端，便放任他們自己管理。<br/>{np}為此，聯盟派將該都市取名為尼柯波爾利斯，慶賀自己的勝利。<br/> 尼柯波爾利斯在這之後有了短暫的繁榮。<br/>因為魔法師們齊聚後效率升高，他們供給的魔法商品與魔法勞務品質隨之提升，價格方面也降低。<br/>{np}對王室來說，尼柯波爾利斯若是繁榮，會增加付給朝廷的租稅，這方面的的確確是有利的。<br/>而根據這種變化，王室也不用再擔負對非聯盟派魔法師的援助。<br/>只要聚集在尼柯波爾利斯的魔法師們不在王國其他地區惹事，這是一個能雙贏的局面。<br/>{np}但是事情一般都不會如我們所願。<br/>目前雖無法得知來龍去脈，但尼柯波爾利斯的魔法師們在嘗試未知的魔法實驗時，其產生的副作用引發了十分嚴重的事故，除了聯盟的所有魔法師，居住在尼柯波爾利斯的一般市民們也全數消失了。<br/>{np}根據日後的調查結果，這個是為了高度強化魔法師們魔力的實驗，由於實驗失敗產生了副作用，尼柯波爾利斯的建築物等雖沒有受到影響，但參與該實驗的聯盟魔法師與都市所有生物，都因為這不知名的副作用消失到了某處。<br/>{np}此後雖然都市變成空城，但這個由魔法師努力建造出的都市，雖然時光流逝，還是展現出對抗風化作用的驚人抵抗力。就算無人照料，都市面貌還是如同昨天才撤離居民一樣，沒有老舊的痕跡，這都要歸功於此都市有強力的魔法支撐著的緣故。<br/>{np}再過了一段時間，人們逐漸忘卻對幽靈都市的恐懼感，都市內漸漸移入了王國的百姓們，因此變得活躍。直到神樹之日前，都是一座平凡的都市。<br/>然而讓後來居住在尼柯波爾利斯的居民無須過於修繕與補強的魔法，卻在神樹之日時，變成了災難。<br/>{np}由於這股潛伏在都市的隱藏魔力，讓都市受到了比佩迪米安或其他都市更大的傷害。這個傷害對人類尤其不利，因此相當多的居民離開了都市。<br/> 只是神樹之日讓王國境內完好的地區所剩無幾，聽說此處由於魔法的關係，內部的建築物與設施尚屬完整，有一些居民還是留在裡面。<br/>{np}據說此後由於都市內魔法的關係，吸引許多怪物聚集，變成很危險的狀態，而王國也沒有心力管到這裡，只能規勸一般人不要隨便入內。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>尼柯波爾利斯的起源故事，點擊滑鼠右鍵可以閱讀。</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

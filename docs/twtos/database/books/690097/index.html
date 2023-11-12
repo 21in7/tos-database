@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="鬥牛士大師克里戴拉歐泰羅的傳記，點擊滑鼠右鍵可以閱讀。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>克里戴拉歐泰羅傳記2卷 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/twtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/twtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/twtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/twtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/twtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/twtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/twtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/twtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/twtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/twtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/twtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/twtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/twtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/twtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690097" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690097" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690097" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>克里戴拉歐泰羅傳記2卷</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>*克里戴拉歐泰羅傳記2卷{np}克里戴拉歐泰羅和一名男子正走在黑暗的走廊上。<br/>提著燈走在前頭的男子，有著叫做普里昂的名字。<br/>克里戴拉歐泰羅因為不喜歡他，所以都沒有跟他說話，在漫長路途和長時間的沉默下，率先投降的普里昂先開口說了。<br/>{np}[老實說，我總是對妳感嘆不已。大師所援助的二十九名少年少女中，能夠達到大師標準的人非常稀少。但妳不只達到了那個標準，還取得了那以上的成就。<br/>{np}與妳相仿的年紀中，可以用武藝來和你較量的人應該除了擊劍手大師索勒夏河頓以外就沒有了。如果考慮到索勒夏河頓是出生於握湯匙之前就開始握劍的河頓家門，妳在5年就取得現在的成就，恐怕歷史上也沒有這種事情。]<br/>{np}克里戴拉聽完之後，忍不住的說道。<br/>[即使是那二十八名中最落後的人，實力也沒有那麼的爛。我認為你們把標準訂的太高了。<br/>{np}[妳是這麼認為的嗎?但我們訂的標準並不是妳們所取得的成就，而是看妳的忠誠和誠信。如果沒有那些東西，就應該具備沒有那些也很出色的實力。<br/>{np}老實說，我並不認為妳是一個值得相信的女人，但也不是不值得相信的人。不過可以確定相信的是，妳是一個擁有非常恐怖實力的人。]<br/>{np}[你真的是個很特別的人，一個武藝也不怎麼樣的人與對自己不懷好意的人在一起時，完全都不會感到害怕。]<br/>{np}[每天看到實力者、強者、殺人者這些人的就是競技場管理人。如果害怕這些東西的話，就沒辦法做這個工作了。比起這些，如果真的有想實現的夢想，就能從恐懼這種瑣碎的感情中覺得很自在。]<br/>{np}[好像確實是這樣，我正是從普里昂你的身上學習到了這些，的確你在人情和倫理意識這種所謂的瑣碎感情中看起來很自在。]<br/>{np}[對，就是那樣敏銳的磨練內心，只有這樣，你想要離開我們的日子才會趕快到來。雖然離開之後，能做什麼也是個疑問。]<br/>{np}當普里昂這樣說的時候，他的腳步終於停了下來。<br/>普里昂按照規定敲打了在他前面的門，開門後，看見除了粗糙的桌子和椅子之外沒有其他任何東西的房間裡坐著的武僧大師。<br/>{np}普里昂並沒有進去裡面，等到克里戴拉歐泰羅走進去裡面之後，對著武僧大師低頭行禮，接著關上門就離開了。<br/>[坐吧。]<br/>武僧大師歐爾帕斯克林說道，但克里戴拉卻稍微遲疑了一下。<br/>{np}歐爾帕斯克林苦笑著說。<br/>[這樣猶豫不決的能殺掉我嗎?如果有想要做的事情，就應該果斷進行才對，妳又不是沒有那個實力..]<br/>{np}克里戴拉並沒有回應那句話，而是把椅子拉過來後坐在那邊。<br/>[難道是還沒有信心殺死我嗎?應該除了這個原因之外，主要是因為想要守護自己是貴族的那份驕傲吧，難道不是嗎?]<br/>{np}[不要閒聊了，快說叫我來的原因吧。]<br/>[好吧，雖然很努力的尋找妳未來所待的位置，但目前為止還沒有遇到好的機會，妳也知道大師的位置是不會這麼容易就有空缺的。<br/>{np}也不能因為這樣就把妳放進某個教團或者是讓妳去學習魔法。但是現在機會終於來了。]<br/>克里戴拉歐泰羅聽到之後，露出了很感興趣的反應。<br/>{np}[哪位大師要隱退了嗎?]<br/>[是鬥牛士大師。]<br/>[聽到這句話後，克里戴拉的表情變得很僵硬的說道。<br/>[但是我從未修練過鬥牛士的技術，而且老實說我對跟競技場有關的大師並不怎麼感興趣。]<br/>{np}[運氣好的話，也許會有其它的空缺，但不好的話有可能到妳成為老太婆為止都不會有空缺產生，所以妳要好好抓住這個機會。至於修練方面，如果是妳的話，我認為妳很快的就能熟練成為鬥牛士所需要的全部東西。<br/>{np}而且以武藝來說，妳想要成為這領域中的任何一個大師都是一件很容易的事情，雖然我知道妳對索勒夏河頓的擊劍手大師很有興趣，但那孩子還年輕而且實力也不錯，所以很難去動搖那個位置。就算製造醜聞，她也不吃這一套..所以妳就負責這個位置吧。]<br/>{np}[突然有一個不相干的人要坐在那個位置上..難道競技場其他的管理者們，還有現在鬥牛士大師的弟子們會乖乖待著看嗎?]<br/>[那個我和普里昂會解決的，還有雖然妳不太清楚，但鬥牛士大師身邊的人其實都是很喜歡妳的，果然女人的外貿出眾的話，也是有很多的好處。<br/>{np}所以只要妳用實力將他們壓制，讓他們了解到在鬥牛士的技術上面也不輸於他們的話，應該就不會有問題了。而且我認為在明年的這個時候，妳的技術應該就會超越一生都在修練的那些人了。]<br/>克里戴拉雖然沒有再說任何話，但也還沒答應，感覺正在思考著什麼一樣。<br/>{np}武僧大師看看之後問道。<br/>[感覺妳還有煩惱的事情卻沒有說出來，應該是跟我有關的事情吧。]<br/>[我只是暫時在思考大師之間禁止私自戰鬥的王國法而已。]<br/>{np}武僧大師因為那句話而輕聲笑了出來。<br/>[哈哈，是這樣嗎?我知道妳在擔心什麼了。但鬥牛士是競技場的大師，而我也是個喜歡站在競技場的大師，對妳來說機會是很足夠的。<br/>{np}但如果是想殺死我的話，妳應該要先償還妳所欠下的債務吧?我很確信妳再償還債務之前不會把我怎麼樣的，雖然妳的實力很厲害，但我是因為欣賞妳的價值觀，所以才收留妳到最後的。]<br/>{np}[5年!]<br/>[什麼?]<br/>[我說5年，因為養育我的時間是5年，所以我說的是接下來的5年，那之後希望不要在向我提出任何要求了。]<br/>{np}[妳這樣就不符合成本了，如果我們只有提供妳食衣住行的話，也許是足夠的。但我們為了將妳打造成擁有最頂尖武藝實力的人而提供了所有的劍法和訓練，而且不只是妳小時候所欠的債務，連妳家門所積欠債務都幫妳還清了，還有..]<br/>{np}[5年再加上3個任務，再多就不行了。]<br/>克里戴拉直直的盯著武僧大師然後用宏亮且決然的聲音說著。<br/>{np}武僧大師歐爾帕斯克林為了不輸給那眼神，短暫地對視了一會兒，然後又笑了。<br/>[哈哈，好阿，這5年妳就為我們工作，等5年後我會再交付給妳三個任務，將任務完成後妳就自由了。貴族家門引以為豪的那份驕傲，感覺會讓妳一定會做到的。]<br/>{np}[但並不是所有的事情我都會去做，特別是最後一個任務，如果是叫我保護歐爾帕斯克林的生命這種任務的話絕對不行。]<br/>[我沒有這麼笨，不管是在5年之間，或是之後的三個任務，我都會讓妳去做妳能的事情、妳不會拒絕的事情或是妳沒辦法拒絕的事情。<br/>{np}還有關於我的性命，我還沒有弱到要避開與妳這種強者戰鬥，難道我看起來像貪生怕死的人嗎?我現在還沒死是因為我還有想要完成的事情，並不是因為想要活下去的關係。]<br/>{np}[您知道無法實現的夢想通常被稱為什麼嗎..]<br/>[隨便妳怎麼諷刺我，但那之前希望妳可以先為成為鬥牛士大師做好準備，先從看這些書開始好了。]<br/>{np}說著武僧大師將一堆書倒在了書桌上，然後走出了房間。克里戴拉歐泰羅看了一下他的背影後，找了個位置坐下，打開油燈後，開始閱讀擺在最上面的書。<br/>{np}..前略..<br/>王國的歷史上，首次出現競技場和劍鬥士的時間，大約是在900年前的梅基耶爾國王時代。<br/>之後競技場和劍鬥士漸漸的發展起來，分類出各種的基礎職業，一直延續到現在。<br/>{np}但在大約300年前，普利內爾Freenel國王的在位期時，引入了王國外部的風俗習慣後，在競技場原有的劍鬥士中誕生了和各種基礎職業完全不同與競技場相關的鬥牛士職業。<br/>{np}更加詳細敘述的話，本來是以我們世界的動物、魔族或是同樣身為人類的劍鬥士為對象來戰鬥和表演的競技場，將會多一個以魔獸為對象來戰鬥的競技表演。<br/>{np}魔獸雖然是同屬於魔界的產物，但和魔族明顯不同，是一種沒智慧或智慧很低的野獸，不存在於這個世界上，可以說是魔界特有的動物。<br/>對付魔獸的這種事情，而且還是在競技場中，與之前我們世界的動物進行競技表演的劍鬥士們經驗相比，需要更多的技術和情報。<br/>{np}這時，王國競技場的相關人員偶然從王國外部社會裡擁有對付魔獸經驗的部族社會中獲得了情報和技術，他參考了自己所接觸到的情報和技術後，創造出了一個全新對付魔獸的方式。<br/>{np}這完全是一種全新的型態和方式，這代表誕生了新的競技場工作者。<br/>到晚年為止，他將自己所掌握的王國外部技術再加上自己所創的技術，把這一切都整理好，最終得到了大師位置的公認，鞏固了鬥牛士這個新職業的誕生。<br/>{np}初代鬥牛士所創立的鬥牛士技術和方式，包含了實際戰鬥所需要的內容和為了給觀眾看的藝術與綜藝，可以說是一個綜合格鬥藝術。<br/>{np}然後經過了300年的時間，鬥牛士的技術果然也隨著時間而產生了變化。<br/>其中要選出最特別的?變化的話，就是鬥牛士的技術不止可以對付魔獸，再一對一的戰鬥中也很強大。<br/>{np}鬥牛士在進行過程中，雖然也有得到輔助者們的幫助，但最終還是需要獨自一人面對魔界的魔獸，面對如此強大的魔獸，經過了三個世紀，因為這樣，鬥牛士的技術也跟著往特殊化的方向去發展了。<br/>{np}因此現代的鬥牛士跟過去專門以魔界魔獸來進行表演的前輩鬥牛士不同，反而是以一對一的戰鬥專家而得到了更多的名聲。<br/>..後略..<br/>{np}讀到這裡的克里戴拉歐泰羅將書闔上後，將剩下的書一本一本的拿起來，接著說道。<br/>[是叫我全部都透過書只用理論來學習的意思嗎?如果不要這樣的話，至少從明天開始就要再觀眾席上好好的觀察一下這些原本的鬥牛士了..]<br/>{np}停止自言自語的克里戴拉歐泰羅將全部的書都整理好之後，將燈關掉走出了房間。<br/>反正這些都是要熬夜看的書，不如回去自己的宿舍看還比較好。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>鬥牛士大師克里戴拉歐泰羅的傳記，點擊滑鼠右鍵可以閱讀。</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

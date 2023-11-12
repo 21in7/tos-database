@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="有關拉伊瑪和傑斯堤的故事。可點擊滑鼠右鍵閱讀。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>拉伊瑪的千年傳 第3卷 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/twtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/twtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/twtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/twtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/twtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/twtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/twtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/twtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/twtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/twtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/twtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/twtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/twtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/twtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690066" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690066" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690066" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>拉伊瑪的千年傳 第3卷</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_04black.png" />
+            <h3>Content</h3>
+            <p>傑斯堤站在可以俯瞰一個巨大墳墓入口的地方，不，正確來說是飄浮在上空。不管是誰往上看，對人類來說都看不到她的身影。<br/>自從接受了這項任務之後，第一次感受到了狼狽感。<br/>已經充分的認知到要抓一個擁有預知權能的女神，是多麼困難的事情。由於拉伊瑪的預知能力，要比拉伊瑪快一步是很困難的。本來以為建立了一個就算知道未來也會被逼的走頭無路的計畫，為了隱密的執行這個計畫，緊緊的追趕在拉伊瑪的後面。{np}但是情況跟傑斯堤所想的完全不同。<br/>「人類」竟然會利用人類..，竟然會想到利用那個卑鄙種族們的想法! <br/>{np}傑斯堤再一次的抑制住湧上來的憤怒，考慮著接下來該怎麼辦了。<br/>根本沒想到會將自己力量的一部分，以啟示的型態留下來，然後將它轉交給人類並且守護它。<br/>女神竟然會依靠人類.. <br/>只要有充分的時間，就可以掌握所有未來和所有可能性的拉伊瑪，竟然會為了勝利而放下了那偉大的權能，去依靠人類的這件事實，傑斯堤還是難以相信。{np}傑斯堤根本無法得知拉伊瑪獲勝的必要條件裡包含著人類，所以這結果對她來說是理所當然的，而這也讓她更加的生氣。<br/>雖然沒有人明確的做出規定，但對她來說，拉伊瑪的舉動就像是在比賽中看到對方犯規的感覺。<br/>而更讓人生氣的是，那樣的犯規行為卻是沒有明文規定的行為。{np}不管是建立了新的人類王國還是王國的建國君主是誰，做了什麼事情，在傑斯堤的立場上，這些根本都是不需要關心的事情。就算是知道建國君主札卡里耶爾和拉伊瑪有接觸的時候，也沒有把這件事情放在心上。<br/>不只是拉伊瑪，其他的女神們也是會聆聽追隨她們的人類信徒和聖職者的祈禱，並且回應他們，有時候還會親自在他們面前現身。傑斯堤認為那些是毫無用處的行為，但這行為本身並不是罕見的事情，所以才沒有把拉伊瑪和人類札卡里耶爾見面的這件事情放在心上。{np}為了躲避自己而去見札卡里耶爾的拉伊瑪，比起這種迫切的理由，而是平時先入為主的觀念，認為人類微不足道，而造成更大作用的結果。<br/>所以當傑斯堤查覺到什麼的時候，已經是札卡里耶爾消耗了如那蜉蝣般的人類壽命，然後進入了他生前所建造的墳墓後了。而且拉伊瑪將自己的權能所分出來的啟示，也是被埋在了那所謂叫做王陵的地方。<br/>當傑斯堤知道這個事實，想要親自進入王陵的時候，她經歷了更荒唐的事情。王陵擁有像傑斯堤這樣的魔王也沒辦法輕視的防禦系統。{np}札卡里耶爾利用國王的權力，動員了所有一切的資源和魔法，另一方面，動員聖職者們傾注女神的神聖力，建造守護王陵的設備。<br/>經年累月，雖然王陵的設備會老化且減弱，但現在卻沒有辦法突破這裡，這樣的事實讓她更生氣了。<br/>雖然不想承認，從一開始自己就受到拉伊瑪的重挫，這樣的事情傑斯堤是沒辦法忽視的。還有更令人討厭的是，拉伊瑪依靠人類的這件事情，是不會就此結束的。<br/>她會繼續找其他的人類，然後做同樣的事情。這樣的事實讓傑斯堤更不舒服了。<br/>但是，又不能不做這件事情。{np}傑斯堤只能承認拉伊瑪利用多數人類的方法會讓她自己的追捕更加困難的事實。<br/>傑斯堤召喚了自己的手下魔君主。再運用吉特涅允許的權力，也召喚了卡魯塔斯與巴以卡麾下的魔君主。{np}拉伊瑪若要利用人類，以她的作風，沒理由不使喚其他的魔族部下。目的也是想要凸顯魔族擁有的力量，遠遠大過於人類渺小的助力。<br/>最先被召喚出來的魔君主是雷克西波。<br/>傑斯堤認為自己召喚出的九位魔君主中，最適合解除或解體此王陵設備並獲得啟示的人，即是雷克西波。<br/>若有需要，可以再召喚更多的魔君主，暫且打算先召喚九位。{np}傑斯堤命令雷克西波去札卡里耶爾王陵偷取啟示，並帶領著其他魔君主消失了。<br/>不管是傑斯堤還是得到命令的雷克西波，那時並不知道這件事會讓雷克西波停留在這王陵峽谷一千年之久。<br/>只有拉伊瑪知道這一千年的任務的結尾。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>有關拉伊瑪和傑斯堤的故事。可點擊滑鼠右鍵閱讀。</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

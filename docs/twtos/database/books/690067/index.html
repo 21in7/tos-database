@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="有關普利米歐艾米諾特的故事。可點擊滑鼠右鍵閱讀。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>艾米諾特的故事1 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/twtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/twtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/twtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/twtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/twtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/twtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/twtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/twtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/twtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/twtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/twtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/twtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/twtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/twtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690067" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690067" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690067" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>艾米諾特的故事1</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_04black.png" />
+            <h3>Content</h3>
+            <p>一個年輕的青年正在回家的路上。<br/>在街上遇到的人們，認出那名青年是統治著他們的領主的兒子，並對他鄭重的敬禮，青年用溫柔的微笑與親切的臉孔一一回應著他們。<br/>這位長相俊美，擁有貴族的禮儀，但卻不見任何貴族常有的傲慢的年輕人，得到了所有領地居民的愛戴與尊敬。{np}尤其去年橫掃領地的傳染病侵襲時，大家都誇讚他，他不顧自己的身體，幫助許多的領地居民，救活了他們。實際上當時，除了他父親之外，家裡的其他兄弟姊妹全部都死了，因此更加受到領地居民們的同情與憐憫。<br/>根據出入領地別墅的人說，不知道是不是因為領主失去了家人，聽說他的身體變得很差。大家都說，若不是領主兒子的悉心照料，說不定早就過世了。<br/>領主居民們對下任領主是這位了不起的年親人都感到十分期待。{np}這位艾米諾特家族唯一的年輕繼承人，就算回到自己的別墅，依然不忘謙恭和善，對在別墅內工作的所有下人與雇員還是會親切的打招呼及應對。<br/>然而進到父親房間後的他，方才對侍從與下人露出的那抹微笑頓時便消失了。<br/>他確定沒有任何人在偷聽後，旋即走到了父親的床邊並對他說[我已經讓所有的人都已經知道我對你照顧得無微不至，你也差不多該離開了。]<br/>語畢，父親用虛弱的聲音說吃力地問[到底為什麼要我們家族做這種事?]{np}青年回答[你說這種事?我會將你的家族發揚光大，讓全世界都知曉，嚴格來說，你還得感謝我選擇了你們家族。]<br/>{np}[你殺死了我所有的子嗣...]<br/>[唉，那也是不得已的，任何有可能發現我是藉這個年輕人的肉身存活之人，我是一個也不能放過。所以說，你也差不多該隨他們去了，繼承你領地與爵位的準備工作，我也都已經完成了。]<br/>[等我能揭穿了你的真面目…]{np}[我已經放過了無辜的下人，你放棄吧，而且你說你想揭穿我，你對我又知道些什麼呢?除了我不是人之外，你對我有任何了解嗎?]<br/>[你這傢伙到底是什麼東西?]<br/>[既然你都要死了，我也不必再瞞著你。我就是你們常說的魔族，而且我還是魔君主，我不打算把真名也告訴你。你只要知道我是你家族的艾米諾特就夠了，你死了之後，不會再有其他的艾米諾特，所以不會發生任何問題。]<br/>[你這個叫魔君主的傢伙，到底為什麼要覬覦人類的爵位和領地?]<br/>[這當然都是有原因的，但我既沒必要跟你說明這些事，也沒有那個時間了。]<br/>語畢，青年伸出手輕輕碰觸他，他現在雖然還留有一口氣，但過一會兒叫人來之後，他將會在眾多傭人的眼前，於睡夢中自然地失去呼吸。{np}在那之前，已經成為艾米諾特家族唯一繼承人的青年，花了點時間重新整理了一些思緒。<br/>自從傑斯堤將取得拉伊瑪啟示的任務交給他之後，他得知了拉伊瑪利用人類在計畫著一些事情時，他也決定要利用人類進行他的計畫。{np}看著如此聰明的雷克西波專注看著人類帝王留下的墓碑，浪費了幾百年的時光，任何一個魔族卻都不想利用人類以及他們的社會， 這可以說是非常奇怪的事。<br/>從魔族的驕傲與習性上來說，這是難以想像的事，或許他與其他魔族有著不同之處。<br/>此時他還不知道，他已經為自己種下了基礎，日後將成為第一個把拉伊瑪選擇的守護者逼到絕境並殺死他的魔族。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>有關普利米歐艾米諾特的故事。可點擊滑鼠右鍵閱讀。</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

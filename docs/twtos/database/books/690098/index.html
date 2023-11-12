@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="狂熱者大師埃莉薩塔爾的傳記，點擊滑鼠右鍵可以閱讀。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>狂熱者大師傳記1卷 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/twtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/twtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/twtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/twtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/twtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/twtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/twtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/twtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/twtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/twtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/twtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/twtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/twtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/twtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690098" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690098" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690098" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>狂熱者大師傳記1卷</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>*狂熱者大師故事<br/>{np}七十餘名的人參加完葬禮之後緊接著的活動就是教團總會。<br/>狂熱者教團素來就和其它聖職者教團沒什麼往來，因為教團性格較封閉，所以葬禮上也沒什麼外來客人，<br/>{np}就只有幾位死者的親戚參加，還有幾位有往來的鄰居們，因為死者是狂熱者大師，所以該地區領主派了人來觀禮。<br/>{np}這些人在表達慰問之後就快速離開了，留在會場的人全都是狂熱者教團內部裡的人，而這些人也是世界上僅有的狂熱者們了。<br/>{np}有一位外部人留到了最後，但那個人跟教團並沒有什麼深厚的情誼，<br/>這中年男性是一位審判者，名為弗雷比(Phrevy)，他是接到審判者大師-托瑪斯伊科諾施塔席斯的命令而來到此地，在教團的首席也就是狂熱者大師為空缺的情況下，為了觀察總會的進行狀況而留下來的人。<br/>{np}狂熱者教團和其它的聖職者們的關係也不是很好，如果不是像審判者這種在聖職者社會裡擔任一些公共性的角色，彼此之間是幾乎不見面的。<br/>{np}如果今天總會選出新的狂熱者大師，那他的任務就是負責證明選出過程是合法的，然後跟審判者大師和王國相關部門報告結果。<br/>{np}狂熱者教團的教主也就是狂熱者大師的選拔過程世世代代都是由教團內部選出人選，審判者代表女神和其它教團進行審查，確認後通報王國，如果沒有特別更正的事宜，就追認該事實，最後發送任命狀以茲證明。<br/>{np}一般來說狂熱者教團的下屆教主大多是在前代大師死亡時或是隱退之前內部先進行選拔，外部人審判者的證明只是型式上的作業程序，選新的教主要審判者花費幾天的時間來觀察這種事從來沒有發生過。<br/>{np}但是總會這次卻沒有事先決定下屆教主的人選，<br/>因此包含被派遣而來的審判者弗雷比，其它留下來的所有人，都有心理準備這次的會議可能會進行好幾天。<br/>{np}這也是史上最初有外部人擔任教團議長的角色，<br/>這點比狂熱者教團的內部勢力鬥爭更具意義。<br/>{np}人不多的狂熱者教團內部分成兩個宗派，而這兩個教團的創建和對立可以說就是這個教團的全部歷史。<br/>{np}狂熱者教團的教義就是恢復遺失的女神，而遺失的女神中就屬拉伊瑪和尤拉泰最具代表性，所以他們分成想要優先恢復拉伊瑪女神和想要優先恢復尤拉泰女神兩個宗派，雙方都有各自的理由和立場。<br/>{np}他們當中當然也有想要優先恢復達莉雅女神的極少數狂熱者存在，但是其他宗派有35名，他們只有三到五名，根本沒有什麼影響力，這些極少數的人就只能跟著大隊，有時往這，有時往那。<br/>他們始終無法發出他們真正的聲音，他們的處境就變成將拉伊瑪和尤拉泰女神當作是主要專攻，而達莉雅女神就當作是次要專攻。<br/>{np}即使狂熱者教團內部一直以來都有這樣的矛盾存在，但是卻不至於造成他們分裂。<br/>首先他們和其他教團相比是少數，所以他們對於再分裂成更小的團體有警戒心。<br/>其次雖然在要先找哪一位女神上的意見有分歧，但是如果有可以找到其他女神的機會來臨時他們也不會置之不理<br/>{np}因為教團的最終目的並不是尋找特定女神，而是尋找所有女神。<br/>更重要的是隸屬於其他女神的教團，還有其他聖職者系列教友的鼓勵和支援也起了相當大的作用。<br/>{np}那些不喜歡狂熱者的女神教團或是聖職者們也無法反對他們要找到失蹤女神的教義，不管是真心認同還是基於禮貌，他們都無法不幫助狂熱者教團。<br/>{np}因此狂熱者教團也不會冒然地將內部的矛盾公開，做一些阻斷支援的事，因為他們已經是少數份子，不能再讓惡劣的教團環境再變得更糟糕，所以他們不能不小心。<br/>{np}在上上次的總會拉伊瑪優先主義宗派的中心大衛塔爾(David Tal)被選拔成為教團的教主，也就是狂熱者大師。<br/>雖然尤拉泰優先主義宗派也有不滿的聲音，但是他與尤拉泰宗派權力者的女兒妮奧米(Naomi)在總會召開之前結為連理，所以兩宗派的鬥爭暫時消退至水面以下。<br/>{np}在那之後雙方宗派的代表性人物的結婚，加上大衛穩定的營運方式，讓牽涉幾世紀的矛盾得到了緩和。<br/>大衛塔爾透過教團穩定化，準備好凝聚狂熱者們的力量，很快就進行了拉伊瑪女神的追緝任務。<br/>{np}這時發現了一個線索，帶領著少數的狂熱者進行了追緝<br/>但是不幸的是這個線索是真的，所以引發了問題。<br/>追緝拉伊瑪女神的還有另一群人，他們遇到大衛塔爾然後殺了他。 <br/>{np}大衛塔爾一死亡，狂熱者教團除了深陷悲傷之外，還面臨了新的分裂。<br/>在經過一番曲折之後由妮奧米塔爾繼承亡夫的位子，成為狂熱者大師，但是失去大衛塔爾的拉伊瑪宗派覺得都是因為大衛跟妮奧米結婚的關係，大衛才會死亡，所以教團的氣氛不是很好。<br/>{np}在這樣的氛圍之下，妮奧米塔爾管理狂熱者教團幾年的時間，合併內部的壓力和個人的希望，決定再次站出來追緝拉伊瑪還有找出殺害丈夫的兇手。<br/>因為這二個事件本質是一樣的，不需要分開追求，最後妮奧米塔爾果然還是被殺害丈夫的兇手和他隸屬的團體給殺害了。<br/>{np}(雖然日後才曝光，這兩人的死，艾保尼風扮演了最關鍵的角色。<br/>而艾爾莉莎塔爾得知誰是殺害父母的犯人，那又是更久以後的事，到那時候，艾保尼風早已死亡。)<br/>{np}第二次死亡造就的結果，就是這次葬禮以及今天的總會。<br/>因此不論拉伊瑪優先主義宗派，或者尤拉泰優先宗派，對彼此多少帶有怨氣。<br/>{np}極端主義者有的認為若不是你們如此催促逼迫，妮奧米塔爾也不會逞強出頭，或者有人認為根本一開始大衛與妮奧米結婚本身就是個錯誤。<br/>{np}當然雙方也有想法不那麼激進的人存在，但這些人還是不無悲傷與埋怨，因此今日的總會進行會流向哪個方向，就更難以捉摸了。<br/>最先向被派來的審判者主持人弗雷比請求發言的狂熱者站出來並說道。<br/>{np}[我是在教團中奉獻最久，資歷最深的狂熱者，下屆大師理當由我擔任。]<br/>符合這個標準的人隸屬拉伊瑪優先宗派。<br/>其他狂熱者在要求並取得發言權後也發表了其他意見。<br/>{np}[雖然有年紀經驗多的人也不錯，但是我認為還是最強、修練最深的人當上狂熱者大師才是理所當然的。畢竟若是大師的實力不如其他狂熱者那不合理啊！]<br/>{np}這番話所說的強者則屬於尤拉泰優先宗派。兩大宗派都派出各自屬意的人選後，原以為不會再有其他發言者或推薦人選，此時又有人請求發言權了。 <br/>{np}[我們狂熱者教團數個世紀的歷史中，未定下繼承人前前任便去世的情況連續發生了兩次。藉這次破天荒的情況，我斗膽建議以不同於過去的方式選出我們教團的首長。]<br/>{np}四處發出了質疑的聲音。<br/>發言者冷靜地繼續說出他準備的話。<br/>[我們教團數個世紀間一直在執行尋找失蹤的女神的任務，卻沒有成功過。我在想這說不定是因為教團太過孤立，且帶著毫無根據的自負心的緣故。]<br/>{np}四方湧入各種主張，內容概括認為那是因為其他聖職者和教團沒意識到或者太過懶惰，以致他們因為滿足於現況，而未採取任何行動。<br/>正當審判者弗雷準備整頓場內混亂時，發言者繼續他的話。<br/>{np}[各位教團弟兄們的話沒有錯，但是若能獲得他人的協助，或者至少得到他們所跟隨的其他女神的協助的話，也未嘗是件壞事。]<br/>發言者這次在因他的話出現反駁者之前，便逕自繼續說道。<br/>{np}[事實上其他女神對拉伊瑪的行蹤未曾有過答覆。女神們對人類的各種疑問未作出答覆的原因有很多，其中也有我們不知情的事。即使未得到答案，這段期間我們仍然很努力，這件事本身就很了不起了。<br/>{np}當其他聖職者在庇佑他們的女神懷中心滿意足時，對女神銷聲匿跡最痛心也最盡心盡力的就是我們了。我認為就算僅此一次，對神諭師大師的神諭抱有期待也無傷大雅，也許女神會為陷入危機的我教團指引方向也不一定？]<br/>{np}狂熱者中有人反駁了。<br/>[女神很清楚人間世事最要緊的是什麼，也不會介入人們的選擇。若如您所說，那女神應該會在每當國王駕崩時，對誰是王族中最具資質的明君給予啟示。<br/>{np}不，也不須是王族，只要指出全人類誰最有資質，會是最出色的明君，事情不簡單多了。不對不對，女神只要把王儲栽培好直接送給我們不就行了。甚至乾脆任一個女神直接坐上王位統治我們如何？<br/>{np}그這樣也不須要煩惱下屆國王人選了。您是個狂熱者，且攻讀神學，該不會您不懂這是不對的事？]<br/>{np}[沒錯。雖然如此，大約200年前，伊奈爾1世是首位由神諭指名的國王。在那之前的國王歐露凱爾便是因女神介入而退位。總會有這樣的例外情況和需要的時候。<br/>{np}我們的神學和信仰的女神雖然重視人類的意志，但也不會因此不知變通。所以嘗試請示，倚賴神諭吧。如果沒有答案，大不了再回到現在這個狀況而已。<br/>{np}除了稍微費點時間，不會有任何損失的。萬一女神當真打破前例，神聖介入了，我不認為我們狂熱者教團教友中會有人反對。]<br/>{np}既是審判者也是擔任第三方審判官角色的弗雷比掃視場內。<br/>沒有任何人反對，多數人贊成，剩下的就算不贊成，至少也沒有反對的意思。<br/>這時有人請求發言了。<br/>{np}這個人正式成為狂熱者並不久，甚至成年也沒多久的一位女性。<br/>獲得發言權的是艾爾莉莎塔爾，近兩次過世的狂熱者大師夫妻的女兒。<br/>{np} [我贊成聽取神諭，但是我只要求一件事。請求神諭的提問內容，不是大範圍的問誰是下屆狂熱者大師，而是直接詢問我艾爾莉莎塔爾是否適任下屆狂熱者大師。<br/>{np}雖然我一個年輕女孩未必達到早前各位教友提及的經驗、深度修練及強韌，但是我的父母，也就是這個教團的大師，他們所期望的是教團和平這個內部目標，以及女神的恢復這項教團真正目的。<br/>{np}我立志同時完成這兩個目標，就詢問這個壯大的遠景是否能實現吧！<br/>{np}萬一女神對我降下神諭，那麼現在在場持有不同立場的各位，繼承雙方各半血統的我發誓，將公平地達成前者的目標與後者的目的。<br/>{np}若是各位教友同意詢問神諭，且認同我所說的提問內容，獲得女神的祝福，神諭也指向我的話，我一定會做到的。]<br/>{np}人們開始你一言我一語說個不停。<br/>鬧騰了好一陣子，幾個人依序上到講台，在主持人審判者弗雷比的耳邊說了幾句話。<br/>聽取多個持有不同意見的集團代表陳述意見後，審判者弗雷比說道。<br/>{np}[所有人都同意透過神諭師大師請求女神的神諭。且將依艾爾莉莎塔爾主張的內容進行。若在場有反對的狂熱者，請現在提出。]<br/>稍過片刻，眼看沒有其他意見，他接著說道。<br/>{np}[很好，那麼就請求神諭吧。然而，有狂熱者教團成員提出意見，認為萬一艾爾莉莎塔爾被神諭拒絕，或者即使獲得神諭，其內容不認同她時，應對她獨佔候補權利一事問責。<br/>{np}對此，此次總會先行休會，將待請求神諭事宜結束後再開，特此說明。]<br/>3日後，透過神諭師大師揭示的神諭，別說是教團，所有聖職者及神學界都為此吃驚。<br/><br/>{np}其內容即是艾爾莉莎塔爾成為狂熱者教團首長，也就是狂熱者大師。<br/>然而等待這個年輕少女的說不定不是身為大師的榮光，而是非常苛刻沉重的責任。 </p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>狂熱者大師埃莉薩塔爾的傳記，點擊滑鼠右鍵可以閱讀。</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

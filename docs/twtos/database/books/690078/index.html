@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="有關蘇科姆的故事。可點擊滑鼠右鍵閱讀。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>蘇科姆的星之塔攻略紀錄4 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/twtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/twtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/twtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/twtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/twtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/twtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/twtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/twtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/twtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/twtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/twtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/twtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/twtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/twtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690078" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690078" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690078" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>蘇科姆的星之塔攻略紀錄4</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>國王正式的將星之塔與鄰近的湖水周圍地區，交給夏班史達全權管轄，但是在那之前，湖水的周圍還是有原本就居住在那裡的居民。<br/>他們在離星之塔有點距離的湖水上，建造了湖上村落生活著。<br/>有些地方是利用夏班史達提供的巨大魔法漂浮石上面，有些是利用船隻與樹木建造的。{np}他們是蘇科姆的下一個目標。他認為夏班史達絕對不會對居民們袖手旁觀，而星之塔裡發射出來的武器是無法抵達到那裡的，即使部分的魔法攻擊可以涵蓋到村落，但其威力與頻繁度，根本不足以畏懼，這些都是經由前幾次的戰鬥確信的事實。{np}針對目前為止的攻擊與探索的經驗做個總整理的話，星之塔會對利用船隻靠近的敵人使用遠距離的攻擊設施進攻，而那樣的設施放置在一般的湖水區以及有魔法漂浮石的區域中。<br/>所以利用船隻的水上攻擊，幾乎是自殺的行為。不管是人類的軍隊還是魔族的軍隊，都會是一樣的結果。{np}而最令人驚訝的是，雖然這湖水是在陸地上，但是其深度深不可測。魔族只要碰到湖水，就會出現接近腐蝕的效果。<br/>蘇科姆利用抓來的人類或野獸，命令他們去探測湖水的深度，但是沒有任何人回來，因此他下了決心，親自潛入水中。{np}但是即使游了五個小時，卻依然沒有看到湖底，最後只好放棄回岸。<br/>越是往下游，越會有奇異的魚類出現並對他發動攻擊，而且那些傢伙還越來越強。<br/>好不容易準備的防禦裝備，被其中一隻撕破，致命的湖水開始滲入，他忍受著痛苦，受到差點就丟掉性命的受傷程度，好不容易回到了岸邊，自此之後，他就打消了湖底進攻的念頭。{np}但奇怪的是，在這湖水裡有從事漁業的漁民，他們會向星之塔的主人夏班史達繳納稅金，同時接受他的保護，<br/>雖然還沒正式接受王國的認可，但利迪亞夏班或她所建立的夏班史達團體，事實上已與這裡的領主沒有兩樣了，整個湖水都是他的領地。<br/>以湖水為根基生活的人，他們以自己的統治者是傳說的英雄利迪亞夏班而感到自豪，夏班史達也很寬大、公正地管理著他們，<br/>事實上與其說統治者，他比較像保護者，在不是大都市的地區中，已沒有像這裡一樣，能夠不受到怪物的侵擾，讓人類安全地生活的居住地了。 {np}到目前為止，只要有怪物出現，夏班史達團員就會立刻出動並消滅牠們。<br/>但是現在有大規模的魔族軍隊與他們對峙，所以以往的方式已經無法解決居民的威脅了。<br/>在塔外，如果不發動全面的戰鬥，是無法保護居民的。<br/>而即使夏班史達再怎麼厲害，在無法攻破的要塞裡發射弓箭跟在廣闊的湖水上進行戰鬥是完全不同的兩回事。{np}對弓兵來說，如果無法在有高度與適當距離的地方戰鬥，幾乎會被步兵或騎兵吃的死死的，蘇科姆認為即使對方是夏班史達，也無法擺脫那樣的劣勢。{np}問題是這是要引誘對方出來的事，蘇科姆想如果襲擊湖上村莊，他們不可能不出來的。<br/>就在蘇科姆展開攻擊時，村莊就將居住地的大門緊閉了起來，<br/>雖然不是很厲害，但至少已變成了孤立的湖上島村，可是對魔族來說，因致命湖水的關係，還是很難接近與展開攻擊，<br/>然而如搭船進行包圍和擊打，那木製的柵門遲早會被打開的，<br/>夏班史達團員怎麼忍受不出來拯救居民呢。{np}但是他們沒有出來。<br/>也沒有必要出來。{np}怎麼會有水龍捲？<br/>這裡又不是海上，只是湖水而已，怎麼會有這種程度的水龍捲..<br/>蘇科姆只能張著嘴呆呆地望著。{np}湖水非常地大，但水龍捲並不一定是在水中發生，也會發生在大地上，截至目前為止還可以理解。<br/>可是正確指出船的地點會發生水龍捲這事絕對不可能是自然現象。<br/>說真的水龍捲只正確地在居住地周圍同時多次發生，而且還持續不斷的發生，這本身就是水龍捲不是自然現象的證據。<br/>因為水龍捲而導致船翻覆，部下們都落入水中，只要落水就無法存活。<br/>就算船沒有翻覆，水龍捲捲起湖水灑向四方，被那個水打中，部下們也不可能會沒事。{np}攻擊星之塔時，並沒有這種情況。<br/>根據推測，這並不是故意留一手沒使用，而是可使用的位置與條件是受限的，所以他們選擇用來保護村子而已，這也是最合理的理論。<br/>而蘇科姆的推測，很不幸的成了事實。<br/>蘇科姆最後連半個夏班史達團員的人影都沒見到，就這樣淒慘的下令撤退。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>有關蘇科姆的故事。可點擊滑鼠右鍵閱讀。</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

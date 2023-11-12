@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="杰洛梅爾1世時發生的合蒙梅德伊渡河事件始末，點擊滑鼠右鍵可以閱讀。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>合蒙梅德伊渡河事件 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/twtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/twtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/twtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/twtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/twtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/twtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/twtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/twtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/twtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/twtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/twtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/twtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/twtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/twtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690094" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690094" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690094" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>合蒙梅德伊渡河事件</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p> *合蒙梅德伊Herrmun_Madale<br/>渡河事件1<br/>{np}札卡里耶爾大王駕崩才過51天。<br/>在開朝同是先王父親駕崩後，於 51歲繼承君主之位的杰洛梅爾國王坐在皇位上一手扶著頭。<br/>在御前聚集了二十名王族與貴族，同時在沈思著國王苦惱的事情，誰都知道國王在煩惱什麼問題，但卻都沒有人想要先提起問題，大家都保持著沈默。<br/>{np}臣子的視線都集中在王的親弟弟安樂森Licsion的身上，最後安樂森開口說話了。<br/>[沒什麼好再看的了，就先用國王勒令來阻止吧，如果再不聽從，就用軍力來懲處就行了，不管派這裡的誰去都絕對不會輸的，只要國王下令，我願意前往。]<br/>{np} 現任王位繼承者的太子說，[但如果叔父這樣做，過去40年來的和平就會被打破了，還有新國王繼位的同時就展開戰爭，這樣在歷史上也會留下污名的，不僅如此，也會讓大家認為王國的現任國王沒有維持先朝和平的能力。]<br/>{np} 既然開了這個話題，貴族當中有個人站了出來。<br/>[請透過勒令讓兩人的領地遠遠地分開吧，如有必要，就用更廣大的領地來處理，那麼比起單純一個人，就會有更好的懲戒名份了。]<br/>{np} 其他貴族也紛紛附和。<br/>[但不聽從命令的他們，難道就會願意接受變更領地到陌生的地方去嗎？不聽從命令的可能性很高，那麼最後也只能夠派出王室的軍隊了。<br/>{np} 國王陛下不能對此抗命坐視不管，這是先朝國王在終結開國戰爭後，從未發生過的戰爭之事，而且那還是叛亂。]<br/>{np} 第一個貴族說話了。<br/>[誰不知道呢？反正都會採取軍事行動，那只是會有更好的名份而已，不是嗎？還有如一旦戰爭開始了，他們就算擁有再好的軍略，也是無法獲勝的。<br/>{np} 雖然我們兵力只有一點，但重點是不管是哪一個魔法師還是女神的祭司，都不願意幫助他們，他們兩都對自己的軍事很有信心，但說不定這反而讓他們知道戰爭的不利而讓他們低頭。]<br/>雖這位貴族這麼說，但當他提到對方會低頭這件事情時，看起來很沒有自信。<br/>{np} 讓現在朝廷的貴族和王族陷入苦惱的問題就是這個。<br/>合蒙家族和梅德伊家族是目前王國貴族中，最強大的貴族世家。<br/>恰巧兩個貴族的領地又接鄰在一起。<br/>{np} 勢力相當的兩大家族之間本就難以和平共存，反目和出現爭執是必然的事，但在札卡里耶爾大王生前在位的40年裡，他們也不敢公然地惹事生非。<br/>{np} 但現在隨著王國接任第二位統治者，他們已沒有開國功臣以及被多名貴族壓制的包袱，而這兩家族也認為如果錯過機會，就再也找不到機會了，因此開始彼此展露出野心與敵對感。<br/>{np} 雙方都認為雖然不是要反抗王國，但一旦新國王登基就沒有機會了，所以在那之前一定要採取行動，如結果確立了，王室也不得不認同了。<br/>{np} 同時兩貴族世家的首長都對自己的軍事能力很有信心，也都認為自己絕對不會輸。<br/>{np} 另一方面，也有用軍事力解決王室繼位初期的問題的先例，雖然不會主張比先王還要好，但也不能說比先王差，在死後就做出評價。<br/>另外，人們還記得王室，不會有人站在他們那邊的。<br/>{np} 在沒有祭司和魔法師的支援之下，雖然客觀判斷擁有相似的軍力，甚至軍力較弱也無條件會獲勝，但兩家族的首長都擁有軍事上的才能，這點也絕對不是他們自我陶醉的錯覺。<br/>{np} 真正擁有優秀才能的兩敵手相爭，雖然最後一定會有輸有贏，但如王國軍隊出兵，要是他們兩方想先對付王室的軍隊，又或是想進一步不對付兩個目標，而是針對某一方的話，那麼事態就會變得不可控制了。<br/>{np} 這樣王室的權威將會被踐踏在腳底，而人們也會認為王室的軍隊很弱，對王族和王室忠誠的貴族沒有能力了。不管這是不是事實，都會動搖到國家的統一。<br/>{np} 女神的旨意是要維持統一的王國，雖然祭司們會依照女神的旨意守護王室不讓王國消失，但要是沒有掌握好事態，很有可能會讓王室的存在變成有名無實，各地區的貴族也都會隨心所欲不遵從王室的命令，國家會陷入混亂的。<br/>{np} 雖然在歷史上沒有可學習的先例，但大家都很明白，杰洛梅爾國王或週遭的王族和貴族並非王國基礎的創始君主，國家是會隨著負責守江山的2代君主而有所改變的。<br/>在經過一段沈默後，貴族中最先任同時也是最年長的克里歐Greeo公爵說話了。<br/>{np} [就我所知，現在直屬於王室的軍力有2萬4千名，另外先王為應對緊急狀態而能動員的總兵力在最後一次清算時，預估有 17萬兵力，要是再加上所有地區的守備兵，應該能動員更多人。<br/>{np} 合蒙公爵如動員領地的兵力大約會有1萬2千名，而梅德伊公爵大約會有 8千，所以兩個加起來約有兩萬，如雙方盪盡家產雇用傭兵，並且動員親近的其他貴族，總參戰可能的兵力大約會有兩倍，也就是 4萬左右。]<br/>[為什麼突然計算起兵力來呢？]<br/>{np} [在4萬名大軍對峙的現場，如出動 2萬 4千王室兵力，雖然這是軍事上的手段，但如派出 4千，看起來不會太誇張了，但對於阻止戰爭或是要懲戒某一方的話，這樣的兵力是完全不夠的，但如果是被派遣的王室代表護衛兵的話，這樣的兵力就太多了。]<br/>{np} 在聽到克里歐這番話後，沈默的杰洛梅爾國王首次開口了。<br/>[但如果代表的身份很高，那在名義上那樣的兵力就說的過去了，譬如國王之類的。]<br/>弟弟樂森在沉思後開口說。<br/>{np} [但不是哥哥而是陛下親自前往，這太不像話了，另外如不是國王的護衛兵，那兵力也太多了。]<br/>克里歐公爵接著繼續說。<br/>{np} [所以只要太子殿下前往就行了，這種事情用這個方法處理，能夠適當地給予示威效果，同時也能夠展現出王室對這種大事的看重，我認為這是非常合適的處理手段了。]<br/>樂森聽到後立刻開口說。<br/>{np} [趁這次機會，也能讓太子名正言順地擁有陛下的稱號，也就是自動讓大家認知到太子是杰洛梅爾 2世。<br/>這樣一來，事情也會是以國王的名義而解決的，<br/>{np} 被派遣的太子也能用國王的威權和他所獲得的權限來處理事情。<br/>另一方面也能獲得穩固繼承的附屬效果。]<br/>{np} 另一個貴族提出了疑問。<br/>[比起派遣太子殿下傳達文書，如是要展現勒令的威權，透過太子殿下的聰穎解開那複雜的情況，認為採取這樣的手段能解決這混亂的局面是妥當的，這點我也不反對。<br/>{np} 但我不明白克里歐公爵為什麼會提到 4千兵力，而不是更少或是更多的 3千或5千兵力呢？依我所見，就算不想讓對方感受到被壓迫的意圖，但至少要派出和守住那意圖範圍內的最大兵力與陛下前行才行。]<br/>{np} 對此，克里歐公爵做出了回答。<br/>[這是因為在必要的時候，要能使用武力的關係， 4千雖不足以當作鎮壓兵力，但當作鎮壓兵力的中軍或本隊也算是不錯的規模了。<br/>{np} 我剛才推算的兵力最多大約是 4萬，事實上並沒有那麼多，如考慮到他們無法活用聖職者和魔法師這點，就算是相同的兵力，事實上也可以說有 2倍的兵力差異。]<br/>{np} 那麼就自然只能讓人聯想到要去哪裡找來這相同的兵力了。<br/>克里歐公爵繼續接著說。<br/>{np} [向王國的貴族們下達召集令，當然我會帶領著旗下的兵力參加的，雖然現在不知道會有多少人附應這次的召集，但我認為應該能夠募集到 4萬。<br/>{np} 4千是4萬的10分之一1，對召集軍的中心，也就是太子殿下的本隊來說，已經算是很足夠的數字了。另外如是 4萬的話，就如之前所言，與他們雙方是同數，就算分開來各個擊破也是有勝算的，再加上如是能利用祭司和魔法師的話，那就錯錯有餘了。<br/>{np} 我認為太子殿下在募集召集軍時，也告誡他們雙方，如勸導無效就能用募集的軍隊給予懲戒，這樣非但能夠表示王室的旨意，同時也能說是代表著王國貴族整體集結的意思，這比光是出動王室兵力還更具有明確的名份。]<br/>{np} 杰洛梅爾國王再次開口說。<br/>[你在朕繼位沒多久就突然從杰洛梅爾變成杰洛梅爾1世了，也好！卿的意見也算妥當，如沒人反對，就接受那個意見吧。<br/>{np} 相關的計畫和作戰補充之事，之後就與太子商議吧，只要對朕我回報就行了。]<br/>場內沒有人反對，因此王室對這件事情就決定用這個方式去進行了。 </p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>杰洛梅爾1世時發生的合蒙梅德伊渡河事件始末，點擊滑鼠右鍵可以閱讀。</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>
