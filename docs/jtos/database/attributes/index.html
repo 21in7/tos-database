@@ -1,0 +1,319 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="List of Attributes, with advanced filtering and sorting">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>Attributes - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <h1>Attributes</h1>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>$ID</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/10015"><img height="40px" width="40px" src="/assets/icons/ability_common_daggermastery.png" /></a></td>
+                <td><a href="/jtos/database/attributes/10015">10015</a></td>
+                <td><a href="/jtos/database/attributes/10015">短剣マスタリ：急襲</a></td>
+                <td><a href="/jtos/database/attributes/10015">* 短剣装着中、特性レベルごとにダメージ4%アップ。（サブスロットを使用しているときには短剣を2つ装着した場合にのみ100％適用される。1つのみ装着した場合には半減して適用）{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/10018"><img height="40px" width="40px" src="/assets/icons/ability_common_maxweightabil.png" /></a></td>
+                <td><a href="/jtos/database/attributes/10018">10018</a></td>
+                <td><a href="/jtos/database/attributes/10018">最大重量アップ</a></td>
+                <td><a href="/jtos/database/attributes/10018">*キャラクターインベントリの持ち運べる重さが特性レベルにつき20アップ{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/10019"><img height="40px" width="40px" src="/assets/icons/ability_common_compmastery1.png" /></a></td>
+                <td><a href="/jtos/database/attributes/10019">10019</a></td>
+                <td><a href="/jtos/database/attributes/10019">コンパニオンマスタリ：根気</a></td>
+                <td><a href="/jtos/database/attributes/10019">*コンパニオンのスタミナが消耗する周期時間が特性レベル1につき10秒アップ{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/10020"><img height="40px" width="40px" src="/assets/icons/ability_common_compmastery2.png" /></a></td>
+                <td><a href="/jtos/database/attributes/10020">10020</a></td>
+                <td><a href="/jtos/database/attributes/10020">コンパニオン応急治療</a></td>
+                <td><a href="/jtos/database/attributes/10020">*コンパニオンのHPが50%以下の時、2秒間[応急治療]効果を受けてHPを持続的に回復{nl}*2レベルから持続時間が特性レベル1につき1秒ずつアップ{nl}*[応急治療]以後、10分間[応急治療不可]状態{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/10026"><img height="40px" width="40px" src="/assets/icons/ability_cleric_thmace2.png" /></a></td>
+                <td><a href="/jtos/database/attributes/10026">10026</a></td>
+                <td><a href="/jtos/database/attributes/10026">鈍器マスタリ：パラディン</a></td>
+                <td><a href="/jtos/database/attributes/10026">* 広域攻撃比率5アップ{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/10027"><img height="40px" width="40px" src="/assets/icons/ability_cleric_thmace.png" /></a></td>
+                <td><a href="/jtos/database/attributes/10027">10027</a></td>
+                <td><a href="/jtos/database/attributes/10027">鈍器マスタリ：モンク</a></td>
+                <td><a href="/jtos/database/attributes/10027">* ブロック貫通85アップ{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/10028"><img height="40px" width="40px" src="/assets/icons/ability_warrior_sword2.png" /></a></td>
+                <td><a href="/jtos/database/attributes/10028">10028</a></td>
+                <td><a href="/jtos/database/attributes/10028">盾マスタリ：ソードマン</a></td>
+                <td><a href="/jtos/database/attributes/10028">* [盾]と一緒に[片手武器]を装着すると、武器攻撃力の10%を物理防御力として適用する。{nl}* （数値はメインスロットとサブスロット重複適用される。）{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/10033"><img height="40px" width="40px" src="/assets/icons/ability_wizard_thstaff.png" /></a></td>
+                <td><a href="/jtos/database/attributes/10033">10033</a></td>
+                <td><a href="/jtos/database/attributes/10033">ウィザード：広域</a></td>
+                <td><a href="/jtos/database/attributes/10033">* 広域攻撃比率6増加{nl}* [ウィザード：迅速]特性とグループ特性{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/10034"><img height="40px" width="40px" src="/assets/icons/ability_wizard_staffmastery.png" /></a></td>
+                <td><a href="/jtos/database/attributes/10034">10034</a></td>
+                <td><a href="/jtos/database/attributes/10034">ウィザード：迅速</a></td>
+                <td><a href="/jtos/database/attributes/10034">* キャスティングタイム50%減少{nl}* [ウィザード：広域]特性とグループ特性{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/10036"><img height="40px" width="40px" src="/assets/icons/ability_common_compmastery1.png" /></a></td>
+                <td><a href="/jtos/database/attributes/10036">10036</a></td>
+                <td><a href="/jtos/database/attributes/10036">コンパニオンマスタリ：回避</a></td>
+                <td><a href="/jtos/database/attributes/10036">* モンスターからの広域攻撃によるコンパニオンの被ダメージが最大70%軽減{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/10037"><img height="40px" width="40px" src="/assets/icons/ability_archer_hunter3.png" /></a></td>
+                <td><a href="/jtos/database/attributes/10037">10037</a></td>
+                <td><a href="/jtos/database/attributes/10037">コンパニオンマスタリ：忍耐</a></td>
+                <td><a href="/jtos/database/attributes/10037">* コンパニオンの防御力と体力25%アップ{nl}* コンパニオンの攻撃力25%ダウン{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/10038"><img height="40px" width="40px" src="/assets/icons/ability_common_compmastery5.png" /></a></td>
+                <td><a href="/jtos/database/attributes/10038">10038</a></td>
+                <td><a href="/jtos/database/attributes/10038">コンパニオンマスタリ：牙</a></td>
+                <td><a href="/jtos/database/attributes/10038">* コンパニオンの攻撃力25%アップ{nl}* コンパニオンの体力25%減少{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/10039"><img height="40px" width="40px" src="/assets/icons/ability_common_compmastery6.png" /></a></td>
+                <td><a href="/jtos/database/attributes/10039">10039</a></td>
+                <td><a href="/jtos/database/attributes/10039">コンパニオンマスタリ：厚皮</a></td>
+                <td><a href="/jtos/database/attributes/10039">* コンパニオンが受ける物理ダメージ25%軽減{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/10040"><img height="40px" width="40px" src="/assets/icons/ability_common_compmastery7.png" /></a></td>
+                <td><a href="/jtos/database/attributes/10040">10040</a></td>
+                <td><a href="/jtos/database/attributes/10040">コンパニオンマスタリ：聡明</a></td>
+                <td><a href="/jtos/database/attributes/10040">* コンパニオンが受ける魔法ダメージ25%軽減{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/101001"><img height="40px" width="40px" src="/assets/icons/ability_warrior_swordman1.png" /></a></td>
+                <td><a href="/jtos/database/attributes/101001">101001</a></td>
+                <td><a href="/jtos/database/attributes/101001">バッシュ：強化</a></td>
+                <td><a href="/jtos/database/attributes/101001">*[バッシュ]のスキル係数が特性レベル1につき0.5%アップ{nl} *最高レベルになるとさらに10%アップ{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/101004"><img height="40px" width="40px" src="/assets/icons/ability_warrior_swordman2.png" /></a></td>
+                <td><a href="/jtos/database/attributes/101004">101004</a></td>
+                <td><a href="/jtos/database/attributes/101004">スラスト：強化</a></td>
+                <td><a href="/jtos/database/attributes/101004">*[スラスト]のスキル係数が特性レベル1につき0.5%アップ{nl}*最高レベルになるとさらに10%アップ{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/101007"><img height="40px" width="40px" src="/assets/icons/ability_warrior_swordman13.png" /></a></td>
+                <td><a href="/jtos/database/attributes/101007">101007</a></td>
+                <td><a href="/jtos/database/attributes/101007">デアデビル：強化</a></td>
+                <td><a href="/jtos/database/attributes/101007">*特性レベル1につき[デアデビル]の物理攻撃ダメージ増加効果が0.5%増加{nl} *最高レベルマスター時10%追加で増加{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/101015"><img height="40px" width="40px" src="/assets/icons/ability_warrior_swordman6.png" /></a></td>
+                <td><a href="/jtos/database/attributes/101015">101015</a></td>
+                <td><a href="/jtos/database/attributes/101015">バッシュ：ノックダウン</a></td>
+                <td><a href="/jtos/database/attributes/101015">*[バッシュ]を受けた敵をノックダウン{nl}*SP消耗30%アップ{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/101020"><img height="40px" width="40px" src="/assets/icons/ability_warrior_swordman28.png" /></a></td>
+                <td><a href="/jtos/database/attributes/101020">101020</a></td>
+                <td><a href="/jtos/database/attributes/101020">プロヴォック</a></td>
+                <td><a href="/jtos/database/attributes/101020">*敵を攻撃する時に得るヘイト値が特性レベル1につき1500%アップ{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/101022"><img height="40px" width="40px" src="/assets/icons/ability_warrior_swordman30.png" /></a></td>
+                <td><a href="/jtos/database/attributes/101022">101022</a></td>
+                <td><a href="/jtos/database/attributes/101022">ベアー：強化</a></td>
+                <td><a href="/jtos/database/attributes/101022">*特性レベル1につき[ベア]のダメージ減少効果が0.5%増加{nl} *最高レベルマスター時10%追加で増加{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/101023"><img height="40px" width="40px" src="/assets/icons/ability_warrior_swordman31.png" /></a></td>
+                <td><a href="/jtos/database/attributes/101023">101023</a></td>
+                <td><a href="/jtos/database/attributes/101023">リベレート:覚醒</a></td>
+                <td><a href="/jtos/database/attributes/101023">* [リベレート]の持続時間が12秒に減る代わり、敵に与えるダメージが50%増加します。{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/101024"><img height="40px" width="40px" src="/assets/icons/ability_warrior_swordman32.png" /></a></td>
+                <td><a href="/jtos/database/attributes/101024">101024</a></td>
+                <td><a href="/jtos/database/attributes/101024">リベレート:忍耐</a></td>
+                <td><a href="/jtos/database/attributes/101024">* [リベレート]の持続時間が6秒に減る代わり、敵から受けるダメージが50%減少します。{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/101025"><img height="40px" width="40px" src="/assets/icons/ability_warrior_swordman33.png" /></a></td>
+                <td><a href="/jtos/database/attributes/101025">101025</a></td>
+                <td><a href="/jtos/database/attributes/101025">[アーツ]スラスト：突進</a></td>
+                <td><a href="/jtos/database/attributes/101025">* [スラスト]スキルのクールタイムが4秒追加され、使用したとき現在の対象である敵に向かって突進しダメージを与えます。{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/101026"><img height="40px" width="40px" src="/assets/icons/ability_warrior_swordman34.png" /></a></td>
+                <td><a href="/jtos/database/attributes/101026">101026</a></td>
+                <td><a href="/jtos/database/attributes/101026">[アーツ]スラスト：上級強化</a></td>
+                <td><a href="/jtos/database/attributes/101026">* [スラスト]のスキル係数が特性レベル1につき1.25%アップ{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/101027"><img height="40px" width="40px" src="/assets/icons/ability_warrior_swordman35.png" /></a></td>
+                <td><a href="/jtos/database/attributes/101027">101027</a></td>
+                <td><a href="/jtos/database/attributes/101027">[アーツ]バッシュ：上級強化</a></td>
+                <td><a href="/jtos/database/attributes/101027">* [バッシュ]のスキル係数が特性レベル1につき1.25%アップ{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/102001"><img height="40px" width="40px" src="/assets/icons/ability_warrior_peltasta11.png" /></a></td>
+                <td><a href="/jtos/database/attributes/102001">102001</a></td>
+                <td><a href="/jtos/database/attributes/102001">リムブロー：強化</a></td>
+                <td><a href="/jtos/database/attributes/102001">*[リムブロー]のスキル係数が特性レベル1につき0.5%アップ{nl} *最高レベルになるとさらに10%アップ{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/102007"><img height="40px" width="40px" src="/assets/icons/ability_warrior_peltasta13.png" /></a></td>
+                <td><a href="/jtos/database/attributes/102007">102007</a></td>
+                <td><a href="/jtos/database/attributes/102007">ガーディアン：強化</a></td>
+                <td><a href="/jtos/database/attributes/102007">*[ガーディアン]の物理、魔法ダメージ減少効果が特性レベル1につき0.5%増加{nl} *最高レベルマスター時10%追加で増加{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/102008"><img height="40px" width="40px" src="/assets/icons/ability_warrior_peltasta14.png" /></a></td>
+                <td><a href="/jtos/database/attributes/102008">102008</a></td>
+                <td><a href="/jtos/database/attributes/102008">シールドロブ：強化</a></td>
+                <td><a href="/jtos/database/attributes/102008">*[シールドロブ]のスキル係数が特性レベル1につき0.5%アップ{nl} *最高レベルになるとさらに10%アップ{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/102012"><img height="40px" width="40px" src="/assets/icons/ability_warrior_peltasta3.png" /></a></td>
+                <td><a href="/jtos/database/attributes/102012">102012</a></td>
+                <td><a href="/jtos/database/attributes/102012">リムブロー：スタン</a></td>
+                <td><a href="/jtos/database/attributes/102012">*スキル[リムブロー]を受けた敵に特性レベル1につき5%の確率で3秒間[スタン]{nl}*SP消費30%アップ{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/102014"><img height="40px" width="40px" src="/assets/icons/ability_warrior_peltasta5.png" /></a></td>
+                <td><a href="/jtos/database/attributes/102014">102014</a></td>
+                <td><a href="/jtos/database/attributes/102014">盾マスタリ：ブロック特化</a></td>
+                <td><a href="/jtos/database/attributes/102014">* [盾] 着用時にブロックが特性レベル1につき0.75%アップし、ブロックに成功すると自身に10秒間[隙間発見]バフ付与{nl}* [隙間発見] ：敵を攻撃した際に命中、ブロック貫通20%アップが適用{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/102016"><img height="40px" width="40px" src="/assets/icons/ability_warrior_peltasta10.png" /></a></td>
+                <td><a href="/jtos/database/attributes/102016">102016</a></td>
+                <td><a href="/jtos/database/attributes/102016">ガード：防御力</a></td>
+                <td><a href="/jtos/database/attributes/102016">*盾着用後、Cキーで[ガード]使用可能{nl}*[ガード]が活性化している間、キャラクターの物理防御力が特性レベル1につき10%アップ{nl}*親善対決とPVP中はダメージを受けると解除され、クールタイム3秒適用{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/attributes/102024"><img height="40px" width="40px" src="/assets/icons/ability_warrior_peltasta27.png" /></a></td>
+                <td><a href="/jtos/database/attributes/102024">102024</a></td>
+                <td><a href="/jtos/database/attributes/102024">ランゴルト：強化</a></td>
+                <td><a href="/jtos/database/attributes/102024">*[ランゴルト]のスキル係数が特性レベル1につき0.5%アップ{nl}*最高レベルになるとさらに10%アップ{nl}</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/"><img height="40px" width="40px" src="" /></a></td>
+                <td><a href="/jtos/"></a></td>
+                <td><a href="/jtos/"></a></td>
+                <td><a href="/jtos/"></a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>
