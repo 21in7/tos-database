@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="List of Items, with advanced filtering and sorting">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>Items - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/ktos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/ktos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/ktos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/ktos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/ktos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/ktos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/ktos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/ktos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/ktos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/ktos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/ktos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/ktos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/ktos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ktos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <h1>Items</h1>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>$ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="d-table-row">
+                <td><a href="/ktos/database/items/-1"><img height="40px" width="40px" src="/assets/icons/icon_item_silver.png" /></a></td>
+                <td><a href="/ktos/database/items/-1">-1</a></td>
+                <td><a href="/ktos/database/items/-1">실버</a></td>
+                <td><a href="/ktos/database/items/-1">undefined</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/92010"><img height="40px" width="40px" src="/assets/icons/icon_item_ragaanosis_blood_8080.png" /></a></td>
+                <td><a href="/ktos/database/items/92010">92010</a></td>
+                <td><a href="/ktos/database/items/92010">래거노시스 혈액</a></td>
+                <td><a href="/ktos/database/items/92010">Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/92012"><img height="40px" width="40px" src="/assets/icons/icon_item_essence_of_curse_8080.png" /></a></td>
+                <td><a href="/ktos/database/items/92012">92012</a></td>
+                <td><a href="/ktos/database/items/92012">저주의 정수</a></td>
+                <td><a href="/ktos/database/items/92012">Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/92100"><img height="40px" width="40px" src="/assets/icons/icon_item_paperpiece.png" /></a></td>
+                <td><a href="/ktos/database/items/92100">92100</a></td>
+                <td><a href="/ktos/database/items/92100">찢어진 고대의 책 낱장</a></td>
+                <td><a href="/ktos/database/items/92100">Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/92101"><img height="40px" width="40px" src="/assets/icons/icon_item_misc_00021.png" /></a></td>
+                <td><a href="/ktos/database/items/92101">92101</a></td>
+                <td><a href="/ktos/database/items/92101">원격 조작 스크롤</a></td>
+                <td><a href="/ktos/database/items/92101">Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/92102"><img height="40px" width="40px" src="/assets/icons/icon_item_orb_1.png" /></a></td>
+                <td><a href="/ktos/database/items/92102">92102</a></td>
+                <td><a href="/ktos/database/items/92102">원격 조작 마법 폭탄 구슬</a></td>
+                <td><a href="/ktos/database/items/92102">Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/92103"><img height="40px" width="40px" src="/assets/icons/icon_item_stuff_box_c.png" /></a></td>
+                <td><a href="/ktos/database/items/92103">92103</a></td>
+                <td><a href="/ktos/database/items/92103">퀘스트 보상 선택 상자 - 기사 티타스에게(3)</a></td>
+                <td><a href="/ktos/database/items/92103">Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/92104"><img height="40px" width="40px" src="/assets/icons/icon_item_stuff_box_c.png" /></a></td>
+                <td><a href="/ktos/database/items/92104">92104</a></td>
+                <td><a href="/ktos/database/items/92104">퀘스트 보상 선택 상자 - 광산 마을 탐문(1)</a></td>
+                <td><a href="/ktos/database/items/92104">Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/92105"><img height="40px" width="40px" src="/assets/icons/icon_item_stuff_box_c.png" /></a></td>
+                <td><a href="/ktos/database/items/92105">92105</a></td>
+                <td><a href="/ktos/database/items/92105">퀘스트 보상 선택 상자 - 여신들의 전언</a></td>
+                <td><a href="/ktos/database/items/92105">Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/92106"><img height="40px" width="40px" src="/assets/icons/icon_item_stuff_box_c.png" /></a></td>
+                <td><a href="/ktos/database/items/92106">92106</a></td>
+                <td><a href="/ktos/database/items/92106">퀘스트 보상 선택 상자 - 어둠 너머에</a></td>
+                <td><a href="/ktos/database/items/92106">Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/92107"><img height="40px" width="40px" src="/assets/icons/icon_item_stuff_box_c.png" /></a></td>
+                <td><a href="/ktos/database/items/92107">92107</a></td>
+                <td><a href="/ktos/database/items/92107">퀘스트 보상 선택 상자 - 예견된 위기(3)</a></td>
+                <td><a href="/ktos/database/items/92107">Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/92108"><img height="40px" width="40px" src="/assets/icons/icon_item_stuff_box_c.png" /></a></td>
+                <td><a href="/ktos/database/items/92108">92108</a></td>
+                <td><a href="/ktos/database/items/92108">퀘스트 보상 선택 상자 - 사학자 렉시퍼의 연구(5)</a></td>
+                <td><a href="/ktos/database/items/92108">Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/92109"><img height="40px" width="40px" src="/assets/icons/icon_item_stuff_box_c.png" /></a></td>
+                <td><a href="/ktos/database/items/92109">92109</a></td>
+                <td><a href="/ktos/database/items/92109">퀘스트 보상 선택 상자 - 광기의 마법사(5)</a></td>
+                <td><a href="/ktos/database/items/92109">Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/92111"><img height="40px" width="40px" src="/assets/icons/icon_item_confession_drug.png" /></a></td>
+                <td><a href="/ktos/database/items/92111">92111</a></td>
+                <td><a href="/ktos/database/items/92111">아우슈리네 여신의 축복</a></td>
+                <td><a href="/ktos/database/items/92111">Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/92112"><img height="40px" width="40px" src="/assets/icons/icon_item_quest_destroy_song.png" /></a></td>
+                <td><a href="/ktos/database/items/92112">92112</a></td>
+                <td><a href="/ktos/database/items/92112">강화된 파괴의 곡조</a></td>
+                <td><a href="/ktos/database/items/92112">Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/201001"><img height="40px" width="40px" src="/assets/icons/icon_item_small_bag.png" /></a></td>
+                <td><a href="/ktos/database/items/201001">201001</a></td>
+                <td><a href="/ktos/database/items/201001">스프레이 - 검정</a></td>
+                <td><a href="/ktos/database/items/201001">Equipment</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/201002"><img height="40px" width="40px" src="/assets/icons/icon_item_small_bag.png" /></a></td>
+                <td><a href="/ktos/database/items/201002">201002</a></td>
+                <td><a href="/ktos/database/items/201002">스프레이 - 빨강</a></td>
+                <td><a href="/ktos/database/items/201002">Equipment</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/201003"><img height="40px" width="40px" src="/assets/icons/icon_item_small_bag.png" /></a></td>
+                <td><a href="/ktos/database/items/201003">201003</a></td>
+                <td><a href="/ktos/database/items/201003">스프레이 - 하얀</a></td>
+                <td><a href="/ktos/database/items/201003">Equipment</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/201004"><img height="40px" width="40px" src="/assets/icons/icon_item_small_bag.png" /></a></td>
+                <td><a href="/ktos/database/items/201004">201004</a></td>
+                <td><a href="/ktos/database/items/201004">스프레이 - 주황</a></td>
+                <td><a href="/ktos/database/items/201004">Equipment</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/201005"><img height="40px" width="40px" src="/assets/icons/icon_item_small_bag.png" /></a></td>
+                <td><a href="/ktos/database/items/201005">201005</a></td>
+                <td><a href="/ktos/database/items/201005">스프레이 - 노랑</a></td>
+                <td><a href="/ktos/database/items/201005">Equipment</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/201006"><img height="40px" width="40px" src="/assets/icons/icon_item_small_bag.png" /></a></td>
+                <td><a href="/ktos/database/items/201006">201006</a></td>
+                <td><a href="/ktos/database/items/201006">스프레이 - 초록</a></td>
+                <td><a href="/ktos/database/items/201006">Equipment</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/300000"><img height="40px" width="40px" src="/assets/icons/icon_item_misc_collect_gimk_007.png" /></a></td>
+                <td><a href="/ktos/database/items/300000">300000</a></td>
+                <td><a href="/ktos/database/items/300000">세이지 마스터의 붉은색 책갈피</a></td>
+                <td><a href="/ktos/database/items/300000">Companion Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/300001"><img height="40px" width="40px" src="/assets/icons/icon_item_misc_collect_gimk_006.png" /></a></td>
+                <td><a href="/ktos/database/items/300001">300001</a></td>
+                <td><a href="/ktos/database/items/300001">세이지 마스터의 주황색 책갈피</a></td>
+                <td><a href="/ktos/database/items/300001">Companion Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/300002"><img height="40px" width="40px" src="/assets/icons/icon_item_misc_collect_gimk_001.png" /></a></td>
+                <td><a href="/ktos/database/items/300002">300002</a></td>
+                <td><a href="/ktos/database/items/300002">세이지 마스터의 노란색 책갈피</a></td>
+                <td><a href="/ktos/database/items/300002">Companion Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/300003"><img height="40px" width="40px" src="/assets/icons/icon_item_misc_collect_gimk_002.png" /></a></td>
+                <td><a href="/ktos/database/items/300003">300003</a></td>
+                <td><a href="/ktos/database/items/300003">세이지 마스터의 초록색 책갈피</a></td>
+                <td><a href="/ktos/database/items/300003">Companion Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/300004"><img height="40px" width="40px" src="/assets/icons/icon_item_misc_collect_gimk_003.png" /></a></td>
+                <td><a href="/ktos/database/items/300004">300004</a></td>
+                <td><a href="/ktos/database/items/300004">세이지 마스터의 푸른색 책갈피</a></td>
+                <td><a href="/ktos/database/items/300004">Companion Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/300005"><img height="40px" width="40px" src="/assets/icons/icon_item_misc_collect_gimk_004.png" /></a></td>
+                <td><a href="/ktos/database/items/300005">300005</a></td>
+                <td><a href="/ktos/database/items/300005">세이지 마스터의 감청색 책갈피</a></td>
+                <td><a href="/ktos/database/items/300005">Companion Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/300006"><img height="40px" width="40px" src="/assets/icons/icon_item_misc_collect_gimk_005.png" /></a></td>
+                <td><a href="/ktos/database/items/300006">300006</a></td>
+                <td><a href="/ktos/database/items/300006">세이지 마스터의 보라색 책갈피</a></td>
+                <td><a href="/ktos/database/items/300006">Companion Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/300007"><img height="40px" width="40px" src="/assets/icons/13_item_mythril.png" /></a></td>
+                <td><a href="/ktos/database/items/300007">300007</a></td>
+                <td><a href="/ktos/database/items/300007">작은 미스릴 광석 조각</a></td>
+                <td><a href="/ktos/database/items/300007">Companion Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/300008"><img height="40px" width="40px" src="/assets/icons/9_item_ore_orichalcon.png" /></a></td>
+                <td><a href="/ktos/database/items/300008">300008</a></td>
+                <td><a href="/ktos/database/items/300008">작은 이실딘 광석 조각</a></td>
+                <td><a href="/ktos/database/items/300008">Companion Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/300009"><img height="40px" width="40px" src="/assets/icons/5_item_ore_fluorite.png" /></a></td>
+                <td><a href="/ktos/database/items/300009">300009</a></td>
+                <td><a href="/ktos/database/items/300009">작은 피데슘 조각</a></td>
+                <td><a href="/ktos/database/items/300009">Companion Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/database/items/300010"><img height="40px" width="40px" src="/assets/icons/25_item_ore_opal.png" /></a></td>
+                <td><a href="/ktos/database/items/300010">300010</a></td>
+                <td><a href="/ktos/database/items/300010">작은 오팔 조각</a></td>
+                <td><a href="/ktos/database/items/300010">Companion Weapon</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/ktos/"><img height="40px" width="40px" src="" /></a></td>
+                <td><a href="/ktos/"></a></td>
+                <td><a href="/ktos/"></a></td>
+                <td><a href="/ktos/"></a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>
