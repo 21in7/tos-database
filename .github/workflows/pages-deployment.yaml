@@ -20,3 +20,4 @@ jobs:
           projectName: tos-database # e.g. 'my-project'
           directory: docs # e.g. 'dist'
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: test
