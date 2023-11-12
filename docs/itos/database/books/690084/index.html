@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Story of the Golden Note mercenaries. Right-click to read. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>Golden Note - War Journal Vol.1 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/itos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/itos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/itos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/itos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/itos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/itos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/itos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/itos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/itos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/itos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/itos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/itos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/itos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/itos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690084" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690084" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690084" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>Golden Note - War Journal Vol.1</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>* Golden Note - War Journal Vol.1{np}Warsis Creek, Schwarzer Reiter Master and leader of the Golden Note mercenaries, was tending to his weapon in the barracks when the voice of a subordinate called his attention.<br/>[You have a guest.]<br/>[Let them in.]<br/>His partner Paul's features were akin to those of a large gorilla, though his wit was anything but dim.{np}The fact that he had chosen not to deal with the client's request himself meant that there was a problem.<br/>An issue with the contract, perhaps. Or a client too important not to be seen directly by him...{np}<br/>[Our guest has just arrived from the Polanyi territories.]<br/>[Pleased to meet you. My name is Yiltren, representative of the Polanyi territories.]<br/>Warsis stood up to greet him. Yiltrin returned the formal bow and prepared to address the Master.{np}Warsis figured that being forced to repeat what he had likely just told Paul all over again would at least bother him, but the man's expression remained calm and composed. Either his problem was urgent, or he was used to that kind of situation. His posture gave away no signs of restlessness, so Warsis concluded it was the latter.{np}[The former Duke of Polanyi divided the territories into three portions, which he passed on to each of his sons. Our land is now smaller and no longer united, but the three lords have always lived in relative harmony.{np}That is, until recently, when the eldest brother passed away with no heir of his own, and the land was once again divided. Each lord now owns part of their brother's land, but neither can agree on how to share it. It has gotten to the point where they're resorting to the use of force.]{np}The dispute itself was obvious to Warsis, but he was left wondering.<br/>[I understand that they would resist dividing the land in half out of greed, but any official diplomat of the Kingdom can certainly intervene. How did the situation escalate without the say of the government?]{np}[Official powers do intervene when there is a dispute between two noble families. The ministry will send officers to investigate and determine who is right, then take the measures necessary to enforce their decision. Unfortunately that is not the protocol for conflicts arising within nobles of the same family.{np}The ministry will not interfere unless a member of the family is suspected of a very grave crime, such as practicing cruel tyranny against the people of their land, colluding with the demons, or otherwise violating the sanctity of the goddess' divine grace.{np}As it is, matters concerning the sovereignty of a territory are the sole responsibility of the ruling lord or lords.]<br/>[Even if that's true, I do think an official diplomat should be able to issue a corrective order...]{np}[Well, yes, but it would take a serious infraction of the royal law in order for them to take any measures. There's never been a corrective order issued about territorial disputes. In fact, there's hardly ever been a situation considered grave enough to warrant a corrective order.{np}It simply cannot be done without a serious motive.]<br/>[I suppose they never punished any lords for misjudging their own governing abilities or famishing entire regions...]<br/>[Precisely. Incompetence does not justify the punishment of someone in the noble class. When the people disagree with their lord's decisions, they find a cleric to complain to, or they petition to the ministry in the capital. Otherwise, they simply live at the whims of their ruler, for better or for worse.]{np}[So your case is considered an internal issue and can't be solved through diplomatic action.]<br/>[Not only that, but since there is no heir, the residents prefer that one of the former Duke's remaining sons is made lord, rather than an administrative officer from the capital.{np}As you know, if a lord passes with no legitimate heir or has their noble title revoked as punishment, an officer of the Kingdom is assigned to manage the territory.<br/>That opens the possibility for another noble person to gain ownership of the land.{np}In any case, an administrative officer, as fair and benevolent as they may be, will only stay as long as their mandate. There is no telling what influence that might have on the region.{np}A long-term ruler is the better option, particularly considering that our former Duke is still very much revered by his people.]<br/>[Well, any lord can only rule because there is the law of the Kingdom above them. And with it, clerics that commune with the goddesses and interpret Their will.{np}The only difference, which you also mention, is that a lord can rule the same territory for longer. That is what keeps local government stable and consistent. I wouldn't say it's because lords are more competent than royal officers.]{np}[I very much agree. Our problem is that the land was divided in three not long after it was first united. The residents agree on a reunification, but the ministry has left the issue in the hands of the current rulers.]{np}[In all honesty, you should be thankful that they've given you power over this situation. So, are the two lords preparing for battle?]<br/>[No, sir. That is not what they want. But settling this dispute through words alone has proven impossible, which is why I came to request your help. Isn't this the kind of work you do, after all?]{np}[Hm, I see. They can't use their own people for battle. Any casualties and the royal officers will come knocking. Talking it out isn't going to work either, so they're looking to hire mercenaries to fight for them instead.{np}If that's all there is, was there a need to bring the client to me directly instead of accepting the order and reporting on it as usual? Paul?]<br/>The words were harsh in Paul's ears, but Warsis was used to relegating general requests to his partner and did not hesitate to scold him.{np}Paul's answer was simple.<br/>[The other side is employing the Pledge of the Blade, sir.]<br/>[Hah. So you thought I'd be scared of facing Guerra? Or do you just take pleasure in hearing a client say it to my face?{np}Doesn't matter. It's not every day you get the chance to stand against an expert like Guerra. We'll take the request. You can settle the details of the contract with my partner Paul.]<br/>Warsis directed a short bow towards their client, before turning around with a pleased smile.<br/>[This is going to be interesting.]</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>Story of the Golden Note mercenaries. Right-click to read. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

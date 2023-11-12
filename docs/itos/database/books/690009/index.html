@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Legends of Klaipedan Lands. Readable.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>The Gambler of Klaipeda - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/itos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/itos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/itos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/itos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/itos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/itos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/itos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/itos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/itos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/itos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/itos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/itos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/itos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/itos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690009" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690009" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690009" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>The Gambler of Klaipeda</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_spellbook_1.png" />
+            <h3>Content</h3>
+            <p>The Gambler of Klaipeda{np}<br/><br/>In the town of Klaipeda, there once lived a man by the name of Modestas. <br/>He was a good, honest man - but had one major flaw that his friends and family all worried about, his wife especially so. <br/>Modestas was not lazy nor very clever nor not too foolish. <br/>He did not drink or repeatedly get into fights. <br/>The man had one flaw, and it was that he loved to gamble.<br/>{np}During the day, Modestas would work hard and would never let himself go hungry - <br/>but whenever he earned more than he really needed, he would gamble. <br/>The wife would always try to save this money, but not one extra coin would ever go toward their home.{np}Whenever she could, Modestas' wife would often go to the shrine, and pray to the goddess' likeness. <br/>But Modestas continued his odd habits, and the people around him grew increasingly concerned. <br/>After all, the mind of a gambler would think, 'Today it may be small, but tomorrow it could be big!' <br/>And so the days rolled by, same as they ever were, until one peculiar day.{np}Like most of his days, Modestas was heading home after gambling away his excess coins. <br/>He was walking through the Siauliai Woods on the path to Klaipeda, when he saw a strange, old woman on the road.{np}This old woman seemed not only old and frail, but had an unnerving aura around her. <br/>She was acting strangely, as if deep in thought or as if she was obsessed with whatever she was doing. <br/>Modestas thought about simply ignoring the woman and walking past. Nothing would have happened if he did that, <br/>but curiosity got the better of him.{np}To be precise, what really turned his head toward the old woman was what she held in her hands. <br/>Gold. The woman seemed to be obsessing over two gold pieces, doing something with them. <br/>Unable to hear her mumbling, Modestas drew closer to the strange woman.{np}Over the jingling sound of gold, the old woman muttered. <br/>'If these two pieces of gold could ever marry, the baby gold would make me rich... but there's no life in these things...' <br/>Modestas heard those words, and decided to comment. <br/>'That gold won't make you rich by itself, so just put it into something worthwhile. <br/>Do you really think muttering at baby gold will do something?'<br/>{np}The old woman spoke plainly, 'Why not? If this way bears fruit, it'll be safe and secure.' <br/>'That's ridiculous. You should do what I do and gamble.' <br/>The woman was incensed.<br/>{np}'So, you think your betting ways are better?' <br/>'Why wouldn't I? There are moments where I could win or lose, but your way won't make any gold at all.' <br/>With Modestas' words, the old woman paused in thought. Finally, she said, <br/>'Then let's have a bet.'<br/>{np}The disturbing aura around her grew as soon as the offer reached Modestas' ears. He couldn't outright refuse. <br/>'What kind of bet?' <br/>'We'll see whether your way or my way will make us richer.' <br/>'And if I lose?'<br/>{np}'Don't worry about that. You will win, and you will lose - That won't change. The rules are fixed.' <br/>'What do you mean by that?' <br/>'By taking my offer, you will fail once, and you will win once. No matter what happens.' <br/>'Well, yeah. Winning and losing is how gambling works.'<br/>{np}'No. No matter how unlucky it may seem, you will win your first gamble. <br/>And then, no matter how favorable life may seem, you will fail the next.'<br/>{np}Modestas was still confused by these strange words. <br/>'So, you're saying I'll win on every odd bet, and lose on every even one?' <br/>'Yes. It will be so. You will win coin, and then you won't. Is that not fair? <br/>One coin will be enough to succeed, no matter how many bets you make. That is my offer.' <br/>'You think I'll switch between winning and losing, huh?<br/>{np}With her hand to her chin, the old woman gave a puzzling response. <br/>'Three times each, should be enough. Return to me after you make six gambles. <br/>Naturally, if you don't have more coin after your sixth bet, I will win.'<br/>{np}Modestas seemed to tremble. 'How much should I earn, then?' <br/>'You start with one gold piece,' she replied, 'and when you return, show me all your gold pieces but that one. <br/>If you stretch that single piece to anything more, then you win. As for the time... you have one week.' <br/>'So, what do you get when I lose?' Modestas reminded her.<br/>{np}'Well...' the old woman lingered, 'If you win, everyone will know about my gold - <br/>and you'll have the power of winning and losing. On the other hand...' <br/>''On the other hand...'?' Modestas said, tensely.<br/>{np}'When I win, then after this, the friends you know will disappear every time you lose a bet.' <br/>Modestas was unnerved by the conditions set. He did not immediately object, but thought of the victory, <br/>and soon accepted. Modestas was, most of all, the kind of person who never backed down.<br/>{np}As Modestas and the old woman parted ways, he, in any case, knew he now had a dangerous power guaranteeing his victory at any time in the near future. <br/>He walked, looking for the next person to bet huge on. As he wondered how much to wager on his next move, he heard the sound of galloping behind him.{np}Modestas turned around. It was his good old friend, Sigfried, riding on horseback towards him. <br/>They knew each other well, as both had been together through the highs and lows of gambling. They exchanged greetings and talked about where they were going. Sigfried dismounted to walk at a leisurely pace with his friend, idly chatting along their way. <br/>{np}However, before long, Modestas could no longer continue walking with Sigfried. <br/>He was fully aware of his deadline, and had no time for such trivial activities. <br/>{np}Even during their normal everyday conversations, Modestas and Sigfried unconsciously made big and small bets. Eventually, one would utter the word, 'Bet?' unconsciously. <br/>Neither of them were rich so these bets weren't ever that significant. Knowing this would trigger the curse, Modestas really wanted to ask Sigfried to leave. <br/>In the end, Modestas uttered these words: <br/>{np}Are you not busy? You seemed in a hurry on your horse before you passed by for a talk. You should stop worrying about me and go.' <br/> Sigfried, hearing Modestas' words, replied, <br/> 'I was busy, but I still have time to walk with you for another 10 minutes or so. This horse might not seem like much, but when it comes down to it he can go pretty fast.' <br/>{np}Seeing Sigfried not budge, Modestas tried again to persuade him, <br/> 'Wouldn't it be better to be early as opposed to be on time?' <br/> <br/> Hearing this, Sigfried became adamant, <br/> 'Do you not believe what I just said or are you willfully ignoring it all?' <br/> A disconcerted Modestas said, <br/> 'No, I didn't mean it like that......' <br/>{np}However, before Modestas could say any more, Sigfried said, 'If you don't believe me, why don't we have a bet?' <br/> <br/> Naturally, the words, 'Sure. What do you want to wager?' rose up in Modestas' throat.{np}Considering Modestas' habit, to simply not immediately accept a gamble took superhuman willpower from him. <br/> 'What...  what kind of bet?' <br/> 'We were going to bet on whether my horse is fast or not.' <br/> Modestas desperately fought his inner gambler.{np}On the other hand, Sigfried was understandably confident, knowing with certainty that he would win the gamble, and was alright with betting his horse. <br/>With only a little money at hand, the bet became too good to refuse, and Modestas finally accepted. <br/>And, as expected, Modestas won. <br/>{np}As soon as the bet started, Sigfried tried every method possible to command his horse to move. Despite his efforts it didn't move a single hoof at all.<br/>At the end, Sigfried repeatedly cursed its strange behavior. Realizing he'd be late to his appointment without a horse, he threw the reins to Modestas and sprinted away.<br/>{np}As Sigfried disappeared, Modestas felt uncomfortable.{np}For Modestas, who had always been elated upon winning bets and depressed upon losing them, to win and feel depressed was a first in his entire life. <br/>{np}Knowing he had just deceived his long-time gambling friend, Sigfried, and also missed an opportunity to earn a lot of money, Modestas felt conflicted as he walked slowly alongside the horse he had just won. <br/>While walking, Modestas remembered the earlier warnings of his unconditional bet. He realized that now, with his upcoming defeat, he was doomed to not earn any more silver than he started with.{np}While walking along the road, Modestas encountered a group of soldiers. <br/>Upon looking closer, the soldiers seemed to be arguing about what to buy at a store. <br/>Modestas decided not to interfere and pass them, but the soldiers noticed him and called. <br/>{np}You, the young man with the horse, can you come over and help us for a bit?' <br/> Modestas had no idea what these soldiers needed help for, but since he could no longer ignore them, he decided to head over. <br/> Once Modestas arrived, one of the soldiers said, <br/> 'You came at just the right time. We would like you to referee a small gamble we're about to make here.' <br/>{np}Modestas was surprised when he heard the word, 'gamble', but was relieved to know he was only being asked to referee. After all, nothing could possibly happen if he was just refereeing. <br/>Modestas learned that the soldiers were fighting over which goddess was the best. <br/>{np}What started as a small banter turned into a big argument, which finally grew to become a big money bet. The soldiers had already gathered their money and only had to decide the winner. Unfortunately, every goddess got equal votes and a winner couldn't be decided.<br/>{np}Thus, the soldiers decided to settle the bet by calling the first person who passed by, asking him who he thought the best goddess is, and deciding the winner from there. The soldiers agreed that the first passer-by would symbolize the will of whatever goddess he supported. <br/>{np}The soldiers did not tell Modestas who voted for which goddess, for fear of his decision being affected by the expressions of each individual soldier. <br/>The soldiers did tell him however, how much they have each wagered. Just by seeing the gold nuggets, he could easily figure that there was a large amount of money in this bet. <br/>{np}Since a big jackpot was on the line, the soldiers waited with bated breath for Modestas' answer. <br/>Knowing there was no right answer to the question, Modestas simply said aloud the name of his favorite goddess. <br/>{np}When he did, the soldiers reacted strangely. <br/> There was supposed to be an ecstatic winner and disappointed losers, but nobody seemed joyful nor disappointed. Instead, everyone had a bewildered look on their faces. <br/>{np}Modestas, perplexed by their reaction, asked for an explanation to which one of the soldiers answered, <br/>'We originally had votes for four goddesses but your choice isn't any of them, so now we have five goddesses.' <br/>Then the soldiers resumed their squabble about how to decide the winner. <br/>{np}The mood began to deteriorate so Modestas wanted to leave them. <br/>When he was about to take off, the soldiers blocked his path and accused him.<br/>'It's your fault the argument heated up even more. You're not thinking of just leaving are you?'<br/>Intimidated by the irritated soldiers, Modestas dared not to escape. <br/>{np}In Modestas' mind, he concluded that the quarrelling soldiers didn't have him referee, but simply added him into the bet. In reality however, he had no real claim, so he wasn't in the bet just yet. <br/>{np}Knowing Modestas, he could not simply sit on the sidelines watching a big bet grow. Eventually, he became enticed to join.{np}Modestas, caught in the heat of the moment and ending up participating in the soldier's bet, finally remembered it was his turn to lose.<br/>But it was too late.<br/>{np}In addition, because the other soldiers had already bet deeply, Modestas had to bet the only gold bullion he had. <br/>{np}If you think about it, even if it was his turn to lose, all it took for him to lose was one more vote for any of the goddesses he didn't choose. With the odds of the next person walking by supporting his goddess being against him, the probability of winning was low anyway.<br/>{np}However, the victor was chosen unexpectedly. A commanding officer found the soldiers slacking, disciplined them and was about to lead them away. <br/>The soldiers, obeying the superior's command, were about to march off when they shrewdly asked him which goddess he favored. <br/>{np}The officer inadvertently said the name of a goddess, and some of the soldiers began cheering. <br/>The officer, not knowing what was going on, simply ordered his soldiers to move along. In any case, Modestas certainly lost. <br/>{np}Having now lost the gold bullion given to him by the strange old woman, Modestas was now at a loss. <br/>To originally intend to referee, only to end up losing all the gold he had, all while knowing exactly the reason why... Modestas felt heartbroken, dumbfounded, and yet, understanding. A unique feeling. <br/>{np}Although Modestas had just lost money by entering a bet started by others, it was the first time he'd done so in his life. Modestas spent some time thinking of how to better his situation and <br/>suddenly got an idea, knowing he was certain to win his next bet. <br/>{np}If he could call back the soldiers from earlier and bet his horse, he could certainly earn his gold back and possibly more. <br/>Knowing this, Modestas got on his horse, and sped in the direction the soldiers left towards. <br/><br/>With speed, Modestas soon spotted a stationary wagon. Modestas lowered his speed to check out the wagon parked on the side of the road. <br/>{np}Unfortunately, just as Modestas pulled up at the wagon, his horse suddenly grew agitated, forcing him off. Fortunately, because he had cut his speed and fell on muddy ground, he was not greatly injured. <br/>{np}Someone approached Modestas who had been lying down hurt and helped him get back on his feet. He turned out to be one of the people standing on the side, the wagon owner. <br/>The man who helped Modestas uttered with relief, <br/>'I am glad you're not too hurt. Your horse also didn't hurt himself tripping over that pit.'<br/>Modestas noticed a well-hidden pit where he pointed. <br/>The wagon owner continued.<br/>{np}'My horse became injured here and can no longer pull my wagon. It's just an empty wagon, but at any rate, it won't be going anywhere for a while. That's why I have a proposition. Won't you sell me your horse? I believe with a healthy horse pulling the wagon, even my injured horse can help pull it in some way.'<br/>{np}It was an unexpected suggestion, but Modestas had to ride the horse to quickly find and catch up to the soldiers. He immediately refused the offer.<br/>The wagon owner tried to explain there was no way his injured horse can pull the wagon alone but Modestas was not persuaded. After his repeated refusal, the wagon owner offered a new suggestion.<br/>'Then let's do this. What if you buy my wagon? I will sell it for cheap. Since my injured horse can't pull the wagon, it will be better off in your hands.'<br/>{np}Modestas could see that the wagon was very durable, good-looking and has been well cared for. However, he had no immediate need for a wagon, so he hesitated. <br/>In addition, Modestas had no money now; no matter how low the wagon owner went, he did not have the money to buy it. <br/>{np}The human heart sure can be an amusing thing. <br/>Modestas, deciding the wagon was worth buying but lacking the money to do so, decided he could use his impending victory to win the wagon for free. <br/>So he proposed a bet with the wagon master, risking his own horse. <br/>Naturally, Modestas won. <br/>{np}Modestas, having now just won a wagon and an injured horse, originally intended to keep just the wagon and his original horse. <br/>But seeing as the injured horse wasn't as injured as he thought, he believed he had won big. <br/>{np}In his mind, now that he'd had obtained two horses and a wagon, he believed he was no longer in a bad situation, deciding this time to be very careful not to lose big next. <br/>So, instead of following the soldiers, he decided to go to a place where there was less people. He reined his horse and traveled away from civilization. <br/>However, even in a remote setting, he was bound to meet others. <br/>{np}Rare as it would be, Modestas, while moving about in a uninhabited mountain, encountered an elderly Alchemist. <br/>The old Alchemist sat on a chair on the right side of the road, a silver nugget in hand. <br/>As Modestas passed by for a closer look, the nugget turned out to not be of silver, but of lead. <br/>{np}'Could this Alchemist be one who could turn lead into gold?' thought Modestas, but soon thought he was just overestimating the Alchemist. <br/>But the Alchemist, glad to see someone pass by after a long time, called out to Modestas, and suddenly proposed a bet with him. Somehow, the whole world today seemed to want to make bets with Modestas, and he was getting tired of it. <br/>Modestas liked gambling, but to find opponents this easily was becoming a joke to him. <br/>{np}Modestas was about to do something unlike his being and reject the bet, but the idea that he could wager low moved his mind. <br/>After all, the old Alchemist was wagering a lead nugget. <br/>{np}Because he was certain to lose this time, Modestas believed it would be better to wager and lose against a lead nugget now than to run into people who would wager a large amount of money, and lose later. <br/>Modestas first made sure that he could accept the bet despite having no money at hand and could bring some later, and accepted the bet. No words need to be said about the result. <br/>{np} Modestas admitted defeat and said he'd pay him pay back. As he was leaving the place with wagon in tow, the old alchemist broke into a strange smile that caught Modestas' attention.{np}And right before his eyes, the lead nugget prize let out a sparkle and in a moment clearly became gold. <br/> The old Alchemist now snickered, 'Now you owe me one gold nugget, be sure to bring it.' <br/> Modestas protested, but as much as he looked, what the old Alchemist now held was clearly no longer lead. <br/>{np}Instead, it was clearly gold, so in the end Modestas had bet and lost against a gold nugget. <br/>A now-tired Modestas ultimately had no way of objecting to the Alchemist. <br/>{np}Now, Modestas had lost more gold than he owed the strange old woman. <br/>And now, he only had one unconditional victory and defeat left. <br/>As Modestas lead his wagon through the rest of the mountain path, he murmured about having to make sure his next win was a very big one. <br/>{np}This time, no matter what, I have to wage a bet against the world's richest, well maybe not the richest, but a wealthy man at the very least.'<br/>As soon as he uttered these words, his surroundings shook like an earthquake and a heavy, deep voice declared.<br/>'I am the richest in this region.'<br/>{np}Modestas scanned his surroundings but failed to find anyone. So he asked,<br/>'Who are you?'<br/>The heavy deep voice answered his question.<br/>'I am where you stand. In your tongue, I am called the mountain.'<br/>Modestas in disbelief, couldn't help but talk back.<br/>{np}You are... the mountain?'<br/>'That is correct. I am the mountain, and just as you are looking for, the richest around here.'<br/>'You are the mountain? Well, no, even if you are the mountain, how can you claim to be the richest?'<br/>'I own much land for my sierra stretches far. Further in me I contain large valuable lodes.'<br/>{np}Hearing about the mountain's valuable lodes revived Modestas' habit. He even knew that this time, he was certain to win. Modestas started persuading the self-proclaiming mountain to make a bet with him. The mountain, unconcerned over winning or losing this bet, agreed. <br/>{np}For a person to have a fateful encounter with a mysterious being like this, even Modestas doubted his own sanity. <br/>In any case, Modestas bet against the mountain's ores, and won.<br/>{np}At the end of the bet, the mountain erupted, and a large boulder landed directly in front of Modestas. It was certainly something, but the boulder didn't seem to be what Modestas expected. For the mountain, this was the gambling debt repaid. <br/>In Modestas' eyes however, there should have been veins of gold, or at least something useful, like copper or coal. <br/>{np}Even if the mountain's veins contained nothing but rocks, he thought he could end up owning a large quarry to dig out valuable stones. Instead, the mountain had paid an inadequate reward.<br/>When Modestas pointed it out, the mountain disagreed.<br/>'All you own are two horses and a wagon.'{np}Surely one must wage things of equal value. This boulder is worth as much as you own.'<br/>With that said, the mountain returned to his former self, never to deal with Modestas nor anyone else ever again. <br/>Modestas, in his desperate situation, had wasted his crucial chance to just win one big boulder.<br/>Despite his bad luck, he consoled himself knowing at least he had horses and a wagon to transport the boulder.<br/>{np}And then suddenly, anxiety struck him. He realized that, although he has an unconditional loss upcoming, given the strange things that happened up to now, he would not be able to easily control the outcome of the final bet. <br/>Nonetheless, Modestas knew he couldn't stay where he was right now, and decided to leave. <br/>{np}Modestas got up and tried to move the boulder, but to no avail. It was simply too large for him to handle by himself. <br/>He considered leaving it behind, but after recalling the mountain's saying that the boulder was worth more than his two horses and wagon combined, he believed that would be a waste. <br/>Supposing he could sell the boulder to a local quarry for a good amount of money, he became troubled and unable to leave. <br/>{np}In front of Modestas, who had been worrying, appeared a familiar figure. It was none other than the one who had started the bet, the suspicious old woman.<br/>The old woman asked Modestas.<br/>'How is it? Is it going well?'<br/>{np}Modestas confessed he was far from making profits, instead being in debt, and he had wasted all his chances to win and only had his last, losing bet remaining.<br/>After listening to his story the old woman flatly added, <br/>'Since you only have one bet left, go ahead and make your last losing bet. Then all that's left for you to do is pay up your end of the bargain for losing the bet against me.'<br/>Modestas was a man who loved to gamble but he was not the type to throw a tantrum nor was he a sore loser.{np} Modestas knew these gambles were more than just about money. <br/>Modestas, a dedicated gambler, nodded along with the woman's words. He clearly looked to be a man with a huge burden, his facial expression dark. <br/>The old woman could sense Modestas' thoughts, so she made this proposal.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>Legends of Klaipedan Lands. Readable.</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

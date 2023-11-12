@@ -1,14 +1,12 @@
 {
   "name": "tos-deploy",
-  "homepage": "https://21in7.github.io/tos-database/",
   "version": "1.0.0",
   "description": "",
   "main": "src/deploy.js",
   "scripts": {
     "build": "node src/build.js",
     "build-debug": "node %NODE_DEBUG_OPTION% src/build.js",
-    "deploy": "gh-pages -d build",
-    "predeploy": "npm run build",
+    "deploy": "node src/deploy.js",
     "deploy-debug": "node %NODE_DEBUG_OPTION% src/deploy.js"
   },
   "author": "",

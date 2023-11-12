@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Story of Premier Emminant, right click to read">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>Eminent Vol. 1 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/itos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/itos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/itos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/itos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/itos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/itos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/itos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/itos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/itos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/itos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/itos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/itos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/itos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/itos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690067" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690067" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690067" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>Eminent Vol. 1</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_04black.png" />
+            <h3>Content</h3>
+            <p>A young man walked down the street with steady, cheerful steps. Locals recognized him as the son of their lord and greeted him politely. He responded to each with a kind smile and a friendly word or two. The young man was exceptionally well-mannered for someone of his noble status, which made him a widely respected figure among the people living in his father's lands.{np}He was particularly remembered for having saved multiple lives during an epidemic that had spread over the region the previous year. The disease took the lives of all his brothers and sisters, leaving only his ailing father and himself in the family. Most believed that, if it weren't for his son's devoted care and attention, the lord too would have perished from the epidemic. Assured by the young nobleman's selfless and respectful nature, the inhabitants of the land looked forward to the day he became his father's successor.{np}Now the sole descendant of the Eminent family, the young man carried his benevolent ways inside the residence, treating servants and guests alike with utmost kindness.<br/>One day, he carefully entered his father's room and dismissed the servants. The amicable smile soon disappeared from his features. He made sure they were out of hearing distance before drawing closer to the bed.<br/>[They know about my dedication and care now. More than enough, in fact. I think it's time for you to go.]<br/>The lord responded in a strained voice.<br/>[Why must you do this with our family...?]{np}The young man replied.<br/>[What do you mean? I'm going to bring true prosperity to your family, I'm going to make your name known. If anything, you should be thanking me for even having chosen you.]<br/>{np}[Please, stop trying. What is it that you want to reveal about my true identity? Other than me not being human, you know nothing.]<br/>[What are you?]<br/>[You will die soon, so I will not hide it. I am what you call a demon. A demon lord. I shall not reveal my true name. It is enough for you to know the name of Eminent, your family. When you die, there will be no more Eminents and no more unrest, no more disorder.]<br/>[Why are you after the lands and authority of a human?]<br/>[I have my reasons, but there is no need or time to elaborate.]<br/>Uttering these words, the young man reached out with his hand and lightly touched the other. He was still breathing slowly, his eyes closed. Later, with the servants back in the room tending to him, he would have his last breath. But not now.{np}[Please, stop trying. What is it that you want to reveal about my true identity? Other than me not being human, you know nothing.]<br/>[What are you?]<br/>[You will die soon, so I will not hide it. I am what you call a demon. A demon lord. I shall not reveal my true name. It is enough for you to know the name of Eminent, your family. When you die, there will be no more Eminents and no more unrest, no more disorder.]<br/>[Why are you after the lands and authority of a human?]<br/>[I have my reasons, but there is no need or time to elaborate.]<br/>Uttering these words, the young man reached out with his hand and lightly touched the other. He was still breathing slowly, his eyes closed. Later, with the servants back in the room tending to him, he would have his last breath. But not now.{np}The man now set to become the only remaining member of the Eminent family took a few moments to organize his thoughts.<br/>After being tasked with finding Laima's Revelation and realizing the ways in which the goddess had used humans in Her favor, he was determined to plot his own scheme of human domination.{np}It would seem odd, that the ingenious Rexipher had wasted centuries surrounding that royal mausoleum before considering the thought of infiltrating the humans' society. On the other hand, the fact that he unlike other demons had even conceived such a plan was remarkable, given their proud and reluctant personality.<br/>He didn't know it yet, but his plan would become the foothold to, years later, defeating Laima's chosen guardian for the first time in history.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>Story of Premier Emminant, right click to read</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

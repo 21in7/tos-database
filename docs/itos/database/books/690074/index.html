@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Story of Solcomm, right-click to read.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>The Story of Solcomm - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/itos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/itos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/itos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/itos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/itos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/itos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/itos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/itos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/itos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/itos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/itos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/itos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/itos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/itos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690074" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690074" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690074" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>The Story of Solcomm</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>[Have you called?]<br/>Demon Lord Solcomm stood in front Gesti, the one who had summoned him. Waiting for her reply, he realized once again the complexity of his situation. Formally, he was a servant of Kartas. His work, however, was largely dedicated to Baiga. And yet there he was, awaiting orders from Gesti. A devoted agent for all three of those high-rank demons.{np}Solcomm's ordeal began with Baiga designating him to work for Kartas in order to spy on the rival demon king. Giltine, their master, had promptly agreed to Baiga's proposal, thinking a reasonable demon such as Solcomm would do well to prevent Kartas' incontrollable nature from getting out of hand.{np}Some centuries later, Gesti was tasked with chasing Laima, and Giltine allowed her to request the help of other demon lord subordinates, Solcomm included.<br/>The decision did nothing to improve Solcomm's situation. His master used the constant "support missions" and "dispatched operations" as an excuse to achieve what was essentially discarding his least favorite henchmen. Not only that, as the most normal and rational of the lower-ranked demon lords, Solcomm was the obvious choice for Gesti.{np}A stubborn, deranged character like Warpulis would be of no help to the task at hand.{np}Having Nebulas around was more than enough. In the end, it was up to Solcomm to accept the new role under Gesti, now his third master.<br/>In the centuries to come, answering to three masters was bound to do more harm than good, he thought. It lowered the chances of any of them truly supporting him.{np} His current master Gesti was, unsurprisingly, beginning to show signs of just that. She addressed him.<br/>[Do you know how long we've been looking for Laima's Revelation? It's bad enough that we haven't made any progress, and it's only going to get worse.]<br/>[Why is that?]<br/>[Ever heard of Lydia Schaffen?]{np}[Yes, I've heard of her. She is exceptionally well-known in the human realm. I don't believe any human in history, not even her mentor Maven, has ever become quite as influential as she.]<br/>[I didn't know you were so keen on human gossip. But alright. What's important is that this woman is guarding Laima's Revelation. And you know what's funny? We know she has it, but we can't even touch her. Every other keeper of a Revelation was either hiding it or protecting it, or at least doing something to keep it off our hands. Maven, the one they call her mentor, is locked inside the Great Cathedral with a Revelation. Tesla, well, he lived for way too long not to be hiding his own Revelation somewhere. His statues are almost as powerful as the goddesses themselves. Even if I catch him, how am I going to interrogate him?{np}The Beholder thinks Tesla has no Revelation. But Lydia Schaffen is different. This woman is different, I'm telling you.]<br/>Solcomm interceded before Gesti's explanation could get any longer.<br/>[She is different, indeed. She defeated six demon lords in the past 27 years. Completely unheard of for a human. And her arrows! There's not a demon's heart that- ahem, I apologize.]{np}His words were momentarily cut off by Gesti's piercing look, but soon he continued.<br/>[What I mean is that other humans have absolute faith in her arrows.]<br/>[Yes, they have every reason to. That's the problem.]{np}Gesti's incredibly rare compliment to a human's power astonished Solcomm. He took the chance to add, [I'm not sure if you're aware, but there is an even greater problem. All the demons she is known for defeating were victims of ingenious tricks. Schaffen is as intelligent as she is talented, and she is extremely resourceful.]<br/>[That's why I called you here. Giltine thinks you're clever enough not to fall for a trap.]{np}[What do you mean?]<br/>[Lately that idiot Ziburynas thought he could beat brain with brawn and went after Lydia. Ended up crossed by an arrow. Apparently she even got hold of an essence with his magic in it. That's the rumor we heard from his Pawndel minions; the other lords don't know about it yet. He wasn't even assigned to her, who knows why he went and got himself killed for nothing.]{np}[I'm sorry to hear that.]<br/>[If she kills you too, we'll have no one left to go to for this.]<br/>[Pardon? I- What is that you mean by...?]<br/>[It's your job now to get the Revelation from Lydia Schaffen. Your mission is in a place the humans call the Star something Lake. She is busy there building some kind of tower.]<br/>Solcomm knew this was not an order he was allowed to refuse, and so he signaled to Gesti his obedience. With that began the history of his legendary defeat.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>Story of Solcomm, right-click to read.</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

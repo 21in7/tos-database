@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Story of Matador Master Chridela Otero. Right-click to read. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>Chridela Otero Diaries Pt. 1 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/itos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/itos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/itos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/itos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/itos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/itos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/itos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/itos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/itos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/itos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/itos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/itos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/itos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/itos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690096" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690096" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690096" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>Chridela Otero Diaries Pt. 1</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p> * Chridela Otero Diaries Pt. 1<br/>{np} In a small, tattered house, an old man reached out with his hand from the crude bed where he lay.<br/>Chridela took her father's hand into her own.<br/>{np} [I'm sorry, Chridela. It's my own fault that I wasted my noble blood only to die like this. I only regret never having done anything for you.]<br/>{np} The girl shook her head.<br/>[Please don't say that. You have to get better.]<br/>[If only I had the fortune of your grandfather, your future would have been very different.]<br/>[I can take care of my future.]<br/>[I'm sorry.]<br/>{np} Her father repeated the words one more time when, as if all energy had left him, he closed his eyes and fell asleep.<br/>Chridela, having skipped already two meals in a row, succumbed to hunger and fatigue as she, too, went to sleep.<br/>When she woke up, her father had already left the world.<br/>{np} After the humble funeral, arranged with the help of the villagers, young Chridela could do nothing but cry in her empty house. Her tears had only just dried out when she heard someone knock on the door.<br/>{np} Chridela didn't answer, but the door wasn't locked, and they came in through the open door.<br/>There were two of them; one was the village elder, the other was a man she didn't recognize.<br/>{np} The man took one look at Chridela and sighed. He said to her,<br/>[I know your father met someone like me not long ago, and I know it won't be easy hearing what I have to say to you, but...]<br/>{np} Before he could continue, Chridela wiped her face to stare boldly at the man.<br/>[An Otero never avoids responsibility, for better or for worse. What is it that you came to tell me?]<br/>The man looked back with a hint of surprise on his face.<br/>{np} [You are brave for such a young girl. People used to say no one in the family was half as good as Manel Otero.]<br/>The man observed Chridela's expression, but the fact that he had just insulted her family didn't seem to bother her.<br/>{np} It wasn't that she didn't understand, she was only being cautious.<br/>The man was again surprised by her attitude.<br/>This time, he addressed her in a serious tone.<br/>{np} [Manel Otero, the founder of your family, was granted noble status under His Majesty, King Termanel, the 38th ruler of our Kingdom. By the third generation, all of your family's property, assets and valuables had been either sold or impounded.<br/>{np} Paintings by Sakkurrhe, the great artist of King Wardel's era, were let go at a price that doesn't nearly compare to their value. A most regretful decision, if I may say. Your father had nothing but the noble status of his name, and now he is no more.]<br/>{np} [You don't have to tell me what I already know. You should start by telling me who you are.]<br/>[Oh! Where are my manners? I am Kdit, from the Kedora Merchant Alliance. I can't really say it's nice to meet you at a time like this.<br/>{np} Alas, this is how we had to meet. I'm surprised you were already aware of all of that. But there's something you need to know.]<br/>{np} Chridela waited for the man to continue.<br/>[Your father may have been born to a noble family, but under our law, that privileged status does not last forever. The Otero family has never made significant contributions to the Kingdom. What's more, they wasted their reputation and wealth throughout the generations.<br/>{np} That is why your noble status has been revoked. Your family will no longer receive the benefits granted to the noble class, particularly in the fiscal sector. Perhaps fortunately, your family has no more wealth to benefit from. This house and all it contains will also become property of the Kedora Alliance.<br/>{np} Though it's a fortunate thing your father owes us and not another agency. We are not the type to strip a poor orphan girl of all her belongings to avoid losses. That said, we can't let you stay in this house anymore.<br/>{np} It's not just a matter of paying off your father's debt. You need to live with a legal guardian until you're an adult.]<br/>[A guardian?]<br/>{np} [Or you can be sent to an orphanage run by the clerics, though I do think a guardian is your best option. You'll be sent to your ruling lord, where you'll receive work and education. Most take the chance to learn a profession they can follow as adults. If you're talented enough, there's nothing you can't learn.<br/>{np} The lord is required by the law to pay for your upbringing, no matter how costly. Of course, if you're looking for more than basic education, you'll have to pay it all back to the lord once you become an adult.]<br/>{np} [So I get to live in the lord's castle?]<br/>[Not quite... Normally that is what happens, but your case is different. Someone else has volunteered to be your guardian.]<br/>[Who?]<br/>[I cannot tell you; not yet. But don't worry. Becoming an orphan's legal guardian is not only a matter of wealth or will, and we at the Kedora Alliance would never disregard the safety of a child.]<br/>{np} Kdit paused for a moment.<br/>[You don't have to call a neighbor, we will be taking you to your guardian ourselves.<br/>{np} Forgive me for this remark but, financially, what we're doing here is a loss for the Kedora Alliance.<br/>{np} This old house and everything in it is not enough to repay your father's loan. However, we will allow you to take anything you want with you.<br/>{np} That includes objects you may have hidden outside the house, of course, as long as you're able to carry them. Make sure to take anything you think is necessary or important.<br/>{np} We won't check even if you're hiding gold bars or other valuables, so I recommend you take as many as possible. Everything you leave behind will be appropriated and reutilized by the Alliance. We will you give you a few hours to prepare. When we return, I expect you to be ready to leave.]<br/>{np} Chridela acquiesced and Kdit gave her a short nod before exiting through the front door. The village elder quietly expressed his condolences to the girl before leaving the house.<br/>Kdit was still nearby when the elder came out.<br/>{np} They had promised Chridela time to prepare, so they began walking towards the village.<br/>A few steps on their way, the elder turned to Kdit.<br/>[I have to say, the Kedora Alliance is much more... generous than what I had imagined.]<br/>{np} Kdit smiled abashedly.<br/>[There's always something to be gained in everything the Alliance does. We give when we must give, and we take when we must take. It's only a question of maintaining balance. In a way, we can afford to be generous because of how effectively we make a profit.]<br/>{np} The village elder didn't quite agree with Kdit, but he chose not to contradict him.<br/>Instead, he said,<br/>{np} [I'm glad you found a guardian for Chridela. Our village doesn't have the means to look after the girl, and sending her to work for the lord would mean an entire life of menial jobs. She would probably end up in someone else's land, the poor girl...]<br/>{np} [That doesn't sound like a bad life at all.]<br/>[Considering she comes from a noble family, I would rather she followed another path, that's all.]<br/>Silently, Kdit nodded in agreement.<br/>{np} In his mind, however, the Kedora Alliance official had other thoughts.<br/>'If she fails to prove herself to her guardian, she might as well marry a farmer and live a quiet life in the countryside. She may not have a choice right now, but with her attitude, there's no telling what the future of this girl will be...'</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>Story of Matador Master Chridela Otero. Right-click to read. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

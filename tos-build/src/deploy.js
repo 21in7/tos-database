@@ -3,7 +3,7 @@ const fs = require('fs');
 const fsExtra = require('fs-extra');
 const path = require('path');
 const shared = require("./shared");
-//const sharedVariables = require("../../variables");
+const sharedVariables = require("../../variables");
 
 // Add timestamp to logs
 require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
@@ -80,9 +80,9 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
     //result.status !== 0 && shared.logError('Failed to patreon', result);
 
     // 6. Commit changes
-    is_new_patch = commitChanges('Patreon', 6) || is_new_patch;
+    is_new_patch = commitChanges('test', 6) || is_new_patch;
 
-    if (shared.IS_PROD && (is_new_patch || is_new_revision || shared.IS_FORCE_DEPLOY)) {
+    //if (shared.IS_PROD && (is_new_patch || is_new_revision || shared.IS_FORCE_DEPLOY)) {
         // 7. Service Worker
         shared.log('7. Service Worker');
         cwd = path.join('..', 'tos-sw');
@@ -98,9 +98,12 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
 
         // 8. Deploy on Apache
         shared.log('8. Deploy on Apache');
-        fsExtra.copySync(path.join('..', 'tos-build', 'dist'), sharedVariables.APACHE_WWW);
-        fsExtra.copySync(path.join('..', 'tos-web', 'dist'), sharedVariables.APACHE_WWW);
-
+        try{
+        fsExtra.copySync(path.join('..', 'tos-build', 'dist'), '/home/gihyeon/2tb/tos-database/docs');
+        fsExtra.copySync(path.join('..', 'tos-web', 'dist'), '/home/gihyeon/2tb/tos-database/docs');
+        } catch(err) {
+            shared.log(err)
+        }
         for (let region of shared.REGIONS) {
             // 9.1. Pre-render HTML for web crawlers
             shared.log(`[${ region }] 9.1. Pre-render HTML for web crawlers`);
@@ -111,7 +114,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
 
             // 9.2. Unzip pre-rendered HTML ( ͡° ͜ʖ ͡°)
             shared.log(`[${ region }] 9.2. Unzip pre-rendered HTML ( ͡° ͜ʖ ͡°)`);
-            cwd = sharedVariables.APACHE_WWW;
+            cwd = path.join('..', 'docs');
 
             let zip_from = path.join('..', 'tos-build', 'dist', region.toLowerCase() + '.zip');
             let zip_to = path.join(cwd, region.toLowerCase() + '.zip');
@@ -126,7 +129,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
 
         // 10. Clear CloudFlare cache
         shared.log('10. Clear CloudFlare cache');
-        let cf = require('cloudflare')({ email: sharedVariables.CF_EMAIL, key: sharedVariables.CF_KEY});
+        let cf = require('cloudflare')({ id: sharedVariables.CF_EMAIL, key: sharedVariables.CF_KEY});
         let manifest = JSON.parse(fs.readFileSync(path.join('..', 'tos-build', 'dist', 'tos-sw.manifest.js'), { encoding: 'utf8' }));
         let assetGroup = manifest.assetGroups.find(value => value.name === 'app');
         let urls = Object
@@ -149,14 +152,15 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
             shared.logError('Failed to purge cache', error)
         }
 
-    } else {
-        shared.log('No new patch nor revision available. No deployment is needed.');
-    }
+    //} //else {
+        //shared.log('No new patch nor revision available. No deployment is needed.');
+    //}
 
     // Update revision
     fs.writeFileSync(revision_path, childProcess.execSync('git rev-parse HEAD').toString());
 
     shared.singletonUnlock();
+
 })();
 
 //----------------------------------------------------------------------------------------------------------------------

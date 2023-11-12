@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Story of the Golden Note mercenaries. Right-click to read. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>Golden Note - War Journal Vol.2 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/itos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/itos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/itos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/itos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/itos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/itos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/itos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/itos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/itos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/itos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/itos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/itos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/itos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/itos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690085" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690085" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690085" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>Golden Note - War Journal Vol.2</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>* Golden Note - War Journal Vol. 2{np}[This is not your call, General!]<br/>Schwarzer Reiter Master Warsis Creek raised his voice to the man facing him across the table. They were inside his barracks, sitting opposite each other on worn out wooden stools.<br/>[I'm afraid it is.]{np}The reply came from Lamin, a general of the Royal Army.<br/>[How?? Territorial disputes are under the jurisdiction of the ministry. Their officer Beikeol already declared that the problem is to be settled by the two parties, in consideration of the residents and the former Duke.{np}I'm well aware of the conditions. No damage to any property in the region, and no casualties on either side of the local armed forces.{np}So I have to insist: this is not the place for the Royal Army. Think about it. Your superiors won't be happy to hear you're interfering in a civilian dispute; that will only escalate the problem. Not to mention how it will look to His Majesty the King.]{np}[We have no intentions of defying the authority of royal officers or ministries. The same is true for the Royal Guard, our Royal Knights, and every other general of the Kingdom.]<br/>[Why is it that having you, General, say this in front of me only makes you sound less credible?]{np}[My men and I are officially off duty. In the meantime, we were given orders to search for territories around the Kingdom that can be used for military purposes.{np}This area of land has just lost its owner and it could be very useful to us. Naturally, we want it.<br/>Whether the ruling lords are at battle, or whether they hire mercenaries to fight for them is not of our concern.<br/>Territorial disputes aside, we are here to adapt this region for military use. That is our official stance.]<br/>Warsis Creek pondered on the general's words before replying.{np}[That's the army's position. Now I want to hear your personal opinion, General Lhamin.]<br/>[Yes, to be honest, if it weren't for this dispute we wouldn't have come here under the pretext of using this land for the army.]<br/>Lhamin paused for a moment before speaking again.<br/>[Mr. Creek.]{np}Intrigued to hear the general call out his name, the Schwarzer Reiter Master adjusted his position, leaning lower towards the table.<br/>Lhamin waited until he was sure he had Warsis' undivided attention.{np}[I'll be frank with you. I know I'm overstepping my authority coming here. I know I have no right to stand in the way of official orders, but I was not sent here by my superiors. I'm keeping an eye on Olfas Grimm and Aleister Crowley. I'm also worried that something might provoke the folks in the Astral Tower to launch an attack.{np}Those are all real threats to the safety of the Kingdom.<br/>But the Royal Army isn't allowed to take action without sufficient reason. And we can't give away the fact that we're paying attention to these issues. Only when something happens can we intervene.]{np}[Well, isn't it your duty as general of the Royal Army? Following the orders of your superiors and the Royal Court when trouble happens?]<br/>[Need I remind you that you abandoned a bright career as general of the Kingdom to pursue your own military endeavors, Mr. Creek? If anyone should sympathize with my position, I would expect that to be you.]{np}[So you believe that waiting until the Court commands you to act is more damaging to the Kingdom, and you can't stand waiting in the dark. So you'll do whatever it takes to prevent something serious from happening, as long as it's not strictly against royal law.]{np}[Correct. I believe it's my duty as general of the Kingdom to use any resources at my disposal to protect the nation and its people.]<br/>[Good. I agree with you, General. Although I don't think I would describe my military career as "bright". Yours, on the other hand...]{np}[I'm afraid there are many talented and more experienced generals above me, Mr. Creek.]<br/>[Come on, General, there's no need to be humble. Tell me what you want.]{np}[Ministry officer Beikeol is a very intelligent man and an outstanding bureaucrat. Some even say he's set to become the next Premier Eminent.{np}But something about his behavior changed in the past few years. It's not enough to incriminate him, but it has caught my attention. Like this territorial dispute, for example. The locals who remember the original Duke want their land to be ruled by either one of his remaining sons.{np}The officer agreed to let the two lords settle things on their own, so long as the conflict doesn't escalate too far. This all seems fairly reasonable, until you consider...]<br/>[... that the scale of this whole confrontation wouldn't be nearly as serious if the lords hadn't hired the Pledge of the Blade and the Golden Note to fight in their behalf. Regardless of the outcome, the responsibility is ours and the residents'.{np}Do you think the officer was trying to aggravate the conflict? There's no proof of it, of course, but is that your suspicion?]<br/>[Incisive as always, Mr. Creek. Not only is there no proof of the officer's intentions, but his reasoning is almost undeniably correct.{np}Also, I suspect it may have something to do with the fact that two Class Masters and two rival mercenary groups are involved.]<br/>[I can see why. Now, this isn't entirely related, but I'm curious about your work with the Astral Tower and the other Masters. I understand you're paying close attention to them.]{np}[As a Master yourself, you know that Class Masters are treated like nobility even if they aren't of the noble class. After all, it's an important position one gains by having their talent recognized. The problem is when one of those highly talented people uses their skill or authority for personal reasons.{np}I simply think that Masters who show that disposition should be monitored.]<br/>[There are much more despicable people among our Class Masters. Corsair Master Hayraven, for example.]<br/>[It was His Majesty, King Rowmel who assigned high positions to pirate captains of the time to increase the numbers of the Royal Navy, and gave them the symbolic token that is passed on from Master to Master. It was an unfortunate decision that we should be trying to rectify.{np}It isn't right for us to continue allowing the pirates to use their contributions of eight centuries ago as an excuse to maintain their importance and appoint their own Masters.]<br/>[Revoking their right to the royal token is nearly impossible now.{np}The token was always taken from the previous Master through means of skill, and His Majesty, King Kadumel declared 600 years ago that the position of Class Master is to be merited by skill. No king has been able to invalidate the token after that, and now it's in Hayraven's hands.{np}Whether we like it or not, the token proves that he is recognized by the Kingdom.]<br/>[King Kadumel's legacy isn't the brightest, unfortunately.]<br/>[Any reasonable person will agree, but that's not what we need to focus on.]<br/>[How I regret not being able to handle Hayraven myself.]{np}[And you say you're worried about the Astral Tower? That's unexpected. The Schaffenstar have been strong allies of the Kingdom for centuries, and Mechen doesn't seem all that bad.]<br/>[Yes, I very much admire their long tradition and dedication. Their leader Mcen is also exceptionally talented and good-natured.{np} However, the Schaffenstar are more numerous than ever and they're incredibly skilled. Not only that, they have autonomous rights. They may follow the values of their founder Lydia Schaffen now, but there's no guarantee that that will always be the case.{np}From a military point of view, if the Schaffenstar were to declare themselves as an independent territory with the Starlit Lake as their borders, there is little the Kingdom could do about it. "There is no such thing as an impenetrable fortress, and even the strongest ones are destined to fail without consistent support from the outside"...]{np}[Glkahn Donihue, The Theory of War Vol. 3.]<br/>Lamin looked almost serene as he nodded knowingly at Warsis. The general continued.{np}[Unlike what the great General Donihue believed, however, impenetrable fortresses do exist. The Astral Tower is proof of that. It transcends theory, really. The only possible way to conquer it would be to wait for all the Schaffenstar members to grow too old to sustain the tower.{np}Not even if a miracle of the goddesses brought back all the great generals of King Zachariel would there be another way to bring it down by force.]{np}[The way I see it, all it takes is an act of treason to weaken the entire foundation of a society like them.]<br/>[Yes, historically it wouldn't be the first time it has happened. The problem is that there isn't much else we can hope for in terms of a solution. As general of the Royal Army, I simply cannot be at ease knowing that an organization like this has the power to ignore our royal laws if they want to.]{np}[I understand, but let's not worry about things that haven't happened yet. We have our own problem to solve now, remember? What are you going to do about our dispute?]<br/>[From what I've observed, it seems like both you and Mr. Guerra aren't quite sure about what to do next.{np}You already settled your commission with the lords. Financially, you can't afford to drag the dispute for much longer. You fought a few battles with no sure victory, but scaling up the conflict means an even heavier burden on your funds.{np}Maybe it isn't my place to say this to the leader of a mercenary group, but if you've been fighting for this long with nothing but casualties and injuries to compensate for, isn't it time to agree on a cease-fire? Isn't that also part of your work?]{np}[I do not need you to explain my job to me. I understand very well that this situation needs to end if we're going make a profit from it. Guerra isn't the only one with an eye for money. Do you think I would be the leader of a mercenary group if I didn't know how to do business?]{np}[Very well. My request is simple, then. Leave. I know you need to return to the capital soon, to complete your contract with the arena and take in new men from their group of fighters. Surely you're not planning to miss that? You would be wasting the amount you spent on the deposit, not to mention the opportunity to integrate new mercenaries.{np}It's very important that you leave now. You may lose the bonus for retreating without a victory, but I'm sure you'll have agreed on a fair commission either way. And yes, you can count on extra compensation if you stay and win, but if your side is defeated, won't that result in twice the losses?{np} That is why you need to leave now. Take the path of less risk and abandon this conflict immediately.]<br/>[Financially, yes, that is the most sensible solution. But still...]<br/>[My soldiers and I will occupy the entire area where your mercenaries are located.  The Pledge of the Blade won't be able to attack us.{np} It's hard to imagine anyone defying the Royal Army. In fact, my soldiers and I would be happy if they tried. We would very much like the chance to face off against Guerra's men. It isn't something that happens every day, after all.]{np}[Would that be legally viable?]<br/>[We'll use force and pressure them to abandon their occupied territory. The ministry or the army will likely send someone to investigate. They'll go back and forth before they make the decision to send me the orders to retreat, but that will take time.{np}I'll receive a warning for misinterpreting the scope of my duty; nothing serious. If I'm lucky, my superior in the capital, General Vincentas, might even recognize this land for official military use.{np} If that happens, the two lords who hired you will just have to accept the situation. Of course, with the ministry in charge, things might not look good for me.{np}Prince Tylenis and Princess Kaonilla both have ties with some of my general friends in the Royal Army, so I don't believe they would let me get demoted over this incident. At most, I'm expecting a cut in my pay or some other kind of mild disciplinary action.]{np}[If you're already expecting that, why not go ahead and propose an expropriation of the disputed territory? Even if one of the lords ends up occupying the land, the profit from the crops can help fund the soldiers stationed in the area. It can't get more practical than that.]{np}[That's a good idea. We would never be able to do that in reality, but the absurd proposal is sure to make the two lords rethink their positions. If we can create a new plan to section the land, there's a chance they will consider it one final time.]{np}[I think Guerra should handle the agreement, in that case. I will already be gone by then, and Guerra can use his influence to settle the dispute and receive some added compensation from both lords.]{np}[Are you sure you're rivals? Hahah. That's incredibly generous of you, Mr. Creek.]<br/>[Let's keep it at that. I'll give my men orders to begin evacuating. But I'll need to you to make sure that both my mercenaries and the local soldiers are protected from Guerra's side while I'm away.]{np}[That's a given, isn't it? I already gave you my word as general of the Kingdom.]<br/>[I wouldn't have let you convince me this far if I didn't trust you, General.]<br/>[Thank you, Mr. Creek.]<br/>[Thank you for the meeting.]<br/>Pleased, the men stood up from their stools and shook hands over the table.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>Story of the Golden Note mercenaries. Right-click to read. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

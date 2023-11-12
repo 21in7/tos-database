@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Story of Hayraven. Right-click to read. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>Hayraven's Unofficial Chronicles Part 2 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/itos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/itos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/itos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/itos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/itos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/itos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/itos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/itos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/itos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/itos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/itos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/itos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/itos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/itos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690083" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690083" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690083" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>Hayraven's Unofficial Chronicles Part 2</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>Hayraven's Unofficial Chronicles Part 2{np}Warm sunlight was shining through the window of the captain's cabin. Hayraven, opening his eyes, awoke from his shallow sleep. He had dreamt another of his many recurring dreams.<br/>At times finding himself on a small boat, facing an unfamiliar foe, or at others recalling events from his past. He would dream of endless rope ladders and ghost ships. Visions of his crew and Vladislovas' subordinates populated his subconscious; dreams that shifted but remained unchanged as well.<br/>{np}He put on his clothes and stepped out onto the deck, where he was greeted by his crew. Hayraven raised his hand in response as he walked, but was halted by the sight of Seadog approaching. {np}The latter looked up at the watchman stationed atop of the mast.<br/>Before Seadog could speak, the watchman cried out,<br/>[Mast sighted starboard!]<br/>Unaware of the fact that he would have been punished had his warning arrived only a second later, the watchman continued to shout.{np}[Merchant vessel! Flag unidentified!]<br/>He soon followed with more information.<br/>[Flag confirmed! It's a Kedora Alliance vessel!]<br/>Hayraven nodded at Seadog, who understood his orders.{np}The captain, having spotted the approaching vessel long before the watchman, sat down on a deckchair and quietly observed his crew prepare for battle under Seadog's command. The merchant ship was now close enough for all the men on board to see. Seadog, who was standing next to the captain, muttered in surprise,<br/>[Huh. Who do we have here?]{np}Hayraven's eyes were also set on the group of heavily armed men on deck of the neighboring vessel.<br/>[Looks like Guerra's Pledge of the Blade mercenaries are on board.]<br/>Seadog spoke carefully.{np}[They don't seem to be shipping any cargo. If all they have are mercenaries, their ship will be light and fast. Seems to me like they should be counting on that to retreat as fast as they can now... Unlike the Golden Note mercenaries, they don't look like they travel with enough combat supplies, either.]{np}[Running away would taint their reputation; that can't be good for business. No, they're looking for a fight here. Let's grant their wish,] Hayraven concluded. [Do you reckon Guerra's involved?]<br/>[It doesn't look like he is, Captain.]<br/>Seadog shot another glance at the watchman, confirming the absence of any new reports. Hayraven spoke again.<br/>[Look at the way they're lined up. They're expecting hand-to-hand. They think I'm going to fight them their way, do they?]{np}[The Pledge of the Blade is known for the knives, but they should know their arrows, too.]<br/>Hayraven took Seadog's words lightly.<br/>[We're pirates; we start our fights from the ship, and if we can, we end them from the ship. Why let it escalate? It's not like we're fighting the Great Pirate Vladislovas now, is it?"<br/>Seadog acquiesced and began calling out the captain's orders to the crew in a sonorous voice.{np}Hayraven returned to his deckchair. The early stages of the battle were easy for Hayraven's side. The wind blew in the direction of the enemy, protecting his ship from the merchant vessel's arrows and allowing his crew to decimate a large part of the mercenary forces.{np}Yet, no strangers to the projectile attack themselves, the Pledge of the Blade used wide shields to defend their crews.<br/>However, they were at sea.<br/>If anyone had the knowledge to make the most of the factors at play, it was hayraven.{np}By controlling the movement of his own ship from its fortunate position, he made use of the wind and currents to tilt the enemy vessel to a nearly 45 degrees angle.<br/>{np}Not only were they now standing on a slope, the mercenaries had to maintain their balance over the continuous rocking of the waves, which to less seasoned sailors was no easy task.<br/>Once the Pledge's numbers were sufficiently reduced, hand-on-hand combat began.<br/>Seadog coarsely shouted the order at the pirates.<br/>[Hook them! Hook the Ship!]{np}Hayraven's subordinates hurried to swing their hooks into the enemy vessel. The mercenaries, in turn, bustled to and fro, cutting off the ropes attached to the priates' metal hooks using large two-handed swords.{np}Observing the mercenaries' fast response to his attack, Hayraven stood up from the deckchair.<br/>[They aren't playing, are they?]<br/>He ran to the edge of the ship and swung his own iron hook at the merchant vessel, striking an unknown mercenary across the chest. The hook went on to bury itself deep within the ship.{np}Another member of the Pledge ran towards Hayraven's hook brandishing his bayonet. Seeing him,<br/>the captain withdrew his pistol and aimed.<br/>One shot was all it took to blast away the mercenary.{np}Yet already another one was attempting to reach the hook. This time, the mercenary avoided the pistol shot, causing Hayraven to react with a smile of amusement.<br/>[Alright, this one knows what he's doing. Let's see you cut this, then!] As he spoke, Hayraven swung another hook at the enemy ship, one which the agile mercenary was unable to avoid.{np}Struggling to free himself from the hook, the man bore deep injuries as Hayraven pulled him through the waters between the two vessels.{np}The Keel hauling eventually took his life before the captain could pull him up onto the pirate ship.<br/>The two crafts drew closer and closer, and hayraven eagerly reached for the Jolly Roger.{np}[Did Vladislovas ever hit a hip with the Jolly Roger from this far?] he asked, grinning blithely.<br/>Seadog, who had been standing by the captain awaiting new orders, shook his head.<br/>[At this distance? Impossible.]{np}Hayraven replied.<br/>[That's right. For anyone else it is.]<br/>With this, he launched the pirate flag across the waters.Seeing the Jolly Roger lodge itself in the merchant ship, Hayraven called out to his crew.{np}[Go! Let them fear my flag! I'm giving twice the loot to the first pirate to slaughter a mercenary by the Jolly Roger!]<br/>Seadog followed with his own commands.<br/>[You heard the captain. The last man to get on that ship is riding the keel.]{np}The pirates dutifully complied, echoing each other's battle cries as they crossed over onto the merchant ship.<br/>The Pledge of the Blade were already behind their opponents in both number and morale, and having Hayraven himself join the combat only asserted their inevitable defeat.{np}The Pirate Captain's dust devil quickly spread terror among the last surviving members of the mercenary group, who promptly abandoned their weapons and surrendered.<br/>It wasn't long before Hayraven's subordinates executed the few who had dared to resist them.{np}Finally, the captain and crew of the merchant ship, who had been hiding in a corner of the vessel as the battle was held, were dragged out onto the deck.<br/>These sailors had been spared by the mere efficiency of Hayraven's powerful attacks.<br/>Had the conflict spread out across the entire ship, they were unlikely to have survived.{np}The pirate looked down at the captured crew before addressing them.<br/>[Are these all the men you have? I didn't think there'd be so few of you.]<br/>Their captain replied.<br/>[It is as Guerra requested, yes. The Alliance crew was reduced and the work was assigned to his mercenaries to decrease costs.{np}Not only was the ship mostly occupied by these mercenaries, we are also carrying a considerable amount of our own cargo. It was very difficult for us to sail in these conditions, you see. Guerra's men aren't familiar with the sea; I suppose that ultimately led to their defeat today.]{np}[According to your logs, the goods you're shipping are heavy but they aren't worth much. And you say you cut the freight charges, too. It sure doesn't sound like a good deal for the alliance.]<br/>[Before our encounter, Captain, the mercenaries were paying their passage as stipulated in the contract, tending to the weapons and cleaning the deck. As for the goods, they may not be worth much now, but surely you're aware of how we do business at the Kedora Merchant Alliance. The original value of those goods will pose no problem. That is why...]{np}The captain of the merchant vessel stood up to adopt a bolder stance.<br/>[Should you release this ship, the crew and all of our merchandise in safety, I propose to write you a certificate. A document that guarantees you a generous fee from any branch of the Kedora Alliance.{np}Our goods won't yield much profit to an untrained merchant. And as you see, our current personnel are far too scarce to be any help to you. Our only condition is that this ship arrives safely at its destination. Once that is confirmed, you're welcome to claim your reward.]{np}[So you're offering me a paper that's worth more than this ship, the cargo and a few crewmen. Is that right? And all I have to do is wait for you to dock and tell the Alliance to get my money?]<br/>[That is correct. I should say, our communication network is rather advanced; it won't take long for the information to reach all our branches.'{np}Hayraven pondered for a moment.<br/>[Alright. The Alliance always finds a way to avoid a loss, don't they? Dirtier than pirates, you are. Then, the rest of the filthy mercenaries will stay with us, yes? Everything they had on them, too.]{np}The captain of the Kedora Alliance knew Hayraven was not asking for consent, and so he nodded in agreement.<br/>The surviving mercenaries and their belongings were moved to the pirate ship.{np}Oceanid approached Hayraven and asked,<br/>[Should we get the plank ready?]<br/>It was the custom in pirate ships to force captured enemies onto a plank laid on the side of the vessel and demand that they choose between joining the crew and drowning at sea.{np}Hayraven, however, shook his head.<br/>[Leave them be. I have a deal with Olfas Grimm. We'll gather a few more prisoners and sell them off to the Monk Master. Let them starve until they're weak enough, but not so much that they'll mutiny.]{np}The captain's orders were confusing, but Oceanid acceded and returned to the crew.{np}Hayraven was left to mutter to himself.<br/>[Guerra, you filthy rat. I hope you find me after this; maybe then I'll finally get myself a worthy fight.{np}This time we’ll use our knives. Hmm. Come to think of it, they do say Creak is a match for Guerra. Who knows, it could be fun to fight Creak, too. Bore a bullet hole in his skull like I did to Vladislovas. He’s not bad with his gun either, or so they say.]{np}At the end of his train of thought, Hayraven became silent. He raised his eyes to the silhouette of the merchant ship slowly disappearing in the horizon before turning back to the captain's cabin.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>Story of Hayraven. Right-click to read. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

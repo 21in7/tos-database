@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Story of Bullet Marker Flint Winterwood. Right-click to read. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>Winter Flint - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/itos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/itos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/itos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/itos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/itos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/itos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/itos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/itos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/itos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/itos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/itos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/itos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/itos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/itos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690100" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690100" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690100" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>Winter Flint</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p> * Winter Flint<br/>{np} A mansion, dating back centuries, had been overtaken by a melancholy mood that matched its aging years. <br/>Yet, it was not always like that.<br/>Just a few weeks ago, the mansion glowed with the prestige it had gathered over the years and the atmosphere not so heavy.<br/>{np} But, the actions of a certain someone led to a family meeting being held in a mood so somber that it affected not only the disposition of the mansion but the extended family as well.<br/>Walking down a corridor of this mansion, in the direction of the meeting, were two men and one woman.<br/>{np} Of these three people, the one to the far right, Vaidotas Winterspoon, addressed the man walking to his left.<br/>[I did wrong. I will not do so again in the future. That is what you will say. Understood? Don't speak of anything else.]<br/>{np} The woman interjected. [But, why must our Flint apologize? And you, Vaidotas, are being quite annoying.]<br/>[You are the annoying one, Lucienne. Do you then think it's alright for Flint to be punished?]<br/>[What did he do that this is the case?<br/>{np} [I also think he did nothing wrong. But if it's all so simple, why have the elders gone so far as to hold a family meeting?]<br/>[For the elders to feel the need to do so, shows how old fashioned they are. If Flint inherits the head of the household our family will have to change as well.]<br/>{np} [It's important that he first endures today's meeting before considering his inheritance.]<br/>Although Flint was carefully listening to the words of his cousins, he did not speak.<br/> It was not that he refused to answer, but rather he had yet to decide what it was that he would do.<br/>{np} Whether they were aware of this or not, Vaidotas and Lucienne continued their debate until the three of them arrived at the doors of the meeting.<br/>Just before opening the door, Vaidotas stressed his previous thoughts onto Flint one final time.<br/>{np} The door, now opened, revealed dozens of men and women sitting inside the hall.<br/> A look around and one would note a single, remote chair that was prepared as though its future occupant was to face trial or interrogation. To the front and at an angle on either side of this chair, the men and women waited.<br/>{np} Vaidotas and Lucienne took their seats in their respective places.<br/>And, without a word, Flint Winterspoon, the man who had followed them both, took his place at the center in the lone chair.<br/>{np} However you viewed it, this event was for him. Although his seat seemed that of a criminal on trial, he was today's main protagonist.<br/>In other words, today these people would judge if he would be a hero or a villain. <br/>From that perspective, you could say he was less like a criminal waiting trial and more like an actor awaiting the reviews of the audience.<br/>{np} Now there was but one place of honor that remained empty.<br/>If this place was also filled then the hall would seat 33.<br/>However, if one excludes the man sitting in the place of the defendant, there were only 31 people sitting around him, staring him down.<br/>{np} An elderly man, sitting to the right of the empty place of honor, opened his mouth to speak. <br/>[With this, the current members of the Winterspoon family who have completed the rite of passage, for the exception of one, have all gathered here today. In place of our vacant Patriarch, I will take the role of eldest and announce the start of the 817th Family Meeting.]<br/>{np} He paused slightly before continuing.<br/>[Kohath Winterspoon you have requested the right to speak and thus, you may go first.]<br/>To his right, a man sitting in the center of the group rose, bowed his head towards the rest of the family in greeting, and spoke.<br/>{np} [This meeting was originally intended to be a joyful one to fill the vacancy of the Patriarch in the family. However, it is unfortunate that one of our members, who was a strong candidate for such a position, has been suspected of violating the family law and the rules of the alchemists. This meeting now serves as an investigation.<br/>{np} Our family has been regarded for centuries as the most prestigious in the kingdom and the very founders of alchemy.]<br/>{np} Kohath took a breath, then spoke on. <br/>One. An Alchemist's research and results will not interfere with the divine providence of the Goddesses.<br/>Two. An Alchemist's research and results will not bring harm to the Goddesses.<br/>{np} Three. An Alchemist will never use the Goddesses or humans as raw material.<br/>All Alchemist will seek to follow the aforementioned provisions and will work to ensure others do as well. <br/>As you know, as a member of this family, these are the first sentences you learn and last that you keep until the day you die.<br/>{np} Yet, it seems that Flint Winterspoon has allowed these rules to slip his mind. He hopes to use alchemy to craft more powerful weapons. If we begin to use the skills and capability of our family to create such things, what sort of issues will arise?<br/>{np} What sort of horrible place will our world become if these weapons exist? I judge that we stop this type of research and experimentation. There is not one person in the history of the Winterspoon family who has directly used alchemy to develop weapons.<br/>{np} No, even more, no one has spared the thought. And to come here and hear that the person who will be inheriting the family hopes to use alchemy as a foundation to create weapons cannot be ignored.]<br/>When he was done, a young man raised his hand and asked for permission to address the family.<br/>The elderly man gave such permission with his eyes, and the younger one began.<br/>{np} It was Vaidotas Winterspoon. <br/>[What was just said does not match the truth. Cheminis Sword, Vine Equipment, Riena Equipment and more were all created by our family or were provided for by our skill. With these weapons we have made great contributions to the kingdom by saving many lives.<br/>{np} If we consider this example, and continue to think that making weapons with alchemy is a problem then this would lead to the absurd thinking that all blacksmiths and weapon makers in our world are killers who do not know the sanctity of life.]<br/>{np} Although a select few nodded at Vaidotas words, Kohath did not stand down.<br/>[Do you think I don't know that? My nephew knows of only one thing and speaks unknowingly of the second. Do you know how long ago gun powder was invented?<br/>{np} During the time of Sosel the 2nd, our family created gun power, yet as time passed, as powerful as it may be, gun power based weapons did not become the norm. Even the majority of the Kingdom's soldiers use spears and swords. Have you considered why?<br/>{np} But before Vaidotas could retort, another person raised their hand.<br/>This time it was Lucienne Winterspoon. <br/>With permission, she began to speak.<br/>{np} [Nonetheless, the Royal Army does use Sappers and Cannons. The reason why the Kingdom tends not to use gun power is because they are already using weapons founded in magic and divine energy that are just as good as gun powder.<br/>{np} But this doesn't mean that gun power is weak. Guns and swords are all just weapons. Our family applied alchemy to swords and spears, so there is no reason for us not to do the same with gun powder based weapons.<br/>{np} It is our family that has developed gun power and we should consider it time to develop it further, Father.]<br/>And with grace Lucienne Winterspoon ended her appeal.<br/>{np} But Kohath words were harsh.<br/>[I have failed as my daughter’s teacher. From the time of Sosel the 2nd for thousands of years, you think that various patriarchs have not thought of applying such research because of a lack of curiosity or ability? It was through wisdom and discretion that they began to realize the dangers.]<br/>{np} Before either Lucienne or Vaidotas could recover permission to speak, the doors flew open and a single person walked in. Although not a usual attendant of such meeting, it was for this person that the highest chair of honor was left vacant.<br/>{np} And though not many were used to seeing her, all members of the family knew her face.<br/>It was not a face easy to forget even if seen only once over several decades. <br/>Time had passed and yet her features had not changed at all, making her all the more recognizable.<br/>{np} When she entered the room, the other members of the family rose from their seats and bowed their heads in reverence of the eldest member.<br/>And as she walked, she began to speak.<br/>{np} [Although I have attended great meetings, it has been awhile since I've attended one where the moment it opens a debate has already started.]<br/>The elderly man who was acting representative addressed her.<br/>[It has been awhile, Great Aunt.]<br/>The woman, Lucid Winterspoon casually nodded her head and disappeared.<br/>{np} Reappearing in the vacant chair high above.<br/>[As time went by I grew tired of being called Grandmother, Great Grandmother, Great-Great-Grandmother and asked to go by Great Aunt, but Kenaz, we are both old and to hear you call me that has put me off.]<br/>{np} Lucid Winterspoon took her seat and the rest if the family followed suit.<br/>As Kenaz Winterspoon considered what to say, Lucid stopped him.<br/>[In the time it took to approach this chair I saw all that had occurred here. You do not need to explain it to me.]<br/>{np} With that said, Lucid turned her attention to the man sitting in the defendant's chair, Flint Winterspoon.<br/>[It is not clear if pausing a heated discussion is the best idea,<br/> {np} but if the opinions differ so much as to start a fight and where opposing opinions could lead to further misunderstandings, the discussion must be put to rest. And I think that time has come.]<br/>{np} After speaking, Lucid took a moment to examine the other members one by one. She saw in them the descendants of her brothers and sisters who had long passed away centuries ago. Then spoke again.<br/>{np} [Although, I would like us to share our thoughts and wisdom to work towards an appropriate conclusion, I know that the truth is that we do not have the time.]<br/>{np} The elder man, Kenaz Winterspoon, who was acting speaker, spoke.<br/>[Great Aunt, as observer of time and eldest of us all, if you say as such then it is fine. However, we are aware that you often separate yourself from the events of the family and even that of the outside world, but<br/> {np} sometimes there are times where you do interfere and only afterwards do we understand why. If there is a patriarch that you wish to chose, then we will trust your wisdom and gather together to prepare for such a person.<br/> {np} No matter who is selected by you, we will not refuse them.]<br/>[My answer does not bear with it wisdom of such expectation. And more importantly, it is not the wisdom of the decision that is important, but the effort set to reach the intended result.<br/>{np} Regrettably, time is short. Which is why I have given you the task of presiding over these assemblies.]<br/>[Speak.]<br/>Kenaz replied, but Lucid Winterspoon directed her next question towards Flint.<br/>{np} [This whole time, we still have not asked you of your opinion. Hearing the opinion of the others is important, but first we must hear from you. What are your thoughts? Do you wish to use alchemy to develop these powerful bullets and sell them?]<br/>{np} Flint Winterspoon, shocked by the appearance of a famous family member he had only heard stories about, was at a loss for words.<br/>As such, Lucid Winterspoon waited quietly for the answer and this was the result.<br/>{np} The time to personally meet Lucid Winterspoon and greet her or ask her questions had already passed, and as such his reply was short.<br/>[I would prefer if it was not summarized in that way, but your summary is not wrong. Great Aunt.]<br/>{np} Lucid Winterspoon turned back to the whole assembly<br/>[For the exception of a few, the majority of the family members here oppose this thought. I, for one, think that working on something again with alchemy that I have left untouched for the last 100 years would bring exciting developments...]<br/>{np} Kohath Winterspoon's mouth fell open and a weak indignant voice escaped his lips.<br/>[Great Aunt!]<br/>{np} But Lucid Winterspoon silenced him with a wave of her finger.<br/>[This is not the time to get excited, my boy. I simply mean that I do not wish to deal with the family's work here and there. And I am past the age of being able to do such exciting experiments...<br/>{np} She stopped and after a long paused continued again.<br/>[I understand that this is not the opinion you would like to hear. But if anyone shares a different one then feel free to speak. But right now, I will ask Flint. The work you would like to do, can you complete it with the help of our family?]<br/>{np} Flint's expression changed.<br/>It was because he had never let the thought cross his mind.<br/>Lucienne and Vaidotas, who were sitting amongst the family, shared a look over this exciting prospect and waited for Flint's response with anticipation.<br/>{np} The other family members as well shared a similar anticipation as they stared at Flint.<br/> His concerns were many, but time was short and the answer he had for himself was ever more so.<br/>Thus his answer came easy.<br/>{np} [Of course not. I would not need to focus on the Winterspoon's family power or influence. But, the problem remains that I will not be using my skills for the family.]<br/>{np} [If that is the case, why do you feel the need to convince them? If you have no interest in the patriarch seat, can't you simply go and do the work you wish? If you feel frustrated and unable to use your talents within the family, then leave. The family will not collapse without you.<br/>{np} I know this because I, too, have done nothing to contribute to the family for centuries.]<br/>Kohath and a few others wished to protest but,<br/> {np} the family, for centuries, faced no problems with the absence of Lucid's alchemy and there was no evidence to support the opinion that removing Flint would suddenly cause problems.<br/>{np} But Flint was still shocked by the idea of leaving the family, a thought that had never occurred to him. But as he thought about it the more the idea was to his liking.<br/>When Lucid Winterspoon saw this change she was prompted to speak.<br/>{np} [If Flint leaves the family, then whatever work he does we have no reason to interfere. However, we cannot ignore the fact that the foundation of Flint's work is our own teachings.<br/>{np} So, if you carry the Winterspoon name you cannot complete the work you would like to do. Whatever comes next will be difficult, and ending your connection with the family will also bring challenges, so in the future go by the name, Winterwood.<br/>{np} I ask that you use this name as a guide to remember to walk the path between what you have learned from the family and what you hope to do in your own work.]<br/>{np} Kohath spoke.<br/>[Saying he will leave the family does not excuse him from the rules of alchemy. It is not just our family but all Alchemists in the Kingdom -- no the world who must adhere to these immutable principles.]<br/>{np} Lucid Winterspoon replied.<br/>[I know your worries. But Flint is not the type of person to use what he has learned with reckless abandonment. You too already know this, no? And I also believe that in the long-term this work will be good for the family and for the advancement of our world.<br/>{np} Have you forgotten that I am a Chronomancer? And if you would like to discuss the rules of alchemy, it was I who was at the center of its creation. Forget the thought that you can tie me down using the fear of these principles.]<br/>{np} Kenaz, not waiting to miss the opportunity to keep the rarely seen Lucid Winterspoon involved with the family, spoke.<br/>[If it pleases you, how about also recommending the next head of the family? Just mention a promising person to be patriarch and you can go your way.]<br/>{np} If the person Lucid picks does become the next patriarch, and Lucid is there to help them the success of the family would be even greater.<br/>If one considers the generations of patriarchs who had begged Lucid earnestly for a single shred of advice, this was an opportunity the family could not let slip by.<br/>{np} [You should pick a person from the next generation. Vaidotas would do well. The family elders will help to guide the younger Patriarch...]<br/>Kohath who was ignoring Kenaz's gaze had a need to object this time too.<br/>{np} [Vaidotas' alchemist abilities are fine. But he does not share the same strength as Flint. He is but a scholar. And, as you know, to be the patriarch you need to have a certain level of fighting skill as well.]<br/>{np} On hearing this, Kenaz realized that Kohath was not opposed to Vaidotas as leader but rather wanted to restrain Lucid to the role of looking after a weaker patriarch.<br/>To ensure what this is what was said, Lucid Winterspoon spoke first.<br/>{np} [Since he is still young we can prepare him for the title and develop areas where is he lacking. If you feel anxious, we can send him to train. In fact, let us do this.<br/>{np} Recently, the Swordsman Master gave up his public office and retired to Klaipeda. Let us send Vaidotas to Klaipeda to receive his guidance.]<br/>The elder, Kenaz, spoke.<br/> {np} [Learning how to fight like a warrior isn't bad, but don't you think, if it is possible, learning how to fight as a Wizard from you, Great Aunt, would be simpler?]<br/>{np} [The Wizard Society would be in an uproar if I trained him. It would be seen as favoritism and I will still need to be responsible for the work I am supposed to do. Send him south.<br/> {np} Let him experience the Great Woodlands and other areas, and along the way I will teach him about the climate of each region and their special materials. It has been hundreds of years since I've trained someone in alchemy. But I will yield this amount. In this case you will arrive to Klaipeda a bit late, but warrior training needs not to be rushed.]<br/>{np} At this, Lucid stopped and closed her eyes for a moment.<br/>‘No…if our family’s members try to save this world, even just a small step it will prove difficult. We will have to match the time…<br/>{np} We cannot be too strong, nor weak, we must match the moment perfectly… It doesn’t need to be Vaidotas, but there is also no reason not to. As long as it does not interfere with the providence and expectations of the Goddesses, it will be okay…’<br/>And like that the thought disappeared.<br/>{np} Of course, she could not share her thinking with the others.<br/>Instead, she turned to Flint and spoke.<br/>[You have given up the burden of Patriarch, but there is other work you must bear.<br/>{np} I will pray that the honor of the goddesses be revealed through you. You still retain half of the family name and for that you must carry our reputation with you.]<br/>{np} This frustrated Flint.<br/>[If someone else has said that I would not have found it so strange, but from you Great Aunt, I do not know.]<br/>At that accusation, Lucid replied.<br/>[Oh? But it is like that, no? Even if we go our separate ways, no matter how far we go, we cannot be fully apart.]<br/>{np} When those words were spoken, Lucid Winterspoon, without a single goodbye began to disappear.<br/>The remaining family members, who were used to this behavior, sent her off by bowing their heads.<br/>{np} Although they did not have the ability to see as far into the future as Lucid, they could feel that this was the start of a new era.<br/>However, not one of them remaining there knew how difficult this new era would be.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>Story of Bullet Marker Flint Winterwood. Right-click to read. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

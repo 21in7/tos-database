@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Story of Premier Emminant, right click to read">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>Eminent Vol. 3 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/itos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/itos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/itos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/itos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/itos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/itos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/itos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/itos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/itos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/itos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/itos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/itos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/itos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/itos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690069" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690069" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690069" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>Eminent Vol. 3</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_04black.png" />
+            <h3>Content</h3>
+            <p>Emiment kneeled silently before Gesti. They were on the Fortress of the Land Ruklys had once built. Looking down at Eminent, Gesti spoke with despise.<br/>[You scoured through every body of every miserable human in here for years, and you can't tell me where in this fortress it's hidden?]<br/>Eminent replied in an almost inaudible voice.<br/>[Forgive me.]<br/>In his mind, he wondered for a moment if Baiga would have understood his situation better than Gesti. She interrupted his train of thought immediately.<br/>[What are you going to do about it? You're a chancellor to those humans now. If the King calls you back to the court, how are you going to keep looking for it? Huh? Look at you. Does it look like you did a good job, playing human like that? What good is it now, if you can't even do you real job?]<br/>{np}Eminent could no longer stand listening to Gesti berate him in silence.<br/>[As chancellor I have authority over many human subordinates, including armies. Even if I return to the capital, I can send soldiers under my orders to continue looking...]{np}Angered, Gesti spoke over him.<br/>[And start depending on those filthy humans again? You couldn't find it, but you think they can? What are you even thinking??]<br/>Seeing the ire in Gesti's eyes, Eminent lowered his head. She continued.<br/>[You've been living with them for too long. I want you to stop playing chancellor and focus on your job for once. Just find me the Revelation]<br/>Eminent rushed to answer.<br/>[I remind you that my position would be very useful for keeping humans away while we're searching. I can have the measures taken under my orders, then kill my human character and return to this place immediately to continue the search. Please, allow me to do so.]{np}Gesti wasn't overly pleased with Eminent's plan, but she agreed to it.<br/>[You were the first to kill Laima's chosen keeper, I suppose. I'll allow it.]<br/>Hearing Gesti's voice soften, Eminent pushed for a second request.<br/>[I have only one more thing to ask.]<br/>[What is it?]{np}Premier Eminent thought carefully on how to convey his second request to Demon Lord Gesti.<br/>[Many of Ruklys' followers are still living in a city near the fortress called Roxona. My soldiers have been keeping guard at the fortress for now, but they can't do that forever. If we let them be, his followers will try to invade the fortress. But I also can't arrest an entire city...]<br/>[Spare me the details of human society. Just say what you want to do.]<br/>[If you could destroy the city with your powers...]<br/>[Why don't you do it yourself?]<br/>[I certainly could, with the right amount of preparation and the right tools. But annihilating an entire city would call the attention of the goddesses. And then there's the agreement...]<br/>[Didn't you kill everyone in that noble family to get to your position? The goddesses didn't do anything then, why would they care now? I doubt they'll even find out about it.]{np}Eminent replied.<br/>[Those humans died from an epidemic. It's true that I created the disease and made it spread, but ultimately I didn't kill them. The locals saw me as a virtuous man. Not to mention the scale of that was much smaller than an entire city. This will be a much more serious violation of the agreement in the eyes of the goddesses.]{np}Gesti was engrossed in her thoughts for a moment. To her, humans were of no particular interest. The same could not be said about the goddesses. Knowing the next step of Giltine's great plan, she did not want to provoke them. But most of all, there was the agreement that could not be broken by either side. They had apologized for minor transgressions before, but to completely disregard the agreement was yet out of the question.{np}Gesti finally spoke again.<br/>[Here's what we're going to do. I'm going to cast a petrifying curse on the city. In theory, the humans can return to normal when the curse is broken, so they won't be dead. Meanwhile, you can use your authority in the human Kingdom to move the petrified ones to another location. That will keep them away without us needing to kill them. Whatever happens next will be the work of the humans, meaning Zemyna as well will be less likely to suspect us.]{np}<br/>[Understood. If we can also convince the humans that it's a curse from the goddesses, like the rumors about Ruklys, I don't think anything can stop this plan.]{np}[You can take care of that yourself, just focus on the goal. Remember, we're not trying to kill Laima's chosen keepers; what we want is the Revelations and nothing more. Be grateful that Giltine hasn't punished you yet, and work harder to finish your job. That's what you really ought to do.]<br/>With these words, Gesti disappeared.{np}Premier Eminent was finally able to stand again. He was burdened with a heavy task. He did not know yet about the long years he would spend inside that fortress, never reaching success. If he did know, he would have perhaps been slightly consoled by the fact that Laima had been left deeply grief-stricken after Ruklys' death under his false accusations. In the conflict between goddesses and demons, that too was a victory.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>Story of Premier Emminant, right click to read</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

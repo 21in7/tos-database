@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Legends of Fedimian. Readable.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>Silver of Fedimian - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/itos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/itos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/itos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/itos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/itos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/itos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/itos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/itos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/itos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/itos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/itos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/itos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/itos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/itos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690003" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690003" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690003" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>Silver of Fedimian</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_01red.png" />
+            <h3>Content</h3>
+            <p>This is from before there was a large statue in Fedimian.<br/>Of course, there was a small statue even then.{np}A long time ago, the people of Fedimian were quite normal, <br/>not much different from the ordinary people of the rest of the world. <br/>However, the people of Fedimian did differ from their worldly peers in one aspect.{np}The people of Fedimian were very cautious.<br/>In the sense that they take the word 'cautious' much more seriously. <br/>These people were as cautious around fire as they were without.{np}The Fedimians were modest about this with others. <br/>Even those who stayed at Fedimian for a while could not pick up the trait.{np}Thanks to this behavior, the people of Fedimian fared better during tough times, <br/>as they were able to sense danger coming.{np}Because of this, no few words were said about the cautiousness of the Fedimian people.{np}In Fedimian, if someone dropped money on the ground, it would be gone forever. <br/>In a world where money mostly consists of silver coins, <br/>only the creditors would know exactly how much money has been lost in this manner.{np}Why money disappears into the ground at Fedimian remains unknown. <br/>Some people believe the Goddess Zemyna absorbs any money that makes contact with her area. <br/>Most commoners, however, believe this was done to reduce the demand of silver coins from creditors.{np}By believing that the goddess herself takes the silver,<br/>the people found it pointless to try and dig it up in her grounds. <br/>The fact that you can offer silver coins at Fedimian as tribute to her reinforces this idea.{np}In any case, the fact that one could lose money by dropping it on Fedimian soil <br/>has made Fedimians very careful in handling their money.{np}However, as much as one tries to be careful, mistakes still happen. <br/>More so with the case of young girls. <br/>One day, it happened to a girl named Aiste.{np}Normally, when one drops silver coins on the ground, it would scatter about on the road, <br/>and then disappear without a trace. <br/><br/>Fedimians usually curse their own carelessness and move on, <br/>but Aiste was different: she wondered why and how it happened.{np}To find out what happened, Aiste began inspecting the area she lost her coins at. <br/>In her search she came across a beggar beside the deep end of the canal.{np}Aiste asked the elderly beggar, <br/>'Did you by any chance pick up the silver coins I dropped? Would you return them to me? I worked very hard everyday for those coins and really need them.'<br/><br/>{np}The beggar was taken aback. Aiste was asking for the impossible. After all, finding dropped coins in Fedimian was unthinkable. <br/>The old beggar was about to explain this to Aiste but instead remarked, <br/>'I've also lost coins in this area. It would be nice if you looked for mine as you searched for yours.'<br/><br/>{np}Almost immediately, the beggar felt guilty of the mocking words he blurted out. He apologized to Aiste.''Why don't you go to where you work and explain what happened to them? Make sure you look lost.' The beggar then hesitantly added, <br/>'In the meantime, I'll be looking for your silver coins here.'<br/><br/>{np}Upon hearing the beggar's words, Aiste thanked the beggar, and went on to follow his advice. <br/>Through his selfless act, the beggar suddenly felt a revived sense of responsibility. He looked toward the silhouette of the leaving Aiste, his heart heavy and warm from this experience.{np}Aiste went to the orchards at the outskirts of Fedimian where she worked. <br/>While one could just pick fruit from the trees there, it was also important to take the fruit that fell on the ground.{np}Smaller hands worked better for picking fruits, so young children were often hired at the orchards. <br/>Some orchards took it a step further: hiring monkeys, whose hands were smaller than that of children, to pick fruit. Monkeys did work more effectively than children, but often ate the fruit they picked. Thus, most owners relied on hiring children.{np}Returning, Aiste visited the orchard she worked at and explained her situation to the orchard owner. <br/>Unfortunately, the owner was not in a good mood, having just had a quarrel with his wife. <br/>He, like all other Fedimians, knew about the phenomenon, and saw no reason to give Aiste more money.{np}And so he said, <br/>'Just as you've been able to pick up all my fruit, you should be able to find your lost money at Fedimian, so do not tell me to give you a second pay.' <br/>The orchard owner's cold words brought tears to the girl's eyes. <br/>The sight broke his heart, but even so, he did not want to give her any more money. <br/><br/>{np}He was soon overtaken by guilt and said, <br/>'If you really need that money, you should go to the silversmith's.'<br/><br/>{np}Aiste set towards the silversmith's place as soon as she heard those words. <br/>Fortunately, the house was located outside Fedimian walls. <br/>Had it been inside, the silversmith ran the risk of losing his money and silverware to the soil.{np}It is for this reason that he lives on the outskirts of Fedimian. <br/>Aiste knocked on the front door and explained her situation to him as soon as he answered.{np}The silversmith, after hearing Aiste's story, stated, <br/>'Even for children it is foolish to be so careless. How could you not know that all money that falls on Fedimian soil disappears, never to be found again?'<br/><br/>{np}Aiste was surprised by what the silversmith said and grew sad. <br/>After a while she asked, <br/>'Then why is it that such a cruel thing happens?'<br/><br/>{np}Even the silversmith did not know the true answer, so he improvised, <br/>'Goddess Zemyna must be taking them.'<br/><br/>{np}Hearing those words, Aiste replied, <br/>'Then I will just have to go ask the goddess.' <br/>The silversmith was astounded and replied, <br/>'While you're at it, why don't you ask the goddess to return my silverware?'<br/><br/>{np}The silversmith did not take to heart his own words, but Aiste did. <br/>She immediately set out to do as she said. The silversmith felt sorry for Aiste, <br/>but did not have the courage to call her back as she faded into the distance.{np}An exhausted Aiste soon arrived at the Statue of Goddess Zemyna. <br/>She prostrated herself before it and prayed to the Goddess Statue represented, her head completely down. <br/>'Oh, goddess. Please return my lost silver coins.' <br/>Soon, while offering her prayers, Aiste could no longer hold in her sadness and she finally wept.<br/><br/>{np}How long did she pray crying? <br/>Suddenly, Aiste heard a voice addressed to her. <br/>'My child, have come to take back what you have lost?'<br/><br/>{np}Aiste knew in her heart that it was Goddess Zemyna that was addressing her. <br/>She stopped crying, cleared her voice and replied so.{np}The goddess' voice was heard again. <br/>'Aiste, what your asking from me is not in a method I approve of. Where I reign there is no harvest nor fruits to those who do not work.'<br/><br/>{np}'But I worked very hard today!'<br/><br/>{np}'I know. So instead, I will give you and the others a chance. Look under your feet.'<br/><br/>{np}The goddess' voice faded with those words, and Aiste found silver coins under her feet. <br/>She looked to where she had left her silvers and found that the tears she shed had transformed into coins.<br/>Aiste was very happy, and made sure to pick up all the silver before leaving.{np}After a number of steps, Aiste thought about the silversmith, <br/>and, again, went to his house and knocked on his door. <br/>As if the silversmith was waiting for her return, he opened the door immediately and said. <br/>'I'm sorry. I regret sending you away like that. I'll give you some silver. <br/>This time, be careful not to drop any and get home safely.'<br/><br/>{np}As the silversmith held out his silver coins, Aiste shook her head and said,<br/>'No thank you, the goddess returned all my coins. On top of that she gave me even more. <br/>I remembered you saying you had also lost silver, so I came to give you my extra coins. You don't need to give me yours.'<br/><br/>{np}At first, the silversmith was skeptical about the coins being returned, <br/>so he was surprised when Aiste showed him genuine coins. After thinking for a while, the silversmith said, <br/>'Then how about this. You give me what you want while you accept what I was about to give you. <br/>Isn't that fair? On top of that I'll give you a pouch to carry your extra silver.'<br/><br/>{np}Aiste obliged and gave her extra coins to the silversmith. <br/>After this, the silversmith gave Aiste a bag of coins.{np}After leaving the silversmith's house, <br/>Aiste suddenly remembered that the old beggar must still be looking for her lost coins and worried about him. <br/>On her way to the beggar, she met the orchard owner again. <br/>Upon seeing Aiste, the orchard owner was overjoyed. <br/>'I was looking for you. I'm sorry for sending you off earlier. As an apology, I'll give you your salary again. <br/>Please be careful not to lose it this time.'<br/><br/>{np}The orchard owner took out a large amount of coins, more than what Aiste's salary was, and handed it to her. <br/>However, Aiste shook her head and said, <br/>'Goddess Zemyna already returned my money to me. The silversmith also helped me, so now I actually have too much. <br/>Here, take a look.'<br/><br/>{np}Saying that, Aiste opened the bag of coins she got from the silversmith and showed the orchard owner. <br/>The orchard owner was extremely surprised, as the amount of money she got from the goddess and the silversmith surpassed the amount he had.{np}Disregarding the amount Aiste had shown him, the orchard owner said, <br/>'Well, even so, I would be ashamed for not giving you my due, so please just take it.' <br/>After saying this, the orchard owner stuffed his coins into Aiste's bag and left. <br/>By the time Aiste could muster up the energy to call the orchard owner, he was too far away.<br/><br/>{np}She hesitated for a moment but then set her mind on the beggar. <br/>After a bit of walking, Aiste arrived at where they met. The old beggar spotted her first and hurried over to her. <br/>He showed her the silver coins he was clenching onto and said, 'Look! I found your lost silver.' <br/>Aiste received the beggar's silver and then showed the beggar her bag and said, <br/>'Look, I found your silver coins too.'<br/><br/>{np}Even though the beggar was exhausted, he cupped his hands to get his coins back. <br/>Seeing this, Aiste was brought to the brink of tears. <br/>She wondered how much begging the beggar had to do to give her her coins back. <br/>With a heavy heart, Aiste gave the old beggar the coins.{np}After that, Aiste also held out her bag and said, <br/>'This is a gift as thanks for looking for my silver. I was given this through Goddess Zemyna's grace.' <br/>Aiste then left before the Old Beggar could figure out how to reply.<br/><br/>{np}The beggar looked towards Aiste's distant shadow, and opened the present she gave him, <br/>curious to what was inside. Inside, he was surprised to find dozens of silver coins. <br/>Now he understood why Aiste was able to depart much more quickly than she arrived - she had lightened her load by giving him the excess.{np}For a beggar who had been stingy over a single silver coin, the fact Aiste could simply give away several tens of times that amount moved him. <br/>The fact that Aiste, who had went off and solved the mystery of Fedimian, came back and gave him what she really didn't owe, made the beggar thankful.{np}The more he thought, the less the beggar was able to hold back his tears. <br/>As he cried, he noticed something odd - every shining teardrop that touched the ground transformed to silver coins.{np}The beggar could not believe his eyes, but quickly remembered Aiste words about a blessing from the goddess. <br/>After a while, the beggar stopped crying, and went to pick up the coins and put them in the bag Aiste gave him.{np}A few days later, the beggar went to the statue that Aiste prayed to. There, he took out one coin from the bag to keep, and offered the rest to the Goddess Statue. <br/>He then prayed to the goddess whole-heartedly and left. As the money he offered disappeared, the beggar again to shed tears, but that's another story.{np}After a few days, an odd rumor spread across Fedimian. <br/>The rumor claimed that silver no longer disappeared into Fedimian soil. <br/>The rumor did not sit well at first with older, experienced people, but some tested the rumor with a paltry amount of silver, <br/>and it turned out to be true. Everyone agreed that finally, the mysterious phenomenon of Fedimian has come to an end.{np}After some time, word of this occurrence reached the king. Curious as to why this happened, the king ordered an investigation. <br/>The hidden truth was brought to light, and Aiste's story was known.{np}The king praised the people that caused the miracle with their charitable hearts. <br/>Additionally, to honor the grace of the goddess, he decided to spend the national treasury to build a large statue dedicated to her.{np}On the day the statue was finally completed, <br/>something miraculous happened as the King and Aiste went together to make the first offering. <br/>From the circumference of the statue sprouted coins - all the silver coins that had been lost by Fedimians up until that time.{np}After heated debate, the Fedimian people decided to not to hoard their lost silver coins. <br/>Instead, they asked the king to collect all the coins and distribute them among the poor of the Kingdom. <br/>The king readily agreed, and gave the order to record this beautiful event into the history of the Kingdom.{np}Even now, nobody knows when and how the mysterious phenomenon of Fedimian started, <br/>but everybody knows when, how, and who helped unravel the mystery. <br/>It was through the kindness of Aiste and the people who helped her, as well as through the grace of the goddess, that the mystery came to an end.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>Legends of Fedimian. Readable.</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

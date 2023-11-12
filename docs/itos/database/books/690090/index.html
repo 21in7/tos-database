@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Story of the origin of Nicopolis. Right-click to read. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>The Origin of Nicopolis - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_379140_release_379124"}, "jTOS": {"rebuild": true, "version": "patch_379137_release_379121"}, "kTOS": {"rebuild": true, "version": "patch_379139_release_379125"}, "twTOS": {"rebuild": true, "version": "patch_379146_release_379055"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/itos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/itos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/itos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/itos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/itos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/itos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/itos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/itos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/itos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/itos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/itos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/itos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/itos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/itos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690090" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690090" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690090" title="kTOS">kTOS</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>The Origin of Nicopolis</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>The Origin of Nicopolis<br/>- Year 1096 of the Kingdom,<br/>Sage Master Lufas Kehel<br/>{np}The year 15 of the reign of King Baltinel, the 14th King, was a time where the vigor of the founding of the Kingdom was weak and conflicts between factions reached their peak.<br/>This was during the years 348 and 363, about 700 years ago.<br/>Although he was unable to settle the conflict, he is known for laying down the foundation for the Royal army.<br/>If one considers that the rules of King Jeromel's time kept the Kingdom in order, then one could also agree that King Baltinel's use of the Royal Army was another, equal approach to the problems.<br/>This new military approach was helpful in solving the issues of King Baltinel and of his predecessors.<br/>Yet during the reign of King Jusel, after the conflicts between political factions had been settled, a new approach was needed for dealing with the other problems that still remained.<br/>{np} Of these, the most serious issue to deal with was the Wizards.<br/>During this time, the Wizards had organized themselves into an alliance and compelled others to join.<br/>{np} Joining the union also meant following a strict set of rules. As a result, the Wizard society of this time was divided into union members and non-union members.<br/>And if compared, those of the union were stronger than those who were not.<br/>{np} There were worries that the the Clerics and other warriors who bore the strength of the goddesses would be overpowered or, if that was not the case, the union Wizards would overtake the country.<br/>If the organized Wizards were simply stronger and nothing more, then these rumors would not spread, but there were a small few within the union who clearly wished to use this strength for power.<br/>{np} On the other hand, there were Wizards who are either hermits or research-focused and act alone, separate from the union.<br/>As such, although those of the union did not seek for world domination, most of the Wizard societies' initiatives and proposals naturally went in favor of the union.<br/> {np} Concerns were raised about what would happen to the Wizard society if the union was left unattended.<br/>Although the concerns were few, it was those with wisdom who brought the issue before the Kingdom, thus marking it as a crisis.<br/>{np} Thus began King Jusel's official support of non-union Wizards.<br/>Through official policies, his government provided financial support for their research and livelihood.<br/>In retaliation, union Wizards sold their magic at a more expensive price, making it harder for mercenaries and others to gather funds.<br/>{np} Yet those who were not part of the union were mostly researchers and hermits, while those who were part of the union more actively and systematically sold their products to the noble families. This allowed them to build a wider circle of connections.<br/>As such, King Jusel could not prevent the contracts and transactions that occurred between his Kingdom's subjects.<br/>{np} However, there were more complicated measures, such as adding a new tax regulation to cut into the union's profits and to move the non-union members into friendlier relationships with the royal family while slowly reducing the amount of union shops.<br/>Through these methods the government and the nobles were forced to invite non-union members and as a result the measures were thought to be a success.<br/>{np} As these events unfolded, the union members were able to protest, but it had reached a point where even that had become difficult.<br/>There was nothing more for them to do except to retaliate.<br/>{np} There were those who did not like that the work had been passed on to non-union Wizards, but if the situation resulted in a rebellion they were more than likely to side with the royal family. And they would have to deal with Clerics, who had the power of the Goddesses with them and the royal families and their soldiers. Along with that, it is possible that many members would leave the order.<br/>{np} More importantly, there was no pretext for a rebellion.<br/>But the alliance did not stop there, and instead thought of a different method.<br/>They demanded an independent self-governing domain within the borders of the Kingdom.<br/>If they could not be leaders of the world, they would at least make the brightest city known to man.<br/>{np} Although their intentions were inpractical, King Jusel had no way of preventing their request.<br/>As this was legally similar to the lands that the noble families ruled on their own.<br/>{np} The alliance through various means gathered the funds necessary to purchase a plot of land. When their representative went before the Royal family to register as leader, the Royal family, taking comfort in the fact that if a situation should arise then only those in that domain would feel its effects, accepted.<br/>{np} The alliance gave their new city the name Nicopolis.<br/>It wasn't long before Nicopolis saw success.<br/>As they were all gathered in one place, their efficiency saw new heights and they were able to produce magic scrolls and items that produced better effects at a cheaper cost.<br/>{np} The Royal family were also pleased by the successes of Nicopolis and funds from the tax increased.<br/>And with this change, they no longer had the burden of supporting the non-alliance members.<br/>If the Wizards of Nicopolis kept to themselves, then all would be well and prosperous.<br/>{np} But as we already know, this is not how things played out.<br/>To this day, the events of Nicopolis are still unknown, but the Wizards of the city were known to dabble in unprecedented magic. The side effects of which caused not only the alliance Wizards but all the citizens of Nicopolis to disappear.<br/>{np} One hypothesis is that their disappearance was the result of a failed attempt to enhance their magic to its highest potential. As the side effect had no impact on the buildings of the city, we will not be able to know what exactly they were and where are those who were affected.<br/>{np} The city was deserted, yet despite the passing of time the buildings of the city showed no signs of decay, remaining the same as the time it was built. All because of the magic that encased it.<br/>{np} Later, as fear of the city slowly began to disappear, it was used by migrating citizens of the Kingdom and remained a fairly normal city until Medzio Diena.<br/>But the magic of the city became a burden to the citizens when the calamity that was Medzio Diena struck.<br/>{np} It's still not known as to why, but compared to Fedimian and other cities, Nicopolis faced the most damage, causing those who lived there to desert the city in considerable numbers.<br/>After Medzio Diena, most citizens of the Kingdom fled to safer lands, yet it is said that there are still some who remained to make use of the more advanced equipment of the city.<br/>{np} According to rumors, monsters have now gathered at the city and it's recommend that those who have no place being there, should avoid it.</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>Story of the origin of Nicopolis. Right-click to read. </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>
